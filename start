@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+docker stop ExampleModule
+docker rm ExampleModule
+docker pull jack.hc-sc.gc.ca/php/php-base-laminas:latest
+
+docker run -d --name ExampleModule -p 80:80 \
+    -v ~/docker/php-base-laminas-new-app/ExampleModule:/var/www/apps/ExampleModule \
+    jack.hc-sc.gc.ca/php/php-base-laminas:latest

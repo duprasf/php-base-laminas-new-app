@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+docker pull jack.hc-sc.gc.ca/php/php-base-laminas:latest
+docker build -t new-app .
