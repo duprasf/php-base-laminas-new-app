@@ -51,3 +51,5 @@ asset has the same name as set by another module, only one will be served
 (dertermined by the loading order of the modules). You can prefix the path of
 the asset with the name of the module, for example you can use
 ```/img/cute-kitten-playing.jpg``` or ```/example-module/img/cute-kitten-playing.jpg```.
+If you want to add/remove file type that the server can serve, you can modify the
+```[your-module]/config/autoload/public-asset.global.php```
