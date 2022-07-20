@@ -53,3 +53,37 @@ the asset with the name of the module, for example you can use
 ```/img/cute-kitten-playing.jpg``` or ```/example-module/img/cute-kitten-playing.jpg```.
 If you want to add/remove file type that the server can serve, you can modify the
 ```[your-module]/config/autoload/public-asset.global.php```
+
+## Extract translation strings into a .po file
+You can easily extract all the strings that can be translated from your module
+using the TranslationExtractor module. This operation is performed from inside
+the container (docker exec ...). The module is used in the CLI by calling
+the vendor/bin/laminas executable. Executing this command wihout any args will
+give you a list of available command. One of them will be the ```translation:extract```
+command. This requires two parameters, first is the input folder to scan, second
+is the output file name.
+```
+(in /var/www)$ vendor/bin/laminas translation:extract apps/MyApp output.po
+```
+This will create an /var/www/output.po file with all the strings found in
+/var/www/apps/MyApp.
+
+This searches for translated route parts and the use of ```->translate()``` in views
+and controller.
+
+### Easy script
+I created an easy to use script to extract translation when using containers.
+This script will extract the translation from the folder and copy the file
+outside the container in one comand.
+```
+./translation-extract <ContainerName> <PathToScan> <OutputFile.po>
+```
+Since the php-base-laminas container base working directory is /var/www, you can
+use apps/YourAppName as the path to scan.
+The output is local path, not in the container (so ```output.po```to receive the
+file in the current dir or ```~/my-app/language``` to get the file in your home
+directory).
+```
+./translation-extract AppContainer apps/AppName output.po
+```
+

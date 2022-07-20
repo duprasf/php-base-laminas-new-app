@@ -7,9 +7,9 @@ return [
             'appName'=>__NAMESPACE__,
             'apikey'=>'API key provided by GC Notify',
             'templates'=>[
-                'email1'=>'templateKeyFromGCNotify',
-                'email2'=>'templateKeyFromGCNotify',
-                'email3'=>'templateKeyFromGCNotify',
+                'templace-email1'=>'templateKeyFromGCNotify',
+                'template-email2'=>'templateKeyFromGCNotify',
+                'template-email3'=>'templateKeyFromGCNotify',
             ],
         ],
     ],

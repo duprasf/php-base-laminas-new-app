@@ -26,10 +26,15 @@ class Model
     public function doSomething(array $data)
     {
         $pdo = $this->getDb();
-        if($pdo) {
-            $pdo->beginTransaction();
-            $prepared = $pdo->prepare("INSERT INTO yourTable SET name=:name, message=:message");
-            //$prepared->execute([$data['name'], $data['message']]);
+        if($pdo && isset($data['name']) && isset($data['message'])) {
+            try {
+                $pdo->beginTransaction();
+                $prepared = $pdo->prepare("INSERT INTO yourTable SET name=?, message=?");
+                $prepared->execute([$data['name'], $data['message']]);
+                $pdo->commit();
+            } catch(\Exception $e) {
+                $pdo->rollBack();
+            }
         }
     }
 }
