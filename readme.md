@@ -6,7 +6,7 @@ of your application. The standard naming convention for a module name is to
 start with an upper case letter and follow the camelCase format.
 
 The last folder to be renamed is ```view/example-module``` this folder needs to be
-renamed with the with the dash separated format of your application name.
+renamed with the dash separated format of your application name.
 Each uppercase letter becomes a dash followed by the letter, ex: ExampleModule
 would become example-module and ExOfAModule would become ex-of-a-module).
 
@@ -48,7 +48,7 @@ the configuration set, your values will be passed to the GcNotify object.
 By default, the configuration is already set to allow js, css, jpg, jpeg, png,
 gif and svg to be served from the ```/public/``` folder in the module. If an
 asset has the same name as set by another module, only one will be served
-(dertermined by the loading order of the modules). You can prefix the path of
+(determined by the loading order of the modules). You can prefix the path of
 the asset with the name of the module, for example you can use
 ```/img/cute-kitten-playing.jpg``` or ```/example-module/img/cute-kitten-playing.jpg```.
 If you want to add/remove file type that the server can serve, you can modify the
@@ -58,7 +58,7 @@ If you want to add/remove file type that the server can serve, you can modify th
 You can easily extract all the strings that can be translated from your module
 using the TranslationExtractor module. This operation is performed from inside
 the container (docker exec ...). The module is used in the CLI by calling
-the vendor/bin/laminas executable. Executing this command wihout any args will
+the vendor/bin/laminas executable. Executing this command without any args will
 give you a list of available command. One of them will be the ```translation:extract```
 command. This requires two parameters, first is the input folder to scan, second
 is the output file name.
@@ -68,13 +68,13 @@ is the output file name.
 This will create an /var/www/output.po file with all the strings found in
 /var/www/apps/MyApp.
 
-This searches for translated route parts and the use of ```->translate()``` in views
-and controller.
+This searches for translated route parts and the use of ```->translate()``` in
+any php (controllers, models, factories, etc.) and phtml (views) files.
 
 ### Easy script
-I created an easy to use script to extract translation when using containers.
+I created an easy-to-use script to extract translation when using containers.
 This script will extract the translation from the folder and copy the file
-outside the container in one comand.
+outside the container in one command.
 ```
 ./translation-extract <ContainerName> <PathToScan> <OutputFile.po>
 ```
