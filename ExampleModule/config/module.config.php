@@ -10,17 +10,36 @@ use Laminas\ServiceManager\Factory\InvokableFactory;
 return [
     'router' => [
         'routes' => [
-            'root' => [
+            __NAMESPACE__ => [
                 'type'    => Segment::class,
                 'options' => [
+                    // this is the /en/ or /fr/ that begins the route
                     'route'    => '/[:locale]',
                     'defaults' => [
-                        'controller' => Controller\IndexController::class,
-                        'action'     => 'index',
                         'locale'     => 'en',
                     ],
                     'constraints'=>[
                         'locale'=>'en|fr',
+                    ],
+                ],
+                // may_terminate is false since /en/ and /fr/ should go
+                // to a home page. If your module is the home page of
+                // the server, please change to true
+                'may_terminate' => false,
+                'child_routes'=>[
+                    // this is all the other path of your app
+                    'first-page'=>[
+                        'type'    => Segment::class,
+                        'options' => [
+                            'route'    => '/{my-app}',
+                            'defaults' => [
+                                'controller' => Controller\IndexController::class,
+                                'action'     => 'index',
+                            ],
+                        ],
+                        'may_terminate' => true,
+                        'child_routes'=>[
+                        ],
                     ],
                 ],
             ],
