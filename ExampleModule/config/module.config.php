@@ -74,4 +74,14 @@ return [
             __NAMESPACE__ => __DIR__ . '/../view',
         ],
     ],
+    'translator' => [
+        'locale' => 'en_CA',
+        'translation_file_patterns' => [
+            [
+                'type'     => 'gettext',
+                'base_dir' => dirname(__DIR__) . '/language',
+                'pattern'  => '%s.mo',
+            ]
+        ],
+    ],
 ];
