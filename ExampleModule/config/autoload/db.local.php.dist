@@ -2,7 +2,7 @@
 return [
     'service_manager' => [
         'factories' => [
-            'pdo' => function($sm) {
+            'example-module-pdo' => function($sm) {
                 return new \PDO(
                     'mysql:host=localhost;dbname=dbName;',
                     'username',
