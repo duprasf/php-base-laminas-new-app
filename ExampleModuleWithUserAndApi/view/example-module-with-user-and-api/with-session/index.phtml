@@ -1,0 +1,26 @@
+<?php
+$this->metadata['title'] = $this->translate('This is the content page when using session');
+$this->metadata['extra-js'] = '/js/basescript.js|/js/sprintf.min.js';
+$this->metadata['extra-css'] = '/example-module-with-user-and-api/css/style.css';
+?>
+<p><?=$this->translate('For this demo, if the user is not valid or not authenticated, 3 bullets will show up. If the user is logged in correctly, 8 bullets will show up.');?></p>
+
+<?if(!$this->user->isLoggedIn()):?>
+    <section class="panel panel-warning">
+        <header class="panel-heading">
+            <h5 class="panel-title">Login (DB)</h5>
+        </header>
+        <div class="panel-body" id="dbContent">
+            <p><?=$this->translate('You are not logged in, please go back to the home page and login to proceed');?></p>
+            <a href="<?=$this->url('ExampleModuleWithUserAndApi/first-page', ['locale'=>$this->lang]);?>" class="btn btn-default">
+                <?=$this->translate('Login Page');?>
+            </a>
+        </div>
+    </section>
+<?endif;?>
+
+<ul>
+<?foreach($this->content as $li):?>
+    <li class="<?=$li['category'];?>"><?=$li['name'];?></li>
+<?endforeach;?>
+</ul>

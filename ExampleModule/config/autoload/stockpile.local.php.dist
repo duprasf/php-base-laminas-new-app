@@ -1,0 +1,86 @@
+<?php
+namespace Stockpile;
+
+/**
+* Stockpile is a file parser that was created to speed up the
+* conversion of an existing web site to WET. Stockpile can also
+* be used as a URL shortener/redirect with the use of a DB.
+*
+* The path where the file-system-route can find its files is
+* called 'FileSystemPage' and found in
+* 'view_manager'=>[
+*   'template_path_stack'=>[
+*       'FileSystemPage' => "path/",
+*   ],
+* ]
+*/
+return [
+    'router' => [
+        'routes' => [
+            // To enable the "file system page" keep this route
+            'file-system-page'=>[
+                'type'=>Route\FileSystemRoute::class,
+                'options'=>[
+                    'regex'=>'/(?P<lang>en|fr)(?P<path>/.*)?$',
+                    'spec'=>'/%lang%/%path%',
+                    'defaults' => [
+                        'controller' => Controller\IndexController::class,
+                        'action'     => 'file-system-page',
+                    ],
+                    'constraints'=>[
+                        'path'=>'^[\w\d/-]*$',
+                        'lang'=>'en|fr',
+                    ],
+                ],
+            ],
+            // to enable the URL shortner/redirect, keep this route (and the next)
+            // a service called 'stockpilePdoMovedPages' will be required
+            'moved-page'=>[
+                'type'=>Route\MovedPageRoute::class,
+                'options'=>[
+                    'regex'=>'/(?P<path>.*)$',
+                    'spec'=>'/%path%',
+                    'defaults'=>[
+                        'controller'=>Controller\IndexController::class,
+                        'action'=>'moved-page',
+                    ],
+                ],
+            ],
+            // This route would allow admin to maintain the DB
+            // a service called 'stockpilePdoMovedPages' will be required
+            // the 'route' can be changed ({stockpile-moved-pages}) as long
+            // as the route name stays the same. The code will use that name to build URLs
+            'moved-pages-admin'=>[
+                'type'=>'Segment',
+                'options'=>[
+                    'route'=>'/:locale/{stockpile-moved-pages}',
+                    'defaults'=>[
+                        'controller'=>Controller\AdminController::class,
+                        'action'=>'moved-pages-admin',
+                    ],
+                    'constraints'=>[
+                        'locale'=>'en|fr',
+                    ],
+                ],
+            ],
+        ],
+    ],
+    'service_manager' => [
+        'factories' => [
+            'stockpilePdoMovedPages' => function($sm) {
+                return new \PDO(
+                    'mysql:host=localhost;dbname=dbName;',
+                    'username',
+                    'password',
+                    array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES \'UTF8\'')
+                );
+            },
+        ],
+    ],
+    'view_manager' => [
+        'template_path_stack' => [
+            // This is where you would put the file-system-page files
+            'FileSystemPage'=>dirname(__DIR__) . '/site',
+        ],
+    ],
+];

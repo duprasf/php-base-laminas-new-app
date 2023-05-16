@@ -1,0 +1,16 @@
+<?php
+namespace ExampleModuleWithUserAndApi;
+
+return [
+    'gc-notify-config'=>[
+        __NAMESPACE__=>[
+            'appName'=>__NAMESPACE__,
+            'apikey'=>'API key provided by GC Notify',
+            'templates'=>[
+                'templace-email1'=>'templateKeyFromGCNotify',
+                'template-email2'=>'templateKeyFromGCNotify',
+                'template-email3'=>'templateKeyFromGCNotify',
+            ],
+        ],
+    ],
+];

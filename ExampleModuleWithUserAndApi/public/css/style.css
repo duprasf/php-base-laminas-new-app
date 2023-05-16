@@ -1,0 +1,26 @@
+.isLoggedIn #kitten {
+    content: url("/example-module-with-user-and-api/img/kitten-sleeping.jpg")
+}
+li.green:before, li.red:before, li.gold:before {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1;
+    margin-right: 5px;
+}
+li.green:before {
+    color:#10B140;
+    content: "\e125";
+}
+li.red:before {
+    color:#BB1B09;
+    content: "\e014";
+}
+li.gold:before {
+    color:#EDF71D;
+    -webkit-text-stroke: 1px #000;
+    content: "\e006";
+}

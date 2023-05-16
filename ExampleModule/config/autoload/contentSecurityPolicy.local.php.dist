@@ -1,0 +1,28 @@
+<?php
+
+/**
+* @var service contentSecurityPolicy can be set if you have different sites from where you load
+* javascrtipt than the normal list
+*/
+return [
+    'service_manager' => [
+        'services'=>[
+            'contentSecurityPolicy' => "default-src 'self' ".implode(' ', [
+                "*.canada.ca",
+                "healthycanadians.gc.ca",
+                "canadiaensensante.gc.ca",
+                "code.jquery.com",
+                "ajax.googleapis.com",
+                "www.google-analytics.com",
+                "ssl.google-analytics.com",
+                "www.googletagmanager.com",
+                "*.googleapis.com",
+                "cse.google.com",
+                "fonts.gstatic.com",
+                "use.fontawesome.com",
+                "'unsafe-eval'",
+                "'unsafe-inline'",
+            ]),
+        ],
+    ],
+];

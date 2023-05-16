@@ -1,0 +1,69 @@
+<?php
+$this->metadata['title'] = $this->translate('Overwritten title of this page');
+$this->metadata['extra-js'] = '/js/basescript.js|/js/sprintf.min.js|/example-module-with-user-and-api/js/User.js|/example-module-with-user-and-api/js/script.js';
+$this->metadata['extra-css'] = '/example-module-with-user-and-api/css/style.css';
+?>
+<p><?=$this->translate('This is the index page of ExampleModuleWithUserAndApi');?></p>
+
+<div class="row">
+    <div class="col-md-6">
+        <section class="panel panel-primary">
+            <header class="panel-heading">
+                <h5 class="panel-title"><?=$this->translate('Login');?> (DB)</h5>
+            </header>
+            <div class="panel-body" id="dbContent">
+            </div>
+        </section>
+    </div>
+
+    <div class="col-md-6">
+        <section class="panel panel-primary">
+            <header class="panel-heading">
+                <h5 class="panel-title"><?=$this->translate('Login');?> (LDAP)</h5>
+            </header>
+            <div class="panel-body" id="ldapContent">
+            </div>
+        </section>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <section class="panel panel-primary">
+            <header class="panel-heading">
+                <h5 class="panel-title"><?=$this->translate('Image');?></h5>
+            </header>
+            <div class="panel-body">
+                <p><?=$this->translate('This image changes depending on login status using CSS');?></p>
+                <img class="img-rounded img-responsive" src="/example-module/img/cute-kitten-playing.jpg" id="kitten" alt="Cute Kitten Fighting">
+            </div>
+        </section>
+    </div>
+
+    <div class="col-md-6">
+        <section class="panel panel-primary">
+            <header class="panel-heading">
+                <h5 class="panel-title"><?=$this->translate('API Content');?></h5>
+            </header>
+            <div class="panel-body">
+                <p><?=$this->translate('The content below is received from the API. The call is made with the <abbr title="JavaScript Web Token">JWT</abbr> in the custom header <code>X-Access-Token</code>. The API then confirm the token is valid and not expired before prividing content. For this demo, if the user is not valid or not authenticated, 3 bullets will show up. If the user is logged in correctly, 8 bullets will show up.');?></p>
+                <ul id="content-list">
+                </ul>
+            </div>
+        </section>
+    </div>
+</div>
+
+<script>
+const strings={
+    'you are logged in':'<?=$this->translate('You are logged in as %s.');?>',
+    'logout':'<?=$this->translate('Logout');?>',
+    'You can use any email and the password is "test"':'<?=$this->translate('You can use any email and the password is "test"');?>',
+    'Email address':'<?=$this->translate('Email address');?>',
+    'required':'<?=$this->translate('required', 'layout');?>',
+    'Password':'<?=$this->translate('Password');?>',
+    'Remember me':'<?=$this->translate('Remember me');?>',
+    'Submit':'<?=$this->translate('Submit', 'layout');?>',
+    'Use your your Windows username (or email)/password':'<?=$this->translate('Use your your Windows username (or email)/password');?>'
+};
+</script>
