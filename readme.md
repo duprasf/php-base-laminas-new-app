@@ -514,6 +514,7 @@ The reason API are using JWT instead of session these days is that many API are 
 but they run on the cloud. Session can also be hijacked, but it is easier and safer to use JWT.
 
 How is a JWT safe? JWT is an industry standard https://datatracker.ietf.org/doc/html/rfc7519
-it encrypts the data using the 'JWT_SECRET' service as a salt (see ```ExampleModuleWithUserAndApi/config/autoload/user.local.php.dist```).
-The longer the more secure. It should also be set for each environment.
+it encrypts the data using the 'JWT_SECRET' taken from environment variable to use as a salt.
+The longer and the more random, the better. It should also be different for each environment.
+(if using the ./start command locally, you can change the variable in there)
 
