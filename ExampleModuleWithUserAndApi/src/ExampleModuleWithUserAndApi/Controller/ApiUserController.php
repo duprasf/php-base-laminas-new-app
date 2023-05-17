@@ -96,14 +96,12 @@ class ApiUserController extends AbstractRestfulController
             // a if() statement, if we pass the ->login() we are correctly logged in
             // you can do any other operation here before continuing
 
+            $this->response->setStatusCode(200);
             return $this->returnUserData($user, length:60, remember:!!$data['remember']);
 
         } catch(InvalidCredentialsException $e) {
             $this->response->setStatusCode(401);
             return new JsonModel(['error' => 'Invalid credentials']);
-        } catch(UserException $e) {
-            $this->response->setStatusCode(500);
-            return new JsonModel(['error'=>'Unknown error, please try again']);
         } catch(\Exception $e) {
             $this->response->setStatusCode(500);
             return new JsonModel(['error'=>'Unknown error, please try again']);

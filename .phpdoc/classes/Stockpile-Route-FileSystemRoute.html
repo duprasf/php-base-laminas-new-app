@@ -335,8 +335,9 @@ called 'FileSystemPage' and located in &quot;view_manager' =&gt; 'template_path_
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Stockpile-Route-FileSystemRoute.html#method_match">match()</a>
     <span>
-                                &nbsp;: mixed    </span>
+                                &nbsp;: <abbr title="\Laminas\Router\RouteMatch">RouteMatch</abbr>|null    </span>
 </dt>
+<dd>Try to find a sutable file for this path</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Stockpile-Route-FileSystemRoute.html#method_setConfig">setConfig()</a>
@@ -474,18 +475,25 @@ called 'FileSystemPage' and located in &quot;view_manager' =&gt; 'template_path_
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="base/module/Stockpile/src/Stockpile/Route/FileSystemRoute.php"><a href="files/base-module-stockpile-src-stockpile-route-filesystemroute.html"><abbr title="base/module/Stockpile/src/Stockpile/Route/FileSystemRoute.php">FileSystemRoute.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">34</span>
+    <span class="phpdocumentor-element-found-in__line">48</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Try to find a sutable file for this path</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">match</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><abbr title="\Laminas\Stdlib\RequestInterface">RequestInterface</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$request</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$pathOffset</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">match</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><abbr title="\Laminas\Stdlib\RequestInterface">RequestInterface</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$request</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$pathOffset</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><abbr title="\Laminas\Router\RouteMatch">RouteMatch</abbr>|null</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
-    
+        <section class="phpdocumentor-description"><p>Returns the first found out of ($lang = 'en'/'fr', $lang3 = 'eng'/'fra')
+$path-$lang.phtml, $path/index-$lang.phtml,
+$path-$lang3.phtml, $path/index-$lang3.phtml,
+$path-$lang.php, $path/index-$lang.php,
+$path-$lang3.php, $path/index-$lang3.php</p>
+</section>
+
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
@@ -506,7 +514,11 @@ called 'FileSystemPage' and located in &quot;view_manager' =&gt; 'template_path_
 
     
 
-    
+            <section>
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type"><abbr title="\Laminas\Router\RouteMatch">RouteMatch</abbr>|null</span>
+            </section>
+
 </article>
                     <article
         class="phpdocumentor-element

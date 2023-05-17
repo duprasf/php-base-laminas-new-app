@@ -472,3 +472,48 @@ You can also use the "by" keyword to change the step increment
 #### Javascript
 The gulp script will also take any JavaScript files located in ```/apps/*/source/js/```, combine them
 into ```/apps/*/public/js/script.js``` and ```/apps/*/public/js/script.min.js```
+
+### API
+You will find an example of how to use Restful API using Laminas in the ```ExampleModuleWithUserAndApi```
+The most important part is the controller, extending AbstractRestfulController will allow method
+called based on HTTP Verb and route parameters. You can look at [the laminas documentation](https://docs.laminas.dev/laminas-mvc/controllers/#abstractrestfulcontroller)
+to learn which method is called when and which is the most appropriate HTTP status code
+to return under which circonstances. For example, a simple GET request, will be sent to the method
+```getList()``` or ```get()``` if an 'id' is specified in the route, a POST request,
+will be sent to ```create()```. These calls should be initiated in JavaScript since
+they are, after all, for an API. The data received and returned should be in JSON format.
+
+The JavaScript used in this example to login a user can be found in ```ExampleModuleWithUserAndApi/public/js/script.js```.
+I hope the comments are enough for anyoneto understand the logic, but basically when a
+user fill the login fields (let say for the DB), the ```loginDb()``` is called. A POST request is then sent
+to ```/en/my-app-with-user/api/v1/user``` with the username and password as the post data. This should,
+in prod, be done over HTTPS but for our learning example, it does not matter.
+
+The server can return status code 200 if successful, 401 if credentials are wrong
+and 500 for any other reasons. If successful, a Javascript Web Token (JWT) is received and
+passed to ```user.handleLogin()``` from the ```ExampleModuleWithUserAndApi/public/js/User.js```.
+This token is stored in LocalStorage if the user requested to be remembered, or the SessionStorage
+otherwise.
+
+A timeout is also set to the length of the JWT that will trigger a "jwt-expired" event.
+The "application", in this example in the script.js, will listen to this event and log the user out.
+
+When subsequent request are made to the API, the JWT should be sent to identify the user. In this example,
+the JWT is sent as a header called "X-Access-Token", any header starting with "X-" is understood to be
+a custom header. The API then use this JWT to log the user back in.
+
+You can see this in action in the ```ApiContentController``` (located in ```ExampleModuleWithUserAndApi/src/ExampleModuleWithUserAndApi/Controller```).
+The request sends a GET verb with the custom header "X-Access-Token". Since there is no 'id' defined,
+the request will be sent to ```getList()```, the JWT is taken from the header and passed to the
+user object. Depending on the implementation, the JWT can contains any number of information, but should always
+have at least a way to identify the user. In the User (DB) example, the information contained are all
+the information from the fake DB (email, userId and status) with some extra debug data added (see [User class](https://github.hc-sc.gc.ca/hs/php-base-laminas-new-app/blob/master/ExampleModuleWithUserAndApi/src/ExampleModuleWithUserAndApi/Model/User.php#L151)).
+So to reload the user, we just take this data and populate the user with it.
+
+The reason API are using JWT instead of session these days is that many API are not run on a single server
+but they run on the cloud. Session can also be hijacked, but it is easier and safer to use JWT.
+
+How is a JWT safe? JWT is an industry standard https://datatracker.ietf.org/doc/html/rfc7519
+it encrypts the data using the 'JWT_SECRET' service as a salt (see ```ExampleModuleWithUserAndApi/config/autoload/user.local.php.dist```).
+The longer the more secure. It should also be set for each environment.
+

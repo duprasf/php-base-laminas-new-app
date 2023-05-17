@@ -1268,7 +1268,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Stockpile\\Route\\FileSystemRoute\u003A\u003Amatch\u0028\u0029",
             "name": "match",
-            "summary": "",
+            "summary": "Try\u0020to\u0020find\u0020a\u0020sutable\u0020file\u0020for\u0020this\u0020path",
             "url": "classes/Stockpile-Route-FileSystemRoute.html#method_match"
         },                {
             "fqsen": "\\Stockpile\\Route\\FileSystemRoute\u003A\u003A\u0024config",
@@ -1278,7 +1278,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Stockpile\\Route\\MovedPageRoute",
             "name": "MovedPageRoute",
-            "summary": "",
+            "summary": "This\u0020route\u0020will\u0020look\u0020into\u0020a\u0020DB\u0020for\u0020pages\u0020that\u0020were\u0020moved.\u0020This\u0020can\u0020also\u0020be\u0020used\u0020as\u0020a\u0020URL\u0020shortner.",
             "url": "classes/Stockpile-Route-MovedPageRoute.html"
         },                {
             "fqsen": "\\Stockpile\\Route\\MovedPageRoute\u003A\u003AsetMovedPageObj\u0028\u0029",
@@ -1298,7 +1298,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Stockpile\\Route\\MovedPageRoute\u003A\u003Amatch\u0028\u0029",
             "name": "match",
-            "summary": "",
+            "summary": "Try\u0020to\u0020match\u0020the\u0020requested\u0020page\u0020using\u0020the\u0020MovedPageObj",
             "url": "classes/Stockpile-Route-MovedPageRoute.html#method_match"
         },                {
             "fqsen": "\\Stockpile\\Route\\MovedPageRoute\u003A\u003A\u0024movedPageObj",

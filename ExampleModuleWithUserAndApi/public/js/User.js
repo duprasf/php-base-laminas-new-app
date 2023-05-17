@@ -3,7 +3,7 @@
 */
 class User {
     /**
-    * return true if logged in and false if not logged in or if the JWT expired
+    * @return bool, true if logged in and false if not logged in or if the JWT expired
     */
     get isLoggedIn() {
         if(!this.getJwt()) {
