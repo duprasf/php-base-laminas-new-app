@@ -1,6 +1,10 @@
 # New Laminas Application
 
-## Basic setup
+## Building a new application
+If your goal is to start a new application, you should follow these steps. If you goal is
+only to test the functionnalities included in the HC flavour of the Laminas framework, you should
+jump to the [Functionalities](#functionalities) section.
+
 Rename the main folder ```ExampleModule``` and ```src/ExampleModule``` to the name
 of your application. The standard naming convention for a module name is to
 start with an upper case letter and follow the camelCase format.
@@ -11,36 +15,77 @@ Each uppercase letter becomes a dash followed by the letter, ex: ExampleModule
 would become example-module and ExOfAModule would become ex-of-a-module.
 
 Next you can do a search and replace within all the files for ```ExampleModule```
-and replace it with your module name.
+and replace it with your module name. Your module name needs to be written the
+same exact way you named your folder.
+
+Some of the example loads files using the ```example-module``` name. If you are
+keeping the content, you will also need to do a search and replace for ```example-module``` to
+```{your-app-name}``` in the view files (located in the ```view/{your-module-name}```)
 
 Place your module folder (ExampleModule, now renamed to your app name) in the
 ```/var/www/apps``` folder of the laminas container (with ```COPY``` in prod or
 as a volume during development). If everything was done properly, your application
 should show up in your browser.
 
-Remember to change the route in ```/config/module.config.php``` the route for the
+Remember to change the route in ```/config/module.config.php```, the route for the
 ExampleModule is currently ```/en/my-app```
 
-## User and API
-I included a much bigger example in the module ```ExampleModuleWithUserAndApi```.
-As the name suggest, I added an example of API and using the UserAuth module.
-Both are described in more details below. you can test this module on ```/en/my-app-with-user```
+## Functionalities
+This readme should help you get started, but this was designed for developers, you
+will NEED to look and play in the code. Both ```ExampleModule``` and ```ExampleModuleWithUserAndApi```
+are meant to be starting point for you to learn how to build modules in Laminas.
 
-## Development Environment
+The module called ```ExampleModule``` is ver, very basic and is meant mostly to
+be a placeholder that will be renamed as as starting point for your own module(s).
+The extended example called ```ExampleModuleWithUserAndApi``` has different controller,
+modele and even javascript to show how you can build a Restful API with authentication.
+You can use this as starting point for your application, but it might require more
+modification not listed in the [Building a new application](#building-a-new-application)
+section. Once you have a working version (see below), the start page for this extended
+example is ```/en/my-app-with-user```.
+
+You will find a Linux "start" executable script in the root of this repo to start a new
+docker container. This new container is called 'LaminasExample' and activate both example
+modules. The framework was configured to load all modules located in the apps/ folder.
+The start script creates volumes from the working directory ```ExampleModule```
+and ```ExampleModuleWithUserAndApi``` into the apps folder. This means that when you change
+a file in the working directory, you will see the change when you reload the page.
+If you create your own module, you will have to edit the start script to include your new
+module as well.
+
+If you are not using docker on your local VM... you should. You can install docker on a
+Windows machine but I know the process is not perfect and will most likely not be compatible
+with the script I created as an example. The easiest solution is just to install a small
+Linux VM, then install git and DockerCE on it. You can then use your Windows VM if your prefered
+IDE is not available on Linux but still have docker container running the same solution
+that will be running when in the cloud. Most IDE has a feature to connect to a
+Linux VM using sFTP and edit your files there. Even in Notepad++, you can enable the NppFTP plugin and
+edit file directly on the server if you don't like to upload.
+
+In PhpED, I have local file on my Windows VM, once I made some change, I upload them to the Linux VM
+directly from the IDE (changed the keybind so ctrl-shift-S will save and upload).
+Then I go to my browser and refresh. Very simple. I even created an entry in my hosts file that
+points a domain called 'localdev.hc-sc.gc.ca' that points to my Linux VM.
+
+If you really don't want to use docker, you can download the content of the 'code' folder
+from https://github.hc-sc.gc.ca/hs/php-base-laminas into your web server folder. Only the
+folder 'public' should be browser accessible. You might need to install PHP modules to get
+everything to work since a lot went into building the docker image. You can see all the
+PHP modules that were installed in the dockerfile in the (php-base-docker repo)[https://github.hc-sc.gc.ca/hs/php-base-docker/blob/master/dockerfile].
+Once you have the basic setup, you can copy the example modules in the apps/ folder.
+
+### Development Environment
 In development environment you can set the environment variable "PHP_DEV_ENV"
-to 1, this will display the errors and disabled the config cache.
-```
-docker run -d --name laminas -p 80:80 \
-    -e PHP_DEV_ENV=1 \
-    jack.hc-sc.gc.ca/php/php-base-laminas:latest
-```
+to 1, this will display the errors and disabled the config cache. In docker,
+you can do this in the docker run command by adding ```-e PHP_DEV_ENV=1```
+(should already by set to 1 in the start script).
 
-## Full documentation
+### Full documentation
 You can find the full documentation of each module/class from this framework and
-example modules in .phpdoc/index.html
-
-## Extra modules
-A number of modules were developed to help speed up the development of applications
+example modules in (.phpdoc/index.html). This documentation was generated by the
+[phpDocumentor](https://phpdoc.org/) project. If you use the PHPDoc format in your code,
+you will be able to generate something similar for your own projects (not that it is
+useful if you are not building code for others to use).
 
 ### UserAuth
 The UserAuth module is a basic authentication module. It is enabled by default, you can
@@ -118,7 +163,108 @@ ALTER TABLE `userAudit`
 COMMIT;
 ```
 
-### Stockpile
+### API
+You will find an example of how to use Restful API using Laminas in the ```ExampleModuleWithUserAndApi```
+The most important part is the controller, extending AbstractRestfulController will allow method
+called based on HTTP Verb and route parameters. You can look at [the laminas documentation](https://docs.laminas.dev/laminas-mvc/controllers/#abstractrestfulcontroller)
+to learn which method is called when and which is the most appropriate HTTP status code
+to return under which circonstances. For example, a simple GET request, will be sent to the method
+```getList()``` or ```get()``` if an 'id' is specified in the route, a POST request,
+will be sent to ```create()```. These calls should be initiated in JavaScript since
+they are, after all, for an API. The data received and returned should be in JSON format.
+
+The JavaScript used in this example to login a user can be found in ```ExampleModuleWithUserAndApi/public/js/script.js```.
+I hope the comments are enough for anyoneto understand the logic, but basically when a
+user fill the login fields (let say for the DB), the ```loginDb()``` is called. A POST request is then sent
+to ```/en/my-app-with-user/api/v1/user``` with the username and password as the post data. This should,
+in prod, be done over HTTPS but for our learning example, it does not matter.
+
+The server can return status code 200 if successful, 401 if credentials are wrong
+and 500 for any other reasons. If successful, a Javascript Web Token (JWT) is received and
+passed to ```user.handleLogin()``` from the ```ExampleModuleWithUserAndApi/public/js/User.js```.
+This token is stored in LocalStorage if the user requested to be remembered, or the SessionStorage
+otherwise.
+
+A timeout is also set to the length of the JWT that will trigger a "jwt-expired" event.
+The "application", in this example in the script.js, will listen to this event and log the user out.
+
+When subsequent request are made to the API, the JWT should be sent to identify the user. In this example,
+the JWT is sent as a header called "X-Access-Token", any header starting with "X-" is understood to be
+a custom header. The API then use this JWT to log the user back in.
+
+You can see this in action in the ```ApiContentController``` (located in ```ExampleModuleWithUserAndApi/src/ExampleModuleWithUserAndApi/Controller```).
+The request sends a GET verb with the custom header "X-Access-Token". Since there is no 'id' defined,
+the request will be sent to ```getList()```, the JWT is taken from the header and passed to the
+user object. Depending on the implementation, the JWT can contains any number of information, but should always
+have at least a way to identify the user. In the User (DB) example, the information contained are all
+the information from the fake DB (email, userId and status) with some extra debug data added (see [User class](https://github.hc-sc.gc.ca/hs/php-base-laminas-new-app/blob/master/ExampleModuleWithUserAndApi/src/ExampleModuleWithUserAndApi/Model/User.php#L151)).
+So to reload the user, we just take this data and populate the user with it.
+
+The reason API are using JWT instead of session these days is that many API are not run on a single server
+but they run on the cloud. Session can also be hijacked, but it is easier and safer to use JWT.
+
+How is a JWT safe? JWT is an industry standard https://datatracker.ietf.org/doc/html/rfc7519
+it encrypts the data using the 'JWT_SECRET' taken from environment variable to use as a salt.
+The longer and the more random, the better. It should also be different for each environment.
+(if using the ./start command locally, you can change the variable in there)
+
+### GC Notify
+GC Notify is easily implement in the new application since the building blocks
+are already added to the php-base-laminas image. All that is required is
+to add the configuration. You can find the configuration example in the folder
+/ExampleModule/config/autoload/gc-notify.local.php. The code looks like this
+```php
+<?php
+namespace ExampleModule;
+
+return [
+    'gc-notify-config'=>[
+        __NAMESPACE__=>[
+            'appName'=>__NAMESPACE__,
+            'apikey'=>'API key provided by GC Notify',
+            'templates'=>[
+                'email1'=>'templateKeyFromGCNotify',
+                'email2'=>'templateKeyFromGCNotify',
+                'email3'=>'templateKeyFromGCNotify',
+            ],
+        ],
+    ],
+];
+```
+By default, the GcNotify object is passed to the IndexController, if you have
+the configuration set, your values will be passed to the GcNotify object. This
+is done by the IndexController, but of course if you change this factory, the
+GcNotify might not be sent to the controller.
+
+To use the GcNotify, just use something like the code below, (**you should not
+display errors unless you are in a dev environment**)
+```php
+$result = $notify->sendEmail(
+    'hc.imsd.web-dsgi.sc@canada.ca', // recipient of the email
+    $gc-notify-email-template, // template ID from GC Notify
+    array('varInTemplate'=>'value'), // needs to have ALL variable from the template
+    $config['gc-notify-error-api'] // API Key if different than the default one set by default
+);
+
+if(!$result && getenv('PHP_DEV_ENV')) {
+    $error = json_decode($notify->lastPage, true);
+    print 'The error message is: '.$error['errors'][0]['message'];
+    print 'The last status from GcNotify was : '.$notify->lastStatus;
+
+}
+```
+
+### Public Assets (images, css, js)
+In the example modules provided, the configuration is already set to allow js, css, jpg, jpeg, png,
+gif and svg to be served from the ```/public/``` folder in the module. If an
+asset has the same name as set by another module, only one will be served
+(determined by the loading order of the modules). You can prefix the path of
+the asset with the name of the module, for example you can use
+```/img/cute-kitten-playing.jpg``` or ```/example-module/img/cute-kitten-playing.jpg```.
+If you want to add/remove file type that the server can serve, you can modify the
+```{yourAppName}/config/autoload/public-asset.global.php```
+
+## Stockpile
 Stockpile was a content management system I created a while back. One of the
 functionality was to load file from filesystem. This is the functionality that
 was implemented in this framework. It allows pages to be created very quickly,
@@ -244,61 +390,6 @@ $this->metadata['modified']='2022-08-13';
 Content of the stockpile test page
 ```
 
-### GC Notify
-GC Notify is easily implement in the new application since the building blocks
-are already added to the php-base-laminas image. All that is required is
-to add the configuration. You can find the configuration example in the folder
-/ExampleModule/config/autoload/gc-notify.local.php. The code looks like this
-```php
-<?php
-namespace ExampleModule;
-
-return [
-    'gc-notify-config'=>[
-        __NAMESPACE__=>[
-            'appName'=>__NAMESPACE__,
-            'apikey'=>'API key provided by GC Notify',
-            'templates'=>[
-                'email1'=>'templateKeyFromGCNotify',
-                'email2'=>'templateKeyFromGCNotify',
-                'email3'=>'templateKeyFromGCNotify',
-            ],
-        ],
-    ],
-];
-```
-By default, the GcNotify object is passed to the IndexController, if you have
-the configuration set, your values will be passed to the GcNotify object. This
-is done by the IndexController, but of course if you change this factory, the
-GcNotify might not be sent to the controller.
-
-To use the GcNotify, just use something like the code below
-```php
-$result = $notify->sendEmail(
-    'hc.imsd.web-dsgi.sc@canada.ca', // recipient of the email
-    $gc-notify-email-template, // template ID from GC Notify
-    array('varInTemplate'=>'value'), // needs to have ALL variable from the template
-    $config['gc-notify-error-api'] // API Key if different than the default one set by default
-);
-
-if(!$result) {
-    $error = json_decode($notify->lastPage, true);
-    print 'The error message is: '.$error['errors'][0]['message'];
-    print 'The last status from GcNotify was : '.$notify->lastStatus;
-
-}
-```
-
-### Public Assets (images, css, js)
-By default, the configuration is already set to allow js, css, jpg, jpeg, png,
-gif and svg to be served from the ```/public/``` folder in the module. If an
-asset has the same name as set by another module, only one will be served
-(determined by the loading order of the modules). You can prefix the path of
-the asset with the name of the module, for example you can use
-```/img/cute-kitten-playing.jpg``` or ```/example-module/img/cute-kitten-playing.jpg```.
-If you want to add/remove file type that the server can serve, you can modify the
-```[your-module]/config/autoload/public-asset.global.php```
-
 ## Extract translation strings into a .po file
 You can easily extract all the strings that can be translated from your module
 using the TranslationExtractor module. This operation is performed from inside
@@ -332,10 +423,10 @@ directory).
 ./translation-extract AppContainer apps/AppName output.po
 ```
 
-### PostCSS and JavaScript processing with Gulp
+## PostCSS and JavaScript processing with Gulp
 A gulp script runs on the Laminas container that will process PostCSS and merge/compress JavaScript.
 
-#### PostCSS
+### PostCSS
 The entry file is set as ```/apps/*/source/postcss/main.pcss``` (see https://github.hc-sc.gc.ca/hs/php-base-laminas/blob/master/code/gulpfile.js).
 This will compile any file you @import in the main and output in ```/apps/*/public/css```.
 The script also watches for any change in ```/apps/*/source/postcss/*.pcss``` and execute
@@ -469,52 +560,6 @@ You can also use the "by" keyword to change the step increment
 }
 ```
 
-#### Javascript
+### Javascript
 The gulp script will also take any JavaScript files located in ```/apps/*/source/js/```, combine them
 into ```/apps/*/public/js/script.js``` and ```/apps/*/public/js/script.min.js```
-
-### API
-You will find an example of how to use Restful API using Laminas in the ```ExampleModuleWithUserAndApi```
-The most important part is the controller, extending AbstractRestfulController will allow method
-called based on HTTP Verb and route parameters. You can look at [the laminas documentation](https://docs.laminas.dev/laminas-mvc/controllers/#abstractrestfulcontroller)
-to learn which method is called when and which is the most appropriate HTTP status code
-to return under which circonstances. For example, a simple GET request, will be sent to the method
-```getList()``` or ```get()``` if an 'id' is specified in the route, a POST request,
-will be sent to ```create()```. These calls should be initiated in JavaScript since
-they are, after all, for an API. The data received and returned should be in JSON format.
-
-The JavaScript used in this example to login a user can be found in ```ExampleModuleWithUserAndApi/public/js/script.js```.
-I hope the comments are enough for anyoneto understand the logic, but basically when a
-user fill the login fields (let say for the DB), the ```loginDb()``` is called. A POST request is then sent
-to ```/en/my-app-with-user/api/v1/user``` with the username and password as the post data. This should,
-in prod, be done over HTTPS but for our learning example, it does not matter.
-
-The server can return status code 200 if successful, 401 if credentials are wrong
-and 500 for any other reasons. If successful, a Javascript Web Token (JWT) is received and
-passed to ```user.handleLogin()``` from the ```ExampleModuleWithUserAndApi/public/js/User.js```.
-This token is stored in LocalStorage if the user requested to be remembered, or the SessionStorage
-otherwise.
-
-A timeout is also set to the length of the JWT that will trigger a "jwt-expired" event.
-The "application", in this example in the script.js, will listen to this event and log the user out.
-
-When subsequent request are made to the API, the JWT should be sent to identify the user. In this example,
-the JWT is sent as a header called "X-Access-Token", any header starting with "X-" is understood to be
-a custom header. The API then use this JWT to log the user back in.
-
-You can see this in action in the ```ApiContentController``` (located in ```ExampleModuleWithUserAndApi/src/ExampleModuleWithUserAndApi/Controller```).
-The request sends a GET verb with the custom header "X-Access-Token". Since there is no 'id' defined,
-the request will be sent to ```getList()```, the JWT is taken from the header and passed to the
-user object. Depending on the implementation, the JWT can contains any number of information, but should always
-have at least a way to identify the user. In the User (DB) example, the information contained are all
-the information from the fake DB (email, userId and status) with some extra debug data added (see [User class](https://github.hc-sc.gc.ca/hs/php-base-laminas-new-app/blob/master/ExampleModuleWithUserAndApi/src/ExampleModuleWithUserAndApi/Model/User.php#L151)).
-So to reload the user, we just take this data and populate the user with it.
-
-The reason API are using JWT instead of session these days is that many API are not run on a single server
-but they run on the cloud. Session can also be hijacked, but it is easier and safer to use JWT.
-
-How is a JWT safe? JWT is an industry standard https://datatracker.ietf.org/doc/html/rfc7519
-it encrypts the data using the 'JWT_SECRET' taken from environment variable to use as a salt.
-The longer and the more random, the better. It should also be different for each environment.
-(if using the ./start command locally, you can change the variable in there)
-
