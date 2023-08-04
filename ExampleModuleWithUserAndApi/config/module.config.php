@@ -5,7 +5,6 @@ namespace ExampleModuleWithUserAndApi;
 
 use Laminas\Router\Http\Literal;
 use Laminas\Router\Http\Segment;
-use Laminas\ServiceManager\Factory\InvokableFactory;
 use UserAuth\Factory\GetJwtDataFactory;
 
 return [

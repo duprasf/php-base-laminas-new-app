@@ -4,13 +4,28 @@ docker stop LaminasExample
 docker rm LaminasExample
 docker pull jack.hc-sc.gc.ca/php/php-base-laminas:latest
 
+TRAEFIK_RULE='Host(`localdev.hc-sc.gc.ca`)&&(!PathPrefix(`/en/survey/`)&&!PathPrefix(`/fr/sondage/`))'
+TRAEFIK_TLS_MAIN_DOMAIN=localdev.hc-sc.gc.ca
+TRAEFIK_TLS_SANS_DOMAIN=localdev.hc-sc.gc.ca
+
 docker run -d --name LaminasExample \
     -v /etc/localtime:/etc/localtime:ro \
     --restart unless-stopped \
-    -p 80:80 \
+    --network=appnet \
     -e PHP_DEV_ENV=1 \
     -e LAMINAS_ROOT_PATH="/var/www" \
+    --label traefik.enable=true \
+    --label traefik.http.routers.LaminasExample.rule=$TRAEFIK_RULE \
+    --label traefik.http.routers.LaminasExample.entrypoints=websecure \
+    --label traefik.http.routers.LaminasExample.tls=true \
+    --label traefik.http.routers.LaminasExample.tls.domains[0].main=$TRAEFIK_TLS_MAIN_DOMAIN \
+    --label traefik.http.routers.LaminasExample.tls.domains[0].sans=$TRAEFIK_TLS_SANS_DOMAIN \
+    --label traefik.http.routers.LaminasExample_http.rule=$TRAEFIK_RULE \
+    --label traefik.http.routers.LaminasExample_http.entrypoints=web \
     -e JWT_SECRET="PLEASE CHANGE ME! Secret salt for the JWT. The longer the more secure. Should be unique for each environment. UzacJwlFjGNTB1j9NYrVBVku2t7vAAyTQYrkt9u9fIu5G75lvMz9L7Dw6stA4nLPVrpIRd3yf4s8pHvJFDEiJw4I1NkkgngUE5GkSqHpKycrN7J58nd9DdhUqsj6zTWRwCqpRyJdiCcgvq9BHKYMgrfSTLbqTjLzSsUzHeSl6OljhgttLYlSqrxbr3l12honWHiobNmMrBGvPfhWLH2GtXmc73X6OWqgIUmRp5Dn8jf95IgoRqoJjQFrv7rKB8ZBKMMWvtaXmBVlVyFKyUfDX8homxj1jDoFF3IJDWh8tsrQ" \
     -v $PWD/ExampleModule:/var/www/apps/ExampleModule \
     -v $PWD/ExampleModuleWithUserAndApi:/var/www/apps/ExampleModuleWithUserAndApi \
+    -v /docker/php-base-laminas/code/module:/var/www/module \
+    -v /docker/php-base-laminas/code/config:/var/www/config \
+    -v /docker/php-base-laminas/code/module:/var/www/module \
     jack.hc-sc.gc.ca/php/php-base-laminas:latest

@@ -97,7 +97,9 @@ class ApiUserController extends AbstractRestfulController
             // you can do any other operation here before continuing
 
             $this->response->setStatusCode(200);
-            return $this->returnUserData($user, length:60, remember:!!$data['remember']);
+            // length is the number of seconds the JWT will be valid.
+            // 86400 = 24 hours, which is the default is length param is not provided
+            return $this->returnUserData($user, length:86400, remember:!!$data['remember']);
 
         } catch(InvalidCredentialsException $e) {
             $this->response->setStatusCode(401);

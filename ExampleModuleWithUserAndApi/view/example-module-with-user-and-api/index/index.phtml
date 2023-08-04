@@ -5,6 +5,7 @@ $this->metadata['extra-css'] = '/example-module-with-user-and-api/css/style.css'
 ?>
 <p><?=$this->translate('This is the index page of ExampleModuleWithUserAndApi');?></p>
 
+<button id="oauth2" class="btn btn-default">OAuth 2 Login</button>
 <div class="row">
     <div class="col-md-6">
         <section class="panel panel-primary">
@@ -66,4 +67,10 @@ const strings={
     'Submit':'<?=$this->translate('Submit', 'layout');?>',
     'Use your your Windows username (or email)/password':'<?=$this->translate('Use your your Windows username (or email)/password');?>'
 };
+
+ready(()=>{
+    laminas.oauth2.register(document.querySelector("#oauth2"), {
+        "method":"ldap",
+    });
+});
 </script>
