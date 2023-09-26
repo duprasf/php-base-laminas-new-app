@@ -1,6 +1,7 @@
 <?php
 namespace ExampleModuleWithUserAndApi;
 
+use Laminas\Stdlib\ArrayUtils;
 use Laminas\ModuleManager\Feature\ConfigProviderInterface;
 
 class Module implements ConfigProviderInterface
@@ -10,7 +11,7 @@ class Module implements ConfigProviderInterface
         $config = include __DIR__ . '/config/module.config.php';
         foreach(glob(__DIR__ . '/config/autoload/{,*.}{global,local}.php', GLOB_BRACE) as $file) {
             if(is_readable($file)) {
-                $config = array_merge_recursive($config, include($file));
+                $config = ArrayUtils::merge($config, include($file));
             }
         }
         return $config;

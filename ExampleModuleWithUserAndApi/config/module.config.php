@@ -35,6 +35,7 @@ return [
                             'defaults' => [
                                 'controller' => Controller\IndexController::class,
                                 'action'     => 'index',
+                                'token'      => '',
                             ],
                         ],
                         'may_terminate' => true,
@@ -106,6 +107,19 @@ return [
                                     'defaults' => [
                                         'controller' => Controller\WithSessionController::class,
                                         'action'     => 'index',
+                                    ],
+                                ],
+                                'may_terminate' => true,
+                                'child_routes'=>[
+                                ],
+                            ],
+                            'oauth-return'=>[
+                                'type'    => Segment::class,
+                                'options' => [
+                                    'route'    => '/{return}',
+                                    'defaults' => [
+                                        'controller' => Controller\IndexController::class,
+                                        'action'     => 'return',
                                     ],
                                 ],
                                 'may_terminate' => true,

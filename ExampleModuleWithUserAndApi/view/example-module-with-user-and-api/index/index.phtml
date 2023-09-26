@@ -69,8 +69,17 @@ const strings={
 };
 
 ready(()=>{
-    laminas.oauth2.register(document.querySelector("#oauth2"), {
-        "method":"ldap",
-    });
+    laminas.oauth2.register(
+        document.querySelector("#oauth2"),
+        {
+            "method":"local-dev",
+            "state":JSON.stringify({
+                /*
+                "controller":'\\ExampleModuleWithUserAndApi\\Controller\\Index',
+                "params":{"action":"return","param1":"test", "param2":true}
+                /**/
+            })
+        }
+    );
 });
 </script>

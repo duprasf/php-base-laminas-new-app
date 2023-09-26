@@ -35,7 +35,7 @@ class UserLdap extends LdapUser
     * @param int $time, the length of time the JWT will be valid. It should not change anything, but just in case...
     * @return array, the data you want to send to client as part of the JWT
     */
-    protected function getDataForJWT($time) : array
+    public function getDataForJWT(int $time=86400) : array
     {
 
         $payload = parent::getDataForJWT($time);

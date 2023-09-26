@@ -13,6 +13,16 @@ class IndexController extends AbstractActionController
     public function indexAction()
     {
         $view = $this->_setCommonMetadata(new ViewModel());
+        $view->setVariable('token', $this->params()->fromRoute('token'));
+        return $view;
+    }
+
+    public function returnAction()
+    {
+        $view = new ViewModel();
+        $view->setTerminal(true);
+        $view->setVariable('token', $this->params()->fromRoute('token'));
+
         return $view;
     }
 

@@ -86,7 +86,6 @@ class ApiContentController extends AbstractRestfulController
                 $user->loadFromJwt($jwt);
             } catch (\Exception $e) {
             }
-
             // do something... get a list of entries or something
             $entries = [
                 ['name'=>'first item', 'category'=>'green'],
