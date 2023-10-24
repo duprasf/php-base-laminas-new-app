@@ -13,6 +13,7 @@ return [
                 "canadiaensensante.gc.ca",
                 "code.jquery.com",
                 "ajax.googleapis.com",
+                "assets.adobedtm.com",
                 "www.google-analytics.com",
                 "ssl.google-analytics.com",
                 "www.googletagmanager.com",

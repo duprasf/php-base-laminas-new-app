@@ -30,6 +30,12 @@ should show up in your browser.
 Remember to change the route in ```/config/module.config.php```, the route for the
 ExampleModule is currently ```/en/my-app```
 
+## Variable
+- ANALYTICS_USE_ADOBE_WITH_PERSONAL_INFORMATION if true, the Adobe Analytics code will be added to the page. This script if required if your application gather personal information from the user.
+- ANALYTICS_USE_ADOBE if true, will include the general code for Adobe Analytics.
+- ANALYTICS_GA_ID your Google Analytics ID (should look like G-VEFXXXXXXX)
+- LAMINAS_LOAD_MODULES here you can pass a JSON array of modules that the site should load. Ex: '["GcDirectory"]'
+
 ## Functionalities
 This readme should help you get started, but this was designed for developers, you
 will NEED to look and play in the code. Both ```ExampleModule``` and ```ExampleModuleWithUserAndApi```
