@@ -35,6 +35,9 @@ ExampleModule is currently ```/en/my-app```
 - ANALYTICS_USE_ADOBE if true, will include the general code for Adobe Analytics.
 - ANALYTICS_GA_ID your Google Analytics ID (should look like G-VEFXXXXXXX)
 - LAMINAS_LOAD_MODULES here you can pass a JSON array of modules that the site should load. Ex: '["GcDirectory"]'
+- JWT_SECRET a long string of random characters that is used as the salt for your JSON web token used for user identification (required only if you have user authetification)
+More variables are supported by PHP Base. You can found them in the [PHP base image](https://github.hc-sc.gc.ca/hs/php-base-docker#params) documentation.
+It is recommended that you do not change those values unlessyou have a good reason to do so.
 
 ## Functionalities
 This readme should help you get started, but this was designed for developers, you
@@ -50,15 +53,20 @@ modification not listed in the [Building a new application](#building-a-new-appl
 section. Once you have a working version (see below), the start page for this extended
 example is ```/en/my-app-with-user```.
 
+### Local development environment
 You will find a Linux "start" executable script in the root of this repo to start a new
-docker container. This new container is called 'LaminasExample' and activate both example
-modules. The framework was configured to load all modules located in the apps/ folder.
-The start script creates volumes from the working directory ```ExampleModule```
-and ```ExampleModuleWithUserAndApi``` into the apps folder. This means that when you change
-a file in the working directory, you will see the change when you reload the page.
-If you create your own module, you will have to edit the start script to include your new
-module as well.
+docker container. This script might not be executable by default, so you might need to
+rung ```chmod 775 start``` to make it executable.
 
+When executing this script a new container called 'LaminasExample' will be created. It will
+have both example modules already "installed". The framework was configured to load all
+modules located in the apps/ folder. The start script creates volumes from the working
+directory ```ExampleModule``` and ```ExampleModuleWithUserAndApi``` into the apps folder.
+This means that when you change a file in the working directory, you will see the change
+when you reload the page. If you create your own module, you will have to edit the start
+script to include your new module as well.
+
+<details><summary>Read this if you don't have docker installed</summary>
 If you are not using docker on your local VM... you should. You can install docker on a
 Windows machine but I know the process is not perfect and will most likely not be compatible
 with the script I created as an example. The easiest solution is just to install a small
@@ -79,12 +87,34 @@ folder 'public' should be browser accessible. You might need to install PHP modu
 everything to work since a lot went into building the docker image. You can see all the
 PHP modules that were installed in the dockerfile in the (php-base-docker repo)[https://github.hc-sc.gc.ca/hs/php-base-docker/blob/master/dockerfile].
 Once you have the basic setup, you can copy the example modules in the apps/ folder.
+</details>
 
-### Development Environment
-In development environment you can set the environment variable "PHP_DEV_ENV"
-to 1, this will display the errors and disabled the config cache. In docker,
-you can do this in the docker run command by adding ```-e PHP_DEV_ENV=1```
-(should already by set to 1 in the start script).
+#### Flags
+The start script supports a few flags. You can use the ```-h``` flag to see the list of flags
+available to the script if you forgot. This list is as follow:
+* -k|--traefik: Tell the script that you are using traefik. You can also specify a different domain
+if you wish.
+* -e|--env-file: Specify that you wish to use a different environment file then the
+default one (which is $PWD/environment/app.env)
+
+#### Environment file
+The docker script will be looking for a environment file that sets up the environment variables
+for the container. In the repo you should have a /environment/app.env.dist file that you should
+copy to /environment/app.env (so ```cp environment/app.env.dist environment/app.env```)
+
+That file is a list of all environment variables to be set in your container.
+
+In a development environment you can set the environment variable "PHP_DEV_ENV"
+to 1. This will display the errors and disabled the OP cache.
+
+In the default file, you will also find LAMINAS_ROOT_PATH which define the root path of laminas
+and should not be changed.
+
+The last environment variable in the default file is JWT_SECRET. This variable is the salt
+use to generate JWT token and should be a unique very long string of random characters.
+
+Other variables that you can set can be found in the [PHP base image](https://github.hc-sc.gc.ca/hs/php-base-docker#params) documentation.
+It is recommended that you do not change those values unlessyou have a good reason to do so.
 
 ### Full documentation
 You can find the full documentation of each module/class from this framework and
@@ -218,7 +248,6 @@ but they run on the cloud. Session can also be hijacked, but it is easier and sa
 How is a JWT safe? JWT is an industry standard https://datatracker.ietf.org/doc/html/rfc7519
 it encrypts the data using the 'JWT_SECRET' taken from environment variable to use as a salt.
 The longer and the more random, the better. It should also be different for each environment.
-(if using the ./start command locally, you can change the variable in there)
 
 ### GC Notify
 GC Notify is easily implement in the new application since the building blocks
