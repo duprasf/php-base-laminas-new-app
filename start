@@ -49,6 +49,7 @@ while test $# -gt 0; do
             shift
         fi
         USE_TRAEFIK=true
+        PORT=''
         ;;
     *)
         break
@@ -72,6 +73,7 @@ docker run -d --name $CONTAINER_NAME --pull always \
     --label traefik.http.routers.LaminasExample.tls.domains[0].sans=$TRAEFIK_TLS_SANS_DOMAIN \
     --label traefik.http.routers.LaminasExample_http.rule=$TRAEFIK_RULE \
     --label traefik.http.routers.LaminasExample_http.entrypoints=web \
+    $PORT \
     --env-file $ENV_FILE \
     -v $PWD/ExampleModule:/var/www/apps/ExampleModule \
     -v $PWD/ExampleModuleWithUserAndApi:/var/www/apps/ExampleModuleWithUserAndApi \
