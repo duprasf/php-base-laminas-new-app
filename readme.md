@@ -1,8 +1,8 @@
 # New Laminas Application
 
 ## Building a new application
-If your goal is to start a new application, you should follow these steps. If you goal is
-only to test the functionnalities included in the HC flavour of the Laminas framework, you should
+If your goal is to start a new application, you should follow these steps. If your goal is
+only to test the functionalities included in the HC flavour of the Laminas framework, you should
 jump to the [Functionalities](#functionalities) section.
 
 Rename the main folder ```ExampleModule``` and ```src/ExampleModule``` to the name
@@ -15,7 +15,7 @@ Each uppercase letter becomes a dash followed by the letter, ex: ExampleModule
 would become example-module and ExOfAModule would become ex-of-a-module.
 
 Next you can do a search and replace within all the files for ```ExampleModule```
-and replace it with your module name. Your module name needs to be written the
+and replace it with your module name. Your module name needs to be written in the
 same exact way you named your folder.
 
 Some of the example loads files using the ```example-module``` name. If you are
@@ -35,30 +35,31 @@ ExampleModule is currently ```/en/my-app```
 - ANALYTICS_USE_ADOBE if true, will include the general code for Adobe Analytics.
 - ANALYTICS_GA_ID your Google Analytics ID (should look like G-VEFXXXXXXX)
 - LAMINAS_LOAD_MODULES here you can pass a JSON array of modules that the site should load. Ex: '["GcDirectory"]'
-- JWT_SECRET a long string of random characters that is used as the salt for your JSON web token used for user identification (required only if you have user authetification)
-More variables are supported by PHP Base. You can found them in the [PHP base image](https://github.hc-sc.gc.ca/hs/php-base-docker#params) documentation.
-It is recommended that you do not change those values unlessyou have a good reason to do so.
+- JWT_SECRET a long string of random characters that is used as the salt for your JSON web token used for user identification (required only if you have user authentication)
+
+More variables are supported by PHP Base. You can find them in the [PHP base image](https://github.hc-sc.gc.ca/hs/php-base-docker#params) documentation.
+It is recommended that you do not change those values unless you have a good reason to do so.
 
 ## Functionalities
 This readme should help you get started, but this was designed for developers, you
 will NEED to look and play in the code. Both ```ExampleModule``` and ```ExampleModuleWithUserAndApi```
 are meant to be starting point for you to learn how to build modules in Laminas.
 
-The module called ```ExampleModule``` is ver, very basic and is meant mostly to
-be a placeholder that will be renamed as as starting point for your own module(s).
+The module called ```ExampleModule``` is very, very basic and is meant mostly to
+be a placeholder that will be renamed as a starting point for your own module(s).
 The extended example called ```ExampleModuleWithUserAndApi``` has different controller,
-modele and even javascript to show how you can build a Restful API with authentication.
-You can use this as starting point for your application, but it might require more
-modification not listed in the [Building a new application](#building-a-new-application)
-section. Once you have a working version (see below), the start page for this extended
+model and even JavaScript to show how you can build a Restful API with authentication.
+You can use this as a starting point for your application, but it might require more
+modifications not listed in the [Building a new application](#building-a-new-application)
+section. Once you have a working local development container (see below), the start page for this extended
 example is ```/en/my-app-with-user```.
 
 ### Local development environment
 You will find a Linux "start" executable script in the root of this repo to start a new
 docker container. This script might not be executable by default, so you might need to
-rung ```chmod 775 start``` to make it executable.
+run ```chmod 775 start``` to make it executable.
 
-When executing this script a new container called 'LaminasExample' will be created. It will
+When executing this script, a new container called 'LaminasExample' will be created. It will
 have both example modules already "installed". The framework was configured to load all
 modules located in the apps/ folder. The start script creates volumes from the working
 directory ```ExampleModule``` and ```ExampleModuleWithUserAndApi``` into the apps folder.
@@ -70,16 +71,16 @@ script to include your new module as well.
 If you are not using docker on your local VM... you should. You can install docker on a
 Windows machine but I know the process is not perfect and will most likely not be compatible
 with the script I created as an example. The easiest solution is just to install a small
-Linux VM, then install git and DockerCE on it. You can then use your Windows VM if your prefered
+Linux VM, then install git and DockerCE on it. You can then use your Windows VM if your preferred
 IDE is not available on Linux but still have docker container running the same solution
 that will be running when in the cloud. Most IDE has a feature to connect to a
 Linux VM using sFTP and edit your files there. Even in Notepad++, you can enable the NppFTP plugin and
-edit file directly on the server if you don't like to upload.
+edit files directly on the server if you don't like to upload.
 
-In PhpED, I have local file on my Windows VM, once I made some change, I upload them to the Linux VM
+In PhpED, I have a local file on my Windows VM, once I made some change, I upload them to the Linux VM
 directly from the IDE (changed the keybind so ctrl-shift-S will save and upload).
 Then I go to my browser and refresh. Very simple. I even created an entry in my hosts file that
-points a domain called 'localdev.hc-sc.gc.ca' that points to my Linux VM.
+points to a domain called 'localdev.hc-sc.gc.ca' that points to my Linux VM.
 
 If you really don't want to use docker, you can download the content of the 'code' folder
 from https://github.hc-sc.gc.ca/hs/php-base-laminas into your web server folder. Only the
@@ -91,30 +92,34 @@ Once you have the basic setup, you can copy the example modules in the apps/ fol
 
 #### Flags
 The start script supports a few flags. You can use the ```-h``` flag to see the list of flags
-available to the script if you forgot. This list is as follow:
-* -k|--traefik: Tell the script that you are using traefik. You can also specify a different domain
+available to the script if you forgot. This list is as follows:
+* ```-k|--traefik```: Tell the script that you are using traefik. You can also specify a different domain
 if you wish.
-* -e|--env-file: Specify that you wish to use a different environment file then the
+* ```-e|--env-file```: Specify that you wish to use a different environment file then the
 default one (which is $PWD/environment/app.env)
 
 #### Environment file
-The docker script will be looking for a environment file that sets up the environment variables
+The docker script will be looking for an environment file that sets up the environment variables
 for the container. In the repo you should have a /environment/app.env.dist file that you should
 copy to /environment/app.env (so ```cp environment/app.env.dist environment/app.env```)
 
 That file is a list of all environment variables to be set in your container.
 
-In a development environment you can set the environment variable "PHP_DEV_ENV"
+In a development environment, you should set the environment variable PHP_DEV_ENV
 to 1. This will display the errors and disabled the OP cache.
 
-In the default file, you will also find LAMINAS_ROOT_PATH which define the root path of laminas
+In the default file, you will also find LAMINAS_ROOT_PATH which defines the root path of laminas
 and should not be changed.
 
 The last environment variable in the default file is JWT_SECRET. This variable is the salt
-use to generate JWT token and should be a unique very long string of random characters.
+use to generate JWT (JavaScript Web Token) and should be a unique very long string of random characters.
 
 Other variables that you can set can be found in the [PHP base image](https://github.hc-sc.gc.ca/hs/php-base-docker#params) documentation.
-It is recommended that you do not change those values unlessyou have a good reason to do so.
+It is recommended that you do not change those values unless you have a good reason to do so.
+
+You can also add your own environment variable required for your application. It is better to
+start with the acronym of your app or some type of ID to differentiate it from PHP_*,
+LAMIAS_*, ANALYTICS_* and JWT_* for example.
 
 ### Full documentation
 You can find the full documentation of each module/class from this framework and
@@ -131,16 +136,16 @@ docker run --rm -v /{your-php-folder}:/data phpdoc/phpdoc
 
 ### UserAuth
 The UserAuth module is a basic authentication module. It is enabled by default, you can
-use it by extending the stardard classes or using them as is.
+use it by extending the standard classes or using them as is.
 
-#### Using a Active Directory
+#### Using an Active Directory
 The class ```UserAuth\Model\LdapUser``` provide a way to authenticate a user using Active Directory.
 Which means the user can use their same username/password used on Windows. For an example,
 you can look at ```ExampleModuleWithUserAndApi\Model\UserLdap```
 
 #### Using a Database
 You can also use ```UserAuth\Model\DbUser``` which use a DB with credentials to validate the identity
-of the user. In that case you can use the "parentDb" or build your decendent class to overwrite a few
+of the user. In that case you can use the "parentDb" or build your dependent class to overwrite a few
 methods (```authenticate()```, ```register()```, ```resetPassword()```, etc.) to set your own DB schema.
 
 To use the "parentDb" flow, you will need to define a service called ```user-parent-db``` which will be
@@ -210,19 +215,19 @@ You will find an example of how to use Restful API using Laminas in the ```Examp
 The most important part is the controller, extending AbstractRestfulController will allow method
 called based on HTTP Verb and route parameters. You can look at [the laminas documentation](https://docs.laminas.dev/laminas-mvc/controllers/#abstractrestfulcontroller)
 to learn which method is called when and which is the most appropriate HTTP status code
-to return under which circonstances. For example, a simple GET request, will be sent to the method
+to return under which circumstances. For example, a simple GET request, will be sent to the method
 ```getList()``` or ```get()``` if an 'id' is specified in the route, a POST request,
 will be sent to ```create()```. These calls should be initiated in JavaScript since
 they are, after all, for an API. The data received and returned should be in JSON format.
 
 The JavaScript used in this example to login a user can be found in ```ExampleModuleWithUserAndApi/public/js/script.js```.
-I hope the comments are enough for anyoneto understand the logic, but basically when a
+I hope the comments are enough for anyone to understand the logic, but basically when a
 user fill the login fields (let say for the DB), the ```loginDb()``` is called. A POST request is then sent
 to ```/en/my-app-with-user/api/v1/user``` with the username and password as the post data. This should,
 in prod, be done over HTTPS but for our learning example, it does not matter.
 
 The server can return status code 200 if successful, 401 if credentials are wrong
-and 500 for any other reasons. If successful, a Javascript Web Token (JWT) is received and
+and 500 for any other reasons. If successful, a JavaScript Web Token (JWT) is received and
 passed to ```user.handleLogin()``` from the ```ExampleModuleWithUserAndApi/public/js/User.js```.
 This token is stored in LocalStorage if the user requested to be remembered, or the SessionStorage
 otherwise.
@@ -230,14 +235,14 @@ otherwise.
 A timeout is also set to the length of the JWT that will trigger a "jwt-expired" event.
 The "application", in this example in the script.js, will listen to this event and log the user out.
 
-When subsequent request are made to the API, the JWT should be sent to identify the user. In this example,
+When subsequent requests are made to the API, the JWT should be sent to identify the user. In this example,
 the JWT is sent as a header called "X-Access-Token", any header starting with "X-" is understood to be
-a custom header. The API then use this JWT to log the user back in.
+a custom header. The API then uses this JWT to log the user back in.
 
 You can see this in action in the ```ApiContentController``` (located in ```ExampleModuleWithUserAndApi/src/ExampleModuleWithUserAndApi/Controller```).
 The request sends a GET verb with the custom header "X-Access-Token". Since there is no 'id' defined,
 the request will be sent to ```getList()```, the JWT is taken from the header and passed to the
-user object. Depending on the implementation, the JWT can contains any number of information, but should always
+user object. Depending on the implementation, the JWT can contain any number of information, but should always
 have at least a way to identify the user. In the User (DB) example, the information contained are all
 the information from the fake DB (email, userId and status) with some extra debug data added (see [User class](https://github.hc-sc.gc.ca/hs/php-base-laminas-new-app/blob/master/ExampleModuleWithUserAndApi/src/ExampleModuleWithUserAndApi/Model/User.php#L151)).
 So to reload the user, we just take this data and populate the user with it.
@@ -274,7 +279,7 @@ return [
 ```
 By default, the GcNotify object is passed to the IndexController, if you have
 the configuration set, your values will be passed to the GcNotify object. This
-is done by the IndexController, but of course if you change this factory, the
+is done by the IndexController, but, of course, if you change this factory, the
 GcNotify might not be sent to the controller.
 
 To use the GcNotify, just use something like the code below, (**you should not
@@ -419,7 +424,7 @@ and the H1 on the page.
 only be used when your title requires HTML tage (ex: abbr).
 * extra-css, this allow the page to have its own css style sheet.
 Format: /css/style1.css|/css/style2.css
-* extra-js, this allow the page to have its own javascript file loaded.
+* extra-js, this allow the page to have its own JavaScript file loaded.
 Format: /js/js1.js|/js/js2.js
 
 ```php
