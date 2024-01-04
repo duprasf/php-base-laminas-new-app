@@ -1,20 +1,70 @@
 #!/usr/bin/env bash
 
-docker stop LaminasExample
-docker rm LaminasExample
-docker pull jack.hc-sc.gc.ca/php/php-base-laminas:latest
+APPNAME=LaminasExample
+CONTAINER_NAME=$APPNAME
+REMOTE_IMAGE="jack.hc-sc.gc.ca/php/php-base-laminas"
+APPTAG="latest"
+DOMAIN=localdev.hc-sc.gc.ca
+ENV_FILE="$PWD/environment/app.env"
+NETWORK=appnet
 
-TRAEFIK_RULE='Host(`localdev.hc-sc.gc.ca`)&&(!PathPrefix(`/en/survey/`)&&!PathPrefix(`/fr/sondage/`))'
-TRAEFIK_TLS_MAIN_DOMAIN=localdev.hc-sc.gc.ca
-TRAEFIK_TLS_SANS_DOMAIN=localdev.hc-sc.gc.ca
+TRAEFIK_RULE='HostRegexp(`'$DOMAIN'`)'
+TRAEFIK_TLS_MAIN_DOMAIN=$DOMAIN
+TRAEFIK_TLS_SANS_DOMAIN=$DOMAIN,*.hc-sc.gc.ca
+USE_TRAEFIK=false
+PORT='-p 80:80'
+IMAGE=$REMOTE_IMAGE
 
-docker run -d --name LaminasExample \
+
+print_usage() {
+    echo "Usage: ./start [options]"
+    echo " "
+    echo "    -h|--help     Show this message"
+    echo "    -k|--traefik  Use traefik instead of port 80 follow by the domain name [localdev.hc-sc.gc.ca]"
+    echo "                  Set to use traefik automatically if a container name traefik is running"
+    echo "    -e|--env-file The file with the environment variable [secret/cops.drupal.env]"
+    echo "                  see secrets/cops.drupal.env.dist for an example"
+    echo " "
+    exit;
+}
+
+while test $# -gt 0; do
+  case "$1" in
+    -h|--help)
+        print_usage
+        exit 0
+        ;;
+    -e|--env-file)
+        shift
+        ENV_FILE=$1
+        shift
+        ;;
+    -k|--traefik)
+        shift
+        if [[ ! -z "$1" ]] && [[ $1 != -* ]] ; then
+            DOMAIN=$1
+            TRAEFIK_RULE='Host(`'$DOMAIN'`)'
+            TRAEFIK_TLS_MAIN_DOMAIN=$DOMAIN
+            TRAEFIK_TLS_SANS_DOMAIN=$DOMAIN
+            shift
+        fi
+        USE_TRAEFIK=true
+        ;;
+    *)
+        break
+        ;;
+  esac
+done
+
+docker stop $CONTAINER_NAME
+docker rm $CONTAINER_NAME
+
+docker run -d --name $CONTAINER_NAME --pull always \
     -v /etc/localtime:/etc/localtime:ro \
+    -v /etc/timezone:/etc/timezone:ro \
     --restart unless-stopped \
-    --network=appnet \
-    -e PHP_DEV_ENV=1 \
-    -e LAMINAS_ROOT_PATH="/var/www" \
-    --label traefik.enable=true \
+    --network=$NETWORK \
+    --label traefik.enable=$USE_TRAEFIK \
     --label traefik.http.routers.LaminasExample.rule=$TRAEFIK_RULE \
     --label traefik.http.routers.LaminasExample.entrypoints=websecure \
     --label traefik.http.routers.LaminasExample.tls=true \
@@ -22,10 +72,7 @@ docker run -d --name LaminasExample \
     --label traefik.http.routers.LaminasExample.tls.domains[0].sans=$TRAEFIK_TLS_SANS_DOMAIN \
     --label traefik.http.routers.LaminasExample_http.rule=$TRAEFIK_RULE \
     --label traefik.http.routers.LaminasExample_http.entrypoints=web \
-    -e JWT_SECRET="PLEASE CHANGE ME! Secret salt for the JWT. The longer the more secure. Should be unique for each environment. UzacJwlFjGNTB1j9NYrVBVku2t7vAAyTQYrkt9u9fIu5G75lvMz9L7Dw6stA4nLPVrpIRd3yf4s8pHvJFDEiJw4I1NkkgngUE5GkSqHpKycrN7J58nd9DdhUqsj6zTWRwCqpRyJdiCcgvq9BHKYMgrfSTLbqTjLzSsUzHeSl6OljhgttLYlSqrxbr3l12honWHiobNmMrBGvPfhWLH2GtXmc73X6OWqgIUmRp5Dn8jf95IgoRqoJjQFrv7rKB8ZBKMMWvtaXmBVlVyFKyUfDX8homxj1jDoFF3IJDWh8tsrQ" \
+    --env-file $ENV_FILE \
     -v $PWD/ExampleModule:/var/www/apps/ExampleModule \
     -v $PWD/ExampleModuleWithUserAndApi:/var/www/apps/ExampleModuleWithUserAndApi \
-    -v /docker/php-base-laminas/code/module:/var/www/module \
-    -v /docker/php-base-laminas/code/config:/var/www/config \
-    -v /docker/php-base-laminas/code/module:/var/www/module \
-    jack.hc-sc.gc.ca/php/php-base-laminas:latest
+    $IMAGE:$APPTAG
