@@ -10,6 +10,7 @@ use Laminas\View\Model\JsonModel;
 use UserAuth\Model\UserInterface;
 use UserAuth\Exception\JwtException;
 use UserAuth\Exception\JwtExpiredException;
+use ExampleModuleWithUserAndApi\Model\Content;
 
 // first a restfulController should not be only "api" but should
 // be a specific controller like "ApiMembersController" or
@@ -31,6 +32,23 @@ class ApiContentController extends AbstractRestfulController
     protected function getUser()
     {
         return $this->userObj;
+    }
+
+    private $contentObj;
+    /**
+    * Set the User obj implementing UserInterface (used in factory)
+    *
+    * @param UserInterface $obj
+    * @return ApiUserController
+    */
+    public function setContentObj(Content $obj)
+    {
+        $this->contentObj = $obj;
+        return $this;
+    }
+    protected function getContentObj()
+    {
+        return $this->contentObj;
     }
 
     /**
@@ -86,20 +104,7 @@ class ApiContentController extends AbstractRestfulController
                 $user->loadFromJwt($jwt);
             } catch (\Exception $e) {
             }
-            // do something... get a list of entries or something
-            $entries = [
-                ['name'=>'first item', 'category'=>'green'],
-                ['name'=>'second item', 'category'=>'green'],
-                ['name'=>'third item', 'category'=>'red'],
-            ];
-            if($user->isLoggedIn()) {
-                $entries[] = ['name'=>'item 4', 'category'=>'green'];
-                $entries[] = ['name'=>'item 5', 'category'=>'gold'];
-                $entries[] = ['name'=>'item 6', 'category'=>'green'];
-                $entries[] = ['name'=>'item 7', 'category'=>'green'];
-                $entries[] = ['name'=>'item 8', 'category'=>'green'];
-            }
-            $view->setVariable('data', $entries);
+            $view->setVariable('data', $this->getContentObj()->getContent());
 
             return $view;
         } catch (JwtExpiredException $e) {

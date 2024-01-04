@@ -157,6 +157,7 @@ return [
             Model\Model::class => Factory\Model\ModelFactory::class,
             Model\User::class => Factory\Model\UserFactory::class,
             Model\UserLdap::class => Factory\Model\UserFactory::class,
+            Model\Content::class => Factory\Model\ContentFactory::class,
         ],
         'invokables' => [
         ],

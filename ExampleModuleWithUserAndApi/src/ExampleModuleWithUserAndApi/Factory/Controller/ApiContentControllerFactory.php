@@ -15,6 +15,7 @@ use Laminas\ServiceManager\Factory\FactoryInterface;
 // for this example, we use the DB version and never check
 // anything in a DB, we just return success if a valid JWT was received
 use ExampleModuleWithUserAndApi\Model\User as User;
+use ExampleModuleWithUserAndApi\Model\Content;
 
 class ApiContentControllerFactory implements FactoryInterface
 {
@@ -22,6 +23,7 @@ class ApiContentControllerFactory implements FactoryInterface
     {
         $obj = new $requestName();
         $obj->setUser($container->get(User::class));
+        $obj->setContentObj($container->get(Content::class));
         return $obj;
     }
 }
