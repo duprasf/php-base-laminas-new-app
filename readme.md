@@ -310,6 +310,44 @@ the asset with the name of the module, for example you can use
 If you want to add/remove file type that the server can serve, you can modify the
 ```{yourAppName}/config/autoload/public-asset.global.php```
 
+## Using the app template
+CDTS provide a template for template specifically for applications. You can always
+use the basic template even for an application. The application template changes
+the header (adds the login/logout/settings buttons) and changes the footer.
+
+To change the template, add "isApp" set to true in the metadata array.
+
+Add a key "appName" and "appUrl". The URL is the url of the home page of your app
+and text is the name of application that will be displayed at the top of the
+page. See below for an example:
+```php
+"appName"=>$translator->translate('App Name'),
+"appUrl"=>$url('locale/app-root'),
+```
+
+### Using URL for sign in, sign out and user settings
+Adding the "signInUrl" to the metadata array will let the CDTS will create a
+button that will redirect to this page.
+You can also add "signOutUrl" however, only one of the two buttons will be displayed
+at a time. This means that if you are using URL, you will have to check if a user
+is already logged in and switch between sending "signInUrl" and "signOutUrl".
+
+The "appSettingsUrl" will add a "Account Settings" button to the bar. Even if the
+user is not logged in, the button will show up if the "appSettingsUrl" is passed
+as metadata, so you might want to only pass that when the user is logged in.
+
+### Using Javascript callbacks for sign in, sign out and user settings
+When you add a key to your metadata called "signInCallback", "signOutCallback",
+and/or "appSettingsCallback" a buttons will be added by the UserAuth module's
+JavaScript. This means that it is possible that when CDTS/WET change the template,
+the buttons will stay the same until the UserAuth script is changed. You can
+specify all 3 at once, only the sign in button will show up when the user is not
+logged in yet and only the other two will show up when the user is logged in.
+Only the buttons with the specify key will show up.
+
+Using both the URL and Callback together would, in theory, work, but it
+wasn't fully tested.
+
 ## Stockpile
 Stockpile was a content management system I created a while back. One of the
 functionality was to load file from filesystem. This is the functionality that
