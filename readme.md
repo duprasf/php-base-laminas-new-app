@@ -36,6 +36,9 @@ ExampleModule is currently ```/en/my-app```
 - ANALYTICS_GA_ID your Google Analytics ID (should look like G-VEFXXXXXXX)
 - LAMINAS_LOAD_MODULES here you can pass a JSON array of modules that the site should load. Ex: '["GcDirectory"]'
 - JWT_SECRET a long string of random characters that is used as the salt for your JSON web token used for user identification (required only if you have user authentication)
+- ISSUED_DATE set the issued date that shows up in metadata and on the page (if no lastModifiedDate set)
+- LAST_MODIFIED_DATE set the modified date that shows up in metadate and on the page
+
 
 More variables are supported by PHP Base. You can find them in the [PHP base image](https://github.hc-sc.gc.ca/hs/php-base-docker#params) documentation.
 It is recommended that you do not change those values unless you have a good reason to do so.
