@@ -12,46 +12,15 @@ class IndexController extends AbstractActionController
 {
     public function indexAction()
     {
-        $view = $this->_setCommonMetadata(new ViewModel());
+        $view = $this->exampleModuleCommonMetadata(new ViewModel());
         return $view;
     }
 
-    /**
-    * Set the common metadata for this project
-    *
-    * @param ViewModel $view
-    *
-    * @return ViewModel
-    */
-    public function _setCommonMetadata(ViewModel $view)
+    public function splashAction()
     {
-        $translator = $this->getTranslator();
-        $lang = $translator->getLang();
-        $view->setVariable('metadata', new \ArrayObject(array(
-            "title" => $translator->translate('ExampleModule'),
-            "description"=>$translator->translate("ExampleModule"),
-            "issuedDate"=>date('Y-m-d'),
-            //"extra-css"=>'/css/stylesheet.css',
-            //"extra-js"=>'/js/script.js',
-        )));
-
-        $view->setVariable('attribution', 'HC');
-
-        $breadcrumbItems = new Breadcrumbs();
-        if($lang == 'fr') {
-            $breadcrumbItems->addBreadcrumbs([
-                'http://canada.ca/'.$lang => 'Canada.ca',
-                // put the default breadcrumbs for your app here (in French)
-            ]);
-        } else {
-            $breadcrumbItems->addBreadcrumbs([
-                'http://canada.ca/'.$lang => 'Canada.ca',
-                // put the default breadcrumbs for your app here (in English)
-            ]);
-        }
-        $view->setVariable('breadcrumbItems', $breadcrumbItems);
-        $view->setVariable('metadata', new \ArrayObject());
-
+        $view = $this->exampleModuleCommonMetadata(new ViewModel());
+        $view->setVariable('homeRoute', 'ExampleModule/first-page');
+        $view->setTemplate('layout/splash');
         return $view;
     }
 }

@@ -20,13 +20,27 @@ print_usage() {
     echo "Usage: ./start [options]"
     echo " "
     echo "    -h|--help     Show this message"
-    echo "    -k|--traefik  Use traefik instead of port 80 follow by the domain name [localdev.hc-sc.gc.ca]"
-    echo "                  Set to use traefik automatically if a container name traefik is running"
-    echo "    -e|--env-file The file with the environment variable [secret/cops.drupal.env]"
-    echo "                  see secrets/cops.drupal.env.dist for an example"
+    echo "    -e|--env-file The file with the environment variable [environment/app.env]"
+    echo "                  see environment/app.env.dist for an example"
     echo " "
     exit;
 }
+
+# switch to using traefik automatically if a traefik container is running
+if [ "$(docker ps -qf name=traefik)" ]; then
+    USE_TRAEFIK=true
+    PORT=''
+fi
+
+### Check if we can reach https://jack.hc-sc.gc.ca to download the latest version
+# -q : Silence mode
+# --spider : don't get, just check page availability
+wget -q --spider https://jack.hc-sc.gc.ca
+if [ $? -eq 0 ]; then
+    echo "Online, pulling from jack.hc-sc.gc.ca"
+    docker pull $REMOTE_IMAGE:$APPTAG
+    docker pull $REMOTE_IMAGE:latest
+fi
 
 while test $# -gt 0; do
   case "$1" in
@@ -39,28 +53,42 @@ while test $# -gt 0; do
         ENV_FILE=$1
         shift
         ;;
-    -k|--traefik)
-        shift
-        if [[ ! -z "$1" ]] && [[ $1 != -* ]] ; then
-            DOMAIN=$1
-            TRAEFIK_RULE='Host(`'$DOMAIN'`)'
-            TRAEFIK_TLS_MAIN_DOMAIN=$DOMAIN
-            TRAEFIK_TLS_SANS_DOMAIN=$DOMAIN
-            shift
-        fi
-        USE_TRAEFIK=true
-        PORT=''
-        ;;
     *)
         break
         ;;
   esac
 done
 
-docker stop $CONTAINER_NAME
-docker rm $CONTAINER_NAME
 
-docker run -d --name $CONTAINER_NAME --pull always \
+## Check if the network exists, if not create it
+if [ ! "$(docker network ls -qf name=${NETWORK})" ]; then
+  echo "Creating network appnet..."
+  docker network create ${NETWORK}
+fi
+
+## Check if the container is already running, if so, stop and delete it
+if [ "$(docker ps -qf name=${CONTAINER_NAME})" ]; then
+  echo "Stoping and deleting existing container ${CONTAINER_NAME}..."
+  docker stop ${CONTAINER_NAME}
+  docker rm ${CONTAINER_NAME}
+
+## if the container exists, but is not running, just delete it
+elif [ "$(docker ps -qaf name=${CONTAINER_NAME})" ]; then
+  echo "Deleting container ${CONTAINER_NAME}..."
+  docker rm ${CONTAINER_NAME}
+fi
+
+
+## if developing Laminas (meaning you have the /docker/php-base-laminas/code/module folder),
+## use the latest module files. This is to see modifications immediately when changing the framework.
+LAMINAS_DEVEL=""
+if [ -d "/docker/php-base-laminas/code/module" ]; then
+    LAMINAS_DEVEL="-v /docker/php-base-laminas/code/module:/var/www/module -v /docker/php-base-laminas/code/config:/var/www/config"
+fi
+
+echo "Starting ${CONTAINER_NAME}..."
+# setting the container to run detach (-d) so we can use the console
+docker run -d --name $CONTAINER_NAME \
     -v /etc/localtime:/etc/localtime:ro \
     -v /etc/timezone:/etc/timezone:ro \
     --restart unless-stopped \
@@ -77,4 +105,5 @@ docker run -d --name $CONTAINER_NAME --pull always \
     --env-file $ENV_FILE \
     -v $PWD/ExampleModule:/var/www/apps/ExampleModule \
     -v $PWD/ExampleModuleWithUserAndApi:/var/www/apps/ExampleModuleWithUserAndApi \
+    $LAMINAS_DEVEL \
     $IMAGE:$APPTAG

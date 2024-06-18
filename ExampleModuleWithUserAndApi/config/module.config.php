@@ -6,6 +6,8 @@ namespace ExampleModuleWithUserAndApi;
 use Laminas\Router\Http\Literal;
 use Laminas\Router\Http\Segment;
 use UserAuth\Factory\GetJwtDataFactory;
+use Application\Factory\Controller\Plugin\CommonMetadataFactory;
+
 
 return [
     'router' => [
@@ -148,8 +150,10 @@ return [
         ],
         'factories' => [
             'getJwtData' => GetJwtDataFactory::class,
+            Controller\Plugin\CommonMetadata::class=>CommonMetadataFactory::class,
         ],
         'aliases' => [
+            'exampleModuleWithUserAndApiCommonMetadata'=>Controller\Plugin\CommonMetadata::class,
         ],
     ],
     'service_manager' => [

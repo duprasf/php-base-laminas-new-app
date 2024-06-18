@@ -6,15 +6,28 @@ namespace ExampleModule;
 use Laminas\Router\Http\Literal;
 use Laminas\Router\Http\Segment;
 use Laminas\ServiceManager\Factory\InvokableFactory;
+use Application\Factory\Controller\Plugin\CommonMetadataFactory;
+
 
 return [
     'router' => [
         'routes' => [
+            'root'=> [
+                'type'    => Segment::class,
+                'options' => [
+                    'route'    => '[/]',
+                    'defaults' => [
+                        'controller' => Controller\IndexController::class,
+                        'action'     => 'splash',
+                    ],
+                ],
+                'may_terminate' => true,
+            ],
             __NAMESPACE__ => [
                 'type'    => Segment::class,
                 'options' => [
                     // this is the /en/ or /fr/ that begins the route
-                    'route'    => '/[:locale]',
+                    'route'    => '/:locale',
                     'defaults' => [
                         'locale'     => 'en',
                     ],
@@ -51,9 +64,11 @@ return [
         ],
     ],
     'controller_plugins' => [
-        'factories' => [
+        'aliases'=> [
+            'exampleModuleCommonMetadata'=>Controller\Plugin\CommonMetadata::class,
         ],
-        'aliases' => [
+        'factories' => [
+            Controller\Plugin\CommonMetadata::class=>CommonMetadataFactory::class,
         ],
     ],
     'service_manager' => [
