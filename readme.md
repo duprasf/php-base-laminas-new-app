@@ -38,7 +38,11 @@ ExampleModule is currently ```/en/my-app```
 - JWT_SECRET a long string of random characters that is used as the salt for your JSON web token used for user identification (required only if you have user authentication)
 - ISSUED_DATE set the issued date that shows up in metadata and on the page (if no lastModifiedDate set)
 - LAST_MODIFIED_DATE set the modified date that shows up in metadate and on the page
-
+- GC_NOTIFY_API_KEY your GcNotify API Key for your project (if you are using GcNotify)
+- GC_NOTIFY_TEMPATES a json string of your GcNotify templates (ex: {templateName:"id"}) for your project (if you are using GcNotify)
+- GC_NOTIFY_APP_NAME the name of your application in bilangual format (ex: Project | Projet), used by GcNotify when reporting errors
+- GC_NOTIFY_ERROR_REPORTING_API_KEY this is an API Key for your project on the "HC Error Reporting | SC Rapport d'erreur" project, this will send an email to IMSD mailbox (or equivalent) with all uncaught exception
+- GC_NOTIFY_OVERWRITE_ALL_EMAIL this will send ALL email from GcNotify to the specified email. Should only be used in prePROD
 
 More variables are supported by PHP Base. You can find them in the [PHP base image](https://github.hc-sc.gc.ca/hs/php-base-docker#params) documentation.
 It is recommended that you do not change those values unless you have a good reason to do so.
