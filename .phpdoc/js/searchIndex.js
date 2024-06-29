@@ -1,6 +1,546 @@
 Search.appendIndex(
     [
                 {
+            "fqsen": "\\ExampleModule\\Module",
+            "name": "Module",
+            "summary": "",
+            "url": "classes/ExampleModule-Module.html"
+        },                {
+            "fqsen": "\\ExampleModule\\Module\u003A\u003AgetConfig\u0028\u0029",
+            "name": "getConfig",
+            "summary": "",
+            "url": "classes/ExampleModule-Module.html#method_getConfig"
+        },                {
+            "fqsen": "\\ExampleModule\\Module\u003A\u003AgetAutoloaderConfig\u0028\u0029",
+            "name": "getAutoloaderConfig",
+            "summary": "",
+            "url": "classes/ExampleModule-Module.html#method_getAutoloaderConfig"
+        },                {
+            "fqsen": "\\ExampleModule\\Controller\\IndexController",
+            "name": "IndexController",
+            "summary": "",
+            "url": "classes/ExampleModule-Controller-IndexController.html"
+        },                {
+            "fqsen": "\\ExampleModule\\Controller\\IndexController\u003A\u003AindexAction\u0028\u0029",
+            "name": "indexAction",
+            "summary": "",
+            "url": "classes/ExampleModule-Controller-IndexController.html#method_indexAction"
+        },                {
+            "fqsen": "\\ExampleModule\\Controller\\IndexController\u003A\u003AsplashAction\u0028\u0029",
+            "name": "splashAction",
+            "summary": "",
+            "url": "classes/ExampleModule-Controller-IndexController.html#method_splashAction"
+        },                {
+            "fqsen": "\\ExampleModule\\Controller\\Plugin\\CommonMetadata",
+            "name": "CommonMetadata",
+            "summary": "",
+            "url": "classes/ExampleModule-Controller-Plugin-CommonMetadata.html"
+        },                {
+            "fqsen": "\\ExampleModule\\Controller\\Plugin\\CommonMetadata\u003A\u003A__invoke\u0028\u0029",
+            "name": "__invoke",
+            "summary": "",
+            "url": "classes/ExampleModule-Controller-Plugin-CommonMetadata.html#method___invoke"
+        },                {
+            "fqsen": "\\ExampleModule\\Factory\\IndexControllerFactory",
+            "name": "IndexControllerFactory",
+            "summary": "",
+            "url": "classes/ExampleModule-Factory-IndexControllerFactory.html"
+        },                {
+            "fqsen": "\\ExampleModule\\Factory\\IndexControllerFactory\u003A\u003A__invoke\u0028\u0029",
+            "name": "__invoke",
+            "summary": "",
+            "url": "classes/ExampleModule-Factory-IndexControllerFactory.html#method___invoke"
+        },                {
+            "fqsen": "\\ExampleModule\\Factory\\ModelFactory",
+            "name": "ModelFactory",
+            "summary": "",
+            "url": "classes/ExampleModule-Factory-ModelFactory.html"
+        },                {
+            "fqsen": "\\ExampleModule\\Factory\\ModelFactory\u003A\u003A__invoke\u0028\u0029",
+            "name": "__invoke",
+            "summary": "",
+            "url": "classes/ExampleModule-Factory-ModelFactory.html#method___invoke"
+        },                {
+            "fqsen": "\\ExampleModule\\Model\\Model",
+            "name": "Model",
+            "summary": "",
+            "url": "classes/ExampleModule-Model-Model.html"
+        },                {
+            "fqsen": "\\ExampleModule\\Model\\Model\u003A\u003AsetDb\u0028\u0029",
+            "name": "setDb",
+            "summary": "",
+            "url": "classes/ExampleModule-Model-Model.html#method_setDb"
+        },                {
+            "fqsen": "\\ExampleModule\\Model\\Model\u003A\u003AgetDb\u0028\u0029",
+            "name": "getDb",
+            "summary": "",
+            "url": "classes/ExampleModule-Model-Model.html#method_getDb"
+        },                {
+            "fqsen": "\\ExampleModule\\Model\\Model\u003A\u003AdoSomething\u0028\u0029",
+            "name": "doSomething",
+            "summary": "an\u0020example\u0020of\u0020a\u0020method\u0020to\u0020be\u0020called",
+            "url": "classes/ExampleModule-Model-Model.html#method_doSomething"
+        },                {
+            "fqsen": "\\ExampleModule\\Model\\Model\u003A\u003A\u0024pdo",
+            "name": "pdo",
+            "summary": "This\u0020setter\u0020is\u0020used\u0020by\u0020the\u0020factory\nThe\u0020getter\u0020is\u0020used\u0020within\u0020this\u0020classe",
+            "url": "classes/ExampleModule-Model-Model.html#property_pdo"
+        },                {
+            "fqsen": "\\ExampleModuleWithUserAndApi\\Module",
+            "name": "Module",
+            "summary": "",
+            "url": "classes/ExampleModuleWithUserAndApi-Module.html"
+        },                {
+            "fqsen": "\\ExampleModuleWithUserAndApi\\Module\u003A\u003AgetConfig\u0028\u0029",
+            "name": "getConfig",
+            "summary": "",
+            "url": "classes/ExampleModuleWithUserAndApi-Module.html#method_getConfig"
+        },                {
+            "fqsen": "\\ExampleModuleWithUserAndApi\\Module\u003A\u003AgetAutoloaderConfig\u0028\u0029",
+            "name": "getAutoloaderConfig",
+            "summary": "",
+            "url": "classes/ExampleModuleWithUserAndApi-Module.html#method_getAutoloaderConfig"
+        },                {
+            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller\\ApiContentController",
+            "name": "ApiContentController",
+            "summary": "",
+            "url": "classes/ExampleModuleWithUserAndApi-Controller-ApiContentController.html"
+        },                {
+            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller\\ApiContentController\u003A\u003AsetUser\u0028\u0029",
+            "name": "setUser",
+            "summary": "Set\u0020the\u0020User\u0020obj\u0020implementing\u0020UserInterface\u0020\u0028used\u0020in\u0020factory\u0029",
+            "url": "classes/ExampleModuleWithUserAndApi-Controller-ApiContentController.html#method_setUser"
+        },                {
+            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller\\ApiContentController\u003A\u003AgetUser\u0028\u0029",
+            "name": "getUser",
+            "summary": "",
+            "url": "classes/ExampleModuleWithUserAndApi-Controller-ApiContentController.html#method_getUser"
+        },                {
+            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller\\ApiContentController\u003A\u003AsetContentObj\u0028\u0029",
+            "name": "setContentObj",
+            "summary": "Set\u0020the\u0020User\u0020obj\u0020implementing\u0020UserInterface\u0020\u0028used\u0020in\u0020factory\u0029",
+            "url": "classes/ExampleModuleWithUserAndApi-Controller-ApiContentController.html#method_setContentObj"
+        },                {
+            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller\\ApiContentController\u003A\u003AgetContentObj\u0028\u0029",
+            "name": "getContentObj",
+            "summary": "",
+            "url": "classes/ExampleModuleWithUserAndApi-Controller-ApiContentController.html#method_getContentObj"
+        },                {
+            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller\\ApiContentController\u003A\u003Aoptions\u0028\u0029",
+            "name": "options",
+            "summary": "This\u0020is\u0020required\u0020for\u0020APIs\nThe\u0020plugin\u0020setResponseHeaders\u0020will\u0020return\u0020which\u0020domain\u0020can\u0020call\nthis\u0020API\u0020and\u0020which\u0020verb\u0020are\u0020accepted",
+            "url": "classes/ExampleModuleWithUserAndApi-Controller-ApiContentController.html#method_options"
+        },                {
+            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller\\ApiContentController\u003A\u003Aget\u0028\u0029",
+            "name": "get",
+            "summary": "GET\u0020maps\u0020to\u0020either\u0020get\u0028\u0029\u0020or\u0020getList\u0028\u0029,\u0020depending\u0020on\u0020whether\u0020or\u0020not\u0020an\u0020\u0022id\u0022\nparameter\u0020is\u0020found\u0020in\u0020the\u0020route\u0020matches.\u0020If\u0020one\u0020is,\u0020it\u0020is\u0020passed\u0020as\u0020an\nargument\u0020to\u0020get\u0028\u0029\u003B\u0020if\u0020not,\u0020getList\u0028\u0029\u0020is\u0020invoked.\u0020In\u0020the\u0020former\u0020case,\u0020you\nshould\u0020provide\u0020a\u0020representation\u0020of\u0020the\u0020given\u0020entity\u0020with\u0020that\u0020identification\u003B\nin\u0020the\u0020latter,\u0020you\u0020should\u0020provide\u0020a\u0020list\u0020of\u0020entities.",
+            "url": "classes/ExampleModuleWithUserAndApi-Controller-ApiContentController.html#method_get"
+        },                {
+            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller\\ApiContentController\u003A\u003AgetList\u0028\u0029",
+            "name": "getList",
+            "summary": "",
+            "url": "classes/ExampleModuleWithUserAndApi-Controller-ApiContentController.html#method_getList"
+        },                {
+            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller\\ApiContentController\u003A\u003Acreate\u0028\u0029",
+            "name": "create",
+            "summary": "POST\u0020maps\u0020to\u0020create\u0028\u0029.\u0020That\u0020method\u0020expects\u0020a\u0020\u0024data\u0020argument,\u0020usually\u0020the\n\u0024_POST\u0020superglobal\u0020array.\u0020The\u0020data\u0020should\u0020be\u0020used\u0020to\u0020create\u0020a\u0020new\u0020entity,\nand\u0020the\u0020response\u0020should\u0020typically\u0020be\u0020an\u0020HTTP\u0020201\u0020response\u0020with\u0020the\nLocation\u0020header\u0020indicating\u0020the\u0020URI\u0020of\u0020the\u0020newly\u0020created\u0020entity\u0020and\nthe\u0020response\u0020body\u0020providing\u0020the\u0020representation.",
+            "url": "classes/ExampleModuleWithUserAndApi-Controller-ApiContentController.html#method_create"
+        },                {
+            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller\\ApiContentController\u003A\u003Aupdate\u0028\u0029",
+            "name": "update",
+            "summary": "PUT\u0020maps\u0020to\u0020update\u0028\u0029,\u0020and\u0020requires\u0020that\u0020an\u0020\u0022id\u0022\u0020parameter\u0020exists\u0020in\u0020the\nroute\u0020matches\u003B\u0020that\u0020value\u0020is\u0020passed\u0020as\u0020an\u0020argument\u0020to\u0020the\u0020method.\u0020It\nshould\u0020attempt\u0020to\u0020update\u0020the\u0020given\u0020entity,\u0020and,\u0020if\u0020successful,\u0020return\neither\u0020a\u0020200\u0020or\u0020202\u0020response\u0020status,\u0020as\u0020well\u0020as\u0020the\u0020representation\u0020of\nthe\u0020entity.",
+            "url": "classes/ExampleModuleWithUserAndApi-Controller-ApiContentController.html#method_update"
+        },                {
+            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller\\ApiContentController\u003A\u003Adelete\u0028\u0029",
+            "name": "delete",
+            "summary": "DELETE\u0020maps\u0020to\u0020delete\u0028\u0029,\u0020and\u0020requires\u0020that\u0020an\u0020\u0022id\u0022\u0020parameter\u0020exists\u0020in\nthe\u0020route\u0020matches\u003B\u0020that\u0020value\u0020is\u0020passed\u0020as\u0020an\u0020argument\u0020to\u0020the\u0020method.\u0020It\nshould\u0020attempt\u0020to\u0020delete\u0020the\u0020given\u0020entity,\u0020and,\u0020if\u0020successful,\u0020return\neither\u0020a\u0020200\u0020or\u0020204\u0020response\u0020status.",
+            "url": "classes/ExampleModuleWithUserAndApi-Controller-ApiContentController.html#method_delete"
+        },                {
+            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller\\ApiContentController\u003A\u003A\u0024userObj",
+            "name": "userObj",
+            "summary": "",
+            "url": "classes/ExampleModuleWithUserAndApi-Controller-ApiContentController.html#property_userObj"
+        },                {
+            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller\\ApiContentController\u003A\u003A\u0024contentObj",
+            "name": "contentObj",
+            "summary": "",
+            "url": "classes/ExampleModuleWithUserAndApi-Controller-ApiContentController.html#property_contentObj"
+        },                {
+            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller\\ApiUserController",
+            "name": "ApiUserController",
+            "summary": "",
+            "url": "classes/ExampleModuleWithUserAndApi-Controller-ApiUserController.html"
+        },                {
+            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller\\ApiUserController\u003A\u003AsetUser\u0028\u0029",
+            "name": "setUser",
+            "summary": "Set\u0020the\u0020User\u0020obj\u0020implementing\u0020UserInterface\u0020\u0028used\u0020in\u0020factory\u0029",
+            "url": "classes/ExampleModuleWithUserAndApi-Controller-ApiUserController.html#method_setUser"
+        },                {
+            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller\\ApiUserController\u003A\u003AgetUser\u0028\u0029",
+            "name": "getUser",
+            "summary": "",
+            "url": "classes/ExampleModuleWithUserAndApi-Controller-ApiUserController.html#method_getUser"
+        },                {
+            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller\\ApiUserController\u003A\u003Aoptions\u0028\u0029",
+            "name": "options",
+            "summary": "This\u0020is\u0020required\u0020for\u0020APIs\nThe\u0020plugin\u0020setResponseHeaders\u0020will\u0020return\u0020which\u0020domain\u0020can\u0020call\u0020this\u0020API\u0020and\u0020using\u0020which\u0020verb",
+            "url": "classes/ExampleModuleWithUserAndApi-Controller-ApiUserController.html#method_options"
+        },                {
+            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller\\ApiUserController\u003A\u003Aget\u0028\u0029",
+            "name": "get",
+            "summary": "GET\u0020maps\u0020to\u0020either\u0020get\u0028\u0029\u0020or\u0020getList\u0028\u0029,\u0020depending\u0020on\u0020whether\u0020or\u0020not\u0020an\u0020\u0022id\u0022\nparameter\u0020is\u0020found\u0020in\u0020the\u0020route\u0020matches.\u0020If\u0020one\u0020is,\u0020it\u0020is\u0020passed\u0020as\u0020an\nargument\u0020to\u0020get\u0028\u0029\u003B\u0020if\u0020not,\u0020getList\u0028\u0029\u0020is\u0020invoked.\u0020In\u0020the\u0020former\u0020case,\u0020you\nshould\u0020provide\u0020a\u0020representation\u0020of\u0020the\u0020given\u0020entity\u0020with\u0020that\u0020identification\u003B\nin\u0020the\u0020latter,\u0020you\u0020should\u0020provide\u0020a\u0020list\u0020of\u0020entities.",
+            "url": "classes/ExampleModuleWithUserAndApi-Controller-ApiUserController.html#method_get"
+        },                {
+            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller\\ApiUserController\u003A\u003AgetList\u0028\u0029",
+            "name": "getList",
+            "summary": "",
+            "url": "classes/ExampleModuleWithUserAndApi-Controller-ApiUserController.html#method_getList"
+        },                {
+            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller\\ApiUserController\u003A\u003Acreate\u0028\u0029",
+            "name": "create",
+            "summary": "POST\u0020maps\u0020to\u0020create\u0028\u0029.\u0020That\u0020method\u0020expects\u0020a\u0020\u0024data\u0020argument,\u0020usually\u0020the\n\u0024_POST\u0020superglobal\u0020array.\u0020The\u0020data\u0020should\u0020be\u0020used\u0020to\u0020create\u0020a\u0020new\u0020entity,\nand\u0020the\u0020response\u0020should\u0020typically\u0020be\u0020an\u0020HTTP\u0020201\u0020response\u0020with\u0020the\nLocation\u0020header\u0020indicating\u0020the\u0020URI\u0020of\u0020the\u0020newly\u0020created\u0020entity\u0020and\nthe\u0020response\u0020body\u0020providing\u0020the\u0020representation.",
+            "url": "classes/ExampleModuleWithUserAndApi-Controller-ApiUserController.html#method_create"
+        },                {
+            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller\\ApiUserController\u003A\u003Aupdate\u0028\u0029",
+            "name": "update",
+            "summary": "PUT\u0020maps\u0020to\u0020update\u0028\u0029,\u0020and\u0020requires\u0020that\u0020an\u0020\u0022id\u0022\u0020parameter\u0020exists\u0020in\u0020the\nroute\u0020matches\u003B\u0020that\u0020value\u0020is\u0020passed\u0020as\u0020an\u0020argument\u0020to\u0020the\u0020method.\u0020It\nshould\u0020attempt\u0020to\u0020update\u0020the\u0020given\u0020entity,\u0020and,\u0020if\u0020successful,\u0020return\neither\u0020a\u0020200\u0020or\u0020202\u0020response\u0020status,\u0020as\u0020well\u0020as\u0020the\u0020representation\u0020of\nthe\u0020entity.",
+            "url": "classes/ExampleModuleWithUserAndApi-Controller-ApiUserController.html#method_update"
+        },                {
+            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller\\ApiUserController\u003A\u003Adelete\u0028\u0029",
+            "name": "delete",
+            "summary": "DELETE\u0020maps\u0020to\u0020delete\u0028\u0029,\u0020and\u0020requires\u0020that\u0020an\u0020\u0022id\u0022\u0020parameter\u0020exists\u0020in\nthe\u0020route\u0020matches\u003B\u0020that\u0020value\u0020is\u0020passed\u0020as\u0020an\u0020argument\u0020to\u0020the\u0020method.\u0020It\nshould\u0020attempt\u0020to\u0020delete\u0020the\u0020given\u0020entity,\u0020and,\u0020if\u0020successful,\u0020return\neither\u0020a\u0020200\u0020or\u0020204\u0020response\u0020status.",
+            "url": "classes/ExampleModuleWithUserAndApi-Controller-ApiUserController.html#method_delete"
+        },                {
+            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller\\ApiUserController\u003A\u003A\u0024userObj",
+            "name": "userObj",
+            "summary": "",
+            "url": "classes/ExampleModuleWithUserAndApi-Controller-ApiUserController.html#property_userObj"
+        },                {
+            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller\\ApiUserLdapController",
+            "name": "ApiUserLdapController",
+            "summary": "",
+            "url": "classes/ExampleModuleWithUserAndApi-Controller-ApiUserLdapController.html"
+        },                {
+            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller\\ApiUserLdapController\u003A\u003AsetUser\u0028\u0029",
+            "name": "setUser",
+            "summary": "Set\u0020the\u0020User\u0020obj\u0020implementing\u0020UserInterface\u0020\u0028used\u0020in\u0020factory\u0029",
+            "url": "classes/ExampleModuleWithUserAndApi-Controller-ApiUserLdapController.html#method_setUser"
+        },                {
+            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller\\ApiUserLdapController\u003A\u003AgetUser\u0028\u0029",
+            "name": "getUser",
+            "summary": "",
+            "url": "classes/ExampleModuleWithUserAndApi-Controller-ApiUserLdapController.html#method_getUser"
+        },                {
+            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller\\ApiUserLdapController\u003A\u003Aoptions\u0028\u0029",
+            "name": "options",
+            "summary": "This\u0020is\u0020required\u0020for\u0020APIs\nThe\u0020plugin\u0020setResponseHeaders\u0020will\u0020return\u0020which\u0020domain\u0020can\u0020call\u0020this\u0020API\u0020and\u0020using\u0020which\u0020verb",
+            "url": "classes/ExampleModuleWithUserAndApi-Controller-ApiUserLdapController.html#method_options"
+        },                {
+            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller\\ApiUserLdapController\u003A\u003Aget\u0028\u0029",
+            "name": "get",
+            "summary": "GET\u0020maps\u0020to\u0020either\u0020get\u0028\u0029\u0020or\u0020getList\u0028\u0029,\u0020depending\u0020on\u0020whether\u0020or\u0020not\u0020an\u0020\u0022id\u0022\nparameter\u0020is\u0020found\u0020in\u0020the\u0020route\u0020matches.\u0020If\u0020one\u0020is,\u0020it\u0020is\u0020passed\u0020as\u0020an\nargument\u0020to\u0020get\u0028\u0029\u003B\u0020if\u0020not,\u0020getList\u0028\u0029\u0020is\u0020invoked.\u0020In\u0020the\u0020former\u0020case,\u0020you\nshould\u0020provide\u0020a\u0020representation\u0020of\u0020the\u0020given\u0020entity\u0020with\u0020that\u0020identification\u003B\nin\u0020the\u0020latter,\u0020you\u0020should\u0020provide\u0020a\u0020list\u0020of\u0020entities.",
+            "url": "classes/ExampleModuleWithUserAndApi-Controller-ApiUserLdapController.html#method_get"
+        },                {
+            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller\\ApiUserLdapController\u003A\u003AgetList\u0028\u0029",
+            "name": "getList",
+            "summary": "",
+            "url": "classes/ExampleModuleWithUserAndApi-Controller-ApiUserLdapController.html#method_getList"
+        },                {
+            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller\\ApiUserLdapController\u003A\u003Acreate\u0028\u0029",
+            "name": "create",
+            "summary": "POST\u0020maps\u0020to\u0020create\u0028\u0029.\u0020That\u0020method\u0020expects\u0020a\u0020\u0024data\u0020argument,\u0020usually\u0020the\n\u0024_POST\u0020superglobal\u0020array.\u0020The\u0020data\u0020should\u0020be\u0020used\u0020to\u0020create\u0020a\u0020new\u0020entity,\nand\u0020the\u0020response\u0020should\u0020typically\u0020be\u0020an\u0020HTTP\u0020201\u0020response\u0020with\u0020the\nLocation\u0020header\u0020indicating\u0020the\u0020URI\u0020of\u0020the\u0020newly\u0020created\u0020entity\u0020and\nthe\u0020response\u0020body\u0020providing\u0020the\u0020representation.",
+            "url": "classes/ExampleModuleWithUserAndApi-Controller-ApiUserLdapController.html#method_create"
+        },                {
+            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller\\ApiUserLdapController\u003A\u003Aupdate\u0028\u0029",
+            "name": "update",
+            "summary": "PUT\u0020maps\u0020to\u0020update\u0028\u0029,\u0020and\u0020requires\u0020that\u0020an\u0020\u0022id\u0022\u0020parameter\u0020exists\u0020in\u0020the\nroute\u0020matches\u003B\u0020that\u0020value\u0020is\u0020passed\u0020as\u0020an\u0020argument\u0020to\u0020the\u0020method.\u0020It\nshould\u0020attempt\u0020to\u0020update\u0020the\u0020given\u0020entity,\u0020and,\u0020if\u0020successful,\u0020return\neither\u0020a\u0020200\u0020or\u0020202\u0020response\u0020status,\u0020as\u0020well\u0020as\u0020the\u0020representation\u0020of\nthe\u0020entity.",
+            "url": "classes/ExampleModuleWithUserAndApi-Controller-ApiUserLdapController.html#method_update"
+        },                {
+            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller\\ApiUserLdapController\u003A\u003Adelete\u0028\u0029",
+            "name": "delete",
+            "summary": "DELETE\u0020maps\u0020to\u0020delete\u0028\u0029,\u0020and\u0020requires\u0020that\u0020an\u0020\u0022id\u0022\u0020parameter\u0020exists\u0020in\nthe\u0020route\u0020matches\u003B\u0020that\u0020value\u0020is\u0020passed\u0020as\u0020an\u0020argument\u0020to\u0020the\u0020method.\u0020It\nshould\u0020attempt\u0020to\u0020delete\u0020the\u0020given\u0020entity,\u0020and,\u0020if\u0020successful,\u0020return\neither\u0020a\u0020200\u0020or\u0020204\u0020response\u0020status.",
+            "url": "classes/ExampleModuleWithUserAndApi-Controller-ApiUserLdapController.html#method_delete"
+        },                {
+            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller\\ApiUserLdapController\u003A\u003A\u0024userObj",
+            "name": "userObj",
+            "summary": "",
+            "url": "classes/ExampleModuleWithUserAndApi-Controller-ApiUserLdapController.html#property_userObj"
+        },                {
+            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller\\IndexController",
+            "name": "IndexController",
+            "summary": "",
+            "url": "classes/ExampleModuleWithUserAndApi-Controller-IndexController.html"
+        },                {
+            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller\\IndexController\u003A\u003AindexAction\u0028\u0029",
+            "name": "indexAction",
+            "summary": "",
+            "url": "classes/ExampleModuleWithUserAndApi-Controller-IndexController.html#method_indexAction"
+        },                {
+            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller\\IndexController\u003A\u003AreturnAction\u0028\u0029",
+            "name": "returnAction",
+            "summary": "",
+            "url": "classes/ExampleModuleWithUserAndApi-Controller-IndexController.html#method_returnAction"
+        },                {
+            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller\\Plugin\\CommonMetadata",
+            "name": "CommonMetadata",
+            "summary": "",
+            "url": "classes/ExampleModuleWithUserAndApi-Controller-Plugin-CommonMetadata.html"
+        },                {
+            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller\\Plugin\\CommonMetadata\u003A\u003A__invoke\u0028\u0029",
+            "name": "__invoke",
+            "summary": "",
+            "url": "classes/ExampleModuleWithUserAndApi-Controller-Plugin-CommonMetadata.html#method___invoke"
+        },                {
+            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller\\Plugin\\ReturnUserData",
+            "name": "ReturnUserData",
+            "summary": "",
+            "url": "classes/ExampleModuleWithUserAndApi-Controller-Plugin-ReturnUserData.html"
+        },                {
+            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller\\Plugin\\ReturnUserData\u003A\u003A__invoke\u0028\u0029",
+            "name": "__invoke",
+            "summary": "Return\u0020a\u0020simple\u0020JsonModel\u0020with\u0020the\u0020JWT\u0020and\u0020if\u0020the\u0020user\u0020click\u0020remember\nIn\u0020most\u0020app,\u0020if\u0020the\u0020user\u0020wants\u0020to\u0020be\u0020remembered,\u0020the\u0020JWT\u0020should\u0020be\u0020saved\u0020in\nlocalStorage,\u0020if\u0020they\u0020do\u0020not\u0020want\u0020to\u0020be\u0020remembered,\u0020the\u0020JWT\u0020should\u0020be\nsaved\u0020in\u0020localSession",
+            "url": "classes/ExampleModuleWithUserAndApi-Controller-Plugin-ReturnUserData.html#method___invoke"
+        },                {
+            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller\\Plugin\\SetResponseHeaders",
+            "name": "SetResponseHeaders",
+            "summary": "",
+            "url": "classes/ExampleModuleWithUserAndApi-Controller-Plugin-SetResponseHeaders.html"
+        },                {
+            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller\\Plugin\\SetResponseHeaders\u003A\u003A__invoke\u0028\u0029",
+            "name": "__invoke",
+            "summary": "Header\u0020sent\u0020to\u0020each\u0020request",
+            "url": "classes/ExampleModuleWithUserAndApi-Controller-Plugin-SetResponseHeaders.html#method___invoke"
+        },                {
+            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller\\WithSessionController",
+            "name": "WithSessionController",
+            "summary": "",
+            "url": "classes/ExampleModuleWithUserAndApi-Controller-WithSessionController.html"
+        },                {
+            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller\\WithSessionController\u003A\u003AsetUser\u0028\u0029",
+            "name": "setUser",
+            "summary": "",
+            "url": "classes/ExampleModuleWithUserAndApi-Controller-WithSessionController.html#method_setUser"
+        },                {
+            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller\\WithSessionController\u003A\u003AgetUser\u0028\u0029",
+            "name": "getUser",
+            "summary": "",
+            "url": "classes/ExampleModuleWithUserAndApi-Controller-WithSessionController.html#method_getUser"
+        },                {
+            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller\\WithSessionController\u003A\u003AindexAction\u0028\u0029",
+            "name": "indexAction",
+            "summary": "",
+            "url": "classes/ExampleModuleWithUserAndApi-Controller-WithSessionController.html#method_indexAction"
+        },                {
+            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller\\WithSessionController\u003A\u003A_setCommonMetadata\u0028\u0029",
+            "name": "_setCommonMetadata",
+            "summary": "Set\u0020the\u0020common\u0020metadata\u0020for\u0020this\u0020project",
+            "url": "classes/ExampleModuleWithUserAndApi-Controller-WithSessionController.html#method__setCommonMetadata"
+        },                {
+            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller\\WithSessionController\u003A\u003A\u0024user",
+            "name": "user",
+            "summary": "",
+            "url": "classes/ExampleModuleWithUserAndApi-Controller-WithSessionController.html#property_user"
+        },                {
+            "fqsen": "\\ExampleModuleWithUserAndApi\\Factory\\Controller\\ApiContentControllerFactory",
+            "name": "ApiContentControllerFactory",
+            "summary": "",
+            "url": "classes/ExampleModuleWithUserAndApi-Factory-Controller-ApiContentControllerFactory.html"
+        },                {
+            "fqsen": "\\ExampleModuleWithUserAndApi\\Factory\\Controller\\ApiContentControllerFactory\u003A\u003A__invoke\u0028\u0029",
+            "name": "__invoke",
+            "summary": "",
+            "url": "classes/ExampleModuleWithUserAndApi-Factory-Controller-ApiContentControllerFactory.html#method___invoke"
+        },                {
+            "fqsen": "\\ExampleModuleWithUserAndApi\\Factory\\Controller\\ApiUserControllerFactory",
+            "name": "ApiUserControllerFactory",
+            "summary": "",
+            "url": "classes/ExampleModuleWithUserAndApi-Factory-Controller-ApiUserControllerFactory.html"
+        },                {
+            "fqsen": "\\ExampleModuleWithUserAndApi\\Factory\\Controller\\ApiUserControllerFactory\u003A\u003A__invoke\u0028\u0029",
+            "name": "__invoke",
+            "summary": "",
+            "url": "classes/ExampleModuleWithUserAndApi-Factory-Controller-ApiUserControllerFactory.html#method___invoke"
+        },                {
+            "fqsen": "\\ExampleModuleWithUserAndApi\\Factory\\Controller\\ApiUserLdapControllerFactory",
+            "name": "ApiUserLdapControllerFactory",
+            "summary": "",
+            "url": "classes/ExampleModuleWithUserAndApi-Factory-Controller-ApiUserLdapControllerFactory.html"
+        },                {
+            "fqsen": "\\ExampleModuleWithUserAndApi\\Factory\\Controller\\ApiUserLdapControllerFactory\u003A\u003A__invoke\u0028\u0029",
+            "name": "__invoke",
+            "summary": "",
+            "url": "classes/ExampleModuleWithUserAndApi-Factory-Controller-ApiUserLdapControllerFactory.html#method___invoke"
+        },                {
+            "fqsen": "\\ExampleModuleWithUserAndApi\\Factory\\Controller\\IndexControllerFactory",
+            "name": "IndexControllerFactory",
+            "summary": "",
+            "url": "classes/ExampleModuleWithUserAndApi-Factory-Controller-IndexControllerFactory.html"
+        },                {
+            "fqsen": "\\ExampleModuleWithUserAndApi\\Factory\\Controller\\IndexControllerFactory\u003A\u003A__invoke\u0028\u0029",
+            "name": "__invoke",
+            "summary": "",
+            "url": "classes/ExampleModuleWithUserAndApi-Factory-Controller-IndexControllerFactory.html#method___invoke"
+        },                {
+            "fqsen": "\\ExampleModuleWithUserAndApi\\Factory\\Controller\\WithSessionControllerFactory",
+            "name": "WithSessionControllerFactory",
+            "summary": "",
+            "url": "classes/ExampleModuleWithUserAndApi-Factory-Controller-WithSessionControllerFactory.html"
+        },                {
+            "fqsen": "\\ExampleModuleWithUserAndApi\\Factory\\Controller\\WithSessionControllerFactory\u003A\u003A__invoke\u0028\u0029",
+            "name": "__invoke",
+            "summary": "",
+            "url": "classes/ExampleModuleWithUserAndApi-Factory-Controller-WithSessionControllerFactory.html#method___invoke"
+        },                {
+            "fqsen": "\\ExampleModuleWithUserAndApi\\Factory\\Model\\ContentFactory",
+            "name": "ContentFactory",
+            "summary": "",
+            "url": "classes/ExampleModuleWithUserAndApi-Factory-Model-ContentFactory.html"
+        },                {
+            "fqsen": "\\ExampleModuleWithUserAndApi\\Factory\\Model\\ContentFactory\u003A\u003A__invoke\u0028\u0029",
+            "name": "__invoke",
+            "summary": "",
+            "url": "classes/ExampleModuleWithUserAndApi-Factory-Model-ContentFactory.html#method___invoke"
+        },                {
+            "fqsen": "\\ExampleModuleWithUserAndApi\\Factory\\ModelFactory",
+            "name": "ModelFactory",
+            "summary": "",
+            "url": "classes/ExampleModuleWithUserAndApi-Factory-ModelFactory.html"
+        },                {
+            "fqsen": "\\ExampleModuleWithUserAndApi\\Factory\\ModelFactory\u003A\u003A__invoke\u0028\u0029",
+            "name": "__invoke",
+            "summary": "",
+            "url": "classes/ExampleModuleWithUserAndApi-Factory-ModelFactory.html#method___invoke"
+        },                {
+            "fqsen": "\\ExampleModuleWithUserAndApi\\Factory\\Model\\UserFactory",
+            "name": "UserFactory",
+            "summary": "",
+            "url": "classes/ExampleModuleWithUserAndApi-Factory-Model-UserFactory.html"
+        },                {
+            "fqsen": "\\ExampleModuleWithUserAndApi\\Factory\\Model\\UserFactory\u003A\u003A__invoke\u0028\u0029",
+            "name": "__invoke",
+            "summary": "",
+            "url": "classes/ExampleModuleWithUserAndApi-Factory-Model-UserFactory.html#method___invoke"
+        },                {
+            "fqsen": "\\ExampleModuleWithUserAndApi\\Model\\Content",
+            "name": "Content",
+            "summary": "",
+            "url": "classes/ExampleModuleWithUserAndApi-Model-Content.html"
+        },                {
+            "fqsen": "\\ExampleModuleWithUserAndApi\\Model\\Content\u003A\u003AsetDb\u0028\u0029",
+            "name": "setDb",
+            "summary": "",
+            "url": "classes/ExampleModuleWithUserAndApi-Model-Content.html#method_setDb"
+        },                {
+            "fqsen": "\\ExampleModuleWithUserAndApi\\Model\\Content\u003A\u003AgetDb\u0028\u0029",
+            "name": "getDb",
+            "summary": "",
+            "url": "classes/ExampleModuleWithUserAndApi-Model-Content.html#method_getDb"
+        },                {
+            "fqsen": "\\ExampleModuleWithUserAndApi\\Model\\Content\u003A\u003AsetUser\u0028\u0029",
+            "name": "setUser",
+            "summary": "Set\u0020the\u0020User\u0020obj\u0020implementing\u0020UserInterface\u0020\u0028used\u0020in\u0020factory\u0029",
+            "url": "classes/ExampleModuleWithUserAndApi-Model-Content.html#method_setUser"
+        },                {
+            "fqsen": "\\ExampleModuleWithUserAndApi\\Model\\Content\u003A\u003AgetUser\u0028\u0029",
+            "name": "getUser",
+            "summary": "",
+            "url": "classes/ExampleModuleWithUserAndApi-Model-Content.html#method_getUser"
+        },                {
+            "fqsen": "\\ExampleModuleWithUserAndApi\\Model\\Content\u003A\u003AgetContent\u0028\u0029",
+            "name": "getContent",
+            "summary": "",
+            "url": "classes/ExampleModuleWithUserAndApi-Model-Content.html#method_getContent"
+        },                {
+            "fqsen": "\\ExampleModuleWithUserAndApi\\Model\\Content\u003A\u003A\u0024pdo",
+            "name": "pdo",
+            "summary": "This\u0020setter\u0020is\u0020used\u0020by\u0020the\u0020factory\nThe\u0020getter\u0020is\u0020used\u0020within\u0020this\u0020classe",
+            "url": "classes/ExampleModuleWithUserAndApi-Model-Content.html#property_pdo"
+        },                {
+            "fqsen": "\\ExampleModuleWithUserAndApi\\Model\\Content\u003A\u003A\u0024userObj",
+            "name": "userObj",
+            "summary": "",
+            "url": "classes/ExampleModuleWithUserAndApi-Model-Content.html#property_userObj"
+        },                {
+            "fqsen": "\\ExampleModuleWithUserAndApi\\Model\\Model",
+            "name": "Model",
+            "summary": "",
+            "url": "classes/ExampleModuleWithUserAndApi-Model-Model.html"
+        },                {
+            "fqsen": "\\ExampleModuleWithUserAndApi\\Model\\Model\u003A\u003AsetDb\u0028\u0029",
+            "name": "setDb",
+            "summary": "",
+            "url": "classes/ExampleModuleWithUserAndApi-Model-Model.html#method_setDb"
+        },                {
+            "fqsen": "\\ExampleModuleWithUserAndApi\\Model\\Model\u003A\u003AgetDb\u0028\u0029",
+            "name": "getDb",
+            "summary": "",
+            "url": "classes/ExampleModuleWithUserAndApi-Model-Model.html#method_getDb"
+        },                {
+            "fqsen": "\\ExampleModuleWithUserAndApi\\Model\\Model\u003A\u003AdoSomething\u0028\u0029",
+            "name": "doSomething",
+            "summary": "an\u0020example\u0020of\u0020a\u0020method\u0020to\u0020be\u0020called",
+            "url": "classes/ExampleModuleWithUserAndApi-Model-Model.html#method_doSomething"
+        },                {
+            "fqsen": "\\ExampleModuleWithUserAndApi\\Model\\Model\u003A\u003A\u0024pdo",
+            "name": "pdo",
+            "summary": "This\u0020setter\u0020is\u0020used\u0020by\u0020the\u0020factory\nThe\u0020getter\u0020is\u0020used\u0020within\u0020this\u0020classe",
+            "url": "classes/ExampleModuleWithUserAndApi-Model-Model.html#property_pdo"
+        },                {
+            "fqsen": "\\ExampleModuleWithUserAndApi\\Model\\User",
+            "name": "User",
+            "summary": "",
+            "url": "classes/ExampleModuleWithUserAndApi-Model-User.html"
+        },                {
+            "fqsen": "\\ExampleModuleWithUserAndApi\\Model\\User\u003A\u003AsetDb\u0028\u0029",
+            "name": "setDb",
+            "summary": "Set\u0020the\u0020PDO\u0020connection\u0020to\u0020manage\u0020your\u0020users\nThis\u0020setter\u0020is\u0020used\u0020by\u0020the\u0020factory",
+            "url": "classes/ExampleModuleWithUserAndApi-Model-User.html#method_setDb"
+        },                {
+            "fqsen": "\\ExampleModuleWithUserAndApi\\Model\\User\u003A\u003AgetDb\u0028\u0029",
+            "name": "getDb",
+            "summary": "Get\u0020the\u0020PDO\u0020connection",
+            "url": "classes/ExampleModuleWithUserAndApi-Model-User.html#method_getDb"
+        },                {
+            "fqsen": "\\ExampleModuleWithUserAndApi\\Model\\User\u003A\u003Aauthenticate\u0028\u0029",
+            "name": "authenticate",
+            "summary": "Authenticate\/login\u0020a\u0020user\u0020using\u0020a\u0020database.\u0020This\u0020particular\u0020implementation\u0020would\u0020use\u0020a\u0020central\nDB\u0020for\u0020user\u0020and\u0020each\u0020app\u0020could\u0020have\u0020a\u0020user\u0020param,\u0020that\u0027s\u0020why\u0020it\u0020uses\u0020a\u0020parentDb\u0020for\u0020authenticating",
+            "url": "classes/ExampleModuleWithUserAndApi-Model-User.html#method_authenticate"
+        },                {
+            "fqsen": "\\ExampleModuleWithUserAndApi\\Model\\User\u003A\u003A_loadUserById\u0028\u0029",
+            "name": "_loadUserById",
+            "summary": "A\u0020method\u0020used\u0020by\u0020loadFromJwt\u0020and\u0020loadFromSession\u0020to\u0020load\u0020the\u0020user\u0020without\u0020validating\u0020credentials",
+            "url": "classes/ExampleModuleWithUserAndApi-Model-User.html#method__loadUserById"
+        },                {
+            "fqsen": "\\ExampleModuleWithUserAndApi\\Model\\User\u003A\u003AloadFromJwt\u0028\u0029",
+            "name": "loadFromJwt",
+            "summary": "Load\u0020a\u0020user\u0020from\u0020the\u0020JWT",
+            "url": "classes/ExampleModuleWithUserAndApi-Model-User.html#method_loadFromJwt"
+        },                {
+            "fqsen": "\\ExampleModuleWithUserAndApi\\Model\\User\u003A\u003AgetDataForJWT\u0028\u0029",
+            "name": "getDataForJWT",
+            "summary": "This\u0020function\u0020is\u0020called\u0020when\u0020trying\u0020to\u0020get\u0020the\u0020JWT",
+            "url": "classes/ExampleModuleWithUserAndApi-Model-User.html#method_getDataForJWT"
+        },                {
+            "fqsen": "\\ExampleModuleWithUserAndApi\\Model\\User\u003A\u003AID_FIELD",
+            "name": "ID_FIELD",
+            "summary": "In\u0020DbUser,\u0020the\u0020ID\u0020Field\u0020is\u0020userId",
+            "url": "classes/ExampleModuleWithUserAndApi-Model-User.html#constant_ID_FIELD"
+        },                {
+            "fqsen": "\\ExampleModuleWithUserAndApi\\Model\\UserLdap",
+            "name": "UserLdap",
+            "summary": "",
+            "url": "classes/ExampleModuleWithUserAndApi-Model-UserLdap.html"
+        },                {
+            "fqsen": "\\ExampleModuleWithUserAndApi\\Model\\UserLdap\u003A\u003Aauthenticate\u0028\u0029",
+            "name": "authenticate",
+            "summary": "Authenticate\/login\u0020a\u0020user",
+            "url": "classes/ExampleModuleWithUserAndApi-Model-UserLdap.html#method_authenticate"
+        },                {
+            "fqsen": "\\ExampleModuleWithUserAndApi\\Model\\UserLdap\u003A\u003AgetDataForJWT\u0028\u0029",
+            "name": "getDataForJWT",
+            "summary": "This\u0020function\u0020is\u0020called\u0020when\u0020trying\u0020to\u0020get\u0020the\u0020JWT",
+            "url": "classes/ExampleModuleWithUserAndApi-Model-UserLdap.html#method_getDataForJWT"
+        },                {
             "fqsen": "\\ActiveDirectory\\Factory\\ActiveDirectoryFactory",
             "name": "ActiveDirectoryFactory",
             "summary": "",
@@ -76,20 +616,215 @@ Search.appendIndex(
             "summary": "Get\u0020a\u0020group\u0020name\u0020from\u0020DN",
             "url": "classes/ActiveDirectory-Model-ActiveDirectory.html#method_getGroupName"
         },                {
+            "fqsen": "\\ActiveDirectoryTest\\ActiveDirectoryTest",
+            "name": "ActiveDirectoryTest",
+            "summary": "",
+            "url": "classes/ActiveDirectoryTest-ActiveDirectoryTest.html"
+        },                {
+            "fqsen": "\\ActiveDirectoryTest\\ActiveDirectoryTest\u003A\u003AsetUp\u0028\u0029",
+            "name": "setUp",
+            "summary": "",
+            "url": "classes/ActiveDirectoryTest-ActiveDirectoryTest.html#method_setUp"
+        },                {
+            "fqsen": "\\ActiveDirectoryTest\\ActiveDirectoryTest\u003A\u003AtestValidateUsername\u0028\u0029",
+            "name": "testValidateUsername",
+            "summary": "",
+            "url": "classes/ActiveDirectoryTest-ActiveDirectoryTest.html#method_testValidateUsername"
+        },                {
+            "fqsen": "\\ActiveDirectoryTest\\ActiveDirectoryTest\u003A\u003AtestInvalidateUsernames\u0028\u0029",
+            "name": "testInvalidateUsernames",
+            "summary": "",
+            "url": "classes/ActiveDirectoryTest-ActiveDirectoryTest.html#method_testInvalidateUsernames"
+        },                {
+            "fqsen": "\\Application\\Module",
+            "name": "Module",
+            "summary": "Base\u0020configuration\u0020class\u0020for\u0020the\u0020Application\u0020module.\u0020This\u0020is\u0020the\u0020namespace\u0020for\u0020generic\u0020features",
+            "url": "classes/Application-Module.html"
+        },                {
+            "fqsen": "\\Application\\Command\\Cronjob",
+            "name": "Cronjob",
+            "summary": "",
+            "url": "classes/Application-Command-Cronjob.html"
+        },                {
+            "fqsen": "\\Application\\Command\\Cronjob\u003A\u003AsetEventManager\u0028\u0029",
+            "name": "setEventManager",
+            "summary": "should\u0020be\u0020used\u0020in\u0020the\u0020factory",
+            "url": "classes/Application-Command-Cronjob.html#method_setEventManager"
+        },                {
+            "fqsen": "\\Application\\Command\\Cronjob\u003A\u003AgetEventManager\u0028\u0029",
+            "name": "getEventManager",
+            "summary": "Get\u0020the\u0020EventManager\u0020to\u0020triger\u0020for\u0020different\u0020events",
+            "url": "classes/Application-Command-Cronjob.html#method_getEventManager"
+        },                {
+            "fqsen": "\\Application\\Command\\Cronjob\u003A\u003Aconfigure\u0028\u0029",
+            "name": "configure",
+            "summary": "",
+            "url": "classes/Application-Command-Cronjob.html#method_configure"
+        },                {
+            "fqsen": "\\Application\\Command\\Cronjob\u003A\u003Aexecute\u0028\u0029",
+            "name": "execute",
+            "summary": "",
+            "url": "classes/Application-Command-Cronjob.html#method_execute"
+        },                {
             "fqsen": "\\Application\\Controller\\IndexController",
             "name": "IndexController",
             "summary": "",
             "url": "classes/Application-Controller-IndexController.html"
+        },                {
+            "fqsen": "\\Application\\Controller\\IndexController\u003A\u003AsetLoadBaseScript\u0028\u0029",
+            "name": "setLoadBaseScript",
+            "summary": "",
+            "url": "classes/Application-Controller-IndexController.html#method_setLoadBaseScript"
+        },                {
+            "fqsen": "\\Application\\Controller\\IndexController\u003A\u003AgetLoadBaseScript\u0028\u0029",
+            "name": "getLoadBaseScript",
+            "summary": "",
+            "url": "classes/Application-Controller-IndexController.html#method_getLoadBaseScript"
         },                {
             "fqsen": "\\Application\\Controller\\IndexController\u003A\u003AindexAction\u0028\u0029",
             "name": "indexAction",
             "summary": "",
             "url": "classes/Application-Controller-IndexController.html#method_indexAction"
         },                {
+            "fqsen": "\\Application\\Controller\\IndexController\u003A\u003AcacheAction\u0028\u0029",
+            "name": "cacheAction",
+            "summary": "",
+            "url": "classes/Application-Controller-IndexController.html#method_cacheAction"
+        },                {
+            "fqsen": "\\Application\\Controller\\IndexController\u003A\u003AcacheStatusAction\u0028\u0029",
+            "name": "cacheStatusAction",
+            "summary": "",
+            "url": "classes/Application-Controller-IndexController.html#method_cacheStatusAction"
+        },                {
+            "fqsen": "\\Application\\Controller\\IndexController\u003A\u003AbasescriptAction\u0028\u0029",
+            "name": "basescriptAction",
+            "summary": "",
+            "url": "classes/Application-Controller-IndexController.html#method_basescriptAction"
+        },                {
             "fqsen": "\\Application\\Controller\\IndexController\u003A\u003A_setCommonMetadata\u0028\u0029",
             "name": "_setCommonMetadata",
             "summary": "",
             "url": "classes/Application-Controller-IndexController.html#method__setCommonMetadata"
+        },                {
+            "fqsen": "\\Application\\Controller\\IndexController\u003A\u003A\u0024loadBaseScript",
+            "name": "loadBaseScript",
+            "summary": "",
+            "url": "classes/Application-Controller-IndexController.html#property_loadBaseScript"
+        },                {
+            "fqsen": "\\Application\\Controller\\Plugin\\CommonMetadata",
+            "name": "CommonMetadata",
+            "summary": "",
+            "url": "classes/Application-Controller-Plugin-CommonMetadata.html"
+        },                {
+            "fqsen": "\\Application\\Controller\\Plugin\\CommonMetadata\u003A\u003AsetTranslator\u0028\u0029",
+            "name": "setTranslator",
+            "summary": "",
+            "url": "classes/Application-Controller-Plugin-CommonMetadata.html#method_setTranslator"
+        },                {
+            "fqsen": "\\Application\\Controller\\Plugin\\CommonMetadata\u003A\u003AgetTranslator\u0028\u0029",
+            "name": "getTranslator",
+            "summary": "",
+            "url": "classes/Application-Controller-Plugin-CommonMetadata.html#method_getTranslator"
+        },                {
+            "fqsen": "\\Application\\Controller\\Plugin\\CommonMetadata\u003A\u003AsetLang\u0028\u0029",
+            "name": "setLang",
+            "summary": "",
+            "url": "classes/Application-Controller-Plugin-CommonMetadata.html#method_setLang"
+        },                {
+            "fqsen": "\\Application\\Controller\\Plugin\\CommonMetadata\u003A\u003AgetLang\u0028\u0029",
+            "name": "getLang",
+            "summary": "",
+            "url": "classes/Application-Controller-Plugin-CommonMetadata.html#method_getLang"
+        },                {
+            "fqsen": "\\Application\\Controller\\Plugin\\CommonMetadata\u003A\u003AsetUrlObj\u0028\u0029",
+            "name": "setUrlObj",
+            "summary": "",
+            "url": "classes/Application-Controller-Plugin-CommonMetadata.html#method_setUrlObj"
+        },                {
+            "fqsen": "\\Application\\Controller\\Plugin\\CommonMetadata\u003A\u003AgetUrlObj\u0028\u0029",
+            "name": "getUrlObj",
+            "summary": "",
+            "url": "classes/Application-Controller-Plugin-CommonMetadata.html#method_getUrlObj"
+        },                {
+            "fqsen": "\\Application\\Controller\\Plugin\\CommonMetadata\u003A\u003AsetBreadcrumbsObj\u0028\u0029",
+            "name": "setBreadcrumbsObj",
+            "summary": "",
+            "url": "classes/Application-Controller-Plugin-CommonMetadata.html#method_setBreadcrumbsObj"
+        },                {
+            "fqsen": "\\Application\\Controller\\Plugin\\CommonMetadata\u003A\u003AgetBreadcrumbsObj\u0028\u0029",
+            "name": "getBreadcrumbsObj",
+            "summary": "",
+            "url": "classes/Application-Controller-Plugin-CommonMetadata.html#method_getBreadcrumbsObj"
+        },                {
+            "fqsen": "\\Application\\Controller\\Plugin\\CommonMetadata\u003A\u003AsetRouteMatch\u0028\u0029",
+            "name": "setRouteMatch",
+            "summary": "",
+            "url": "classes/Application-Controller-Plugin-CommonMetadata.html#method_setRouteMatch"
+        },                {
+            "fqsen": "\\Application\\Controller\\Plugin\\CommonMetadata\u003A\u003AgetRouteMatch\u0028\u0029",
+            "name": "getRouteMatch",
+            "summary": "",
+            "url": "classes/Application-Controller-Plugin-CommonMetadata.html#method_getRouteMatch"
+        },                {
+            "fqsen": "\\Application\\Controller\\Plugin\\CommonMetadata\u003A\u003AsetMetadataObj\u0028\u0029",
+            "name": "setMetadataObj",
+            "summary": "",
+            "url": "classes/Application-Controller-Plugin-CommonMetadata.html#method_setMetadataObj"
+        },                {
+            "fqsen": "\\Application\\Controller\\Plugin\\CommonMetadata\u003A\u003AgetMetadataObj\u0028\u0029",
+            "name": "getMetadataObj",
+            "summary": "",
+            "url": "classes/Application-Controller-Plugin-CommonMetadata.html#method_getMetadataObj"
+        },                {
+            "fqsen": "\\Application\\Controller\\Plugin\\CommonMetadata\u003A\u003AsetAppMetadata\u0028\u0029",
+            "name": "setAppMetadata",
+            "summary": "",
+            "url": "classes/Application-Controller-Plugin-CommonMetadata.html#method_setAppMetadata"
+        },                {
+            "fqsen": "\\Application\\Controller\\Plugin\\CommonMetadata\u003A\u003AgetAppMetadata\u0028\u0029",
+            "name": "getAppMetadata",
+            "summary": "",
+            "url": "classes/Application-Controller-Plugin-CommonMetadata.html#method_getAppMetadata"
+        },                {
+            "fqsen": "\\Application\\Controller\\Plugin\\CommonMetadata\u003A\u003A__invoke\u0028\u0029",
+            "name": "__invoke",
+            "summary": "",
+            "url": "classes/Application-Controller-Plugin-CommonMetadata.html#method___invoke"
+        },                {
+            "fqsen": "\\Application\\Controller\\Plugin\\CommonMetadata\u003A\u003A\u0024translator",
+            "name": "translator",
+            "summary": "",
+            "url": "classes/Application-Controller-Plugin-CommonMetadata.html#property_translator"
+        },                {
+            "fqsen": "\\Application\\Controller\\Plugin\\CommonMetadata\u003A\u003A\u0024lang",
+            "name": "lang",
+            "summary": "",
+            "url": "classes/Application-Controller-Plugin-CommonMetadata.html#property_lang"
+        },                {
+            "fqsen": "\\Application\\Controller\\Plugin\\CommonMetadata\u003A\u003A\u0024url",
+            "name": "url",
+            "summary": "",
+            "url": "classes/Application-Controller-Plugin-CommonMetadata.html#property_url"
+        },                {
+            "fqsen": "\\Application\\Controller\\Plugin\\CommonMetadata\u003A\u003A\u0024breadcrumbsObj",
+            "name": "breadcrumbsObj",
+            "summary": "",
+            "url": "classes/Application-Controller-Plugin-CommonMetadata.html#property_breadcrumbsObj"
+        },                {
+            "fqsen": "\\Application\\Controller\\Plugin\\CommonMetadata\u003A\u003A\u0024route",
+            "name": "route",
+            "summary": "",
+            "url": "classes/Application-Controller-Plugin-CommonMetadata.html#property_route"
+        },                {
+            "fqsen": "\\Application\\Controller\\Plugin\\CommonMetadata\u003A\u003A\u0024metadata",
+            "name": "metadata",
+            "summary": "",
+            "url": "classes/Application-Controller-Plugin-CommonMetadata.html#property_metadata"
+        },                {
+            "fqsen": "\\Application\\Controller\\Plugin\\CommonMetadata\u003A\u003A\u0024appMetadata",
+            "name": "appMetadata",
+            "summary": "",
+            "url": "classes/Application-Controller-Plugin-CommonMetadata.html#property_appMetadata"
         },                {
             "fqsen": "\\Application\\Controller\\Plugin\\GetTranslator",
             "name": "GetTranslator",
@@ -136,6 +871,36 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Application-Controller-Plugin-GetTranslator.html#property_lang"
         },                {
+            "fqsen": "\\Application\\Controller\\Plugin\\GetUrlHelper",
+            "name": "GetUrlHelper",
+            "summary": "",
+            "url": "classes/Application-Controller-Plugin-GetUrlHelper.html"
+        },                {
+            "fqsen": "\\Application\\Controller\\Plugin\\GetUrlHelper\u003A\u003AsetUrl\u0028\u0029",
+            "name": "setUrl",
+            "summary": "",
+            "url": "classes/Application-Controller-Plugin-GetUrlHelper.html#method_setUrl"
+        },                {
+            "fqsen": "\\Application\\Controller\\Plugin\\GetUrlHelper\u003A\u003AgetUrl\u0028\u0029",
+            "name": "getUrl",
+            "summary": "",
+            "url": "classes/Application-Controller-Plugin-GetUrlHelper.html#method_getUrl"
+        },                {
+            "fqsen": "\\Application\\Controller\\Plugin\\GetUrlHelper\u003A\u003A__invoke\u0028\u0029",
+            "name": "__invoke",
+            "summary": "",
+            "url": "classes/Application-Controller-Plugin-GetUrlHelper.html#method___invoke"
+        },                {
+            "fqsen": "\\Application\\Controller\\Plugin\\GetUrlHelper\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "",
+            "url": "classes/Application-Controller-Plugin-GetUrlHelper.html#method___construct"
+        },                {
+            "fqsen": "\\Application\\Controller\\Plugin\\GetUrlHelper\u003A\u003A\u0024urlObj",
+            "name": "urlObj",
+            "summary": "",
+            "url": "classes/Application-Controller-Plugin-GetUrlHelper.html#property_urlObj"
+        },                {
             "fqsen": "\\Application\\Controller\\Plugin\\Lang",
             "name": "Lang",
             "summary": "Simple\u0020class\u0020to\u0020just\u0020return\u0020the\u0020lang\u0020of\u0020the\u0020current\u0020page",
@@ -166,6 +931,51 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Application-Controller-Plugin-Lang.html#property_lang"
         },                {
+            "fqsen": "\\Application\\Controller\\Plugin\\SetApiResponseHeaders",
+            "name": "SetApiResponseHeaders",
+            "summary": "",
+            "url": "classes/Application-Controller-Plugin-SetApiResponseHeaders.html"
+        },                {
+            "fqsen": "\\Application\\Controller\\Plugin\\SetApiResponseHeaders\u003A\u003A__invoke\u0028\u0029",
+            "name": "__invoke",
+            "summary": "",
+            "url": "classes/Application-Controller-Plugin-SetApiResponseHeaders.html#method___invoke"
+        },                {
+            "fqsen": "\\Application\\Exception\\MetadataException",
+            "name": "MetadataException",
+            "summary": "",
+            "url": "classes/Application-Exception-MetadataException.html"
+        },                {
+            "fqsen": "\\Application\\Factory\\Command\\CronjobCommandFactory",
+            "name": "CronjobCommandFactory",
+            "summary": "",
+            "url": "classes/Application-Factory-Command-CronjobCommandFactory.html"
+        },                {
+            "fqsen": "\\Application\\Factory\\Command\\CronjobCommandFactory\u003A\u003A__invoke\u0028\u0029",
+            "name": "__invoke",
+            "summary": "",
+            "url": "classes/Application-Factory-Command-CronjobCommandFactory.html#method___invoke"
+        },                {
+            "fqsen": "\\OAuth\\Factory\\Controller\\IndexControllerFactory",
+            "name": "IndexControllerFactory",
+            "summary": "",
+            "url": "classes/OAuth-Factory-Controller-IndexControllerFactory.html"
+        },                {
+            "fqsen": "\\OAuth\\Factory\\Controller\\IndexControllerFactory\u003A\u003A__invoke\u0028\u0029",
+            "name": "__invoke",
+            "summary": "",
+            "url": "classes/OAuth-Factory-Controller-IndexControllerFactory.html#method___invoke"
+        },                {
+            "fqsen": "\\Application\\Factory\\Controller\\Plugin\\CommonMetadataFactory",
+            "name": "CommonMetadataFactory",
+            "summary": "",
+            "url": "classes/Application-Factory-Controller-Plugin-CommonMetadataFactory.html"
+        },                {
+            "fqsen": "\\Application\\Factory\\Controller\\Plugin\\CommonMetadataFactory\u003A\u003A__invoke\u0028\u0029",
+            "name": "__invoke",
+            "summary": "",
+            "url": "classes/Application-Factory-Controller-Plugin-CommonMetadataFactory.html#method___invoke"
+        },                {
             "fqsen": "\\Application\\Factory\\Controller\\Plugin\\GetTranslatorFactory",
             "name": "GetTranslatorFactory",
             "summary": "",
@@ -175,6 +985,16 @@ Search.appendIndex(
             "name": "__invoke",
             "summary": "Get\u0020the\u0020translator\u0020object",
             "url": "classes/Application-Factory-Controller-Plugin-GetTranslatorFactory.html#method___invoke"
+        },                {
+            "fqsen": "\\Application\\Factory\\Controller\\Plugin\\GetUrlHelperFactory",
+            "name": "GetUrlHelperFactory",
+            "summary": "",
+            "url": "classes/Application-Factory-Controller-Plugin-GetUrlHelperFactory.html"
+        },                {
+            "fqsen": "\\Application\\Factory\\Controller\\Plugin\\GetUrlHelperFactory\u003A\u003A__invoke\u0028\u0029",
+            "name": "__invoke",
+            "summary": "Get\u0020the\u0020translator\u0020object",
+            "url": "classes/Application-Factory-Controller-Plugin-GetUrlHelperFactory.html#method___invoke"
         },                {
             "fqsen": "\\Application\\Factory\\Controller\\Plugin\\LangFactory",
             "name": "LangFactory",
@@ -186,6 +1006,26 @@ Search.appendIndex(
             "summary": "Get\u0020the\u0020Lang\u0020variable.\u0020By\u0020default\u0020the\u0020lang\u0020variable\u0020is\u0020sent\u0020to\u0020layout\u0020and\u0020view\u0020but\u0020there\nis\u0020no\u0020way\u0020to\u0020have\u0020a\u0020variable\u0020in\u0020controller,\u0020this\u0020is\u0020a\u0020subtitute",
             "url": "classes/Application-Factory-Controller-Plugin-LangFactory.html#method___invoke"
         },                {
+            "fqsen": "\\Application\\Factory\\DomainFactory",
+            "name": "DomainFactory",
+            "summary": "",
+            "url": "classes/Application-Factory-DomainFactory.html"
+        },                {
+            "fqsen": "\\Application\\Factory\\DomainFactory\u003A\u003A__invoke\u0028\u0029",
+            "name": "__invoke",
+            "summary": "",
+            "url": "classes/Application-Factory-DomainFactory.html#method___invoke"
+        },                {
+            "fqsen": "\\Application\\Factory\\FilesizeSuffixesFactory",
+            "name": "FilesizeSuffixesFactory",
+            "summary": "",
+            "url": "classes/Application-Factory-FilesizeSuffixesFactory.html"
+        },                {
+            "fqsen": "\\Application\\Factory\\FilesizeSuffixesFactory\u003A\u003A__invoke\u0028\u0029",
+            "name": "__invoke",
+            "summary": "",
+            "url": "classes/Application-Factory-FilesizeSuffixesFactory.html#method___invoke"
+        },                {
             "fqsen": "\\Application\\Factory\\GcNotifyFactory",
             "name": "GcNotifyFactory",
             "summary": "",
@@ -195,11 +1035,6 @@ Search.appendIndex(
             "name": "__invoke",
             "summary": "",
             "url": "classes/Application-Factory-GcNotifyFactory.html#method___invoke"
-        },                {
-            "fqsen": "\\Application\\Factory\\GcNotifyFactory\u003A\u003AcreateService\u0028\u0029",
-            "name": "createService",
-            "summary": "Create\u0020service",
-            "url": "classes/Application-Factory-GcNotifyFactory.html#method_createService"
         },                {
             "fqsen": "\\Application\\Factory\\GetLangSwitchUrlFactory",
             "name": "GetLangSwitchUrlFactory",
@@ -216,6 +1051,26 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Application-Factory-GetLangSwitchUrlFactory.html#method___invoke"
         },                {
+            "fqsen": "\\Application\\Factory\\LangFactory",
+            "name": "LangFactory",
+            "summary": "",
+            "url": "classes/Application-Factory-LangFactory.html"
+        },                {
+            "fqsen": "\\Application\\Factory\\LangFactory\u003A\u003A__invoke\u0028\u0029",
+            "name": "__invoke",
+            "summary": "",
+            "url": "classes/Application-Factory-LangFactory.html#method___invoke"
+        },                {
+            "fqsen": "\\Application\\Factory\\Listener\\ApplicationSetupListenerFactory",
+            "name": "ApplicationSetupListenerFactory",
+            "summary": "",
+            "url": "classes/Application-Factory-Listener-ApplicationSetupListenerFactory.html"
+        },                {
+            "fqsen": "\\Application\\Factory\\Listener\\ApplicationSetupListenerFactory\u003A\u003A__invoke\u0028\u0029",
+            "name": "__invoke",
+            "summary": "",
+            "url": "classes/Application-Factory-Listener-ApplicationSetupListenerFactory.html#method___invoke"
+        },                {
             "fqsen": "\\Application\\Factory\\MetadataBuilderFactory",
             "name": "MetadataBuilderFactory",
             "summary": "",
@@ -226,20 +1081,30 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Application-Factory-MetadataBuilderFactory.html#method___invoke"
         },                {
-            "fqsen": "\\Application\\Factory\\MetadataBuilderFactory\u003A\u003AcreateService\u0028\u0029",
-            "name": "createService",
-            "summary": "Create\u0020service",
-            "url": "classes/Application-Factory-MetadataBuilderFactory.html#method_createService"
+            "fqsen": "\\Application\\Factory\\MetadataFactory",
+            "name": "MetadataFactory",
+            "summary": "",
+            "url": "classes/Application-Factory-MetadataFactory.html"
+        },                {
+            "fqsen": "\\Application\\Factory\\MetadataFactory\u003A\u003A__invoke\u0028\u0029",
+            "name": "__invoke",
+            "summary": "",
+            "url": "classes/Application-Factory-MetadataFactory.html#method___invoke"
+        },                {
+            "fqsen": "\\Application\\Factory\\SessionManagerFactory",
+            "name": "SessionManagerFactory",
+            "summary": "",
+            "url": "classes/Application-Factory-SessionManagerFactory.html"
+        },                {
+            "fqsen": "\\Application\\Factory\\SessionManagerFactory\u003A\u003A__invoke\u0028\u0029",
+            "name": "__invoke",
+            "summary": "",
+            "url": "classes/Application-Factory-SessionManagerFactory.html#method___invoke"
         },                {
             "fqsen": "\\Application\\Factory\\View\\Helper\\CompleteMetadataFactory",
             "name": "CompleteMetadataFactory",
             "summary": "",
             "url": "classes/Application-Factory-View-Helper-CompleteMetadataFactory.html"
-        },                {
-            "fqsen": "\\Application\\Factory\\View\\Helper\\CompleteMetadataFactory\u003A\u003AcreateService\u0028\u0029",
-            "name": "createService",
-            "summary": "",
-            "url": "classes/Application-Factory-View-Helper-CompleteMetadataFactory.html#method_createService"
         },                {
             "fqsen": "\\Application\\Factory\\View\\Helper\\CompleteMetadataFactory\u003A\u003A__invoke\u0028\u0029",
             "name": "__invoke",
@@ -251,15 +1116,20 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Application-Factory-View-Helper-GetLangSwitchUrlFactory.html"
         },                {
-            "fqsen": "\\Application\\Factory\\View\\Helper\\GetLangSwitchUrlFactory\u003A\u003AcreateService\u0028\u0029",
-            "name": "createService",
-            "summary": "",
-            "url": "classes/Application-Factory-View-Helper-GetLangSwitchUrlFactory.html#method_createService"
-        },                {
             "fqsen": "\\Application\\Factory\\View\\Helper\\GetLangSwitchUrlFactory\u003A\u003A__invoke\u0028\u0029",
             "name": "__invoke",
             "summary": "",
             "url": "classes/Application-Factory-View-Helper-GetLangSwitchUrlFactory.html#method___invoke"
+        },                {
+            "fqsen": "\\Application\\Factory\\View\\Helper\\HeadScriptFactory",
+            "name": "HeadScriptFactory",
+            "summary": "",
+            "url": "classes/Application-Factory-View-Helper-HeadScriptFactory.html"
+        },                {
+            "fqsen": "\\Application\\Factory\\View\\Helper\\HeadScriptFactory\u003A\u003A__invoke\u0028\u0029",
+            "name": "__invoke",
+            "summary": "",
+            "url": "classes/Application-Factory-View-Helper-HeadScriptFactory.html#method___invoke"
         },                {
             "fqsen": "\\Application\\Factory\\View\\Helper\\UrlFactory",
             "name": "UrlFactory",
@@ -271,10 +1141,80 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Application-Factory-View-Helper-UrlFactory.html#method___invoke"
         },                {
-            "fqsen": "\\Application\\Factory\\View\\Helper\\UrlFactory\u003A\u003AcreateService\u0028\u0029",
-            "name": "createService",
+            "fqsen": "\\Application\\Listener\\ApplicationSetupListener",
+            "name": "ApplicationSetupListener",
             "summary": "",
-            "url": "classes/Application-Factory-View-Helper-UrlFactory.html#method_createService"
+            "url": "classes/Application-Listener-ApplicationSetupListener.html"
+        },                {
+            "fqsen": "\\Application\\Listener\\ApplicationSetupListener\u003A\u003AsetSessionManager\u0028\u0029",
+            "name": "setSessionManager",
+            "summary": "",
+            "url": "classes/Application-Listener-ApplicationSetupListener.html#method_setSessionManager"
+        },                {
+            "fqsen": "\\Application\\Listener\\ApplicationSetupListener\u003A\u003AgetSessionManager\u0028\u0029",
+            "name": "getSessionManager",
+            "summary": "",
+            "url": "classes/Application-Listener-ApplicationSetupListener.html#method_getSessionManager"
+        },                {
+            "fqsen": "\\Application\\Listener\\ApplicationSetupListener\u003A\u003AsetRequest\u0028\u0029",
+            "name": "setRequest",
+            "summary": "",
+            "url": "classes/Application-Listener-ApplicationSetupListener.html#method_setRequest"
+        },                {
+            "fqsen": "\\Application\\Listener\\ApplicationSetupListener\u003A\u003AgetRequest\u0028\u0029",
+            "name": "getRequest",
+            "summary": "",
+            "url": "classes/Application-Listener-ApplicationSetupListener.html#method_getRequest"
+        },                {
+            "fqsen": "\\Application\\Listener\\ApplicationSetupListener\u003A\u003AsetConfig\u0028\u0029",
+            "name": "setConfig",
+            "summary": "",
+            "url": "classes/Application-Listener-ApplicationSetupListener.html#method_setConfig"
+        },                {
+            "fqsen": "\\Application\\Listener\\ApplicationSetupListener\u003A\u003AgetConfig\u0028\u0029",
+            "name": "getConfig",
+            "summary": "",
+            "url": "classes/Application-Listener-ApplicationSetupListener.html#method_getConfig"
+        },                {
+            "fqsen": "\\Application\\Listener\\ApplicationSetupListener\u003A\u003Aattach\u0028\u0029",
+            "name": "attach",
+            "summary": "",
+            "url": "classes/Application-Listener-ApplicationSetupListener.html#method_attach"
+        },                {
+            "fqsen": "\\Application\\Listener\\ApplicationSetupListener\u003A\u003AstartSession\u0028\u0029",
+            "name": "startSession",
+            "summary": "",
+            "url": "classes/Application-Listener-ApplicationSetupListener.html#method_startSession"
+        },                {
+            "fqsen": "\\Application\\Listener\\ApplicationSetupListener\u003A\u003AonDispatch\u0028\u0029",
+            "name": "onDispatch",
+            "summary": "Setup\u0020the\u0020flash\u0020messenger\u0020and\u0020the\u0020controller\u0020in\u0020the\u0020layout",
+            "url": "classes/Application-Listener-ApplicationSetupListener.html#method_onDispatch"
+        },                {
+            "fqsen": "\\Application\\Listener\\ApplicationSetupListener\u003A\u003AsetLocale\u0028\u0029",
+            "name": "setLocale",
+            "summary": "Set\u0020locale\u0020\u0028lang\u0029\u0020in\u0020the\u0020the\u0020application,\u0020the\u0020router\u0020and\u0020the\u0020service\u0020manager",
+            "url": "classes/Application-Listener-ApplicationSetupListener.html#method_setLocale"
+        },                {
+            "fqsen": "\\Application\\Listener\\ApplicationSetupListener\u003A\u003AonError\u0028\u0029",
+            "name": "onError",
+            "summary": "Event\u0020listener\u0020method.\u0020SEnd\u0020an\u0020email\u0020for\u0020exceptions\u0020and\u0020errors",
+            "url": "classes/Application-Listener-ApplicationSetupListener.html#method_onError"
+        },                {
+            "fqsen": "\\Application\\Listener\\ApplicationSetupListener\u003A\u003A\u0024session",
+            "name": "session",
+            "summary": "",
+            "url": "classes/Application-Listener-ApplicationSetupListener.html#property_session"
+        },                {
+            "fqsen": "\\Application\\Listener\\ApplicationSetupListener\u003A\u003A\u0024request",
+            "name": "request",
+            "summary": "",
+            "url": "classes/Application-Listener-ApplicationSetupListener.html#property_request"
+        },                {
+            "fqsen": "\\Application\\Listener\\ApplicationSetupListener\u003A\u003A\u0024config",
+            "name": "config",
+            "summary": "",
+            "url": "classes/Application-Listener-ApplicationSetupListener.html#property_config"
         },                {
             "fqsen": "\\Application\\Model\\Breadcrumbs",
             "name": "Breadcrumbs",
@@ -300,6 +1240,56 @@ Search.appendIndex(
             "name": "hidden",
             "summary": "",
             "url": "classes/Application-Model-Breadcrumbs.html#property_hidden"
+        },                {
+            "fqsen": "\\Application\\Model\\Metadata",
+            "name": "Metadata",
+            "summary": "NEW\u0020VERSION\u0020of\u0020MetadataBuilder\nBuild\u0020the\u0020metadata\u0020and\u0020adds\u0020the\u0020default\u0020values\u0020if\u0020any\u0020or\u0020missing",
+            "url": "classes/Application-Model-Metadata.html"
+        },                {
+            "fqsen": "\\Application\\Model\\Metadata\u003A\u003AsetDefaultMetadata\u0028\u0029",
+            "name": "setDefaultMetadata",
+            "summary": "",
+            "url": "classes/Application-Model-Metadata.html#method_setDefaultMetadata"
+        },                {
+            "fqsen": "\\Application\\Model\\Metadata\u003A\u003AgetDefaultMetadata\u0028\u0029",
+            "name": "getDefaultMetadata",
+            "summary": "",
+            "url": "classes/Application-Model-Metadata.html#method_getDefaultMetadata"
+        },                {
+            "fqsen": "\\Application\\Model\\Metadata\u003A\u003AgetDefaultMetadataFromEnvVariables\u0028\u0029",
+            "name": "getDefaultMetadataFromEnvVariables",
+            "summary": "",
+            "url": "classes/Application-Model-Metadata.html#method_getDefaultMetadataFromEnvVariables"
+        },                {
+            "fqsen": "\\Application\\Model\\Metadata\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "",
+            "url": "classes/Application-Model-Metadata.html#method___construct"
+        },                {
+            "fqsen": "\\Application\\Model\\Metadata\u003A\u003Ainit\u0028\u0029",
+            "name": "init",
+            "summary": "",
+            "url": "classes/Application-Model-Metadata.html#method_init"
+        },                {
+            "fqsen": "\\Application\\Model\\Metadata\u003A\u003Amerge\u0028\u0029",
+            "name": "merge",
+            "summary": "",
+            "url": "classes/Application-Model-Metadata.html#method_merge"
+        },                {
+            "fqsen": "\\Application\\Model\\Metadata\u003A\u003AcompleteMetadata\u0028\u0029",
+            "name": "completeMetadata",
+            "summary": "",
+            "url": "classes/Application-Model-Metadata.html#method_completeMetadata"
+        },                {
+            "fqsen": "\\Application\\Model\\Metadata\u003A\u003A\u0024ready",
+            "name": "ready",
+            "summary": "",
+            "url": "classes/Application-Model-Metadata.html#property_ready"
+        },                {
+            "fqsen": "\\Application\\Model\\Metadata\u003A\u003A\u0024defaultMetadata",
+            "name": "defaultMetadata",
+            "summary": "",
+            "url": "classes/Application-Model-Metadata.html#property_defaultMetadata"
         },                {
             "fqsen": "\\Application\\Model\\MetadataBuilder",
             "name": "MetadataBuilder",
@@ -441,31 +1431,6 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Application-Model-MetadataBuilder.html#property_lang"
         },                {
-            "fqsen": "\\Application\\Module",
-            "name": "Module",
-            "summary": "Base\u0020configuration\u0020class\u0020for\u0020the\u0020Application\u0020module.\u0020This\u0020is\u0020the\u0020namespace\u0020for\u0020generic\u0020features",
-            "url": "classes/Application-Module.html"
-        },                {
-            "fqsen": "\\Application\\Module\u003A\u003AbootstrapSession\u0028\u0029",
-            "name": "bootstrapSession",
-            "summary": "Initialize\u0020the\u0020Laminas\u0020Session\u0020class\u0020to\u0020be\u0020used\u0020in\u0020other\u0020modules",
-            "url": "classes/Application-Module.html#method_bootstrapSession"
-        },                {
-            "fqsen": "\\Application\\Module\u003A\u003AonDispatch\u0028\u0029",
-            "name": "onDispatch",
-            "summary": "Setup\u0020the\u0020flash\u0020messenger\u0020and\u0020the\u0020controller\u0020in\u0020the\u0020layout",
-            "url": "classes/Application-Module.html#method_onDispatch"
-        },                {
-            "fqsen": "\\Application\\Module\u003A\u003AsetLocale\u0028\u0029",
-            "name": "setLocale",
-            "summary": "Set\u0020locale\u0020\u0028lang\u0029\u0020in\u0020the\u0020the\u0020application,\u0020the\u0020router\u0020and\u0020the\u0020service\u0020manager",
-            "url": "classes/Application-Module.html#method_setLocale"
-        },                {
-            "fqsen": "\\Application\\Module\u003A\u003AupdateMetadata\u0028\u0029",
-            "name": "updateMetadata",
-            "summary": "Set\u0020\u0022default\u0022\u0020variables\u0020\u0028lang,\u0020supportedLang\u0020and\u0020contentSecurityPolicy\u0029\u0020to\u0020the\u0020layout\u0020and\u0020view\u0020object",
-            "url": "classes/Application-Module.html#method_updateMetadata"
-        },                {
             "fqsen": "\\Application\\View\\Helper\\BreadcrumbsHelper",
             "name": "BreadcrumbsHelper",
             "summary": "Generate\u0020the\u0020WET\u0020HTML\u0020for\u0020the\u0020breadcrumbs",
@@ -505,6 +1470,11 @@ Search.appendIndex(
             "name": "__invoke",
             "summary": "",
             "url": "classes/Application-View-Helper-BreadcrumbsHelper.html#method___invoke"
+        },                {
+            "fqsen": "\\Application\\View\\Helper\\BreadcrumbsHelper\u003A\u003AaddCurrentPage\u0028\u0029",
+            "name": "addCurrentPage",
+            "summary": "THIS\u0020SHOULD\u0020NOT\u0020BE\u0020USED\u0020ANYMORE\nNew\u0020rules\u0020in\u0020the\u0020canada.ca\u0020publishing\u0020guide\u0020says\u0020that\u0020the\u0020breadcrumb\nshould\u0020end\u0020one\u0020level\u0020below\u0020the\u0020current\u0020page",
+            "url": "classes/Application-View-Helper-BreadcrumbsHelper.html#method_addCurrentPage"
         },                {
             "fqsen": "\\Application\\View\\Helper\\BreadcrumbsHelper\u003A\u003A__toString\u0028\u0029",
             "name": "__toString",
@@ -546,16 +1516,6 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Application-View-Helper-CompleteMetadata.html#method_getView"
         },                {
-            "fqsen": "\\Application\\View\\Helper\\CompleteMetadata\u003A\u003AsetMetadataBuilder\u0028\u0029",
-            "name": "setMetadataBuilder",
-            "summary": "",
-            "url": "classes/Application-View-Helper-CompleteMetadata.html#method_setMetadataBuilder"
-        },                {
-            "fqsen": "\\Application\\View\\Helper\\CompleteMetadata\u003A\u003AgetMetadataBuilder\u0028\u0029",
-            "name": "getMetadataBuilder",
-            "summary": "",
-            "url": "classes/Application-View-Helper-CompleteMetadata.html#method_getMetadataBuilder"
-        },                {
             "fqsen": "\\Application\\View\\Helper\\CompleteMetadata\u003A\u003AsetCDTS\u0028\u0029",
             "name": "setCDTS",
             "summary": "",
@@ -566,25 +1526,40 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Application-View-Helper-CompleteMetadata.html#method_getCDTS"
         },                {
+            "fqsen": "\\Application\\View\\Helper\\CompleteMetadata\u003A\u003AsetMetadataObj\u0028\u0029",
+            "name": "setMetadataObj",
+            "summary": "",
+            "url": "classes/Application-View-Helper-CompleteMetadata.html#method_setMetadataObj"
+        },                {
+            "fqsen": "\\Application\\View\\Helper\\CompleteMetadata\u003A\u003AgetMetadataObj\u0028\u0029",
+            "name": "getMetadataObj",
+            "summary": "",
+            "url": "classes/Application-View-Helper-CompleteMetadata.html#method_getMetadataObj"
+        },                {
             "fqsen": "\\Application\\View\\Helper\\CompleteMetadata\u003A\u003A__invoke\u0028\u0029",
             "name": "__invoke",
             "summary": "",
             "url": "classes/Application-View-Helper-CompleteMetadata.html#method___invoke"
+        },                {
+            "fqsen": "\\Application\\View\\Helper\\CompleteMetadata\u003A\u003AupdateMetadata\u0028\u0029",
+            "name": "updateMetadata",
+            "summary": "",
+            "url": "classes/Application-View-Helper-CompleteMetadata.html#method_updateMetadata"
         },                {
             "fqsen": "\\Application\\View\\Helper\\CompleteMetadata\u003A\u003A\u0024view",
             "name": "view",
             "summary": "",
             "url": "classes/Application-View-Helper-CompleteMetadata.html#property_view"
         },                {
-            "fqsen": "\\Application\\View\\Helper\\CompleteMetadata\u003A\u003A\u0024metadataBuilder",
-            "name": "metadataBuilder",
-            "summary": "",
-            "url": "classes/Application-View-Helper-CompleteMetadata.html#property_metadataBuilder"
-        },                {
             "fqsen": "\\Application\\View\\Helper\\CompleteMetadata\u003A\u003A\u0024cdts",
             "name": "cdts",
             "summary": "",
             "url": "classes/Application-View-Helper-CompleteMetadata.html#property_cdts"
+        },                {
+            "fqsen": "\\Application\\View\\Helper\\CompleteMetadata\u003A\u003A\u0024metadata",
+            "name": "metadata",
+            "summary": "",
+            "url": "classes/Application-View-Helper-CompleteMetadata.html#property_metadata"
         },                {
             "fqsen": "\\Application\\View\\Helper\\DisplayFlashMessages",
             "name": "DisplayFlashMessages",
@@ -666,6 +1641,101 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Application-View-Helper-GetLangSwitchUrl.html#property_route"
         },                {
+            "fqsen": "\\Application\\View\\Helper\\HeadScript",
+            "name": "HeadScript",
+            "summary": "Basic\u0020HeadScript\u0020replacement,\u0020any\u0020script\u0020will\u0020look\nfor\u0020a\u0020sri\u0020file\u0020and\u0020add\u0020the\u0020integrity\u0020attribute",
+            "url": "classes/Application-View-Helper-HeadScript.html"
+        },                {
+            "fqsen": "\\Application\\View\\Helper\\HeadScript\u003A\u003AsetSearchFolders\u0028\u0029",
+            "name": "setSearchFolders",
+            "summary": "",
+            "url": "classes/Application-View-Helper-HeadScript.html#method_setSearchFolders"
+        },                {
+            "fqsen": "\\Application\\View\\Helper\\HeadScript\u003A\u003AgetSearchFolders\u0028\u0029",
+            "name": "getSearchFolders",
+            "summary": "",
+            "url": "classes/Application-View-Helper-HeadScript.html#method_getSearchFolders"
+        },                {
+            "fqsen": "\\Application\\View\\Helper\\HeadScript\u003A\u003AtoString\u0028\u0029",
+            "name": "toString",
+            "summary": "",
+            "url": "classes/Application-View-Helper-HeadScript.html#method_toString"
+        },                {
+            "fqsen": "\\Application\\View\\Helper\\HeadScript\u003A\u003AsearchForAsset\u0028\u0029",
+            "name": "searchForAsset",
+            "summary": "Internal\u0020method\u0020that\u0020looks\u0020at\u0020all\u0020the\u0020files\u0020in\u0020the\u0020defined\u0020folders\u0020and\nreturn\u0020the\u0020first\u0020match",
+            "url": "classes/Application-View-Helper-HeadScript.html#method_searchForAsset"
+        },                {
+            "fqsen": "\\Application\\View\\Helper\\HeadScript\u003A\u003AdoesAssetExists\u0028\u0029",
+            "name": "doesAssetExists",
+            "summary": "Simple\u0020check\u0020to\u0020see\u0020if\u0020asset\u0020exists",
+            "url": "classes/Application-View-Helper-HeadScript.html#method_doesAssetExists"
+        },                {
+            "fqsen": "\\Application\\View\\Helper\\HeadScript\u003A\u003A\u0024config",
+            "name": "config",
+            "summary": "",
+            "url": "classes/Application-View-Helper-HeadScript.html#property_config"
+        },                {
+            "fqsen": "\\Application\\View\\Helper\\SetSwitchLangUrl",
+            "name": "SetSwitchLangUrl",
+            "summary": "This\u0020is\u0020OLD.\u0020It\u0020is\u0020meant\u0020as\u0020a\u0020lecagy\u0020support\u0020for\u0020Stockpile",
+            "url": "classes/Application-View-Helper-SetSwitchLangUrl.html"
+        },                {
+            "fqsen": "\\Application\\View\\Helper\\SetSwitchLangUrl\u003A\u003AsetView\u0028\u0029",
+            "name": "setView",
+            "summary": "",
+            "url": "classes/Application-View-Helper-SetSwitchLangUrl.html#method_setView"
+        },                {
+            "fqsen": "\\Application\\View\\Helper\\SetSwitchLangUrl\u003A\u003AgetView\u0028\u0029",
+            "name": "getView",
+            "summary": "",
+            "url": "classes/Application-View-Helper-SetSwitchLangUrl.html#method_getView"
+        },                {
+            "fqsen": "\\Application\\View\\Helper\\SetSwitchLangUrl\u003A\u003A__invoke\u0028\u0029",
+            "name": "__invoke",
+            "summary": "",
+            "url": "classes/Application-View-Helper-SetSwitchLangUrl.html#method___invoke"
+        },                {
+            "fqsen": "\\Application\\View\\Helper\\SetSwitchLangUrl\u003A\u003A\u0024view",
+            "name": "view",
+            "summary": "",
+            "url": "classes/Application-View-Helper-SetSwitchLangUrl.html#property_view"
+        },                {
+            "fqsen": "\\Application\\View\\Helper\\SideMenu",
+            "name": "SideMenu",
+            "summary": "",
+            "url": "classes/Application-View-Helper-SideMenu.html"
+        },                {
+            "fqsen": "\\Application\\View\\Helper\\SideMenu\u003A\u003AsetView\u0028\u0029",
+            "name": "setView",
+            "summary": "",
+            "url": "classes/Application-View-Helper-SideMenu.html#method_setView"
+        },                {
+            "fqsen": "\\Application\\View\\Helper\\SideMenu\u003A\u003AgetView\u0028\u0029",
+            "name": "getView",
+            "summary": "",
+            "url": "classes/Application-View-Helper-SideMenu.html#method_getView"
+        },                {
+            "fqsen": "\\Application\\View\\Helper\\SideMenu\u003A\u003A__invoke\u0028\u0029",
+            "name": "__invoke",
+            "summary": "",
+            "url": "classes/Application-View-Helper-SideMenu.html#method___invoke"
+        },                {
+            "fqsen": "\\Application\\View\\Helper\\SideMenu\u003A\u003ALOCATION_LEFT",
+            "name": "LOCATION_LEFT",
+            "summary": "",
+            "url": "classes/Application-View-Helper-SideMenu.html#constant_LOCATION_LEFT"
+        },                {
+            "fqsen": "\\Application\\View\\Helper\\SideMenu\u003A\u003ALOCATION_RIGHT",
+            "name": "LOCATION_RIGHT",
+            "summary": "",
+            "url": "classes/Application-View-Helper-SideMenu.html#constant_LOCATION_RIGHT"
+        },                {
+            "fqsen": "\\Application\\View\\Helper\\SideMenu\u003A\u003A\u0024view",
+            "name": "view",
+            "summary": "",
+            "url": "classes/Application-View-Helper-SideMenu.html#property_view"
+        },                {
             "fqsen": "\\Application\\View\\Helper\\StripTags",
             "name": "StripTags",
             "summary": "This\u0020is\u0020a\u0020helper\u0020to\u0020strip\u0020all\u0020HTML\u0020content\u0020but\u0020replace\u0020\u003Cabbr\u003E\u0020with\u0020the\u0020full\u0020title",
@@ -731,10 +1801,275 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Application-View-Helper-Url.html#property_lang"
         },                {
+            "fqsen": "\\CurlWrapper\\CurlWrapper",
+            "name": "CurlWrapper",
+            "summary": "",
+            "url": "classes/CurlWrapper-CurlWrapper.html"
+        },                {
+            "fqsen": "\\CurlWrapper\\CurlWrapper\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "",
+            "url": "classes/CurlWrapper-CurlWrapper.html#method___construct"
+        },                {
+            "fqsen": "\\CurlWrapper\\CurlWrapper\u003A\u003A__destruct\u0028\u0029",
+            "name": "__destruct",
+            "summary": "",
+            "url": "classes/CurlWrapper-CurlWrapper.html#method___destruct"
+        },                {
+            "fqsen": "\\CurlWrapper\\CurlWrapper\u003A\u003A__clone\u0028\u0029",
+            "name": "__clone",
+            "summary": "",
+            "url": "classes/CurlWrapper-CurlWrapper.html#method___clone"
+        },                {
+            "fqsen": "\\CurlWrapper\\CurlWrapper\u003A\u003A__call\u0028\u0029",
+            "name": "__call",
+            "summary": "",
+            "url": "classes/CurlWrapper-CurlWrapper.html#method___call"
+        },                {
+            "fqsen": "\\CurlWrapper\\CurlWrapper\u003A\u003AsetOptions\u0028\u0029",
+            "name": "setOptions",
+            "summary": "",
+            "url": "classes/CurlWrapper-CurlWrapper.html#method_setOptions"
+        },                {
+            "fqsen": "\\CurlWrapper\\CurlWrapper\u003A\u003AsetOption\u0028\u0029",
+            "name": "setOption",
+            "summary": "",
+            "url": "classes/CurlWrapper-CurlWrapper.html#method_setOption"
+        },                {
+            "fqsen": "\\CurlWrapper\\CurlWrapper\u003A\u003AdoNotReturnPage\u0028\u0029",
+            "name": "doNotReturnPage",
+            "summary": "",
+            "url": "classes/CurlWrapper-CurlWrapper.html#method_doNotReturnPage"
+        },                {
+            "fqsen": "\\CurlWrapper\\CurlWrapper\u003A\u003AencryptUsingPublicKey\u0028\u0029",
+            "name": "encryptUsingPublicKey",
+            "summary": "",
+            "url": "classes/CurlWrapper-CurlWrapper.html#method_encryptUsingPublicKey"
+        },                {
+            "fqsen": "\\CurlWrapper\\CurlWrapper\u003A\u003Acredentials\u0028\u0029",
+            "name": "credentials",
+            "summary": "",
+            "url": "classes/CurlWrapper-CurlWrapper.html#method_credentials"
+        },                {
+            "fqsen": "\\CurlWrapper\\CurlWrapper\u003A\u003Acredential\u0028\u0029",
+            "name": "credential",
+            "summary": "",
+            "url": "classes/CurlWrapper-CurlWrapper.html#method_credential"
+        },                {
+            "fqsen": "\\CurlWrapper\\CurlWrapper\u003A\u003A\u0024headers",
+            "name": "headers",
+            "summary": "",
+            "url": "classes/CurlWrapper-CurlWrapper.html#property_headers"
+        },                {
+            "fqsen": "\\CurlWrapper\\CurlWrapper\u003A\u003AheadersJson\u0028\u0029",
+            "name": "headersJson",
+            "summary": "",
+            "url": "classes/CurlWrapper-CurlWrapper.html#method_headersJson"
+        },                {
+            "fqsen": "\\CurlWrapper\\CurlWrapper\u003A\u003AaddFile\u0028\u0029",
+            "name": "addFile",
+            "summary": "",
+            "url": "classes/CurlWrapper-CurlWrapper.html#method_addFile"
+        },                {
+            "fqsen": "\\CurlWrapper\\CurlWrapper\u003A\u003AgetNeedsToEncrypt\u0028\u0029",
+            "name": "getNeedsToEncrypt",
+            "summary": "",
+            "url": "classes/CurlWrapper-CurlWrapper.html#method_getNeedsToEncrypt"
+        },                {
+            "fqsen": "\\CurlWrapper\\CurlWrapper\u003A\u003Aexec\u0028\u0029",
+            "name": "exec",
+            "summary": "",
+            "url": "classes/CurlWrapper-CurlWrapper.html#method_exec"
+        },                {
+            "fqsen": "\\CurlWrapper\\CurlWrapper\u003A\u003AgetReturn\u0028\u0029",
+            "name": "getReturn",
+            "summary": "",
+            "url": "classes/CurlWrapper-CurlWrapper.html#method_getReturn"
+        },                {
+            "fqsen": "\\CurlWrapper\\CurlWrapper\u003A\u003AgetPage\u0028\u0029",
+            "name": "getPage",
+            "summary": "",
+            "url": "classes/CurlWrapper-CurlWrapper.html#method_getPage"
+        },                {
+            "fqsen": "\\CurlWrapper\\CurlWrapper\u003A\u003AgetReturnJson\u0028\u0029",
+            "name": "getReturnJson",
+            "summary": "",
+            "url": "classes/CurlWrapper-CurlWrapper.html#method_getReturnJson"
+        },                {
+            "fqsen": "\\CurlWrapper\\CurlWrapper\u003A\u003AgetPageJson\u0028\u0029",
+            "name": "getPageJson",
+            "summary": "",
+            "url": "classes/CurlWrapper-CurlWrapper.html#method_getPageJson"
+        },                {
+            "fqsen": "\\CurlWrapper\\CurlWrapper\u003A\u003AgetReturnCode\u0028\u0029",
+            "name": "getReturnCode",
+            "summary": "",
+            "url": "classes/CurlWrapper-CurlWrapper.html#method_getReturnCode"
+        },                {
+            "fqsen": "\\CurlWrapper\\CurlWrapper\u003A\u003AgetRequestHeaders\u0028\u0029",
+            "name": "getRequestHeaders",
+            "summary": "",
+            "url": "classes/CurlWrapper-CurlWrapper.html#method_getRequestHeaders"
+        },                {
+            "fqsen": "\\CurlWrapper\\CurlWrapper\u003A\u003AgetRawHeaders\u0028\u0029",
+            "name": "getRawHeaders",
+            "summary": "",
+            "url": "classes/CurlWrapper-CurlWrapper.html#method_getRawHeaders"
+        },                {
+            "fqsen": "\\CurlWrapper\\CurlWrapper\u003A\u003AgetHeaders\u0028\u0029",
+            "name": "getHeaders",
+            "summary": "",
+            "url": "classes/CurlWrapper-CurlWrapper.html#method_getHeaders"
+        },                {
+            "fqsen": "\\CurlWrapper\\CurlWrapper\u003A\u003AgetInfo\u0028\u0029",
+            "name": "getInfo",
+            "summary": "",
+            "url": "classes/CurlWrapper-CurlWrapper.html#method_getInfo"
+        },                {
+            "fqsen": "\\CurlWrapper\\CurlWrapper\u003A\u003AgetHttpResponseStatusCode\u0028\u0029",
+            "name": "getHttpResponseStatusCode",
+            "summary": "",
+            "url": "classes/CurlWrapper-CurlWrapper.html#method_getHttpResponseStatusCode"
+        },                {
+            "fqsen": "\\CurlWrapper\\CurlWrapper\u003A\u003AgetUrl\u0028\u0029",
+            "name": "getUrl",
+            "summary": "",
+            "url": "classes/CurlWrapper-CurlWrapper.html#method_getUrl"
+        },                {
+            "fqsen": "\\CurlWrapper\\CurlWrapper\u003A\u003Areset\u0028\u0029",
+            "name": "reset",
+            "summary": "",
+            "url": "classes/CurlWrapper-CurlWrapper.html#method_reset"
+        },                {
+            "fqsen": "\\CurlWrapper\\CurlWrapper\u003A\u003AgetErrorNumber\u0028\u0029",
+            "name": "getErrorNumber",
+            "summary": "",
+            "url": "classes/CurlWrapper-CurlWrapper.html#method_getErrorNumber"
+        },                {
+            "fqsen": "\\CurlWrapper\\CurlWrapper\u003A\u003AgetError\u0028\u0029",
+            "name": "getError",
+            "summary": "",
+            "url": "classes/CurlWrapper-CurlWrapper.html#method_getError"
+        },                {
+            "fqsen": "\\CurlWrapper\\CurlWrapper\u003A\u003AgetErrorStringFromNumber\u0028\u0029",
+            "name": "getErrorStringFromNumber",
+            "summary": "",
+            "url": "classes/CurlWrapper-CurlWrapper.html#method_getErrorStringFromNumber"
+        },                {
+            "fqsen": "\\CurlWrapper\\CurlWrapper\u003A\u003AgetVersion\u0028\u0029",
+            "name": "getVersion",
+            "summary": "",
+            "url": "classes/CurlWrapper-CurlWrapper.html#method_getVersion"
+        },                {
+            "fqsen": "\\CurlWrapper\\CurlWrapper\u003A\u003AGET",
+            "name": "GET",
+            "summary": "",
+            "url": "classes/CurlWrapper-CurlWrapper.html#constant_GET"
+        },                {
+            "fqsen": "\\CurlWrapper\\CurlWrapper\u003A\u003APOST",
+            "name": "POST",
+            "summary": "",
+            "url": "classes/CurlWrapper-CurlWrapper.html#constant_POST"
+        },                {
+            "fqsen": "\\CurlWrapper\\CurlWrapper\u003A\u003APUT",
+            "name": "PUT",
+            "summary": "",
+            "url": "classes/CurlWrapper-CurlWrapper.html#constant_PUT"
+        },                {
+            "fqsen": "\\CurlWrapper\\CurlWrapper\u003A\u003ADELETE",
+            "name": "DELETE",
+            "summary": "",
+            "url": "classes/CurlWrapper-CurlWrapper.html#constant_DELETE"
+        },                {
+            "fqsen": "\\CurlWrapper\\CurlWrapper\u003A\u003AHEAD",
+            "name": "HEAD",
+            "summary": "",
+            "url": "classes/CurlWrapper-CurlWrapper.html#constant_HEAD"
+        },                {
+            "fqsen": "\\CurlWrapper\\CurlWrapper\u003A\u003AOPTIONS",
+            "name": "OPTIONS",
+            "summary": "",
+            "url": "classes/CurlWrapper-CurlWrapper.html#constant_OPTIONS"
+        },                {
+            "fqsen": "\\CurlWrapper\\CurlWrapper\u003A\u003APATCH",
+            "name": "PATCH",
+            "summary": "",
+            "url": "classes/CurlWrapper-CurlWrapper.html#constant_PATCH"
+        },                {
+            "fqsen": "\\CurlWrapper\\CurlWrapper\u003A\u003A\u0024handle",
+            "name": "handle",
+            "summary": "",
+            "url": "classes/CurlWrapper-CurlWrapper.html#property_handle"
+        },                {
+            "fqsen": "\\CurlWrapper\\CurlWrapper\u003A\u003A\u0024verb",
+            "name": "verb",
+            "summary": "",
+            "url": "classes/CurlWrapper-CurlWrapper.html#property_verb"
+        },                {
+            "fqsen": "\\CurlWrapper\\CurlWrapper\u003A\u003A\u0024payload",
+            "name": "payload",
+            "summary": "",
+            "url": "classes/CurlWrapper-CurlWrapper.html#property_payload"
+        },                {
+            "fqsen": "\\CurlWrapper\\CurlWrapper\u003A\u003A\u0024lastPage",
+            "name": "lastPage",
+            "summary": "",
+            "url": "classes/CurlWrapper-CurlWrapper.html#property_lastPage"
+        },                {
+            "fqsen": "\\CurlWrapper\\CurlWrapper\u003A\u003A\u0024lastHeaders",
+            "name": "lastHeaders",
+            "summary": "",
+            "url": "classes/CurlWrapper-CurlWrapper.html#property_lastHeaders"
+        },                {
+            "fqsen": "\\CurlWrapper\\CurlWrapper\u003A\u003A\u0024executed",
+            "name": "executed",
+            "summary": "",
+            "url": "classes/CurlWrapper-CurlWrapper.html#property_executed"
+        },                {
+            "fqsen": "\\CurlWrapper\\CurlWrapper\u003A\u003A\u0024returnPage",
+            "name": "returnPage",
+            "summary": "",
+            "url": "classes/CurlWrapper-CurlWrapper.html#property_returnPage"
+        },                {
+            "fqsen": "\\CurlWrapper\\CurlWrapper\u003A\u003A\u0024returnHeaders",
+            "name": "returnHeaders",
+            "summary": "",
+            "url": "classes/CurlWrapper-CurlWrapper.html#property_returnHeaders"
+        },                {
+            "fqsen": "\\CurlWrapper\\CurlWrapper\u003A\u003A\u0024attachedFiles",
+            "name": "attachedFiles",
+            "summary": "",
+            "url": "classes/CurlWrapper-CurlWrapper.html#property_attachedFiles"
+        },                {
+            "fqsen": "\\CurlWrapper\\CurlWrapper\u003A\u003A\u0024pubkey",
+            "name": "pubkey",
+            "summary": "",
+            "url": "classes/CurlWrapper-CurlWrapper.html#property_pubkey"
+        },                {
+            "fqsen": "\\Application\\Exception\\CurlException",
+            "name": "CurlException",
+            "summary": "",
+            "url": "classes/Application-Exception-CurlException.html"
+        },                {
+            "fqsen": "\\GcNotify\\Exception\\GcNotifyException",
+            "name": "GcNotifyException",
+            "summary": "",
+            "url": "classes/GcNotify-Exception-GcNotifyException.html"
+        },                {
             "fqsen": "\\GcNotify\\GcNotify",
             "name": "GcNotify",
-            "summary": "Class\u0020that\u0020sends\u0020email\u0020using\u0020GcNotify,\u0020this\u0020is\u0020the\u0020Version\u00207.1\u002B\u0020of\u0020PHP,\u0020for\u0020verions\nlower\u0020than\u0020that\u0020see\u0020GcNotify_PHP5\u0020on\u0020GC\/Code",
+            "summary": "Class\u0020that\u0020sends\u0020email\u0020using\u0020GcNotify\u0020\u0028https\u003A\/\/notification.canada.ca\/\u0029",
             "url": "classes/GcNotify-GcNotify.html"
+        },                {
+            "fqsen": "\\GcNotify\\GcNotify\u003A\u003AsetUseException\u0028\u0029",
+            "name": "setUseException",
+            "summary": "",
+            "url": "classes/GcNotify-GcNotify.html#method_setUseException"
+        },                {
+            "fqsen": "\\GcNotify\\GcNotify\u003A\u003AgetUseException\u0028\u0029",
+            "name": "getUseException",
+            "summary": "",
+            "url": "classes/GcNotify-GcNotify.html#method_getUseException"
         },                {
             "fqsen": "\\GcNotify\\GcNotify\u003A\u003AsetErrorReportingKey\u0028\u0029",
             "name": "setErrorReportingKey",
@@ -745,11 +2080,6 @@ Search.appendIndex(
             "name": "setApiKey",
             "summary": "",
             "url": "classes/GcNotify-GcNotify.html#method_setApiKey"
-        },                {
-            "fqsen": "\\GcNotify\\GcNotify\u003A\u003AextractApiKey\u0028\u0029",
-            "name": "extractApiKey",
-            "summary": "",
-            "url": "classes/GcNotify-GcNotify.html#method_extractApiKey"
         },                {
             "fqsen": "\\GcNotify\\GcNotify\u003A\u003AsetBaseUrl\u0028\u0029",
             "name": "setBaseUrl",
@@ -770,6 +2100,31 @@ Search.appendIndex(
             "name": "setGenericErrorEmail",
             "summary": "",
             "url": "classes/GcNotify-GcNotify.html#method_setGenericErrorEmail"
+        },                {
+            "fqsen": "\\GcNotify\\GcNotify\u003A\u003AsetOverrideEmail\u0028\u0029",
+            "name": "setOverrideEmail",
+            "summary": "",
+            "url": "classes/GcNotify-GcNotify.html#method_setOverrideEmail"
+        },                {
+            "fqsen": "\\GcNotify\\GcNotify\u003A\u003AsetOverwriteEmail\u0028\u0029",
+            "name": "setOverwriteEmail",
+            "summary": "",
+            "url": "classes/GcNotify-GcNotify.html#method_setOverwriteEmail"
+        },                {
+            "fqsen": "\\GcNotify\\GcNotify\u003A\u003AgetOverrideEmail\u0028\u0029",
+            "name": "getOverrideEmail",
+            "summary": "",
+            "url": "classes/GcNotify-GcNotify.html#method_getOverrideEmail"
+        },                {
+            "fqsen": "\\GcNotify\\GcNotify\u003A\u003AgetOverwriteEmail\u0028\u0029",
+            "name": "getOverwriteEmail",
+            "summary": "",
+            "url": "classes/GcNotify-GcNotify.html#method_getOverwriteEmail"
+        },                {
+            "fqsen": "\\GcNotify\\GcNotify\u003A\u003AsetUseBridge\u0028\u0029",
+            "name": "setUseBridge",
+            "summary": "The\u0020bridge\u0020is\u0020not\u0020setup\u0020in\u0020version\u0020PHP\u00207\u0020of\u0020this\u0020class\u0020since\u0020PHP\u00207\u0020should\u0020support\u0020TLS\u00201.2\u0020by\u0020default",
+            "url": "classes/GcNotify-GcNotify.html#method_setUseBridge"
         },                {
             "fqsen": "\\GcNotify\\GcNotify\u003A\u003AsetAppName\u0028\u0029",
             "name": "setAppName",
@@ -806,6 +2161,11 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/GcNotify-GcNotify.html#method___toString"
         },                {
+            "fqsen": "\\GcNotify\\GcNotify\u003A\u003AsetConfig\u0028\u0029",
+            "name": "setConfig",
+            "summary": "",
+            "url": "classes/GcNotify-GcNotify.html#method_setConfig"
+        },                {
             "fqsen": "\\GcNotify\\GcNotify\u003A\u003A__invoke\u0028\u0029",
             "name": "__invoke",
             "summary": "Can\u0020you\u0020the\u0020__invoke\u0020to\u0020call\u0020in\u0020Try\/Catch\u0020or\u0020to\u0020send\u0020an\u0020normal\u0020email\nsee\u0020each\u0020functions\u0020for\u0020specific\u0020parameters",
@@ -830,6 +2190,11 @@ Search.appendIndex(
             "name": "makeRequest",
             "summary": "This\u0020method\u0020makes\u0020the\u0020call\u0020to\u0020GC\u0020Notify\u0020server.",
             "url": "classes/GcNotify-GcNotify.html#method_makeRequest"
+        },                {
+            "fqsen": "\\GcNotify\\GcNotify\u003A\u003AreadyToSend\u0028\u0029",
+            "name": "readyToSend",
+            "summary": "",
+            "url": "classes/GcNotify-GcNotify.html#method_readyToSend"
         },                {
             "fqsen": "\\GcNotify\\GcNotify\u003A\u003A\u0024lastPage",
             "name": "lastPage",
@@ -856,6 +2221,11 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/GcNotify-GcNotify.html#property_port"
         },                {
+            "fqsen": "\\GcNotify\\GcNotify\u003A\u003A\u0024useException",
+            "name": "useException",
+            "summary": "",
+            "url": "classes/GcNotify-GcNotify.html#property_useException"
+        },                {
             "fqsen": "\\GcNotify\\GcNotify\u003A\u003A\u0024errorReportingSecretKey",
             "name": "errorReportingSecretKey",
             "summary": "",
@@ -865,11 +2235,6 @@ Search.appendIndex(
             "name": "apiKey",
             "summary": "",
             "url": "classes/GcNotify-GcNotify.html#property_apiKey"
-        },                {
-            "fqsen": "\\GcNotify\\GcNotify\u003A\u003A\u0024apiSecretKey",
-            "name": "apiSecretKey",
-            "summary": "",
-            "url": "classes/GcNotify-GcNotify.html#property_apiSecretKey"
         },                {
             "fqsen": "\\GcNotify\\GcNotify\u003A\u003A\u0024genericErrorTemplate",
             "name": "genericErrorTemplate",
@@ -881,6 +2246,11 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/GcNotify-GcNotify.html#property_genericErrorEmail"
         },                {
+            "fqsen": "\\GcNotify\\GcNotify\u003A\u003A\u0024overrideEmail",
+            "name": "overrideEmail",
+            "summary": "",
+            "url": "classes/GcNotify-GcNotify.html#property_overrideEmail"
+        },                {
             "fqsen": "\\GcNotify\\GcNotify\u003A\u003A\u0024appName",
             "name": "appName",
             "summary": "",
@@ -890,6 +2260,431 @@ Search.appendIndex(
             "name": "templates",
             "summary": "",
             "url": "classes/GcNotify-GcNotify.html#property_templates"
+        },                {
+            "fqsen": "\\AutoStats\\Module",
+            "name": "Module",
+            "summary": "",
+            "url": "classes/AutoStats-Module.html"
+        },                {
+            "fqsen": "\\AutoStats\\Module\u003A\u003AgetConfig\u0028\u0029",
+            "name": "getConfig",
+            "summary": "",
+            "url": "classes/AutoStats-Module.html#method_getConfig"
+        },                {
+            "fqsen": "\\AutoStats\\Module\u003A\u003AgetAutoloaderConfig\u0028\u0029",
+            "name": "getAutoloaderConfig",
+            "summary": "",
+            "url": "classes/AutoStats-Module.html#method_getAutoloaderConfig"
+        },                {
+            "fqsen": "\\AutoStats\\Controller\\ServerSignatureController",
+            "name": "ServerSignatureController",
+            "summary": "",
+            "url": "classes/AutoStats-Controller-ServerSignatureController.html"
+        },                {
+            "fqsen": "\\AutoStats\\Controller\\ServerSignatureController\u003A\u003AsetApmLitePublicKey\u0028\u0029",
+            "name": "setApmLitePublicKey",
+            "summary": "",
+            "url": "classes/AutoStats-Controller-ServerSignatureController.html#method_setApmLitePublicKey"
+        },                {
+            "fqsen": "\\AutoStats\\Controller\\ServerSignatureController\u003A\u003AgetApmLitePublicKey\u0028\u0029",
+            "name": "getApmLitePublicKey",
+            "summary": "",
+            "url": "classes/AutoStats-Controller-ServerSignatureController.html#method_getApmLitePublicKey"
+        },                {
+            "fqsen": "\\AutoStats\\Controller\\ServerSignatureController\u003A\u003Aoptions\u0028\u0029",
+            "name": "options",
+            "summary": "",
+            "url": "classes/AutoStats-Controller-ServerSignatureController.html#method_options"
+        },                {
+            "fqsen": "\\AutoStats\\Controller\\ServerSignatureController\u003A\u003AgetList\u0028\u0029",
+            "name": "getList",
+            "summary": "",
+            "url": "classes/AutoStats-Controller-ServerSignatureController.html#method_getList"
+        },                {
+            "fqsen": "\\AutoStats\\Controller\\ServerSignatureController\u003A\u003A\u0024apmPubKey",
+            "name": "apmPubKey",
+            "summary": "",
+            "url": "classes/AutoStats-Controller-ServerSignatureController.html#property_apmPubKey"
+        },                {
+            "fqsen": "\\AutoStats\\Factory\\Controller\\ServerSignatureControllerFactory",
+            "name": "ServerSignatureControllerFactory",
+            "summary": "",
+            "url": "classes/AutoStats-Factory-Controller-ServerSignatureControllerFactory.html"
+        },                {
+            "fqsen": "\\AutoStats\\Factory\\Controller\\ServerSignatureControllerFactory\u003A\u003A__invoke\u0028\u0029",
+            "name": "__invoke",
+            "summary": "",
+            "url": "classes/AutoStats-Factory-Controller-ServerSignatureControllerFactory.html#method___invoke"
+        },                {
+            "fqsen": "\\AutoStats\\Model\\ServerSignature",
+            "name": "ServerSignature",
+            "summary": "",
+            "url": "classes/AutoStats-Model-ServerSignature.html"
+        },                {
+            "fqsen": "\\AutoStats\\Model\\ServerSignature\u003A\u003Aget\u0028\u0029",
+            "name": "get",
+            "summary": "",
+            "url": "classes/AutoStats-Model-ServerSignature.html#method_get"
+        },                {
+            "fqsen": "\\DompdfView\\Module",
+            "name": "Module",
+            "summary": "",
+            "url": "classes/DompdfView-Module.html"
+        },                {
+            "fqsen": "\\DompdfView\\Module\u003A\u003AgetConfig\u0028\u0029",
+            "name": "getConfig",
+            "summary": "",
+            "url": "classes/DompdfView-Module.html#method_getConfig"
+        },                {
+            "fqsen": "\\DompdfView\\Module\u003A\u003AgetAutoloaderConfig\u0028\u0029",
+            "name": "getAutoloaderConfig",
+            "summary": "",
+            "url": "classes/DompdfView-Module.html#method_getAutoloaderConfig"
+        },                {
+            "fqsen": "\\DompdfView\\Factory\\ViewPdfRendererFactory",
+            "name": "ViewPdfRendererFactory",
+            "summary": "",
+            "url": "classes/DompdfView-Factory-ViewPdfRendererFactory.html"
+        },                {
+            "fqsen": "\\DompdfView\\Factory\\ViewPdfRendererFactory\u003A\u003A__invoke\u0028\u0029",
+            "name": "__invoke",
+            "summary": "",
+            "url": "classes/DompdfView-Factory-ViewPdfRendererFactory.html#method___invoke"
+        },                {
+            "fqsen": "\\DompdfView\\Factory\\ViewPdfStrategyFactory",
+            "name": "ViewPdfStrategyFactory",
+            "summary": "",
+            "url": "classes/DompdfView-Factory-ViewPdfStrategyFactory.html"
+        },                {
+            "fqsen": "\\DompdfView\\Factory\\ViewPdfStrategyFactory\u003A\u003A__invoke\u0028\u0029",
+            "name": "__invoke",
+            "summary": "",
+            "url": "classes/DompdfView-Factory-ViewPdfStrategyFactory.html#method___invoke"
+        },                {
+            "fqsen": "\\DompdfView\\Model\\PdfModel",
+            "name": "PdfModel",
+            "summary": "",
+            "url": "classes/DompdfView-Model-PdfModel.html"
+        },                {
+            "fqsen": "\\DompdfView\\Model\\PdfModel\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "",
+            "url": "classes/DompdfView-Model-PdfModel.html#method___construct"
+        },                {
+            "fqsen": "\\DompdfView\\Model\\PdfModel\u003A\u003AsetPdfOption\u0028\u0029",
+            "name": "setPdfOption",
+            "summary": "",
+            "url": "classes/DompdfView-Model-PdfModel.html#method_setPdfOption"
+        },                {
+            "fqsen": "\\DompdfView\\Model\\PdfModel\u003A\u003A\u0024options",
+            "name": "options",
+            "summary": "",
+            "url": "classes/DompdfView-Model-PdfModel.html#property_options"
+        },                {
+            "fqsen": "\\DompdfView\\Model\\PdfModel\u003A\u003A\u0024captureTo",
+            "name": "captureTo",
+            "summary": "PDF\u0020probably\u0020won\u0027t\u0020need\u0020to\u0020be\u0020captured\u0020into\u0020a\na\u0020parent\u0020container\u0020by\u0020default.",
+            "url": "classes/DompdfView-Model-PdfModel.html#property_captureTo"
+        },                {
+            "fqsen": "\\DompdfView\\Model\\PdfModel\u003A\u003A\u0024terminate",
+            "name": "terminate",
+            "summary": "PDF\u0020is\u0020usually\u0020terminal",
+            "url": "classes/DompdfView-Model-PdfModel.html#property_terminate"
+        },                {
+            "fqsen": "\\DompdfView\\Renderer\\ViewPdfRenderer",
+            "name": "ViewPdfRenderer",
+            "summary": "",
+            "url": "classes/DompdfView-Renderer-ViewPdfRenderer.html"
+        },                {
+            "fqsen": "\\DompdfView\\Renderer\\ViewPdfRenderer\u003A\u003AsetHtmlRenderer\u0028\u0029",
+            "name": "setHtmlRenderer",
+            "summary": "",
+            "url": "classes/DompdfView-Renderer-ViewPdfRenderer.html#method_setHtmlRenderer"
+        },                {
+            "fqsen": "\\DompdfView\\Renderer\\ViewPdfRenderer\u003A\u003AgetHtmlRenderer\u0028\u0029",
+            "name": "getHtmlRenderer",
+            "summary": "",
+            "url": "classes/DompdfView-Renderer-ViewPdfRenderer.html#method_getHtmlRenderer"
+        },                {
+            "fqsen": "\\DompdfView\\Renderer\\ViewPdfRenderer\u003A\u003AsetResolver\u0028\u0029",
+            "name": "setResolver",
+            "summary": "",
+            "url": "classes/DompdfView-Renderer-ViewPdfRenderer.html#method_setResolver"
+        },                {
+            "fqsen": "\\DompdfView\\Renderer\\ViewPdfRenderer\u003A\u003AgetResolver\u0028\u0029",
+            "name": "getResolver",
+            "summary": "",
+            "url": "classes/DompdfView-Renderer-ViewPdfRenderer.html#method_getResolver"
+        },                {
+            "fqsen": "\\DompdfView\\Renderer\\ViewPdfRenderer\u003A\u003AsetEngine\u0028\u0029",
+            "name": "setEngine",
+            "summary": "",
+            "url": "classes/DompdfView-Renderer-ViewPdfRenderer.html#method_setEngine"
+        },                {
+            "fqsen": "\\DompdfView\\Renderer\\ViewPdfRenderer\u003A\u003AgetEngine\u0028\u0029",
+            "name": "getEngine",
+            "summary": "",
+            "url": "classes/DompdfView-Renderer-ViewPdfRenderer.html#method_getEngine"
+        },                {
+            "fqsen": "\\DompdfView\\Renderer\\ViewPdfRenderer\u003A\u003Arender\u0028\u0029",
+            "name": "render",
+            "summary": "Renders\u0020values\u0020as\u0020a\u0020PDF",
+            "url": "classes/DompdfView-Renderer-ViewPdfRenderer.html#method_render"
+        },                {
+            "fqsen": "\\DompdfView\\Renderer\\ViewPdfRenderer\u003A\u003A\u0024dompdf",
+            "name": "dompdf",
+            "summary": "",
+            "url": "classes/DompdfView-Renderer-ViewPdfRenderer.html#property_dompdf"
+        },                {
+            "fqsen": "\\DompdfView\\Renderer\\ViewPdfRenderer\u003A\u003A\u0024resolver",
+            "name": "resolver",
+            "summary": "",
+            "url": "classes/DompdfView-Renderer-ViewPdfRenderer.html#property_resolver"
+        },                {
+            "fqsen": "\\DompdfView\\Renderer\\ViewPdfRenderer\u003A\u003A\u0024htmlRenderer",
+            "name": "htmlRenderer",
+            "summary": "",
+            "url": "classes/DompdfView-Renderer-ViewPdfRenderer.html#property_htmlRenderer"
+        },                {
+            "fqsen": "\\DompdfView\\Strategy\\ViewPdfStrategy",
+            "name": "ViewPdfStrategy",
+            "summary": "",
+            "url": "classes/DompdfView-Strategy-ViewPdfStrategy.html"
+        },                {
+            "fqsen": "\\DompdfView\\Strategy\\ViewPdfStrategy\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "Constructor",
+            "url": "classes/DompdfView-Strategy-ViewPdfStrategy.html#method___construct"
+        },                {
+            "fqsen": "\\DompdfView\\Strategy\\ViewPdfStrategy\u003A\u003Aattach\u0028\u0029",
+            "name": "attach",
+            "summary": "Attach\u0020the\u0020aggregate\u0020to\u0020the\u0020specified\u0020event\u0020manager",
+            "url": "classes/DompdfView-Strategy-ViewPdfStrategy.html#method_attach"
+        },                {
+            "fqsen": "\\DompdfView\\Strategy\\ViewPdfStrategy\u003A\u003Adetach\u0028\u0029",
+            "name": "detach",
+            "summary": "Detach\u0020aggregate\u0020listeners\u0020from\u0020the\u0020specified\u0020event\u0020manager",
+            "url": "classes/DompdfView-Strategy-ViewPdfStrategy.html#method_detach"
+        },                {
+            "fqsen": "\\DompdfView\\Strategy\\ViewPdfStrategy\u003A\u003AselectRenderer\u0028\u0029",
+            "name": "selectRenderer",
+            "summary": "Detect\u0020if\u0020we\u0020should\u0020use\u0020the\u0020PdfRenderer\u0020based\u0020on\u0020model\u0020type",
+            "url": "classes/DompdfView-Strategy-ViewPdfStrategy.html#method_selectRenderer"
+        },                {
+            "fqsen": "\\DompdfView\\Strategy\\ViewPdfStrategy\u003A\u003AinjectResponse\u0028\u0029",
+            "name": "injectResponse",
+            "summary": "Inject\u0020the\u0020response\u0020with\u0020the\u0020PDF\u0020payload\u0020and\u0020appropriate\u0020Content\u002DType\u0020header",
+            "url": "classes/DompdfView-Strategy-ViewPdfStrategy.html#method_injectResponse"
+        },                {
+            "fqsen": "\\DompdfView\\Strategy\\ViewPdfStrategy\u003A\u003A\u0024listeners",
+            "name": "listeners",
+            "summary": "",
+            "url": "classes/DompdfView-Strategy-ViewPdfStrategy.html#property_listeners"
+        },                {
+            "fqsen": "\\DompdfView\\Strategy\\ViewPdfStrategy\u003A\u003A\u0024renderer",
+            "name": "renderer",
+            "summary": "",
+            "url": "classes/DompdfView-Strategy-ViewPdfStrategy.html#property_renderer"
+        },                {
+            "fqsen": "\\GcDirectory\\Module",
+            "name": "Module",
+            "summary": "",
+            "url": "classes/GcDirectory-Module.html"
+        },                {
+            "fqsen": "\\GcDirectory\\Module\u003A\u003AgetConfig\u0028\u0029",
+            "name": "getConfig",
+            "summary": "",
+            "url": "classes/GcDirectory-Module.html#method_getConfig"
+        },                {
+            "fqsen": "\\GcDirectory\\Module\u003A\u003AgetAutoloaderConfig\u0028\u0029",
+            "name": "getAutoloaderConfig",
+            "summary": "",
+            "url": "classes/GcDirectory-Module.html#method_getAutoloaderConfig"
+        },                {
+            "fqsen": "\\GcDirectory\\Factory\\Model\\GcDirectoryFactory",
+            "name": "GcDirectoryFactory",
+            "summary": "",
+            "url": "classes/GcDirectory-Factory-Model-GcDirectoryFactory.html"
+        },                {
+            "fqsen": "\\GcDirectory\\Factory\\Model\\GcDirectoryFactory\u003A\u003A__invoke\u0028\u0029",
+            "name": "__invoke",
+            "summary": "",
+            "url": "classes/GcDirectory-Factory-Model-GcDirectoryFactory.html#method___invoke"
+        },                {
+            "fqsen": "\\GcDirectory\\Model\\GcDirectory",
+            "name": "GcDirectory",
+            "summary": "Class\u0020that\u0020search\u0020the\u0020GCdirectory\u0020\u0028formely\u0020GEDS\u0020repository\u0029",
+            "url": "classes/GcDirectory-Model-GcDirectory.html"
+        },                {
+            "fqsen": "\\GcDirectory\\Model\\GcDirectory\u003A\u003AgetLang\u0028\u0029",
+            "name": "getLang",
+            "summary": "",
+            "url": "classes/GcDirectory-Model-GcDirectory.html#method_getLang"
+        },                {
+            "fqsen": "\\GcDirectory\\Model\\GcDirectory\u003A\u003AsetLang\u0028\u0029",
+            "name": "setLang",
+            "summary": "",
+            "url": "classes/GcDirectory-Model-GcDirectory.html#method_setLang"
+        },                {
+            "fqsen": "\\GcDirectory\\Model\\GcDirectory\u003A\u003AgetConfig\u0028\u0029",
+            "name": "getConfig",
+            "summary": "",
+            "url": "classes/GcDirectory-Model-GcDirectory.html#method_getConfig"
+        },                {
+            "fqsen": "\\GcDirectory\\Model\\GcDirectory\u003A\u003AsetConfig\u0028\u0029",
+            "name": "setConfig",
+            "summary": "",
+            "url": "classes/GcDirectory-Model-GcDirectory.html#method_setConfig"
+        },                {
+            "fqsen": "\\GcDirectory\\Model\\GcDirectory\u003A\u003A__get\u0028\u0029",
+            "name": "__get",
+            "summary": "",
+            "url": "classes/GcDirectory-Model-GcDirectory.html#method___get"
+        },                {
+            "fqsen": "\\GcDirectory\\Model\\GcDirectory\u003A\u003AsearchEmployees\u0028\u0029",
+            "name": "searchEmployees",
+            "summary": "Search\u0020for\u0020a\u0020person.\u0020The\u0020term\u0020is\u0020the\u0020string\u0020that\u0020needs\u0020to\u0020be\u0020matched",
+            "url": "classes/GcDirectory-Model-GcDirectory.html#method_searchEmployees"
+        },                {
+            "fqsen": "\\GcDirectory\\Model\\GcDirectory\u003A\u003AgetData\u0028\u0029",
+            "name": "getData",
+            "summary": "This\u0020method\u0020makes\u0020the\u0020call\u0020to\u0020GEDS\u0020server.\u0020It\u0020takes\u0020care\u0020or\u0020having\u0020the\nproper\u0020authorizationId\u0020\u0028from\u0020the\u0020L01\u0020call\u0029\u0020and\u0020adds\u0020it\u0020to\u0020the\u0020post\u0020data.",
+            "url": "classes/GcDirectory-Model-GcDirectory.html#method_getData"
+        },                {
+            "fqsen": "\\GcDirectory\\Model\\GcDirectory\u003A\u003ApostData\u0028\u0029",
+            "name": "postData",
+            "summary": "This\u0020method\u0020makes\u0020the\u0020call\u0020to\u0020GEDS\u0020server.\u0020It\u0020takes\u0020care\u0020or\u0020having\u0020the\nproper\u0020authorizationId\u0020\u0028from\u0020the\u0020L01\u0020call\u0029\u0020and\u0020adds\u0020it\u0020to\u0020the\u0020post\u0020data.",
+            "url": "classes/GcDirectory-Model-GcDirectory.html#method_postData"
+        },                {
+            "fqsen": "\\GcDirectory\\Model\\GcDirectory\u003A\u003ASEARCH_FIELD_SURNAME_GIVEN_NAME",
+            "name": "SEARCH_FIELD_SURNAME_GIVEN_NAME",
+            "summary": "",
+            "url": "classes/GcDirectory-Model-GcDirectory.html#constant_SEARCH_FIELD_SURNAME_GIVEN_NAME"
+        },                {
+            "fqsen": "\\GcDirectory\\Model\\GcDirectory\u003A\u003ASEARCH_FIELD_SURNAME",
+            "name": "SEARCH_FIELD_SURNAME",
+            "summary": "",
+            "url": "classes/GcDirectory-Model-GcDirectory.html#constant_SEARCH_FIELD_SURNAME"
+        },                {
+            "fqsen": "\\GcDirectory\\Model\\GcDirectory\u003A\u003ASEARCH_FIELD_GIVEN_NAME",
+            "name": "SEARCH_FIELD_GIVEN_NAME",
+            "summary": "",
+            "url": "classes/GcDirectory-Model-GcDirectory.html#constant_SEARCH_FIELD_GIVEN_NAME"
+        },                {
+            "fqsen": "\\GcDirectory\\Model\\GcDirectory\u003A\u003ASEARCH_FIELD_PHONE",
+            "name": "SEARCH_FIELD_PHONE",
+            "summary": "",
+            "url": "classes/GcDirectory-Model-GcDirectory.html#constant_SEARCH_FIELD_PHONE"
+        },                {
+            "fqsen": "\\GcDirectory\\Model\\GcDirectory\u003A\u003ASEARCH_FIELD_TITLE",
+            "name": "SEARCH_FIELD_TITLE",
+            "summary": "",
+            "url": "classes/GcDirectory-Model-GcDirectory.html#constant_SEARCH_FIELD_TITLE"
+        },                {
+            "fqsen": "\\GcDirectory\\Model\\GcDirectory\u003A\u003ASEARCH_FIELD_EMAIL",
+            "name": "SEARCH_FIELD_EMAIL",
+            "summary": "",
+            "url": "classes/GcDirectory-Model-GcDirectory.html#constant_SEARCH_FIELD_EMAIL"
+        },                {
+            "fqsen": "\\GcDirectory\\Model\\GcDirectory\u003A\u003ASEARCH_FIELD_ALL_FIELDS",
+            "name": "SEARCH_FIELD_ALL_FIELDS",
+            "summary": "",
+            "url": "classes/GcDirectory-Model-GcDirectory.html#constant_SEARCH_FIELD_ALL_FIELDS"
+        },                {
+            "fqsen": "\\GcDirectory\\Model\\GcDirectory\u003A\u003ASEARCH_BEGINS_WITH",
+            "name": "SEARCH_BEGINS_WITH",
+            "summary": "",
+            "url": "classes/GcDirectory-Model-GcDirectory.html#constant_SEARCH_BEGINS_WITH"
+        },                {
+            "fqsen": "\\GcDirectory\\Model\\GcDirectory\u003A\u003ASEARCH_ENDS_WITH",
+            "name": "SEARCH_ENDS_WITH",
+            "summary": "",
+            "url": "classes/GcDirectory-Model-GcDirectory.html#constant_SEARCH_ENDS_WITH"
+        },                {
+            "fqsen": "\\GcDirectory\\Model\\GcDirectory\u003A\u003ASEARCH_CONTAINS",
+            "name": "SEARCH_CONTAINS",
+            "summary": "",
+            "url": "classes/GcDirectory-Model-GcDirectory.html#constant_SEARCH_CONTAINS"
+        },                {
+            "fqsen": "\\GcDirectory\\Model\\GcDirectory\u003A\u003ASEARCH_EXACT",
+            "name": "SEARCH_EXACT",
+            "summary": "",
+            "url": "classes/GcDirectory-Model-GcDirectory.html#constant_SEARCH_EXACT"
+        },                {
+            "fqsen": "\\GcDirectory\\Model\\GcDirectory\u003A\u003A\u0024lang",
+            "name": "lang",
+            "summary": "",
+            "url": "classes/GcDirectory-Model-GcDirectory.html#property_lang"
+        },                {
+            "fqsen": "\\GcDirectory\\Model\\GcDirectory\u003A\u003A\u0024config",
+            "name": "config",
+            "summary": "",
+            "url": "classes/GcDirectory-Model-GcDirectory.html#property_config"
+        },                {
+            "fqsen": "\\GcDirectory\\Model\\GcDirectory\u003A\u003A\u0024orgId",
+            "name": "orgId",
+            "summary": "",
+            "url": "classes/GcDirectory-Model-GcDirectory.html#property_orgId"
+        },                {
+            "fqsen": "\\GcDirectory\\Model\\GcDirectory\u003A\u003A\u0024authorizationId",
+            "name": "authorizationId",
+            "summary": "",
+            "url": "classes/GcDirectory-Model-GcDirectory.html#property_authorizationId"
+        },                {
+            "fqsen": "\\GcDirectory\\Model\\GcDirectory\u003A\u003A\u0024lastStatus",
+            "name": "lastStatus",
+            "summary": "",
+            "url": "classes/GcDirectory-Model-GcDirectory.html#property_lastStatus"
+        },                {
+            "fqsen": "\\GcDirectory\\Model\\GcDirectory\u003A\u003A\u0024lastPage",
+            "name": "lastPage",
+            "summary": "",
+            "url": "classes/GcDirectory-Model-GcDirectory.html#property_lastPage"
+        },                {
+            "fqsen": "\\LegacySupport\\Factory\\View\\Helper\\ServiceLocatorFactory",
+            "name": "ServiceLocatorFactory",
+            "summary": "",
+            "url": "classes/LegacySupport-Factory-View-Helper-ServiceLocatorFactory.html"
+        },                {
+            "fqsen": "\\LegacySupport\\Factory\\View\\Helper\\ServiceLocatorFactory\u003A\u003A__invoke\u0028\u0029",
+            "name": "__invoke",
+            "summary": "",
+            "url": "classes/LegacySupport-Factory-View-Helper-ServiceLocatorFactory.html#method___invoke"
+        },                {
+            "fqsen": "\\LegacySupport\\View\\Helper\\ServiceLocator",
+            "name": "ServiceLocator",
+            "summary": "For\u0020legacy\u0020support\u0020only\u0021\nAllow\u0020directly\u0020access\u0020the\u0020service\u0020locator\nPlease\u0020find\u0020a\u0020better\u0020way\u0020for\u0020your\u0020class\u0020that\u0020to\u0020use\u0020this\u0020helper",
+            "url": "classes/LegacySupport-View-Helper-ServiceLocator.html"
+        },                {
+            "fqsen": "\\LegacySupport\\View\\Helper\\ServiceLocator\u003A\u003AsetView\u0028\u0029",
+            "name": "setView",
+            "summary": "",
+            "url": "classes/LegacySupport-View-Helper-ServiceLocator.html#method_setView"
+        },                {
+            "fqsen": "\\LegacySupport\\View\\Helper\\ServiceLocator\u003A\u003AgetView\u0028\u0029",
+            "name": "getView",
+            "summary": "",
+            "url": "classes/LegacySupport-View-Helper-ServiceLocator.html#method_getView"
+        },                {
+            "fqsen": "\\LegacySupport\\View\\Helper\\ServiceLocator\u003A\u003AsetContainerInterface\u0028\u0029",
+            "name": "setContainerInterface",
+            "summary": "",
+            "url": "classes/LegacySupport-View-Helper-ServiceLocator.html#method_setContainerInterface"
+        },                {
+            "fqsen": "\\LegacySupport\\View\\Helper\\ServiceLocator\u003A\u003A__invoke\u0028\u0029",
+            "name": "__invoke",
+            "summary": "",
+            "url": "classes/LegacySupport-View-Helper-ServiceLocator.html#method___invoke"
+        },                {
+            "fqsen": "\\LegacySupport\\View\\Helper\\ServiceLocator\u003A\u003A\u0024view",
+            "name": "view",
+            "summary": "",
+            "url": "classes/LegacySupport-View-Helper-ServiceLocator.html#property_view"
+        },                {
+            "fqsen": "\\LegacySupport\\View\\Helper\\ServiceLocator\u003A\u003A\u0024container",
+            "name": "container",
+            "summary": "",
+            "url": "classes/LegacySupport-View-Helper-ServiceLocator.html#property_container"
         },                {
             "fqsen": "\\Logger\\Factory\\LoggerFactory",
             "name": "LoggerFactory",
@@ -976,6 +2771,606 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Logger-Model-LoggerTrait.html#method_interpolate"
         },                {
+            "fqsen": "\\OAuth\\Module",
+            "name": "Module",
+            "summary": "",
+            "url": "classes/OAuth-Module.html"
+        },                {
+            "fqsen": "\\OAuth\\Command\\Encode",
+            "name": "Encode",
+            "summary": "",
+            "url": "classes/OAuth-Command-Encode.html"
+        },                {
+            "fqsen": "\\OAuth\\Command\\Encode\u003A\u003Aconfigure\u0028\u0029",
+            "name": "configure",
+            "summary": "",
+            "url": "classes/OAuth-Command-Encode.html#method_configure"
+        },                {
+            "fqsen": "\\OAuth\\Command\\Encode\u003A\u003Aexecute\u0028\u0029",
+            "name": "execute",
+            "summary": "In\u0020CLI,\u0020you\u0020can\u0020extract\u0020the\u0020strings\u0020from\u0020a\u0020project\u0020\u0028folder\u0029\u0020into\u0020a\u0020.po\u0020to\u0020be\u0020translated\nusing\u0020services\u0020like\u0020poeditor.com",
+            "url": "classes/OAuth-Command-Encode.html#method_execute"
+        },                {
+            "fqsen": "\\OAuth\\Command\\Encode\u003A\u003A\u0024defaultName",
+            "name": "defaultName",
+            "summary": "",
+            "url": "classes/OAuth-Command-Encode.html#property_defaultName"
+        },                {
+            "fqsen": "\\OAuth\\Controller\\OAuth2ClientController",
+            "name": "OAuth2ClientController",
+            "summary": "",
+            "url": "classes/OAuth-Controller-OAuth2ClientController.html"
+        },                {
+            "fqsen": "\\OAuth\\Controller\\OAuth2ClientController\u003A\u003AsetEnabled\u0028\u0029",
+            "name": "setEnabled",
+            "summary": "",
+            "url": "classes/OAuth-Controller-OAuth2ClientController.html#method_setEnabled"
+        },                {
+            "fqsen": "\\OAuth\\Controller\\OAuth2ClientController\u003A\u003AgetEnabled\u0028\u0029",
+            "name": "getEnabled",
+            "summary": "",
+            "url": "classes/OAuth-Controller-OAuth2ClientController.html#method_getEnabled"
+        },                {
+            "fqsen": "\\OAuth\\Controller\\OAuth2ClientController\u003A\u003AsetOAuth2Client\u0028\u0029",
+            "name": "setOAuth2Client",
+            "summary": "",
+            "url": "classes/OAuth-Controller-OAuth2ClientController.html#method_setOAuth2Client"
+        },                {
+            "fqsen": "\\OAuth\\Controller\\OAuth2ClientController\u003A\u003AgetOAuth2Client\u0028\u0029",
+            "name": "getOAuth2Client",
+            "summary": "",
+            "url": "classes/OAuth-Controller-OAuth2ClientController.html#method_getOAuth2Client"
+        },                {
+            "fqsen": "\\OAuth\\Controller\\OAuth2ClientController\u003A\u003AsetUser\u0028\u0029",
+            "name": "setUser",
+            "summary": "",
+            "url": "classes/OAuth-Controller-OAuth2ClientController.html#method_setUser"
+        },                {
+            "fqsen": "\\OAuth\\Controller\\OAuth2ClientController\u003A\u003AgetUser\u0028\u0029",
+            "name": "getUser",
+            "summary": "",
+            "url": "classes/OAuth-Controller-OAuth2ClientController.html#method_getUser"
+        },                {
+            "fqsen": "\\OAuth\\Controller\\OAuth2ClientController\u003A\u003AsetDefaultController\u0028\u0029",
+            "name": "setDefaultController",
+            "summary": "",
+            "url": "classes/OAuth-Controller-OAuth2ClientController.html#method_setDefaultController"
+        },                {
+            "fqsen": "\\OAuth\\Controller\\OAuth2ClientController\u003A\u003AgetDefaultController\u0028\u0029",
+            "name": "getDefaultController",
+            "summary": "",
+            "url": "classes/OAuth-Controller-OAuth2ClientController.html#method_getDefaultController"
+        },                {
+            "fqsen": "\\OAuth\\Controller\\OAuth2ClientController\u003A\u003AjsAction\u0028\u0029",
+            "name": "jsAction",
+            "summary": "",
+            "url": "classes/OAuth-Controller-OAuth2ClientController.html#method_jsAction"
+        },                {
+            "fqsen": "\\OAuth\\Controller\\OAuth2ClientController\u003A\u003AindexAction\u0028\u0029",
+            "name": "indexAction",
+            "summary": "",
+            "url": "classes/OAuth-Controller-OAuth2ClientController.html#method_indexAction"
+        },                {
+            "fqsen": "\\OAuth\\Controller\\OAuth2ClientController\u003A\u003AreturnAction\u0028\u0029",
+            "name": "returnAction",
+            "summary": "",
+            "url": "classes/OAuth-Controller-OAuth2ClientController.html#method_returnAction"
+        },                {
+            "fqsen": "\\OAuth\\Controller\\OAuth2ClientController\u003A\u003A_setCommonMetadata\u0028\u0029",
+            "name": "_setCommonMetadata",
+            "summary": "Set\u0020the\u0020common\u0020metadata\u0020for\u0020this\u0020project",
+            "url": "classes/OAuth-Controller-OAuth2ClientController.html#method__setCommonMetadata"
+        },                {
+            "fqsen": "\\OAuth\\Controller\\OAuth2ClientController\u003A\u003A\u0024enabled",
+            "name": "enabled",
+            "summary": "",
+            "url": "classes/OAuth-Controller-OAuth2ClientController.html#property_enabled"
+        },                {
+            "fqsen": "\\OAuth\\Controller\\OAuth2ClientController\u003A\u003A\u0024oauthObj",
+            "name": "oauthObj",
+            "summary": "",
+            "url": "classes/OAuth-Controller-OAuth2ClientController.html#property_oauthObj"
+        },                {
+            "fqsen": "\\OAuth\\Controller\\OAuth2ClientController\u003A\u003A\u0024userObj",
+            "name": "userObj",
+            "summary": "",
+            "url": "classes/OAuth-Controller-OAuth2ClientController.html#property_userObj"
+        },                {
+            "fqsen": "\\OAuth\\Controller\\OAuth2ClientController\u003A\u003A\u0024defaultController",
+            "name": "defaultController",
+            "summary": "",
+            "url": "classes/OAuth-Controller-OAuth2ClientController.html#property_defaultController"
+        },                {
+            "fqsen": "\\OAuth\\Controller\\OAuth2ServerController",
+            "name": "OAuth2ServerController",
+            "summary": "",
+            "url": "classes/OAuth-Controller-OAuth2ServerController.html"
+        },                {
+            "fqsen": "\\OAuth\\Controller\\OAuth2ServerController\u003A\u003AsetEnabled\u0028\u0029",
+            "name": "setEnabled",
+            "summary": "",
+            "url": "classes/OAuth-Controller-OAuth2ServerController.html#method_setEnabled"
+        },                {
+            "fqsen": "\\OAuth\\Controller\\OAuth2ServerController\u003A\u003AgetEnabled\u0028\u0029",
+            "name": "getEnabled",
+            "summary": "",
+            "url": "classes/OAuth-Controller-OAuth2ServerController.html#method_getEnabled"
+        },                {
+            "fqsen": "\\OAuth\\Controller\\OAuth2ServerController\u003A\u003AsetLang\u0028\u0029",
+            "name": "setLang",
+            "summary": "",
+            "url": "classes/OAuth-Controller-OAuth2ServerController.html#method_setLang"
+        },                {
+            "fqsen": "\\OAuth\\Controller\\OAuth2ServerController\u003A\u003AgetLang\u0028\u0029",
+            "name": "getLang",
+            "summary": "",
+            "url": "classes/OAuth-Controller-OAuth2ServerController.html#method_getLang"
+        },                {
+            "fqsen": "\\OAuth\\Controller\\OAuth2ServerController\u003A\u003AsetUser\u0028\u0029",
+            "name": "setUser",
+            "summary": "",
+            "url": "classes/OAuth-Controller-OAuth2ServerController.html#method_setUser"
+        },                {
+            "fqsen": "\\OAuth\\Controller\\OAuth2ServerController\u003A\u003AgetUser\u0028\u0029",
+            "name": "getUser",
+            "summary": "",
+            "url": "classes/OAuth-Controller-OAuth2ServerController.html#method_getUser"
+        },                {
+            "fqsen": "\\OAuth\\Controller\\OAuth2ServerController\u003A\u003AsetOAuth2Object\u0028\u0029",
+            "name": "setOAuth2Object",
+            "summary": "",
+            "url": "classes/OAuth-Controller-OAuth2ServerController.html#method_setOAuth2Object"
+        },                {
+            "fqsen": "\\OAuth\\Controller\\OAuth2ServerController\u003A\u003AgetOAuth2Obj\u0028\u0029",
+            "name": "getOAuth2Obj",
+            "summary": "",
+            "url": "classes/OAuth-Controller-OAuth2ServerController.html#method_getOAuth2Obj"
+        },                {
+            "fqsen": "\\OAuth\\Controller\\OAuth2ServerController\u003A\u003AauthorizeAction\u0028\u0029",
+            "name": "authorizeAction",
+            "summary": "display\u0020the\u0020\u0022apps\u0020wants\u0020access\u0022\u0020screen\u0020and\u0020ask\u0020for\u0020authorization",
+            "url": "classes/OAuth-Controller-OAuth2ServerController.html#method_authorizeAction"
+        },                {
+            "fqsen": "\\OAuth\\Controller\\OAuth2ServerController\u003A\u003AauthorizeLoginAction\u0028\u0029",
+            "name": "authorizeLoginAction",
+            "summary": "Authorization\u0020was\u0020granted,\u0020now\u0020verify\u0020user\u0020identity\u0020with\u0020JWT\u0020or\u0020login\u0020credentials",
+            "url": "classes/OAuth-Controller-OAuth2ServerController.html#method_authorizeLoginAction"
+        },                {
+            "fqsen": "\\OAuth\\Controller\\OAuth2ServerController\u003A\u003AtokenAction\u0028\u0029",
+            "name": "tokenAction",
+            "summary": "Once\u0020the\u0020authorization\u0020code\u0020was\u0020sent,\u0020the\u0020app\u0020server\u0020should\u0020ask\u0020to\u0020exchange\u0020the\ncode\u0020for\u0020a\u0020token\u0020\u0028JWT\u0029",
+            "url": "classes/OAuth-Controller-OAuth2ServerController.html#method_tokenAction"
+        },                {
+            "fqsen": "\\OAuth\\Controller\\OAuth2ServerController\u003A\u003ArevokeAction\u0028\u0029",
+            "name": "revokeAction",
+            "summary": "",
+            "url": "classes/OAuth-Controller-OAuth2ServerController.html#method_revokeAction"
+        },                {
+            "fqsen": "\\OAuth\\Controller\\OAuth2ServerController\u003A\u003AresourceAction\u0028\u0029",
+            "name": "resourceAction",
+            "summary": "",
+            "url": "classes/OAuth-Controller-OAuth2ServerController.html#method_resourceAction"
+        },                {
+            "fqsen": "\\OAuth\\Controller\\OAuth2ServerController\u003A\u003AreceiveCodeAction\u0028\u0029",
+            "name": "receiveCodeAction",
+            "summary": "",
+            "url": "classes/OAuth-Controller-OAuth2ServerController.html#method_receiveCodeAction"
+        },                {
+            "fqsen": "\\OAuth\\Controller\\OAuth2ServerController\u003A\u003AadminAction\u0028\u0029",
+            "name": "adminAction",
+            "summary": "",
+            "url": "classes/OAuth-Controller-OAuth2ServerController.html#method_adminAction"
+        },                {
+            "fqsen": "\\OAuth\\Controller\\OAuth2ServerController\u003A\u003A_setCommonMetadata\u0028\u0029",
+            "name": "_setCommonMetadata",
+            "summary": "Set\u0020the\u0020common\u0020metadata\u0020for\u0020this\u0020project",
+            "url": "classes/OAuth-Controller-OAuth2ServerController.html#method__setCommonMetadata"
+        },                {
+            "fqsen": "\\OAuth\\Controller\\OAuth2ServerController\u003A\u003A\u0024enabled",
+            "name": "enabled",
+            "summary": "",
+            "url": "classes/OAuth-Controller-OAuth2ServerController.html#property_enabled"
+        },                {
+            "fqsen": "\\OAuth\\Controller\\OAuth2ServerController\u003A\u003A\u0024lang",
+            "name": "lang",
+            "summary": "",
+            "url": "classes/OAuth-Controller-OAuth2ServerController.html#property_lang"
+        },                {
+            "fqsen": "\\OAuth\\Controller\\OAuth2ServerController\u003A\u003A\u0024user",
+            "name": "user",
+            "summary": "",
+            "url": "classes/OAuth-Controller-OAuth2ServerController.html#property_user"
+        },                {
+            "fqsen": "\\OAuth\\Controller\\OAuth2ServerController\u003A\u003A\u0024oauthObj",
+            "name": "oauthObj",
+            "summary": "",
+            "url": "classes/OAuth-Controller-OAuth2ServerController.html#property_oauthObj"
+        },                {
+            "fqsen": "\\OAuth\\Exception\\AuthorizationExpired",
+            "name": "AuthorizationExpired",
+            "summary": "",
+            "url": "classes/OAuth-Exception-AuthorizationExpired.html"
+        },                {
+            "fqsen": "\\OAuth\\Exception\\AuthorizationExpired\u003A\u003A\u0024message",
+            "name": "message",
+            "summary": "",
+            "url": "classes/OAuth-Exception-AuthorizationExpired.html#property_message"
+        },                {
+            "fqsen": "\\OAuth\\Exception\\ClientRedirectMismatch",
+            "name": "ClientRedirectMismatch",
+            "summary": "",
+            "url": "classes/OAuth-Exception-ClientRedirectMismatch.html"
+        },                {
+            "fqsen": "\\OAuth\\Exception\\ClientRedirectMismatch\u003A\u003A\u0024message",
+            "name": "message",
+            "summary": "",
+            "url": "classes/OAuth-Exception-ClientRedirectMismatch.html#property_message"
+        },                {
+            "fqsen": "\\OAuth\\Exception\\InvalidClientSecret",
+            "name": "InvalidClientSecret",
+            "summary": "",
+            "url": "classes/OAuth-Exception-InvalidClientSecret.html"
+        },                {
+            "fqsen": "\\OAuth\\Exception\\InvalidClientSecret\u003A\u003A\u0024message",
+            "name": "message",
+            "summary": "",
+            "url": "classes/OAuth-Exception-InvalidClientSecret.html#property_message"
+        },                {
+            "fqsen": "\\OAuth\\Exception\\InvalidScope",
+            "name": "InvalidScope",
+            "summary": "",
+            "url": "classes/OAuth-Exception-InvalidScope.html"
+        },                {
+            "fqsen": "\\OAuth\\Exception\\InvalidScope\u003A\u003A\u0024message",
+            "name": "message",
+            "summary": "",
+            "url": "classes/OAuth-Exception-InvalidScope.html#property_message"
+        },                {
+            "fqsen": "\\OAuth\\Exception\\InvalidValidationCode",
+            "name": "InvalidValidationCode",
+            "summary": "",
+            "url": "classes/OAuth-Exception-InvalidValidationCode.html"
+        },                {
+            "fqsen": "\\OAuth\\Exception\\InvalidValidationCode\u003A\u003A\u0024message",
+            "name": "message",
+            "summary": "",
+            "url": "classes/OAuth-Exception-InvalidValidationCode.html#property_message"
+        },                {
+            "fqsen": "\\OAuth\\Exception\\MethodNotFound",
+            "name": "MethodNotFound",
+            "summary": "",
+            "url": "classes/OAuth-Exception-MethodNotFound.html"
+        },                {
+            "fqsen": "\\OAuth\\Exception\\MethodNotFound\u003A\u003A\u0024message",
+            "name": "message",
+            "summary": "",
+            "url": "classes/OAuth-Exception-MethodNotFound.html#property_message"
+        },                {
+            "fqsen": "\\OAuth\\Exception\\MissingMandatoryValue",
+            "name": "MissingMandatoryValue",
+            "summary": "",
+            "url": "classes/OAuth-Exception-MissingMandatoryValue.html"
+        },                {
+            "fqsen": "\\OAuth\\Exception\\MissingMandatoryValue\u003A\u003A\u0024message",
+            "name": "message",
+            "summary": "",
+            "url": "classes/OAuth-Exception-MissingMandatoryValue.html#property_message"
+        },                {
+            "fqsen": "\\OAuth\\Exception\\OAuthException",
+            "name": "OAuthException",
+            "summary": "",
+            "url": "classes/OAuth-Exception-OAuthException.html"
+        },                {
+            "fqsen": "\\OAuth\\Exception\\OAuthException\u003A\u003A\u0024message",
+            "name": "message",
+            "summary": "",
+            "url": "classes/OAuth-Exception-OAuthException.html#property_message"
+        },                {
+            "fqsen": "\\OAuth\\Factory\\Controller\\OAuth2ClientControllerFactory",
+            "name": "OAuth2ClientControllerFactory",
+            "summary": "",
+            "url": "classes/OAuth-Factory-Controller-OAuth2ClientControllerFactory.html"
+        },                {
+            "fqsen": "\\OAuth\\Factory\\Controller\\OAuth2ClientControllerFactory\u003A\u003A__invoke\u0028\u0029",
+            "name": "__invoke",
+            "summary": "",
+            "url": "classes/OAuth-Factory-Controller-OAuth2ClientControllerFactory.html#method___invoke"
+        },                {
+            "fqsen": "\\OAuth\\Factory\\Controller\\OAuth2ServerControllerFactory",
+            "name": "OAuth2ServerControllerFactory",
+            "summary": "",
+            "url": "classes/OAuth-Factory-Controller-OAuth2ServerControllerFactory.html"
+        },                {
+            "fqsen": "\\OAuth\\Factory\\Controller\\OAuth2ServerControllerFactory\u003A\u003A__invoke\u0028\u0029",
+            "name": "__invoke",
+            "summary": "",
+            "url": "classes/OAuth-Factory-Controller-OAuth2ServerControllerFactory.html#method___invoke"
+        },                {
+            "fqsen": "\\OAuth\\Factory\\Listener\\OAuthSetupListenerFactory",
+            "name": "OAuthSetupListenerFactory",
+            "summary": "",
+            "url": "classes/OAuth-Factory-Listener-OAuthSetupListenerFactory.html"
+        },                {
+            "fqsen": "\\OAuth\\Factory\\Listener\\OAuthSetupListenerFactory\u003A\u003A__invoke\u0028\u0029",
+            "name": "__invoke",
+            "summary": "",
+            "url": "classes/OAuth-Factory-Listener-OAuthSetupListenerFactory.html#method___invoke"
+        },                {
+            "fqsen": "\\OAuth\\Factory\\OAuth2ClientFactory",
+            "name": "OAuth2ClientFactory",
+            "summary": "",
+            "url": "classes/OAuth-Factory-OAuth2ClientFactory.html"
+        },                {
+            "fqsen": "\\OAuth\\Factory\\OAuth2ClientFactory\u003A\u003A__invoke\u0028\u0029",
+            "name": "__invoke",
+            "summary": "",
+            "url": "classes/OAuth-Factory-OAuth2ClientFactory.html#method___invoke"
+        },                {
+            "fqsen": "\\OAuth\\Factory\\OAuth2ServerFactory",
+            "name": "OAuth2ServerFactory",
+            "summary": "",
+            "url": "classes/OAuth-Factory-OAuth2ServerFactory.html"
+        },                {
+            "fqsen": "\\OAuth\\Factory\\OAuth2ServerFactory\u003A\u003A__invoke\u0028\u0029",
+            "name": "__invoke",
+            "summary": "",
+            "url": "classes/OAuth-Factory-OAuth2ServerFactory.html#method___invoke"
+        },                {
+            "fqsen": "\\OAuth\\Listener\\OAuthSetupListener",
+            "name": "OAuthSetupListener",
+            "summary": "",
+            "url": "classes/OAuth-Listener-OAuthSetupListener.html"
+        },                {
+            "fqsen": "\\OAuth\\Listener\\OAuthSetupListener\u003A\u003AsetRouter\u0028\u0029",
+            "name": "setRouter",
+            "summary": "",
+            "url": "classes/OAuth-Listener-OAuthSetupListener.html#method_setRouter"
+        },                {
+            "fqsen": "\\OAuth\\Listener\\OAuthSetupListener\u003A\u003AgetRouter\u0028\u0029",
+            "name": "getRouter",
+            "summary": "",
+            "url": "classes/OAuth-Listener-OAuthSetupListener.html#method_getRouter"
+        },                {
+            "fqsen": "\\OAuth\\Listener\\OAuthSetupListener\u003A\u003AsetHeadScript\u0028\u0029",
+            "name": "setHeadScript",
+            "summary": "",
+            "url": "classes/OAuth-Listener-OAuthSetupListener.html#method_setHeadScript"
+        },                {
+            "fqsen": "\\OAuth\\Listener\\OAuthSetupListener\u003A\u003AgetHeadScript\u0028\u0029",
+            "name": "getHeadScript",
+            "summary": "",
+            "url": "classes/OAuth-Listener-OAuthSetupListener.html#method_getHeadScript"
+        },                {
+            "fqsen": "\\OAuth\\Listener\\OAuthSetupListener\u003A\u003Aattach\u0028\u0029",
+            "name": "attach",
+            "summary": "",
+            "url": "classes/OAuth-Listener-OAuthSetupListener.html#method_attach"
+        },                {
+            "fqsen": "\\OAuth\\Listener\\OAuthSetupListener\u003A\u003AaddNewRoutes\u0028\u0029",
+            "name": "addNewRoutes",
+            "summary": "",
+            "url": "classes/OAuth-Listener-OAuthSetupListener.html#method_addNewRoutes"
+        },                {
+            "fqsen": "\\OAuth\\Listener\\OAuthSetupListener\u003A\u003AaddJavascript\u0028\u0029",
+            "name": "addJavascript",
+            "summary": "",
+            "url": "classes/OAuth-Listener-OAuthSetupListener.html#method_addJavascript"
+        },                {
+            "fqsen": "\\OAuth\\Listener\\OAuthSetupListener\u003A\u003A\u0024router",
+            "name": "router",
+            "summary": "",
+            "url": "classes/OAuth-Listener-OAuthSetupListener.html#property_router"
+        },                {
+            "fqsen": "\\OAuth\\Listener\\OAuthSetupListener\u003A\u003A\u0024headScript",
+            "name": "headScript",
+            "summary": "",
+            "url": "classes/OAuth-Listener-OAuthSetupListener.html#property_headScript"
+        },                {
+            "fqsen": "\\OAuth\\Model\\CodeVerifier",
+            "name": "CodeVerifier",
+            "summary": "",
+            "url": "classes/OAuth-Model-CodeVerifier.html"
+        },                {
+            "fqsen": "\\OAuth\\Model\\CodeVerifier\u003A\u003AgetCodeVerifier\u0028\u0029",
+            "name": "getCodeVerifier",
+            "summary": "Get\u0020a\u0020random\u0020string\u0020and\u0020the\u0020hash\u0020value\u0020based\u0020on\u0020the\u0020algorithm\u0020provided",
+            "url": "classes/OAuth-Model-CodeVerifier.html#method_getCodeVerifier"
+        },                {
+            "fqsen": "\\OAuth\\Model\\CodeVerifier\u003A\u003AvalidateCodeVerifier\u0028\u0029",
+            "name": "validateCodeVerifier",
+            "summary": "",
+            "url": "classes/OAuth-Model-CodeVerifier.html#method_validateCodeVerifier"
+        },                {
+            "fqsen": "\\OAuth\\Model\\CodeVerifier\u003A\u003AgetAlgo\u0028\u0029",
+            "name": "getAlgo",
+            "summary": "",
+            "url": "classes/OAuth-Model-CodeVerifier.html#method_getAlgo"
+        },                {
+            "fqsen": "\\OAuth\\Model\\CodeVerifier\u003A\u003AhashCode\u0028\u0029",
+            "name": "hashCode",
+            "summary": "",
+            "url": "classes/OAuth-Model-CodeVerifier.html#method_hashCode"
+        },                {
+            "fqsen": "\\OAuth\\Model\\CodeVerifier\u003A\u003Abase64url_encode\u0028\u0029",
+            "name": "base64url_encode",
+            "summary": "Encode\u0020data\u0020to\u0020Base64URL",
+            "url": "classes/OAuth-Model-CodeVerifier.html#method_base64url_encode"
+        },                {
+            "fqsen": "\\OAuth\\Model\\CodeVerifier\u003A\u003Abase64url_decode\u0028\u0029",
+            "name": "base64url_decode",
+            "summary": "Decode\u0020data\u0020from\u0020Base64URL",
+            "url": "classes/OAuth-Model-CodeVerifier.html#method_base64url_decode"
+        },                {
+            "fqsen": "\\OAuth\\Model\\OAuth2Client",
+            "name": "OAuth2Client",
+            "summary": "OAuth\u00202\u0020class\u0020to\u0020be\u0020used\u0020in\u0020Lamnias\u0020framework\u0020model",
+            "url": "classes/OAuth-Model-OAuth2Client.html"
+        },                {
+            "fqsen": "\\OAuth\\Model\\OAuth2Client\u003A\u003AsetOAuth2Config\u0028\u0029",
+            "name": "setOAuth2Config",
+            "summary": "",
+            "url": "classes/OAuth-Model-OAuth2Client.html#method_setOAuth2Config"
+        },                {
+            "fqsen": "\\OAuth\\Model\\OAuth2Client\u003A\u003AgetOAuth2Config\u0028\u0029",
+            "name": "getOAuth2Config",
+            "summary": "",
+            "url": "classes/OAuth-Model-OAuth2Client.html#method_getOAuth2Config"
+        },                {
+            "fqsen": "\\OAuth\\Model\\OAuth2Client\u003A\u003AsetDb\u0028\u0029",
+            "name": "setDb",
+            "summary": "",
+            "url": "classes/OAuth-Model-OAuth2Client.html#method_setDb"
+        },                {
+            "fqsen": "\\OAuth\\Model\\OAuth2Client\u003A\u003AgetDb\u0028\u0029",
+            "name": "getDb",
+            "summary": "",
+            "url": "classes/OAuth-Model-OAuth2Client.html#method_getDb"
+        },                {
+            "fqsen": "\\OAuth\\Model\\OAuth2Client\u003A\u003Aredirect\u0028\u0029",
+            "name": "redirect",
+            "summary": "",
+            "url": "classes/OAuth-Model-OAuth2Client.html#method_redirect"
+        },                {
+            "fqsen": "\\OAuth\\Model\\OAuth2Client\u003A\u003AvalidatedConfig\u0028\u0029",
+            "name": "validatedConfig",
+            "summary": "",
+            "url": "classes/OAuth-Model-OAuth2Client.html#method_validatedConfig"
+        },                {
+            "fqsen": "\\OAuth\\Model\\OAuth2Client\u003A\u003AgetToken\u0028\u0029",
+            "name": "getToken",
+            "summary": "Exchange\u0020the\u0020Authorization\u0020Code\u0020for\u0020the\u0020JWT",
+            "url": "classes/OAuth-Model-OAuth2Client.html#method_getToken"
+        },                {
+            "fqsen": "\\OAuth\\Model\\OAuth2Client\u003A\u003A\u0024config",
+            "name": "config",
+            "summary": "",
+            "url": "classes/OAuth-Model-OAuth2Client.html#property_config"
+        },                {
+            "fqsen": "\\OAuth\\Model\\OAuth2Client\u003A\u003A\u0024db",
+            "name": "db",
+            "summary": "",
+            "url": "classes/OAuth-Model-OAuth2Client.html#property_db"
+        },                {
+            "fqsen": "\\OAuth\\Model\\OAuth2ClientInterface",
+            "name": "OAuth2ClientInterface",
+            "summary": "OAuth\u00202\u0020interface\u0020to\u0020be\u0020used\u0020in\u0020Lamnias\u0020framework\u0020model",
+            "url": "classes/OAuth-Model-OAuth2ClientInterface.html"
+        },                {
+            "fqsen": "\\OAuth\\Model\\OAuth2ClientInterface\u003A\u003AsetOAuth2Config\u0028\u0029",
+            "name": "setOAuth2Config",
+            "summary": "",
+            "url": "classes/OAuth-Model-OAuth2ClientInterface.html#method_setOAuth2Config"
+        },                {
+            "fqsen": "\\OAuth\\Model\\OAuth2ClientInterface\u003A\u003Aredirect\u0028\u0029",
+            "name": "redirect",
+            "summary": "",
+            "url": "classes/OAuth-Model-OAuth2ClientInterface.html#method_redirect"
+        },                {
+            "fqsen": "\\OAuth\\Model\\OAuth2ClientInterface\u003A\u003AgetToken\u0028\u0029",
+            "name": "getToken",
+            "summary": "",
+            "url": "classes/OAuth-Model-OAuth2ClientInterface.html#method_getToken"
+        },                {
+            "fqsen": "\\OAuth\\Model\\OAuth2Server",
+            "name": "OAuth2Server",
+            "summary": "",
+            "url": "classes/OAuth-Model-OAuth2Server.html"
+        },                {
+            "fqsen": "\\OAuth\\Model\\OAuth2Server\u003A\u003AsetDb\u0028\u0029",
+            "name": "setDb",
+            "summary": "",
+            "url": "classes/OAuth-Model-OAuth2Server.html#method_setDb"
+        },                {
+            "fqsen": "\\OAuth\\Model\\OAuth2Server\u003A\u003AgetDb\u0028\u0029",
+            "name": "getDb",
+            "summary": "",
+            "url": "classes/OAuth-Model-OAuth2Server.html#method_getDb"
+        },                {
+            "fqsen": "\\OAuth\\Model\\OAuth2Server\u003A\u003AsetJwt\u0028\u0029",
+            "name": "setJwt",
+            "summary": "",
+            "url": "classes/OAuth-Model-OAuth2Server.html#method_setJwt"
+        },                {
+            "fqsen": "\\OAuth\\Model\\OAuth2Server\u003A\u003AgetJwt\u0028\u0029",
+            "name": "getJwt",
+            "summary": "",
+            "url": "classes/OAuth-Model-OAuth2Server.html#method_getJwt"
+        },                {
+            "fqsen": "\\OAuth\\Model\\OAuth2Server\u003A\u003AsetTTL\u0028\u0029",
+            "name": "setTTL",
+            "summary": "",
+            "url": "classes/OAuth-Model-OAuth2Server.html#method_setTTL"
+        },                {
+            "fqsen": "\\OAuth\\Model\\OAuth2Server\u003A\u003AgetTTL\u0028\u0029",
+            "name": "getTTL",
+            "summary": "",
+            "url": "classes/OAuth-Model-OAuth2Server.html#method_getTTL"
+        },                {
+            "fqsen": "\\OAuth\\Model\\OAuth2Server\u003A\u003AverifyCodeVerifier\u0028\u0029",
+            "name": "verifyCodeVerifier",
+            "summary": "",
+            "url": "classes/OAuth-Model-OAuth2Server.html#method_verifyCodeVerifier"
+        },                {
+            "fqsen": "\\OAuth\\Model\\OAuth2Server\u003A\u003AverifyClient\u0028\u0029",
+            "name": "verifyClient",
+            "summary": "",
+            "url": "classes/OAuth-Model-OAuth2Server.html#method_verifyClient"
+        },                {
+            "fqsen": "\\OAuth\\Model\\OAuth2Server\u003A\u003AgetAuthorizationCode\u0028\u0029",
+            "name": "getAuthorizationCode",
+            "summary": "",
+            "url": "classes/OAuth-Model-OAuth2Server.html#method_getAuthorizationCode"
+        },                {
+            "fqsen": "\\OAuth\\Model\\OAuth2Server\u003A\u003AgetToken\u0028\u0029",
+            "name": "getToken",
+            "summary": "",
+            "url": "classes/OAuth-Model-OAuth2Server.html#method_getToken"
+        },                {
+            "fqsen": "\\OAuth\\Model\\OAuth2Server\u003A\u003AgarbageCollection\u0028\u0029",
+            "name": "garbageCollection",
+            "summary": "",
+            "url": "classes/OAuth-Model-OAuth2Server.html#method_garbageCollection"
+        },                {
+            "fqsen": "\\OAuth\\Model\\OAuth2Server\u003A\u003A\u0024pdo",
+            "name": "pdo",
+            "summary": "",
+            "url": "classes/OAuth-Model-OAuth2Server.html#property_pdo"
+        },                {
+            "fqsen": "\\OAuth\\Model\\OAuth2Server\u003A\u003A\u0024jwt",
+            "name": "jwt",
+            "summary": "",
+            "url": "classes/OAuth-Model-OAuth2Server.html#property_jwt"
+        },                {
+            "fqsen": "\\OAuth\\Model\\OAuth2Server\u003A\u003A\u0024ttl",
+            "name": "ttl",
+            "summary": "",
+            "url": "classes/OAuth-Model-OAuth2Server.html#property_ttl"
+        },                {
+            "fqsen": "\\OAuth\\Model\\OAuth2ServerInterface",
+            "name": "OAuth2ServerInterface",
+            "summary": "",
+            "url": "classes/OAuth-Model-OAuth2ServerInterface.html"
+        },                {
+            "fqsen": "\\OAuth\\Model\\OAuth2ServerInterface\u003A\u003AgetAuthorizationCode\u0028\u0029",
+            "name": "getAuthorizationCode",
+            "summary": "",
+            "url": "classes/OAuth-Model-OAuth2ServerInterface.html#method_getAuthorizationCode"
+        },                {
+            "fqsen": "\\OAuth\\Model\\OAuth2ServerInterface\u003A\u003AgetToken\u0028\u0029",
+            "name": "getToken",
+            "summary": "",
+            "url": "classes/OAuth-Model-OAuth2ServerInterface.html#method_getToken"
+        },                {
+            "fqsen": "\\OAuth\\Model\\OAuth2ServerInterface\u003A\u003AverifyCodeVerifier\u0028\u0029",
+            "name": "verifyCodeVerifier",
+            "summary": "",
+            "url": "classes/OAuth-Model-OAuth2ServerInterface.html#method_verifyCodeVerifier"
+        },                {
+            "fqsen": "\\OAuth\\Model\\OAuth2ServerInterface\u003A\u003AverifyClient\u0028\u0029",
+            "name": "verifyClient",
+            "summary": "",
+            "url": "classes/OAuth-Model-OAuth2ServerInterface.html#method_verifyClient"
+        },                {
             "fqsen": "\\PublicAsset\\Controller\\IndexController",
             "name": "IndexController",
             "summary": "When\u0020an\u0020asset\u0020is\u0020found,\u0020it\u0020is\u0020returned\u0020using\u0020this\u0020controller",
@@ -985,6 +3380,16 @@ Search.appendIndex(
             "name": "IndexAction",
             "summary": "Output\u0020raw\u0020file\u0020found\u0020from\u0020PublicAsset\\Route\\PublicAssetRoute",
             "url": "classes/PublicAsset-Controller-IndexController.html#method_IndexAction"
+        },                {
+            "fqsen": "\\PublicAsset\\Factory\\Controller\\IndexControllerFactory",
+            "name": "IndexControllerFactory",
+            "summary": "",
+            "url": "classes/PublicAsset-Factory-Controller-IndexControllerFactory.html"
+        },                {
+            "fqsen": "\\PublicAsset\\Factory\\Controller\\IndexControllerFactory\u003A\u003A__invoke\u0028\u0029",
+            "name": "__invoke",
+            "summary": "",
+            "url": "classes/PublicAsset-Factory-Controller-IndexControllerFactory.html#method___invoke"
         },                {
             "fqsen": "\\PublicAsset\\Factory\\PublicAssetRouteFactory",
             "name": "PublicAssetRouteFactory",
@@ -1116,6 +3521,16 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Stockpile-Controller-IndexController.html#method_getTranslator"
         },                {
+            "fqsen": "\\Stockpile\\Controller\\IndexController\u003A\u003AsetMetadata\u0028\u0029",
+            "name": "setMetadata",
+            "summary": "",
+            "url": "classes/Stockpile-Controller-IndexController.html#method_setMetadata"
+        },                {
+            "fqsen": "\\Stockpile\\Controller\\IndexController\u003A\u003AgetMetadata\u0028\u0029",
+            "name": "getMetadata",
+            "summary": "",
+            "url": "classes/Stockpile-Controller-IndexController.html#method_getMetadata"
+        },                {
             "fqsen": "\\Stockpile\\Controller\\IndexController\u003A\u003AfileSystemPageAction\u0028\u0029",
             "name": "fileSystemPageAction",
             "summary": "",
@@ -1130,6 +3545,11 @@ Search.appendIndex(
             "name": "translator",
             "summary": "",
             "url": "classes/Stockpile-Controller-IndexController.html#property_translator"
+        },                {
+            "fqsen": "\\Stockpile\\Controller\\IndexController\u003A\u003A\u0024metadata",
+            "name": "metadata",
+            "summary": "",
+            "url": "classes/Stockpile-Controller-IndexController.html#property_metadata"
         },                {
             "fqsen": "\\Stockpile\\Factory\\AdminControllerFactory",
             "name": "AdminControllerFactory",
@@ -1245,6 +3665,21 @@ Search.appendIndex(
             "name": "pdo",
             "summary": "",
             "url": "classes/Stockpile-Model-MovedPage.html#property_pdo"
+        },                {
+            "fqsen": "\\Stockpile\\Model\\OldHealthCanadaMetadata",
+            "name": "OldHealthCanadaMetadata",
+            "summary": "This\u0020class\u0020replace\u0020the\u0020old\u0020Health\u0020Canada\u0027s\u0020template.\u0020Is\u0020it\u0020meant\u0020to\u0020accelerate\nthe\u0020convertion\u0020of\u0020pages\u0020that\u0020used\u0020this\u0020old\u0020template\u0020to\u0020the\u0020new\u0020one.",
+            "url": "classes/Stockpile-Model-OldHealthCanadaMetadata.html"
+        },                {
+            "fqsen": "\\Stockpile\\Model\\OldHealthCanadaMetadata\u003A\u003A__call\u0028\u0029",
+            "name": "__call",
+            "summary": "",
+            "url": "classes/Stockpile-Model-OldHealthCanadaMetadata.html#method___call"
+        },                {
+            "fqsen": "\\Stockpile\\Model\\OldHealthCanadaMetadata\u003A\u003A\u0024map",
+            "name": "map",
+            "summary": "",
+            "url": "classes/Stockpile-Model-OldHealthCanadaMetadata.html#property_map"
         },                {
             "fqsen": "\\Stockpile\\Route\\FileSystemRoute",
             "name": "FileSystemRoute",
@@ -1401,66 +3836,6 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/UserAuth-Module.html"
         },                {
-            "fqsen": "\\UserAuth\\Module\u003A\u003AgetConfig\u0028\u0029",
-            "name": "getConfig",
-            "summary": "",
-            "url": "classes/UserAuth-Module.html#method_getConfig"
-        },                {
-            "fqsen": "\\UserAuth\\Module\u003A\u003AgetAutoloaderConfig\u0028\u0029",
-            "name": "getAutoloaderConfig",
-            "summary": "",
-            "url": "classes/UserAuth-Module.html#method_getAutoloaderConfig"
-        },                {
-            "fqsen": "\\UserAuth\\Module\u003A\u003AonBootstrap\u0028\u0029",
-            "name": "onBootstrap",
-            "summary": "",
-            "url": "classes/UserAuth-Module.html#method_onBootstrap"
-        },                {
-            "fqsen": "\\UserAuth\\Module\u003A\u003AEVENT_REGISTER",
-            "name": "EVENT_REGISTER",
-            "summary": "",
-            "url": "classes/UserAuth-Module.html#constant_EVENT_REGISTER"
-        },                {
-            "fqsen": "\\UserAuth\\Module\u003A\u003AEVENT_REGISTER_FAILED",
-            "name": "EVENT_REGISTER_FAILED",
-            "summary": "",
-            "url": "classes/UserAuth-Module.html#constant_EVENT_REGISTER_FAILED"
-        },                {
-            "fqsen": "\\UserAuth\\Module\u003A\u003AEVENT_LOGIN",
-            "name": "EVENT_LOGIN",
-            "summary": "",
-            "url": "classes/UserAuth-Module.html#constant_EVENT_LOGIN"
-        },                {
-            "fqsen": "\\UserAuth\\Module\u003A\u003AEVENT_LOGOUT",
-            "name": "EVENT_LOGOUT",
-            "summary": "",
-            "url": "classes/UserAuth-Module.html#constant_EVENT_LOGOUT"
-        },                {
-            "fqsen": "\\UserAuth\\Module\u003A\u003AEVENT_LOGIN_FAILED",
-            "name": "EVENT_LOGIN_FAILED",
-            "summary": "",
-            "url": "classes/UserAuth-Module.html#constant_EVENT_LOGIN_FAILED"
-        },                {
-            "fqsen": "\\UserAuth\\Module\u003A\u003AEVENT_RESET_PASSWORD_REQUEST",
-            "name": "EVENT_RESET_PASSWORD_REQUEST",
-            "summary": "",
-            "url": "classes/UserAuth-Module.html#constant_EVENT_RESET_PASSWORD_REQUEST"
-        },                {
-            "fqsen": "\\UserAuth\\Module\u003A\u003AEVENT_RESET_PASSWORD_HANDLED",
-            "name": "EVENT_RESET_PASSWORD_HANDLED",
-            "summary": "",
-            "url": "classes/UserAuth-Module.html#constant_EVENT_RESET_PASSWORD_HANDLED"
-        },                {
-            "fqsen": "\\UserAuth\\Module\u003A\u003AEVENT_CONFIRM_EMAIL_HANDLED",
-            "name": "EVENT_CONFIRM_EMAIL_HANDLED",
-            "summary": "",
-            "url": "classes/UserAuth-Module.html#constant_EVENT_CONFIRM_EMAIL_HANDLED"
-        },                {
-            "fqsen": "\\UserAuth\\Module\u003A\u003AEVENT_CHANGE_PASSWORD",
-            "name": "EVENT_CHANGE_PASSWORD",
-            "summary": "",
-            "url": "classes/UserAuth-Module.html#constant_EVENT_CHANGE_PASSWORD"
-        },                {
             "fqsen": "\\UserAuth\\Controller\\IndexController",
             "name": "IndexController",
             "summary": "",
@@ -1576,6 +3951,56 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/UserAuth-Controller-IndexController.html#property_config"
         },                {
+            "fqsen": "\\UserAuth\\Controller\\Plugin\\AuthenticateUser",
+            "name": "AuthenticateUser",
+            "summary": "",
+            "url": "classes/UserAuth-Controller-Plugin-AuthenticateUser.html"
+        },                {
+            "fqsen": "\\UserAuth\\Controller\\Plugin\\AuthenticateUser\u003A\u003AsetUser\u0028\u0029",
+            "name": "setUser",
+            "summary": "",
+            "url": "classes/UserAuth-Controller-Plugin-AuthenticateUser.html#method_setUser"
+        },                {
+            "fqsen": "\\UserAuth\\Controller\\Plugin\\AuthenticateUser\u003A\u003AgetUser\u0028\u0029",
+            "name": "getUser",
+            "summary": "",
+            "url": "classes/UserAuth-Controller-Plugin-AuthenticateUser.html#method_getUser"
+        },                {
+            "fqsen": "\\UserAuth\\Controller\\Plugin\\AuthenticateUser\u003A\u003AsetJwtObj\u0028\u0029",
+            "name": "setJwtObj",
+            "summary": "",
+            "url": "classes/UserAuth-Controller-Plugin-AuthenticateUser.html#method_setJwtObj"
+        },                {
+            "fqsen": "\\UserAuth\\Controller\\Plugin\\AuthenticateUser\u003A\u003AgetJwtObj\u0028\u0029",
+            "name": "getJwtObj",
+            "summary": "",
+            "url": "classes/UserAuth-Controller-Plugin-AuthenticateUser.html#method_getJwtObj"
+        },                {
+            "fqsen": "\\UserAuth\\Controller\\Plugin\\AuthenticateUser\u003A\u003A__invoke\u0028\u0029",
+            "name": "__invoke",
+            "summary": "",
+            "url": "classes/UserAuth-Controller-Plugin-AuthenticateUser.html#method___invoke"
+        },                {
+            "fqsen": "\\UserAuth\\Controller\\Plugin\\AuthenticateUser\u003A\u003A\u0024user",
+            "name": "user",
+            "summary": "",
+            "url": "classes/UserAuth-Controller-Plugin-AuthenticateUser.html#property_user"
+        },                {
+            "fqsen": "\\UserAuth\\Controller\\Plugin\\AuthenticateUser\u003A\u003A\u0024jwtObj",
+            "name": "jwtObj",
+            "summary": "",
+            "url": "classes/UserAuth-Controller-Plugin-AuthenticateUser.html#property_jwtObj"
+        },                {
+            "fqsen": "\\UserAuth\\Controller\\Plugin\\ReturnUserData",
+            "name": "ReturnUserData",
+            "summary": "",
+            "url": "classes/UserAuth-Controller-Plugin-ReturnUserData.html"
+        },                {
+            "fqsen": "\\UserAuth\\Controller\\Plugin\\ReturnUserData\u003A\u003A__invoke\u0028\u0029",
+            "name": "__invoke",
+            "summary": "",
+            "url": "classes/UserAuth-Controller-Plugin-ReturnUserData.html#method___invoke"
+        },                {
             "fqsen": "\\UserAuth\\Exception\\InvalidConfirmationPassword",
             "name": "InvalidConfirmationPassword",
             "summary": "",
@@ -1621,6 +4046,11 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/UserAuth-Exception-JwtExpiredException.html#property_message"
         },                {
+            "fqsen": "\\UserAuth\\Exception\\MissingComponentException",
+            "name": "MissingComponentException",
+            "summary": "",
+            "url": "classes/UserAuth-Exception-MissingComponentException.html"
+        },                {
             "fqsen": "\\UserAuth\\Exception\\UserConfirmException",
             "name": "UserConfirmException",
             "summary": "",
@@ -1651,6 +4081,16 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/UserAuth-Exception-UserException.html"
         },                {
+            "fqsen": "\\UserAuth\\Exception\\UserForbidden",
+            "name": "UserForbidden",
+            "summary": "",
+            "url": "classes/UserAuth-Exception-UserForbidden.html"
+        },                {
+            "fqsen": "\\UserAuth\\Exception\\UserForbidden\u003A\u003A\u0024message",
+            "name": "message",
+            "summary": "",
+            "url": "classes/UserAuth-Exception-UserForbidden.html#property_message"
+        },                {
             "fqsen": "\\UserAuth\\Exception\\UserMethodUnavailable",
             "name": "UserMethodUnavailable",
             "summary": "",
@@ -1671,6 +4111,16 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/UserAuth-Factory-AuthFactory.html#method___invoke"
         },                {
+            "fqsen": "\\UserAuth\\Factory\\Controller\\Plugin\\AuthenticateUserFactory",
+            "name": "AuthenticateUserFactory",
+            "summary": "",
+            "url": "classes/UserAuth-Factory-Controller-Plugin-AuthenticateUserFactory.html"
+        },                {
+            "fqsen": "\\UserAuth\\Factory\\Controller\\Plugin\\AuthenticateUserFactory\u003A\u003A__invoke\u0028\u0029",
+            "name": "__invoke",
+            "summary": "",
+            "url": "classes/UserAuth-Factory-Controller-Plugin-AuthenticateUserFactory.html#method___invoke"
+        },                {
             "fqsen": "\\UserAuth\\Factory\\IndexControllerFactory",
             "name": "IndexControllerFactory",
             "summary": "",
@@ -1690,6 +4140,16 @@ Search.appendIndex(
             "name": "__invoke",
             "summary": "",
             "url": "classes/UserAuth-Factory-JWTFactory.html#method___invoke"
+        },                {
+            "fqsen": "\\UserAuth\\Factory\\Listener\\UserAuthListenerFactory",
+            "name": "UserAuthListenerFactory",
+            "summary": "",
+            "url": "classes/UserAuth-Factory-Listener-UserAuthListenerFactory.html"
+        },                {
+            "fqsen": "\\UserAuth\\Factory\\Listener\\UserAuthListenerFactory\u003A\u003A__invoke\u0028\u0029",
+            "name": "__invoke",
+            "summary": "",
+            "url": "classes/UserAuth-Factory-Listener-UserAuthListenerFactory.html#method___invoke"
         },                {
             "fqsen": "\\UserAuth\\Factory\\UserAuditFactory",
             "name": "UserAuditFactory",
@@ -1725,6 +4185,36 @@ Search.appendIndex(
             "name": "__invoke",
             "summary": "",
             "url": "classes/UserAuth-Factory-UserLoggerFactory.html#method___invoke"
+        },                {
+            "fqsen": "\\UserAuth\\Listener\\UserAuthListener",
+            "name": "UserAuthListener",
+            "summary": "",
+            "url": "classes/UserAuth-Listener-UserAuthListener.html"
+        },                {
+            "fqsen": "\\UserAuth\\Listener\\UserAuthListener\u003A\u003AsetHeadScript\u0028\u0029",
+            "name": "setHeadScript",
+            "summary": "",
+            "url": "classes/UserAuth-Listener-UserAuthListener.html#method_setHeadScript"
+        },                {
+            "fqsen": "\\UserAuth\\Listener\\UserAuthListener\u003A\u003AgetHeadScript\u0028\u0029",
+            "name": "getHeadScript",
+            "summary": "",
+            "url": "classes/UserAuth-Listener-UserAuthListener.html#method_getHeadScript"
+        },                {
+            "fqsen": "\\UserAuth\\Listener\\UserAuthListener\u003A\u003Aattach\u0028\u0029",
+            "name": "attach",
+            "summary": "",
+            "url": "classes/UserAuth-Listener-UserAuthListener.html#method_attach"
+        },                {
+            "fqsen": "\\UserAuth\\Listener\\UserAuthListener\u003A\u003AaddJavascript\u0028\u0029",
+            "name": "addJavascript",
+            "summary": "",
+            "url": "classes/UserAuth-Listener-UserAuthListener.html#method_addJavascript"
+        },                {
+            "fqsen": "\\UserAuth\\Listener\\UserAuthListener\u003A\u003A\u0024headScript",
+            "name": "headScript",
+            "summary": "",
+            "url": "classes/UserAuth-Listener-UserAuthListener.html#property_headScript"
         },                {
             "fqsen": "\\UserAuth\\Model\\Auth",
             "name": "Auth",
@@ -1771,16 +4261,6 @@ Search.appendIndex(
             "summary": "Return\u0020the\u0020default\u0020value\u0020of\u0020the\u0020specific\u0020key\u0020or\u0020the\u0020entire\u0020array\u0020of\u0020default\u0020values\u0020if\nno\u0020key\u0020was\u0020provided",
             "url": "classes/UserAuth-Model-DbUser.html#method_getDefaultValues"
         },                {
-            "fqsen": "\\UserAuth\\Model\\DbUser\u003A\u003AsetGcNotifyData\u0028\u0029",
-            "name": "setGcNotifyData",
-            "summary": "set\u0020the\u0020data\u0020used\u0020when\u0020sending\u0020email\u0020using\u0020GC\u0020Notify\u0020\u0028used\u0020for\u0020confirming\u0020email\u0020and\u0020resetting\u0020password\u0029",
-            "url": "classes/UserAuth-Model-DbUser.html#method_setGcNotifyData"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\DbUser\u003A\u003AgetGcNotifyData\u0028\u0029",
-            "name": "getGcNotifyData",
-            "summary": "",
-            "url": "classes/UserAuth-Model-DbUser.html#method_getGcNotifyData"
-        },                {
             "fqsen": "\\UserAuth\\Model\\DbUser\u003A\u003AsetUrlPlugin\u0028\u0029",
             "name": "setUrlPlugin",
             "summary": "Set\u0020the\u0020ViewPlugin\u0020UrlPlugin,\u0020this\u0020is\u0020used\u0020when\u0020generating\u0020the\u0020links\u0020in\u0020the\u0020emails",
@@ -1816,6 +4296,16 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/UserAuth-Model-DbUser.html#method_getParentDb"
         },                {
+            "fqsen": "\\UserAuth\\Model\\DbUser\u003A\u003AsetTableName\u0028\u0029",
+            "name": "setTableName",
+            "summary": "",
+            "url": "classes/UserAuth-Model-DbUser.html#method_setTableName"
+        },                {
+            "fqsen": "\\UserAuth\\Model\\DbUser\u003A\u003AgetTableName\u0028\u0029",
+            "name": "getTableName",
+            "summary": "",
+            "url": "classes/UserAuth-Model-DbUser.html#method_getTableName"
+        },                {
             "fqsen": "\\UserAuth\\Model\\DbUser\u003A\u003Aauthenticate\u0028\u0029",
             "name": "authenticate",
             "summary": "Authenticate\/login\u0020a\u0020user\u0020using\u0020a\u0020database.\u0020This\u0020particular\u0020implementation\u0020would\u0020use\u0020a\u0020central\nDB\u0020for\u0020user\u0020and\u0020each\u0020app\u0020could\u0020have\u0020a\u0020user\u0020param,\u0020that\u0027s\u0020why\u0020it\u0020uses\u0020a\u0020parentDb\u0020for\u0020authenticating",
@@ -1825,11 +4315,6 @@ Search.appendIndex(
             "name": "loadFromJwt",
             "summary": "Load\u0020a\u0020user\u0020from\u0020the\u0020JWT.\u0020The\u0020expiry\u0020time\u0020of\u0020the\u0020JWT\u0020should\u0020be\u0020checked\u0020before\u0020allowing\u0020this.",
             "url": "classes/UserAuth-Model-DbUser.html#method_loadFromJwt"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\DbUser\u003A\u003AloadFromSession\u0028\u0029",
-            "name": "loadFromSession",
-            "summary": "Load\u0020a\u0020user\u0020from\u0020the\u0020Session\u0020if\u0020the\u0020useSession\u0020is\u0020set\u0020to\u0020true\u0020in\u0020userConfig\u0020\u005Bdefault\u0020false\u005D",
-            "url": "classes/UserAuth-Model-DbUser.html#method_loadFromSession"
         },                {
             "fqsen": "\\UserAuth\\Model\\DbUser\u003A\u003A_loadUserById\u0028\u0029",
             "name": "_loadUserById",
@@ -1951,6 +4436,311 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/UserAuth-Model-DbUser.html#property_parentdb"
         },                {
+            "fqsen": "\\UserAuth\\Model\\DbUser\u003A\u003A\u0024tableName",
+            "name": "tableName",
+            "summary": "",
+            "url": "classes/UserAuth-Model-DbUser.html#property_tableName"
+        },                {
+            "fqsen": "\\UserAuth\\Model\\EmailUser",
+            "name": "EmailUser",
+            "summary": "",
+            "url": "classes/UserAuth-Model-EmailUser.html"
+        },                {
+            "fqsen": "\\UserAuth\\Model\\EmailUser\u003A\u003AsetUrlPlugin\u0028\u0029",
+            "name": "setUrlPlugin",
+            "summary": "Set\u0020the\u0020ViewPlugin\u0020UrlPlugin,\u0020this\u0020is\u0020used\u0020when\u0020generating\u0020the\u0020links\u0020in\u0020the\u0020emails",
+            "url": "classes/UserAuth-Model-EmailUser.html#method_setUrlPlugin"
+        },                {
+            "fqsen": "\\UserAuth\\Model\\EmailUser\u003A\u003AgetUrlPlugin\u0028\u0029",
+            "name": "getUrlPlugin",
+            "summary": "",
+            "url": "classes/UserAuth-Model-EmailUser.html#method_getUrlPlugin"
+        },                {
+            "fqsen": "\\UserAuth\\Model\\EmailUser\u003A\u003Aurl\u0028\u0029",
+            "name": "url",
+            "summary": "",
+            "url": "classes/UserAuth-Model-EmailUser.html#method_url"
+        },                {
+            "fqsen": "\\UserAuth\\Model\\EmailUser\u003A\u003AsetTranslator\u0028\u0029",
+            "name": "setTranslator",
+            "summary": "Set\u0020the\u0020MvcTranslator,\u0020this\u0020is\u0020used\u0020when\u0020generating\u0020the\u0020links\u0020in\u0020the\u0020emails",
+            "url": "classes/UserAuth-Model-EmailUser.html#method_setTranslator"
+        },                {
+            "fqsen": "\\UserAuth\\Model\\EmailUser\u003A\u003AgetTranslator\u0028\u0029",
+            "name": "getTranslator",
+            "summary": "",
+            "url": "classes/UserAuth-Model-EmailUser.html#method_getTranslator"
+        },                {
+            "fqsen": "\\UserAuth\\Model\\EmailUser\u003A\u003AsetUserDb\u0028\u0029",
+            "name": "setUserDb",
+            "summary": "Set\u0020a\u0020\u0022parentDb\u0022\u0020used\u0020when\u0020the\u0020child\u0020class\u0020still\u0020use\u0020a\u0020\u0022parent\u0022\u0020user\u0020that\u0020share\u0020user\u0020between\nmultiple\u0020applications",
+            "url": "classes/UserAuth-Model-EmailUser.html#method_setUserDb"
+        },                {
+            "fqsen": "\\UserAuth\\Model\\EmailUser\u003A\u003AgetUserDb\u0028\u0029",
+            "name": "getUserDb",
+            "summary": "",
+            "url": "classes/UserAuth-Model-EmailUser.html#method_getUserDb"
+        },                {
+            "fqsen": "\\UserAuth\\Model\\EmailUser\u003A\u003AsetTimeToLive\u0028\u0029",
+            "name": "setTimeToLive",
+            "summary": "Set\u0020a\u0020\u0022parentDb\u0022\u0020used\u0020when\u0020the\u0020child\u0020class\u0020still\u0020use\u0020a\u0020\u0022parent\u0022\u0020user\u0020that\u0020share\u0020user\u0020between\nmultiple\u0020applications",
+            "url": "classes/UserAuth-Model-EmailUser.html#method_setTimeToLive"
+        },                {
+            "fqsen": "\\UserAuth\\Model\\EmailUser\u003A\u003AgetTimeToLive\u0028\u0029",
+            "name": "getTimeToLive",
+            "summary": "",
+            "url": "classes/UserAuth-Model-EmailUser.html#method_getTimeToLive"
+        },                {
+            "fqsen": "\\UserAuth\\Model\\EmailUser\u003A\u003Asetlang\u0028\u0029",
+            "name": "setlang",
+            "summary": "",
+            "url": "classes/UserAuth-Model-EmailUser.html#method_setlang"
+        },                {
+            "fqsen": "\\UserAuth\\Model\\EmailUser\u003A\u003AgetLang\u0028\u0029",
+            "name": "getLang",
+            "summary": "",
+            "url": "classes/UserAuth-Model-EmailUser.html#method_getLang"
+        },                {
+            "fqsen": "\\UserAuth\\Model\\EmailUser\u003A\u003Aauthenticate\u0028\u0029",
+            "name": "authenticate",
+            "summary": "Authenticate\/login\u0020a\u0020user\u0020using\u0020a\u0020database.\u0020This\u0020particular\u0020implementation\u0020would\u0020use\u0020a\u0020central\nDB\u0020for\u0020user\u0020and\u0020each\u0020app\u0020could\u0020have\u0020a\u0020user\u0020param,\u0020that\u0027s\u0020why\u0020it\u0020uses\u0020a\u0020parentDb\u0020for\u0020authenticating",
+            "url": "classes/UserAuth-Model-EmailUser.html#method_authenticate"
+        },                {
+            "fqsen": "\\UserAuth\\Model\\EmailUser\u003A\u003AloadFromJwt\u0028\u0029",
+            "name": "loadFromJwt",
+            "summary": "Load\u0020a\u0020user\u0020from\u0020the\u0020JWT.\u0020The\u0020expiry\u0020time\u0020of\u0020the\u0020JWT\u0020should\u0020be\u0020checked\u0020before\u0020allowing\u0020this.",
+            "url": "classes/UserAuth-Model-EmailUser.html#method_loadFromJwt"
+        },                {
+            "fqsen": "\\UserAuth\\Model\\EmailUser\u003A\u003AloadFromSession\u0028\u0029",
+            "name": "loadFromSession",
+            "summary": "Load\u0020a\u0020user\u0020from\u0020the\u0020Session\u0020if\u0020the\u0020useSession\u0020is\u0020set\u0020to\u0020true\u0020in\u0020userConfig\u0020\u005Bdefault\u0020false\u005D",
+            "url": "classes/UserAuth-Model-EmailUser.html#method_loadFromSession"
+        },                {
+            "fqsen": "\\UserAuth\\Model\\EmailUser\u003A\u003A_loadUserById\u0028\u0029",
+            "name": "_loadUserById",
+            "summary": "A\u0020method\u0020used\u0020by\u0020loadFromJwt\u0020and\u0020loadFromSession\u0020to\u0020load\u0020the\u0020user\u0020without\u0020validating\u0020credentials",
+            "url": "classes/UserAuth-Model-EmailUser.html#method__loadUserById"
+        },                {
+            "fqsen": "\\UserAuth\\Model\\EmailUser\u003A\u003Aregister\u0028\u0029",
+            "name": "register",
+            "summary": "Register\u0020a\u0020new\u0020user,\u0020create\u0020a\u0020DB\u0020entry\u0020and\u0020send\u0020email\u0020\u0028depending\u0020on\u0020config\u0029",
+            "url": "classes/UserAuth-Model-EmailUser.html#method_register"
+        },                {
+            "fqsen": "\\UserAuth\\Model\\EmailUser\u003A\u003ArequestResetPassword\u0028\u0029",
+            "name": "requestResetPassword",
+            "summary": "request\u0020the\u0020reset\u0020of\u0020a\u0020password,\u0020this\u0020will\u0020send\u0020an\u0020email\u0020to\u0020registrered\u0020user\u0020with\u0020a\u0020reset\u0020link",
+            "url": "classes/UserAuth-Model-EmailUser.html#method_requestResetPassword"
+        },                {
+            "fqsen": "\\UserAuth\\Model\\EmailUser\u003A\u003AresetPassword\u0028\u0029",
+            "name": "resetPassword",
+            "summary": "Called\u0020when\u0020the\u0020user\u0020clicked\u0020on\u0020the\u0020link\u0020to\u0020reset\u0020the\u0020password",
+            "url": "classes/UserAuth-Model-EmailUser.html#method_resetPassword"
+        },                {
+            "fqsen": "\\UserAuth\\Model\\EmailUser\u003A\u003AchangePassword\u0028\u0029",
+            "name": "changePassword",
+            "summary": "Called\u0020when\u0020a\u0020user\u0020changes\u0020his\/her\u0020password.\u0020They\u0020must\u0020provide\u0020the\u0020current\u0020password",
+            "url": "classes/UserAuth-Model-EmailUser.html#method_changePassword"
+        },                {
+            "fqsen": "\\UserAuth\\Model\\EmailUser\u003A\u003AhandleVerifyEmailToken\u0028\u0029",
+            "name": "handleVerifyEmailToken",
+            "summary": "When\u0020a\u0020user\u0020click\u0020on\u0020the\u0020link\u0020sent\u0020to\u0020verify\u0020email",
+            "url": "classes/UserAuth-Model-EmailUser.html#method_handleVerifyEmailToken"
+        },                {
+            "fqsen": "\\UserAuth\\Model\\EmailUser\u003A\u003AremoveToken\u0028\u0029",
+            "name": "removeToken",
+            "summary": "Delete\u0020a\u0020token\u0020once\u0020it\u0020was\u0020used",
+            "url": "classes/UserAuth-Model-EmailUser.html#method_removeToken"
+        },                {
+            "fqsen": "\\UserAuth\\Model\\EmailUser\u003A\u003AgetNewToken\u0028\u0029",
+            "name": "getNewToken",
+            "summary": "generate\u0020a\u0020unique\u0020token.\u0020Not\u0020saved\u0020in\u0020the\u0020DB,\u0020just\u0020return\u0020a\u0020token\u0020not\u0020in\u0020the\u0020DB",
+            "url": "classes/UserAuth-Model-EmailUser.html#method_getNewToken"
+        },                {
+            "fqsen": "\\UserAuth\\Model\\EmailUser\u003A\u003AID_FIELD",
+            "name": "ID_FIELD",
+            "summary": "In\u0020DbUser,\u0020the\u0020ID\u0020Field\u0020is\u0020userId",
+            "url": "classes/UserAuth-Model-EmailUser.html#constant_ID_FIELD"
+        },                {
+            "fqsen": "\\UserAuth\\Model\\EmailUser\u003A\u003A\u0024userDb",
+            "name": "userDb",
+            "summary": "",
+            "url": "classes/UserAuth-Model-EmailUser.html#property_userDb"
+        },                {
+            "fqsen": "\\UserAuth\\Model\\EmailUser\u003A\u003A\u0024ttl",
+            "name": "ttl",
+            "summary": "",
+            "url": "classes/UserAuth-Model-EmailUser.html#property_ttl"
+        },                {
+            "fqsen": "\\UserAuth\\Model\\EmailUser\u003A\u003A\u0024lang",
+            "name": "lang",
+            "summary": "",
+            "url": "classes/UserAuth-Model-EmailUser.html#property_lang"
+        },                {
+            "fqsen": "\\UserAuth\\Model\\FileEmailUser",
+            "name": "FileEmailUser",
+            "summary": "",
+            "url": "classes/UserAuth-Model-FileEmailUser.html"
+        },                {
+            "fqsen": "\\UserAuth\\Model\\FileEmailUser\u003A\u003AsetUrlPlugin\u0028\u0029",
+            "name": "setUrlPlugin",
+            "summary": "Set\u0020the\u0020ViewPlugin\u0020UrlPlugin,\u0020this\u0020is\u0020used\u0020when\u0020generating\u0020the\u0020links\u0020in\u0020the\u0020emails",
+            "url": "classes/UserAuth-Model-FileEmailUser.html#method_setUrlPlugin"
+        },                {
+            "fqsen": "\\UserAuth\\Model\\FileEmailUser\u003A\u003AgetUrlPlugin\u0028\u0029",
+            "name": "getUrlPlugin",
+            "summary": "",
+            "url": "classes/UserAuth-Model-FileEmailUser.html#method_getUrlPlugin"
+        },                {
+            "fqsen": "\\UserAuth\\Model\\FileEmailUser\u003A\u003Aurl\u0028\u0029",
+            "name": "url",
+            "summary": "",
+            "url": "classes/UserAuth-Model-FileEmailUser.html#method_url"
+        },                {
+            "fqsen": "\\UserAuth\\Model\\FileEmailUser\u003A\u003AsetTranslator\u0028\u0029",
+            "name": "setTranslator",
+            "summary": "Set\u0020the\u0020MvcTranslator,\u0020this\u0020is\u0020used\u0020when\u0020generating\u0020the\u0020links\u0020in\u0020the\u0020emails",
+            "url": "classes/UserAuth-Model-FileEmailUser.html#method_setTranslator"
+        },                {
+            "fqsen": "\\UserAuth\\Model\\FileEmailUser\u003A\u003AgetTranslator\u0028\u0029",
+            "name": "getTranslator",
+            "summary": "",
+            "url": "classes/UserAuth-Model-FileEmailUser.html#method_getTranslator"
+        },                {
+            "fqsen": "\\UserAuth\\Model\\FileEmailUser\u003A\u003AsetVerificationRouteName\u0028\u0029",
+            "name": "setVerificationRouteName",
+            "summary": "",
+            "url": "classes/UserAuth-Model-FileEmailUser.html#method_setVerificationRouteName"
+        },                {
+            "fqsen": "\\UserAuth\\Model\\FileEmailUser\u003A\u003AgetVerificationRouteName\u0028\u0029",
+            "name": "getVerificationRouteName",
+            "summary": "",
+            "url": "classes/UserAuth-Model-FileEmailUser.html#method_getVerificationRouteName"
+        },                {
+            "fqsen": "\\UserAuth\\Model\\FileEmailUser\u003A\u003AsetUserFile\u0028\u0029",
+            "name": "setUserFile",
+            "summary": "",
+            "url": "classes/UserAuth-Model-FileEmailUser.html#method_setUserFile"
+        },                {
+            "fqsen": "\\UserAuth\\Model\\FileEmailUser\u003A\u003AgetUserFile\u0028\u0029",
+            "name": "getUserFile",
+            "summary": "",
+            "url": "classes/UserAuth-Model-FileEmailUser.html#method_getUserFile"
+        },                {
+            "fqsen": "\\UserAuth\\Model\\FileEmailUser\u003A\u003AgetUserJson\u0028\u0029",
+            "name": "getUserJson",
+            "summary": "",
+            "url": "classes/UserAuth-Model-FileEmailUser.html#method_getUserJson"
+        },                {
+            "fqsen": "\\UserAuth\\Model\\FileEmailUser\u003A\u003AsetUserJson\u0028\u0029",
+            "name": "setUserJson",
+            "summary": "",
+            "url": "classes/UserAuth-Model-FileEmailUser.html#method_setUserJson"
+        },                {
+            "fqsen": "\\UserAuth\\Model\\FileEmailUser\u003A\u003AsetTimeToLive\u0028\u0029",
+            "name": "setTimeToLive",
+            "summary": "Set\u0020a\u0020\u0022parentDb\u0022\u0020used\u0020when\u0020the\u0020child\u0020class\u0020still\u0020use\u0020a\u0020\u0022parent\u0022\u0020user\u0020that\u0020share\u0020user\u0020between\nmultiple\u0020applications",
+            "url": "classes/UserAuth-Model-FileEmailUser.html#method_setTimeToLive"
+        },                {
+            "fqsen": "\\UserAuth\\Model\\FileEmailUser\u003A\u003AgetTimeToLive\u0028\u0029",
+            "name": "getTimeToLive",
+            "summary": "",
+            "url": "classes/UserAuth-Model-FileEmailUser.html#method_getTimeToLive"
+        },                {
+            "fqsen": "\\UserAuth\\Model\\FileEmailUser\u003A\u003Asetlang\u0028\u0029",
+            "name": "setlang",
+            "summary": "",
+            "url": "classes/UserAuth-Model-FileEmailUser.html#method_setlang"
+        },                {
+            "fqsen": "\\UserAuth\\Model\\FileEmailUser\u003A\u003AgetLang\u0028\u0029",
+            "name": "getLang",
+            "summary": "",
+            "url": "classes/UserAuth-Model-FileEmailUser.html#method_getLang"
+        },                {
+            "fqsen": "\\UserAuth\\Model\\FileEmailUser\u003A\u003Aregister\u0028\u0029",
+            "name": "register",
+            "summary": "Register\u0020a\u0020new\u0020user,\u0020create\u0020an\u0020entry\u0020in\u0020the\u0020file\u0020and\u0020send\u0020email",
+            "url": "classes/UserAuth-Model-FileEmailUser.html#method_register"
+        },                {
+            "fqsen": "\\UserAuth\\Model\\FileEmailUser\u003A\u003AhandleVerifyEmailToken\u0028\u0029",
+            "name": "handleVerifyEmailToken",
+            "summary": "When\u0020a\u0020user\u0020click\u0020on\u0020the\u0020link\u0020sent\u0020to\u0020verify\u0020email",
+            "url": "classes/UserAuth-Model-FileEmailUser.html#method_handleVerifyEmailToken"
+        },                {
+            "fqsen": "\\UserAuth\\Model\\FileEmailUser\u003A\u003AgetDataForJWT\u0028\u0029",
+            "name": "getDataForJWT",
+            "summary": "Should\u0020return\u0020the\u0020data\u0020to\u0020be\u0020included\u0020in\u0020the\u0020JWT.\u0020This\u0020is\u0020meant\u0020to\u0020be\u0020overwritten\u0020if\u0020needed\nBy\u0020default,\u0020the\u0020entire\u0020user\u0020data\u0020set\u0020is\u0020included\u0020and\u0020will\u0020add\u0020a\u0020fields\u0020called\u0020\u0027id\u0027\ncontaining\u0020the\u0020content\u0020of\u0020self\u003A\u003AID_FIELD\u0020if\u0020\u0027id\u0027\u0020was\u0020not\u0020defined",
+            "url": "classes/UserAuth-Model-FileEmailUser.html#method_getDataForJWT"
+        },                {
+            "fqsen": "\\UserAuth\\Model\\FileEmailUser\u003A\u003AloadFromSession\u0028\u0029",
+            "name": "loadFromSession",
+            "summary": "Load\u0020a\u0020user\u0020from\u0020the\u0020Session\u0020if\u0020the\u0020useSession\u0020is\u0020set\u0020to\u0020true\u0020in\u0020userConfig\u0020\u005Bdefault\u0020false\u005D",
+            "url": "classes/UserAuth-Model-FileEmailUser.html#method_loadFromSession"
+        },                {
+            "fqsen": "\\UserAuth\\Model\\FileEmailUser\u003A\u003A_loadUserById\u0028\u0029",
+            "name": "_loadUserById",
+            "summary": "A\u0020method\u0020used\u0020by\u0020loadFromJwt\u0020and\u0020loadFromSession\u0020to\u0020load\u0020the\u0020user\u0020without\u0020validating\u0020credentials",
+            "url": "classes/UserAuth-Model-FileEmailUser.html#method__loadUserById"
+        },                {
+            "fqsen": "\\UserAuth\\Model\\FileEmailUser\u003A\u003AgetNewToken\u0028\u0029",
+            "name": "getNewToken",
+            "summary": "generate\u0020a\u0020unique\u0020token.\u0020Not\u0020saved\u0020in\u0020the\u0020DB,\u0020just\u0020return\u0020a\u0020token\u0020not\u0020in\u0020the\u0020DB",
+            "url": "classes/UserAuth-Model-FileEmailUser.html#method_getNewToken"
+        },                {
+            "fqsen": "\\UserAuth\\Model\\FileEmailUser\u003A\u003AID_FIELD",
+            "name": "ID_FIELD",
+            "summary": "In\u0020DbUser,\u0020the\u0020ID\u0020Field\u0020is\u0020userId",
+            "url": "classes/UserAuth-Model-FileEmailUser.html#constant_ID_FIELD"
+        },                {
+            "fqsen": "\\UserAuth\\Model\\FileEmailUser\u003A\u003AVERIFICATION_DONE",
+            "name": "VERIFICATION_DONE",
+            "summary": "",
+            "url": "classes/UserAuth-Model-FileEmailUser.html#constant_VERIFICATION_DONE"
+        },                {
+            "fqsen": "\\UserAuth\\Model\\FileEmailUser\u003A\u003AVERIFICATION_COULD_NOT_SEND",
+            "name": "VERIFICATION_COULD_NOT_SEND",
+            "summary": "",
+            "url": "classes/UserAuth-Model-FileEmailUser.html#constant_VERIFICATION_COULD_NOT_SEND"
+        },                {
+            "fqsen": "\\UserAuth\\Model\\FileEmailUser\u003A\u003AVERIFICATION_EMAIL_SENT",
+            "name": "VERIFICATION_EMAIL_SENT",
+            "summary": "",
+            "url": "classes/UserAuth-Model-FileEmailUser.html#constant_VERIFICATION_EMAIL_SENT"
+        },                {
+            "fqsen": "\\UserAuth\\Model\\FileEmailUser\u003A\u003ATOKEN_TYPE_CONFIRM_EMAIL",
+            "name": "TOKEN_TYPE_CONFIRM_EMAIL",
+            "summary": "",
+            "url": "classes/UserAuth-Model-FileEmailUser.html#constant_TOKEN_TYPE_CONFIRM_EMAIL"
+        },                {
+            "fqsen": "\\UserAuth\\Model\\FileEmailUser\u003A\u003ATOKEN_TYPE_RESET_PASSWORD",
+            "name": "TOKEN_TYPE_RESET_PASSWORD",
+            "summary": "",
+            "url": "classes/UserAuth-Model-FileEmailUser.html#constant_TOKEN_TYPE_RESET_PASSWORD"
+        },                {
+            "fqsen": "\\UserAuth\\Model\\FileEmailUser\u003A\u003ATOKEN_TTL_CONFIRM_EMAIL",
+            "name": "TOKEN_TTL_CONFIRM_EMAIL",
+            "summary": "",
+            "url": "classes/UserAuth-Model-FileEmailUser.html#constant_TOKEN_TTL_CONFIRM_EMAIL"
+        },                {
+            "fqsen": "\\UserAuth\\Model\\FileEmailUser\u003A\u003A\u0024verificationRouteName",
+            "name": "verificationRouteName",
+            "summary": "",
+            "url": "classes/UserAuth-Model-FileEmailUser.html#property_verificationRouteName"
+        },                {
+            "fqsen": "\\UserAuth\\Model\\FileEmailUser\u003A\u003A\u0024userFile",
+            "name": "userFile",
+            "summary": "",
+            "url": "classes/UserAuth-Model-FileEmailUser.html#property_userFile"
+        },                {
+            "fqsen": "\\UserAuth\\Model\\FileEmailUser\u003A\u003A\u0024ttl",
+            "name": "ttl",
+            "summary": "",
+            "url": "classes/UserAuth-Model-FileEmailUser.html#property_ttl"
+        },                {
+            "fqsen": "\\UserAuth\\Model\\FileEmailUser\u003A\u003A\u0024lang",
+            "name": "lang",
+            "summary": "",
+            "url": "classes/UserAuth-Model-FileEmailUser.html#property_lang"
+        },                {
             "fqsen": "\\UserAuth\\Model\\JWT",
             "name": "JWT",
             "summary": "",
@@ -1965,6 +4755,21 @@ Search.appendIndex(
             "name": "getSecret",
             "summary": "",
             "url": "classes/UserAuth-Model-JWT.html#method_getSecret"
+        },                {
+            "fqsen": "\\UserAuth\\Model\\JWT\u003A\u003AsetIssuer\u0028\u0029",
+            "name": "setIssuer",
+            "summary": "",
+            "url": "classes/UserAuth-Model-JWT.html#method_setIssuer"
+        },                {
+            "fqsen": "\\UserAuth\\Model\\JWT\u003A\u003AgetIssuer\u0028\u0029",
+            "name": "getIssuer",
+            "summary": "",
+            "url": "classes/UserAuth-Model-JWT.html#method_getIssuer"
+        },                {
+            "fqsen": "\\UserAuth\\Model\\JWT\u003A\u003AgetDefaultHeaders\u0028\u0029",
+            "name": "getDefaultHeaders",
+            "summary": "",
+            "url": "classes/UserAuth-Model-JWT.html#method_getDefaultHeaders"
         },                {
             "fqsen": "\\UserAuth\\Model\\JWT\u003A\u003Agenerate\u0028\u0029",
             "name": "generate",
@@ -2010,6 +4815,11 @@ Search.appendIndex(
             "name": "secret",
             "summary": "",
             "url": "classes/UserAuth-Model-JWT.html#property_secret"
+        },                {
+            "fqsen": "\\UserAuth\\Model\\JWT\u003A\u003A\u0024issuer",
+            "name": "issuer",
+            "summary": "",
+            "url": "classes/UserAuth-Model-JWT.html#property_issuer"
         },                {
             "fqsen": "\\UserAuth\\Model\\LdapUser",
             "name": "LdapUser",
@@ -2086,6 +4896,16 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/UserAuth-Model-User.html"
         },                {
+            "fqsen": "\\UserAuth\\Model\\User\u003A\u003AsetGcNotify\u0028\u0029",
+            "name": "setGcNotify",
+            "summary": "",
+            "url": "classes/UserAuth-Model-User.html#method_setGcNotify"
+        },                {
+            "fqsen": "\\UserAuth\\Model\\User\u003A\u003AgetGcNotify\u0028\u0029",
+            "name": "getGcNotify",
+            "summary": "",
+            "url": "classes/UserAuth-Model-User.html#method_getGcNotify"
+        },                {
             "fqsen": "\\UserAuth\\Model\\User\u003A\u003AsetJwtObj\u0028\u0029",
             "name": "setJwtObj",
             "summary": "Set\u0020the\u0020JWT\u0020object\u0020\u0028should\u0020be\u0020used\u0020in\u0020the\u0020factory\u0029",
@@ -2095,6 +4915,16 @@ Search.appendIndex(
             "name": "getJwtObj",
             "summary": "Return\u0020the\u0020JWT\u0020object",
             "url": "classes/UserAuth-Model-User.html#method_getJwtObj"
+        },                {
+            "fqsen": "\\UserAuth\\Model\\User\u003A\u003AsetSessionLength\u0028\u0029",
+            "name": "setSessionLength",
+            "summary": "",
+            "url": "classes/UserAuth-Model-User.html#method_setSessionLength"
+        },                {
+            "fqsen": "\\UserAuth\\Model\\User\u003A\u003AgetSessionLength\u0028\u0029",
+            "name": "getSessionLength",
+            "summary": "",
+            "url": "classes/UserAuth-Model-User.html#method_getSessionLength"
         },                {
             "fqsen": "\\UserAuth\\Model\\User\u003A\u003AsetEventManager\u0028\u0029",
             "name": "setEventManager",
@@ -2221,6 +5051,16 @@ Search.appendIndex(
             "summary": "Which\u0020field\u0020represent\u0020the\u0020unique\u0020identifier\u0020of\u0020the\u0020user\u0020\u0028ex\u003A\u0020email,\u0020userId,\u0020etc.\u0029",
             "url": "classes/UserAuth-Model-User.html#constant_ID_FIELD"
         },                {
+            "fqsen": "\\UserAuth\\Model\\User\u003A\u003A\u0024gcNotifyObj",
+            "name": "gcNotifyObj",
+            "summary": "",
+            "url": "classes/UserAuth-Model-User.html#property_gcNotifyObj"
+        },                {
+            "fqsen": "\\UserAuth\\Model\\User\u003A\u003A\u0024sessionLength",
+            "name": "sessionLength",
+            "summary": "",
+            "url": "classes/UserAuth-Model-User.html#property_sessionLength"
+        },                {
             "fqsen": "\\UserAuth\\Model\\User\u003A\u003A\u0024defaultPasswordRules",
             "name": "defaultPasswordRules",
             "summary": "Default\u0020rules\u0020for\u0020a\u0020valid\u0020password,\u0020this\u0020can\u0020be\u0020overwritten\u0020in\u0020config",
@@ -2306,6 +5146,11 @@ Search.appendIndex(
             "summary": "Generate\u0020and\u0020return\u0020the\u0020Javascript\u0020Web\u0020Token\u0020\u0028when\u0020using\u0020API\u0029",
             "url": "classes/UserAuth-Model-UserInterface.html#method_getJWT"
         },                {
+            "fqsen": "\\UserAuth\\Model\\UserInterface\u003A\u003AgetDataForJWT\u0028\u0029",
+            "name": "getDataForJWT",
+            "summary": "Get\u0020the\u0020data\u0020from\u0020the\u0020user\u0020that\u0020should\u0020be\u0020saved\u0020in\u0020the\u0020token.\u0020Remember\u0020that\ntoken\u0020data\u0020is\u0020public,\u0020the\u0020user\u0020can\u0020see\u0020it.\u0020Do\u0020not\u0020put\u0020some\u0020private\u0020or\nprotected\u0020data\u0020in\u0020JWT\u0021\u0021",
+            "url": "classes/UserAuth-Model-UserInterface.html#method_getDataForJWT"
+        },                {
             "fqsen": "\\UserAuth\\Model\\UserLogger",
             "name": "UserLogger",
             "summary": "",
@@ -2371,515 +5216,125 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/UserAuth-Model-UserLogger.html#property_db"
         },                {
-            "fqsen": "\\ExampleModule\\Module",
-            "name": "Module",
+            "fqsen": "\\UserAuth\\UserEvent",
+            "name": "UserEvent",
             "summary": "",
-            "url": "classes/ExampleModule-Module.html"
+            "url": "classes/UserAuth-UserEvent.html"
         },                {
-            "fqsen": "\\ExampleModule\\Module\u003A\u003AgetConfig\u0028\u0029",
-            "name": "getConfig",
+            "fqsen": "\\UserAuth\\UserEvent\u003A\u003AREGISTER",
+            "name": "REGISTER",
             "summary": "",
-            "url": "classes/ExampleModule-Module.html#method_getConfig"
+            "url": "classes/UserAuth-UserEvent.html#constant_REGISTER"
         },                {
-            "fqsen": "\\ExampleModule\\Module\u003A\u003AgetAutoloaderConfig\u0028\u0029",
-            "name": "getAutoloaderConfig",
+            "fqsen": "\\UserAuth\\UserEvent\u003A\u003AREGISTER_FAILED",
+            "name": "REGISTER_FAILED",
             "summary": "",
-            "url": "classes/ExampleModule-Module.html#method_getAutoloaderConfig"
+            "url": "classes/UserAuth-UserEvent.html#constant_REGISTER_FAILED"
         },                {
-            "fqsen": "\\ExampleModule\\Controller\\IndexController",
-            "name": "IndexController",
+            "fqsen": "\\UserAuth\\UserEvent\u003A\u003ALOGIN",
+            "name": "LOGIN",
             "summary": "",
-            "url": "classes/ExampleModule-Controller-IndexController.html"
+            "url": "classes/UserAuth-UserEvent.html#constant_LOGIN"
         },                {
-            "fqsen": "\\ExampleModule\\Controller\\IndexController\u003A\u003AindexAction\u0028\u0029",
-            "name": "indexAction",
+            "fqsen": "\\UserAuth\\UserEvent\u003A\u003ALOGOUT",
+            "name": "LOGOUT",
             "summary": "",
-            "url": "classes/ExampleModule-Controller-IndexController.html#method_indexAction"
+            "url": "classes/UserAuth-UserEvent.html#constant_LOGOUT"
         },                {
-            "fqsen": "\\ExampleModule\\Controller\\IndexController\u003A\u003A_setCommonMetadata\u0028\u0029",
-            "name": "_setCommonMetadata",
-            "summary": "Set\u0020the\u0020common\u0020metadata\u0020for\u0020this\u0020project",
-            "url": "classes/ExampleModule-Controller-IndexController.html#method__setCommonMetadata"
-        },                {
-            "fqsen": "\\ExampleModule\\Factory\\IndexControllerFactory",
-            "name": "IndexControllerFactory",
+            "fqsen": "\\UserAuth\\UserEvent\u003A\u003ALOGIN_FAILED",
+            "name": "LOGIN_FAILED",
             "summary": "",
-            "url": "classes/ExampleModule-Factory-IndexControllerFactory.html"
+            "url": "classes/UserAuth-UserEvent.html#constant_LOGIN_FAILED"
         },                {
-            "fqsen": "\\ExampleModule\\Factory\\IndexControllerFactory\u003A\u003A__invoke\u0028\u0029",
-            "name": "__invoke",
+            "fqsen": "\\UserAuth\\UserEvent\u003A\u003ARESET_PASSWORD_REQUEST",
+            "name": "RESET_PASSWORD_REQUEST",
             "summary": "",
-            "url": "classes/ExampleModule-Factory-IndexControllerFactory.html#method___invoke"
+            "url": "classes/UserAuth-UserEvent.html#constant_RESET_PASSWORD_REQUEST"
         },                {
-            "fqsen": "\\ExampleModule\\Factory\\ModelFactory",
-            "name": "ModelFactory",
+            "fqsen": "\\UserAuth\\UserEvent\u003A\u003ARESET_PASSWORD_HANDLED",
+            "name": "RESET_PASSWORD_HANDLED",
             "summary": "",
-            "url": "classes/ExampleModule-Factory-ModelFactory.html"
+            "url": "classes/UserAuth-UserEvent.html#constant_RESET_PASSWORD_HANDLED"
         },                {
-            "fqsen": "\\ExampleModule\\Factory\\ModelFactory\u003A\u003A__invoke\u0028\u0029",
-            "name": "__invoke",
+            "fqsen": "\\UserAuth\\UserEvent\u003A\u003ACONFIRM_EMAIL_HANDLED",
+            "name": "CONFIRM_EMAIL_HANDLED",
             "summary": "",
-            "url": "classes/ExampleModule-Factory-ModelFactory.html#method___invoke"
+            "url": "classes/UserAuth-UserEvent.html#constant_CONFIRM_EMAIL_HANDLED"
         },                {
-            "fqsen": "\\ExampleModule\\Model\\Model",
-            "name": "Model",
+            "fqsen": "\\UserAuth\\UserEvent\u003A\u003AEMAIL_SENT",
+            "name": "EMAIL_SENT",
             "summary": "",
-            "url": "classes/ExampleModule-Model-Model.html"
+            "url": "classes/UserAuth-UserEvent.html#constant_EMAIL_SENT"
         },                {
-            "fqsen": "\\ExampleModule\\Model\\Model\u003A\u003AsetDb\u0028\u0029",
-            "name": "setDb",
+            "fqsen": "\\UserAuth\\UserEvent\u003A\u003ACHANGE_PASSWORD",
+            "name": "CHANGE_PASSWORD",
             "summary": "",
-            "url": "classes/ExampleModule-Model-Model.html#method_setDb"
-        },                {
-            "fqsen": "\\ExampleModule\\Model\\Model\u003A\u003AgetDb\u0028\u0029",
-            "name": "getDb",
-            "summary": "",
-            "url": "classes/ExampleModule-Model-Model.html#method_getDb"
-        },                {
-            "fqsen": "\\ExampleModule\\Model\\Model\u003A\u003AdoSomething\u0028\u0029",
-            "name": "doSomething",
-            "summary": "an\u0020example\u0020of\u0020a\u0020method\u0020to\u0020be\u0020called",
-            "url": "classes/ExampleModule-Model-Model.html#method_doSomething"
-        },                {
-            "fqsen": "\\ExampleModule\\Model\\Model\u003A\u003A\u0024pdo",
-            "name": "pdo",
-            "summary": "This\u0020setter\u0020is\u0020used\u0020by\u0020the\u0020factory\nThe\u0020getter\u0020is\u0020used\u0020within\u0020this\u0020classe",
-            "url": "classes/ExampleModule-Model-Model.html#property_pdo"
-        },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi\\Module",
-            "name": "Module",
-            "summary": "",
-            "url": "classes/ExampleModuleWithUserAndApi-Module.html"
-        },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi\\Module\u003A\u003AgetConfig\u0028\u0029",
-            "name": "getConfig",
-            "summary": "",
-            "url": "classes/ExampleModuleWithUserAndApi-Module.html#method_getConfig"
-        },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi\\Module\u003A\u003AgetAutoloaderConfig\u0028\u0029",
-            "name": "getAutoloaderConfig",
-            "summary": "",
-            "url": "classes/ExampleModuleWithUserAndApi-Module.html#method_getAutoloaderConfig"
-        },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller\\ApiContentController",
-            "name": "ApiContentController",
-            "summary": "",
-            "url": "classes/ExampleModuleWithUserAndApi-Controller-ApiContentController.html"
-        },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller\\ApiContentController\u003A\u003AsetUser\u0028\u0029",
-            "name": "setUser",
-            "summary": "Set\u0020the\u0020User\u0020obj\u0020implementing\u0020UserInterface\u0020\u0028used\u0020in\u0020factory\u0029",
-            "url": "classes/ExampleModuleWithUserAndApi-Controller-ApiContentController.html#method_setUser"
-        },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller\\ApiContentController\u003A\u003AgetUser\u0028\u0029",
-            "name": "getUser",
-            "summary": "",
-            "url": "classes/ExampleModuleWithUserAndApi-Controller-ApiContentController.html#method_getUser"
-        },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller\\ApiContentController\u003A\u003Aoptions\u0028\u0029",
-            "name": "options",
-            "summary": "This\u0020is\u0020required\u0020for\u0020APIs\nThe\u0020plugin\u0020setResponseHeaders\u0020will\u0020return\u0020which\u0020domain\u0020can\u0020call\nthis\u0020API\u0020and\u0020which\u0020verb\u0020are\u0020accepted",
-            "url": "classes/ExampleModuleWithUserAndApi-Controller-ApiContentController.html#method_options"
-        },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller\\ApiContentController\u003A\u003Aget\u0028\u0029",
-            "name": "get",
-            "summary": "GET\u0020maps\u0020to\u0020either\u0020get\u0028\u0029\u0020or\u0020getList\u0028\u0029,\u0020depending\u0020on\u0020whether\u0020or\u0020not\u0020an\u0020\u0022id\u0022\nparameter\u0020is\u0020found\u0020in\u0020the\u0020route\u0020matches.\u0020If\u0020one\u0020is,\u0020it\u0020is\u0020passed\u0020as\u0020an\nargument\u0020to\u0020get\u0028\u0029\u003B\u0020if\u0020not,\u0020getList\u0028\u0029\u0020is\u0020invoked.\u0020In\u0020the\u0020former\u0020case,\u0020you\nshould\u0020provide\u0020a\u0020representation\u0020of\u0020the\u0020given\u0020entity\u0020with\u0020that\u0020identification\u003B\nin\u0020the\u0020latter,\u0020you\u0020should\u0020provide\u0020a\u0020list\u0020of\u0020entities.",
-            "url": "classes/ExampleModuleWithUserAndApi-Controller-ApiContentController.html#method_get"
-        },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller\\ApiContentController\u003A\u003AgetList\u0028\u0029",
-            "name": "getList",
-            "summary": "",
-            "url": "classes/ExampleModuleWithUserAndApi-Controller-ApiContentController.html#method_getList"
-        },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller\\ApiContentController\u003A\u003Acreate\u0028\u0029",
-            "name": "create",
-            "summary": "POST\u0020maps\u0020to\u0020create\u0028\u0029.\u0020That\u0020method\u0020expects\u0020a\u0020\u0024data\u0020argument,\u0020usually\u0020the\n\u0024_POST\u0020superglobal\u0020array.\u0020The\u0020data\u0020should\u0020be\u0020used\u0020to\u0020create\u0020a\u0020new\u0020entity,\nand\u0020the\u0020response\u0020should\u0020typically\u0020be\u0020an\u0020HTTP\u0020201\u0020response\u0020with\u0020the\nLocation\u0020header\u0020indicating\u0020the\u0020URI\u0020of\u0020the\u0020newly\u0020created\u0020entity\u0020and\nthe\u0020response\u0020body\u0020providing\u0020the\u0020representation.",
-            "url": "classes/ExampleModuleWithUserAndApi-Controller-ApiContentController.html#method_create"
-        },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller\\ApiContentController\u003A\u003Aupdate\u0028\u0029",
-            "name": "update",
-            "summary": "PUT\u0020maps\u0020to\u0020update\u0028\u0029,\u0020and\u0020requires\u0020that\u0020an\u0020\u0022id\u0022\u0020parameter\u0020exists\u0020in\u0020the\nroute\u0020matches\u003B\u0020that\u0020value\u0020is\u0020passed\u0020as\u0020an\u0020argument\u0020to\u0020the\u0020method.\u0020It\nshould\u0020attempt\u0020to\u0020update\u0020the\u0020given\u0020entity,\u0020and,\u0020if\u0020successful,\u0020return\neither\u0020a\u0020200\u0020or\u0020202\u0020response\u0020status,\u0020as\u0020well\u0020as\u0020the\u0020representation\u0020of\nthe\u0020entity.",
-            "url": "classes/ExampleModuleWithUserAndApi-Controller-ApiContentController.html#method_update"
-        },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller\\ApiContentController\u003A\u003Adelete\u0028\u0029",
-            "name": "delete",
-            "summary": "DELETE\u0020maps\u0020to\u0020delete\u0028\u0029,\u0020and\u0020requires\u0020that\u0020an\u0020\u0022id\u0022\u0020parameter\u0020exists\u0020in\nthe\u0020route\u0020matches\u003B\u0020that\u0020value\u0020is\u0020passed\u0020as\u0020an\u0020argument\u0020to\u0020the\u0020method.\u0020It\nshould\u0020attempt\u0020to\u0020delete\u0020the\u0020given\u0020entity,\u0020and,\u0020if\u0020successful,\u0020return\neither\u0020a\u0020200\u0020or\u0020204\u0020response\u0020status.",
-            "url": "classes/ExampleModuleWithUserAndApi-Controller-ApiContentController.html#method_delete"
-        },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller\\ApiContentController\u003A\u003A\u0024userObj",
-            "name": "userObj",
-            "summary": "",
-            "url": "classes/ExampleModuleWithUserAndApi-Controller-ApiContentController.html#property_userObj"
-        },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller\\ApiController",
-            "name": "ApiController",
-            "summary": "",
-            "url": "classes/ExampleModuleWithUserAndApi-Controller-ApiController.html"
-        },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller\\ApiController\u003A\u003AsetUser\u0028\u0029",
-            "name": "setUser",
-            "summary": "Set\u0020the\u0020User\u0020obj\u0020implementing\u0020UserInterface\u0020\u0028used\u0020in\u0020factory\u0029",
-            "url": "classes/ExampleModuleWithUserAndApi-Controller-ApiController.html#method_setUser"
-        },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller\\ApiController\u003A\u003AgetUser\u0028\u0029",
-            "name": "getUser",
-            "summary": "",
-            "url": "classes/ExampleModuleWithUserAndApi-Controller-ApiController.html#method_getUser"
-        },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller\\ApiController\u003A\u003Aoptions\u0028\u0029",
-            "name": "options",
-            "summary": "This\u0020is\u0020required\u0020for\u0020APIs\nThe\u0020plugin\u0020setResponseHeaders\u0020will\u0020return\u0020which\u0020domain\u0020can\u0020call\nthis\u0020API\u0020and\u0020which\u0020verb\u0020are\u0020accepted",
-            "url": "classes/ExampleModuleWithUserAndApi-Controller-ApiController.html#method_options"
-        },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller\\ApiController\u003A\u003Aget\u0028\u0029",
-            "name": "get",
-            "summary": "GET\u0020maps\u0020to\u0020either\u0020get\u0028\u0029\u0020or\u0020getList\u0028\u0029,\u0020depending\u0020on\u0020whether\u0020or\u0020not\u0020an\u0020\u0022id\u0022\nparameter\u0020is\u0020found\u0020in\u0020the\u0020route\u0020matches.\u0020If\u0020one\u0020is,\u0020it\u0020is\u0020passed\u0020as\u0020an\nargument\u0020to\u0020get\u0028\u0029\u003B\u0020if\u0020not,\u0020getList\u0028\u0029\u0020is\u0020invoked.\u0020In\u0020the\u0020former\u0020case,\u0020you\nshould\u0020provide\u0020a\u0020representation\u0020of\u0020the\u0020given\u0020entity\u0020with\u0020that\u0020identification\u003B\nin\u0020the\u0020latter,\u0020you\u0020should\u0020provide\u0020a\u0020list\u0020of\u0020entities.",
-            "url": "classes/ExampleModuleWithUserAndApi-Controller-ApiController.html#method_get"
-        },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller\\ApiController\u003A\u003AgetList\u0028\u0029",
-            "name": "getList",
-            "summary": "",
-            "url": "classes/ExampleModuleWithUserAndApi-Controller-ApiController.html#method_getList"
-        },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller\\ApiController\u003A\u003Acreate\u0028\u0029",
-            "name": "create",
-            "summary": "POST\u0020maps\u0020to\u0020create\u0028\u0029.\u0020That\u0020method\u0020expects\u0020a\u0020\u0024data\u0020argument,\u0020usually\u0020the\n\u0024_POST\u0020superglobal\u0020array.\u0020The\u0020data\u0020should\u0020be\u0020used\u0020to\u0020create\u0020a\u0020new\u0020entity,\nand\u0020the\u0020response\u0020should\u0020typically\u0020be\u0020an\u0020HTTP\u0020201\u0020response\u0020with\u0020the\nLocation\u0020header\u0020indicating\u0020the\u0020URI\u0020of\u0020the\u0020newly\u0020created\u0020entity\u0020and\nthe\u0020response\u0020body\u0020providing\u0020the\u0020representation.",
-            "url": "classes/ExampleModuleWithUserAndApi-Controller-ApiController.html#method_create"
-        },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller\\ApiController\u003A\u003Aupdate\u0028\u0029",
-            "name": "update",
-            "summary": "PUT\u0020maps\u0020to\u0020update\u0028\u0029,\u0020and\u0020requires\u0020that\u0020an\u0020\u0022id\u0022\u0020parameter\u0020exists\u0020in\u0020the\nroute\u0020matches\u003B\u0020that\u0020value\u0020is\u0020passed\u0020as\u0020an\u0020argument\u0020to\u0020the\u0020method.\u0020It\nshould\u0020attempt\u0020to\u0020update\u0020the\u0020given\u0020entity,\u0020and,\u0020if\u0020successful,\u0020return\neither\u0020a\u0020200\u0020or\u0020202\u0020response\u0020status,\u0020as\u0020well\u0020as\u0020the\u0020representation\u0020of\nthe\u0020entity.",
-            "url": "classes/ExampleModuleWithUserAndApi-Controller-ApiController.html#method_update"
-        },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller\\ApiController\u003A\u003Adelete\u0028\u0029",
-            "name": "delete",
-            "summary": "DELETE\u0020maps\u0020to\u0020delete\u0028\u0029,\u0020and\u0020requires\u0020that\u0020an\u0020\u0022id\u0022\u0020parameter\u0020exists\u0020in\nthe\u0020route\u0020matches\u003B\u0020that\u0020value\u0020is\u0020passed\u0020as\u0020an\u0020argument\u0020to\u0020the\u0020method.\u0020It\nshould\u0020attempt\u0020to\u0020delete\u0020the\u0020given\u0020entity,\u0020and,\u0020if\u0020successful,\u0020return\neither\u0020a\u0020200\u0020or\u0020204\u0020response\u0020status.",
-            "url": "classes/ExampleModuleWithUserAndApi-Controller-ApiController.html#method_delete"
-        },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller\\ApiController\u003A\u003A\u0024userObj",
-            "name": "userObj",
-            "summary": "",
-            "url": "classes/ExampleModuleWithUserAndApi-Controller-ApiController.html#property_userObj"
-        },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller\\ApiUserController",
-            "name": "ApiUserController",
-            "summary": "",
-            "url": "classes/ExampleModuleWithUserAndApi-Controller-ApiUserController.html"
-        },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller\\ApiUserController\u003A\u003AsetUser\u0028\u0029",
-            "name": "setUser",
-            "summary": "Set\u0020the\u0020User\u0020obj\u0020implementing\u0020UserInterface\u0020\u0028used\u0020in\u0020factory\u0029",
-            "url": "classes/ExampleModuleWithUserAndApi-Controller-ApiUserController.html#method_setUser"
-        },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller\\ApiUserController\u003A\u003AgetUser\u0028\u0029",
-            "name": "getUser",
-            "summary": "",
-            "url": "classes/ExampleModuleWithUserAndApi-Controller-ApiUserController.html#method_getUser"
-        },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller\\ApiUserController\u003A\u003Aoptions\u0028\u0029",
-            "name": "options",
-            "summary": "This\u0020is\u0020required\u0020for\u0020APIs\nThe\u0020plugin\u0020setResponseHeaders\u0020will\u0020return\u0020which\u0020domain\u0020can\u0020call\u0020this\u0020API\u0020and\u0020using\u0020which\u0020verb",
-            "url": "classes/ExampleModuleWithUserAndApi-Controller-ApiUserController.html#method_options"
-        },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller\\ApiUserController\u003A\u003Aget\u0028\u0029",
-            "name": "get",
-            "summary": "GET\u0020maps\u0020to\u0020either\u0020get\u0028\u0029\u0020or\u0020getList\u0028\u0029,\u0020depending\u0020on\u0020whether\u0020or\u0020not\u0020an\u0020\u0022id\u0022\nparameter\u0020is\u0020found\u0020in\u0020the\u0020route\u0020matches.\u0020If\u0020one\u0020is,\u0020it\u0020is\u0020passed\u0020as\u0020an\nargument\u0020to\u0020get\u0028\u0029\u003B\u0020if\u0020not,\u0020getList\u0028\u0029\u0020is\u0020invoked.\u0020In\u0020the\u0020former\u0020case,\u0020you\nshould\u0020provide\u0020a\u0020representation\u0020of\u0020the\u0020given\u0020entity\u0020with\u0020that\u0020identification\u003B\nin\u0020the\u0020latter,\u0020you\u0020should\u0020provide\u0020a\u0020list\u0020of\u0020entities.",
-            "url": "classes/ExampleModuleWithUserAndApi-Controller-ApiUserController.html#method_get"
-        },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller\\ApiUserController\u003A\u003AgetList\u0028\u0029",
-            "name": "getList",
-            "summary": "",
-            "url": "classes/ExampleModuleWithUserAndApi-Controller-ApiUserController.html#method_getList"
-        },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller\\ApiUserController\u003A\u003Acreate\u0028\u0029",
-            "name": "create",
-            "summary": "POST\u0020maps\u0020to\u0020create\u0028\u0029.\u0020That\u0020method\u0020expects\u0020a\u0020\u0024data\u0020argument,\u0020usually\u0020the\n\u0024_POST\u0020superglobal\u0020array.\u0020The\u0020data\u0020should\u0020be\u0020used\u0020to\u0020create\u0020a\u0020new\u0020entity,\nand\u0020the\u0020response\u0020should\u0020typically\u0020be\u0020an\u0020HTTP\u0020201\u0020response\u0020with\u0020the\nLocation\u0020header\u0020indicating\u0020the\u0020URI\u0020of\u0020the\u0020newly\u0020created\u0020entity\u0020and\nthe\u0020response\u0020body\u0020providing\u0020the\u0020representation.",
-            "url": "classes/ExampleModuleWithUserAndApi-Controller-ApiUserController.html#method_create"
-        },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller\\ApiUserController\u003A\u003Aupdate\u0028\u0029",
-            "name": "update",
-            "summary": "PUT\u0020maps\u0020to\u0020update\u0028\u0029,\u0020and\u0020requires\u0020that\u0020an\u0020\u0022id\u0022\u0020parameter\u0020exists\u0020in\u0020the\nroute\u0020matches\u003B\u0020that\u0020value\u0020is\u0020passed\u0020as\u0020an\u0020argument\u0020to\u0020the\u0020method.\u0020It\nshould\u0020attempt\u0020to\u0020update\u0020the\u0020given\u0020entity,\u0020and,\u0020if\u0020successful,\u0020return\neither\u0020a\u0020200\u0020or\u0020202\u0020response\u0020status,\u0020as\u0020well\u0020as\u0020the\u0020representation\u0020of\nthe\u0020entity.",
-            "url": "classes/ExampleModuleWithUserAndApi-Controller-ApiUserController.html#method_update"
-        },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller\\ApiUserController\u003A\u003Adelete\u0028\u0029",
-            "name": "delete",
-            "summary": "DELETE\u0020maps\u0020to\u0020delete\u0028\u0029,\u0020and\u0020requires\u0020that\u0020an\u0020\u0022id\u0022\u0020parameter\u0020exists\u0020in\nthe\u0020route\u0020matches\u003B\u0020that\u0020value\u0020is\u0020passed\u0020as\u0020an\u0020argument\u0020to\u0020the\u0020method.\u0020It\nshould\u0020attempt\u0020to\u0020delete\u0020the\u0020given\u0020entity,\u0020and,\u0020if\u0020successful,\u0020return\neither\u0020a\u0020200\u0020or\u0020204\u0020response\u0020status.",
-            "url": "classes/ExampleModuleWithUserAndApi-Controller-ApiUserController.html#method_delete"
-        },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller\\ApiUserController\u003A\u003A\u0024userObj",
-            "name": "userObj",
-            "summary": "",
-            "url": "classes/ExampleModuleWithUserAndApi-Controller-ApiUserController.html#property_userObj"
-        },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller\\ApiUserLdapController",
-            "name": "ApiUserLdapController",
-            "summary": "",
-            "url": "classes/ExampleModuleWithUserAndApi-Controller-ApiUserLdapController.html"
-        },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller\\ApiUserLdapController\u003A\u003AsetUser\u0028\u0029",
-            "name": "setUser",
-            "summary": "Set\u0020the\u0020User\u0020obj\u0020implementing\u0020UserInterface\u0020\u0028used\u0020in\u0020factory\u0029",
-            "url": "classes/ExampleModuleWithUserAndApi-Controller-ApiUserLdapController.html#method_setUser"
-        },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller\\ApiUserLdapController\u003A\u003AgetUser\u0028\u0029",
-            "name": "getUser",
-            "summary": "",
-            "url": "classes/ExampleModuleWithUserAndApi-Controller-ApiUserLdapController.html#method_getUser"
-        },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller\\ApiUserLdapController\u003A\u003Aoptions\u0028\u0029",
-            "name": "options",
-            "summary": "This\u0020is\u0020required\u0020for\u0020APIs\nThe\u0020plugin\u0020setResponseHeaders\u0020will\u0020return\u0020which\u0020domain\u0020can\u0020call\u0020this\u0020API\u0020and\u0020using\u0020which\u0020verb",
-            "url": "classes/ExampleModuleWithUserAndApi-Controller-ApiUserLdapController.html#method_options"
-        },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller\\ApiUserLdapController\u003A\u003Aget\u0028\u0029",
-            "name": "get",
-            "summary": "GET\u0020maps\u0020to\u0020either\u0020get\u0028\u0029\u0020or\u0020getList\u0028\u0029,\u0020depending\u0020on\u0020whether\u0020or\u0020not\u0020an\u0020\u0022id\u0022\nparameter\u0020is\u0020found\u0020in\u0020the\u0020route\u0020matches.\u0020If\u0020one\u0020is,\u0020it\u0020is\u0020passed\u0020as\u0020an\nargument\u0020to\u0020get\u0028\u0029\u003B\u0020if\u0020not,\u0020getList\u0028\u0029\u0020is\u0020invoked.\u0020In\u0020the\u0020former\u0020case,\u0020you\nshould\u0020provide\u0020a\u0020representation\u0020of\u0020the\u0020given\u0020entity\u0020with\u0020that\u0020identification\u003B\nin\u0020the\u0020latter,\u0020you\u0020should\u0020provide\u0020a\u0020list\u0020of\u0020entities.",
-            "url": "classes/ExampleModuleWithUserAndApi-Controller-ApiUserLdapController.html#method_get"
-        },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller\\ApiUserLdapController\u003A\u003AgetList\u0028\u0029",
-            "name": "getList",
-            "summary": "",
-            "url": "classes/ExampleModuleWithUserAndApi-Controller-ApiUserLdapController.html#method_getList"
-        },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller\\ApiUserLdapController\u003A\u003Acreate\u0028\u0029",
-            "name": "create",
-            "summary": "POST\u0020maps\u0020to\u0020create\u0028\u0029.\u0020That\u0020method\u0020expects\u0020a\u0020\u0024data\u0020argument,\u0020usually\u0020the\n\u0024_POST\u0020superglobal\u0020array.\u0020The\u0020data\u0020should\u0020be\u0020used\u0020to\u0020create\u0020a\u0020new\u0020entity,\nand\u0020the\u0020response\u0020should\u0020typically\u0020be\u0020an\u0020HTTP\u0020201\u0020response\u0020with\u0020the\nLocation\u0020header\u0020indicating\u0020the\u0020URI\u0020of\u0020the\u0020newly\u0020created\u0020entity\u0020and\nthe\u0020response\u0020body\u0020providing\u0020the\u0020representation.",
-            "url": "classes/ExampleModuleWithUserAndApi-Controller-ApiUserLdapController.html#method_create"
-        },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller\\ApiUserLdapController\u003A\u003Aupdate\u0028\u0029",
-            "name": "update",
-            "summary": "PUT\u0020maps\u0020to\u0020update\u0028\u0029,\u0020and\u0020requires\u0020that\u0020an\u0020\u0022id\u0022\u0020parameter\u0020exists\u0020in\u0020the\nroute\u0020matches\u003B\u0020that\u0020value\u0020is\u0020passed\u0020as\u0020an\u0020argument\u0020to\u0020the\u0020method.\u0020It\nshould\u0020attempt\u0020to\u0020update\u0020the\u0020given\u0020entity,\u0020and,\u0020if\u0020successful,\u0020return\neither\u0020a\u0020200\u0020or\u0020202\u0020response\u0020status,\u0020as\u0020well\u0020as\u0020the\u0020representation\u0020of\nthe\u0020entity.",
-            "url": "classes/ExampleModuleWithUserAndApi-Controller-ApiUserLdapController.html#method_update"
-        },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller\\ApiUserLdapController\u003A\u003Adelete\u0028\u0029",
-            "name": "delete",
-            "summary": "DELETE\u0020maps\u0020to\u0020delete\u0028\u0029,\u0020and\u0020requires\u0020that\u0020an\u0020\u0022id\u0022\u0020parameter\u0020exists\u0020in\nthe\u0020route\u0020matches\u003B\u0020that\u0020value\u0020is\u0020passed\u0020as\u0020an\u0020argument\u0020to\u0020the\u0020method.\u0020It\nshould\u0020attempt\u0020to\u0020delete\u0020the\u0020given\u0020entity,\u0020and,\u0020if\u0020successful,\u0020return\neither\u0020a\u0020200\u0020or\u0020204\u0020response\u0020status.",
-            "url": "classes/ExampleModuleWithUserAndApi-Controller-ApiUserLdapController.html#method_delete"
-        },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller\\ApiUserLdapController\u003A\u003A\u0024userObj",
-            "name": "userObj",
-            "summary": "",
-            "url": "classes/ExampleModuleWithUserAndApi-Controller-ApiUserLdapController.html#property_userObj"
-        },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller\\IndexController",
-            "name": "IndexController",
-            "summary": "",
-            "url": "classes/ExampleModuleWithUserAndApi-Controller-IndexController.html"
-        },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller\\IndexController\u003A\u003AindexAction\u0028\u0029",
-            "name": "indexAction",
-            "summary": "",
-            "url": "classes/ExampleModuleWithUserAndApi-Controller-IndexController.html#method_indexAction"
-        },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller\\IndexController\u003A\u003A_setCommonMetadata\u0028\u0029",
-            "name": "_setCommonMetadata",
-            "summary": "Set\u0020the\u0020common\u0020metadata\u0020for\u0020this\u0020project",
-            "url": "classes/ExampleModuleWithUserAndApi-Controller-IndexController.html#method__setCommonMetadata"
-        },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller\\Plugin\\ReturnUserData",
-            "name": "ReturnUserData",
-            "summary": "",
-            "url": "classes/ExampleModuleWithUserAndApi-Controller-Plugin-ReturnUserData.html"
-        },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller\\Plugin\\ReturnUserData\u003A\u003A__invoke\u0028\u0029",
-            "name": "__invoke",
-            "summary": "Return\u0020a\u0020simple\u0020JsonModel\u0020with\u0020the\u0020JWT\u0020and\u0020if\u0020the\u0020user\u0020click\u0020remember\nIn\u0020most\u0020app,\u0020if\u0020the\u0020user\u0020wants\u0020to\u0020be\u0020remembered,\u0020the\u0020JWT\u0020should\u0020be\u0020saved\u0020in\nlocalStorage,\u0020if\u0020they\u0020do\u0020not\u0020want\u0020to\u0020be\u0020remembered,\u0020the\u0020JWT\u0020should\u0020be\nsaved\u0020in\u0020localSession",
-            "url": "classes/ExampleModuleWithUserAndApi-Controller-Plugin-ReturnUserData.html#method___invoke"
-        },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller\\Plugin\\SetResponseHeaders",
-            "name": "SetResponseHeaders",
-            "summary": "",
-            "url": "classes/ExampleModuleWithUserAndApi-Controller-Plugin-SetResponseHeaders.html"
-        },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller\\Plugin\\SetResponseHeaders\u003A\u003A__invoke\u0028\u0029",
-            "name": "__invoke",
-            "summary": "Header\u0020sent\u0020to\u0020each\u0020request",
-            "url": "classes/ExampleModuleWithUserAndApi-Controller-Plugin-SetResponseHeaders.html#method___invoke"
-        },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller\\WithSessionController",
-            "name": "WithSessionController",
-            "summary": "",
-            "url": "classes/ExampleModuleWithUserAndApi-Controller-WithSessionController.html"
-        },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller\\WithSessionController\u003A\u003AsetUser\u0028\u0029",
-            "name": "setUser",
-            "summary": "",
-            "url": "classes/ExampleModuleWithUserAndApi-Controller-WithSessionController.html#method_setUser"
-        },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller\\WithSessionController\u003A\u003AgetUser\u0028\u0029",
-            "name": "getUser",
-            "summary": "",
-            "url": "classes/ExampleModuleWithUserAndApi-Controller-WithSessionController.html#method_getUser"
-        },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller\\WithSessionController\u003A\u003AindexAction\u0028\u0029",
-            "name": "indexAction",
-            "summary": "",
-            "url": "classes/ExampleModuleWithUserAndApi-Controller-WithSessionController.html#method_indexAction"
-        },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller\\WithSessionController\u003A\u003A_setCommonMetadata\u0028\u0029",
-            "name": "_setCommonMetadata",
-            "summary": "Set\u0020the\u0020common\u0020metadata\u0020for\u0020this\u0020project",
-            "url": "classes/ExampleModuleWithUserAndApi-Controller-WithSessionController.html#method__setCommonMetadata"
-        },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller\\WithSessionController\u003A\u003A\u0024user",
-            "name": "user",
-            "summary": "",
-            "url": "classes/ExampleModuleWithUserAndApi-Controller-WithSessionController.html#property_user"
-        },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi\\Factory\\Controller\\ApiContentControllerFactory",
-            "name": "ApiContentControllerFactory",
-            "summary": "",
-            "url": "classes/ExampleModuleWithUserAndApi-Factory-Controller-ApiContentControllerFactory.html"
-        },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi\\Factory\\Controller\\ApiContentControllerFactory\u003A\u003A__invoke\u0028\u0029",
-            "name": "__invoke",
-            "summary": "",
-            "url": "classes/ExampleModuleWithUserAndApi-Factory-Controller-ApiContentControllerFactory.html#method___invoke"
-        },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi\\Factory\\Controller\\ApiUserControllerFactory",
-            "name": "ApiUserControllerFactory",
-            "summary": "",
-            "url": "classes/ExampleModuleWithUserAndApi-Factory-Controller-ApiUserControllerFactory.html"
-        },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi\\Factory\\Controller\\ApiUserControllerFactory\u003A\u003A__invoke\u0028\u0029",
-            "name": "__invoke",
-            "summary": "",
-            "url": "classes/ExampleModuleWithUserAndApi-Factory-Controller-ApiUserControllerFactory.html#method___invoke"
-        },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi\\Factory\\Controller\\ApiUserLdapControllerFactory",
-            "name": "ApiUserLdapControllerFactory",
-            "summary": "",
-            "url": "classes/ExampleModuleWithUserAndApi-Factory-Controller-ApiUserLdapControllerFactory.html"
-        },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi\\Factory\\Controller\\ApiUserLdapControllerFactory\u003A\u003A__invoke\u0028\u0029",
-            "name": "__invoke",
-            "summary": "",
-            "url": "classes/ExampleModuleWithUserAndApi-Factory-Controller-ApiUserLdapControllerFactory.html#method___invoke"
-        },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi\\Factory\\Controller\\IndexControllerFactory",
-            "name": "IndexControllerFactory",
-            "summary": "",
-            "url": "classes/ExampleModuleWithUserAndApi-Factory-Controller-IndexControllerFactory.html"
-        },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi\\Factory\\Controller\\IndexControllerFactory\u003A\u003A__invoke\u0028\u0029",
-            "name": "__invoke",
-            "summary": "",
-            "url": "classes/ExampleModuleWithUserAndApi-Factory-Controller-IndexControllerFactory.html#method___invoke"
-        },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi\\Factory\\Controller\\WithSessionControllerFactory",
-            "name": "WithSessionControllerFactory",
-            "summary": "",
-            "url": "classes/ExampleModuleWithUserAndApi-Factory-Controller-WithSessionControllerFactory.html"
-        },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi\\Factory\\Controller\\WithSessionControllerFactory\u003A\u003A__invoke\u0028\u0029",
-            "name": "__invoke",
-            "summary": "",
-            "url": "classes/ExampleModuleWithUserAndApi-Factory-Controller-WithSessionControllerFactory.html#method___invoke"
-        },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi\\Factory\\ModelFactory",
-            "name": "ModelFactory",
-            "summary": "",
-            "url": "classes/ExampleModuleWithUserAndApi-Factory-ModelFactory.html"
-        },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi\\Factory\\ModelFactory\u003A\u003A__invoke\u0028\u0029",
-            "name": "__invoke",
-            "summary": "",
-            "url": "classes/ExampleModuleWithUserAndApi-Factory-ModelFactory.html#method___invoke"
-        },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi\\Factory\\Model\\UserFactory",
-            "name": "UserFactory",
-            "summary": "",
-            "url": "classes/ExampleModuleWithUserAndApi-Factory-Model-UserFactory.html"
-        },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi\\Factory\\Model\\UserFactory\u003A\u003A__invoke\u0028\u0029",
-            "name": "__invoke",
-            "summary": "",
-            "url": "classes/ExampleModuleWithUserAndApi-Factory-Model-UserFactory.html#method___invoke"
-        },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi\\Model\\Model",
-            "name": "Model",
-            "summary": "",
-            "url": "classes/ExampleModuleWithUserAndApi-Model-Model.html"
-        },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi\\Model\\Model\u003A\u003AsetDb\u0028\u0029",
-            "name": "setDb",
-            "summary": "",
-            "url": "classes/ExampleModuleWithUserAndApi-Model-Model.html#method_setDb"
-        },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi\\Model\\Model\u003A\u003AgetDb\u0028\u0029",
-            "name": "getDb",
-            "summary": "",
-            "url": "classes/ExampleModuleWithUserAndApi-Model-Model.html#method_getDb"
-        },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi\\Model\\Model\u003A\u003AdoSomething\u0028\u0029",
-            "name": "doSomething",
-            "summary": "an\u0020example\u0020of\u0020a\u0020method\u0020to\u0020be\u0020called",
-            "url": "classes/ExampleModuleWithUserAndApi-Model-Model.html#method_doSomething"
-        },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi\\Model\\Model\u003A\u003A\u0024pdo",
-            "name": "pdo",
-            "summary": "This\u0020setter\u0020is\u0020used\u0020by\u0020the\u0020factory\nThe\u0020getter\u0020is\u0020used\u0020within\u0020this\u0020classe",
-            "url": "classes/ExampleModuleWithUserAndApi-Model-Model.html#property_pdo"
-        },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi\\Model\\User",
-            "name": "User",
-            "summary": "",
-            "url": "classes/ExampleModuleWithUserAndApi-Model-User.html"
-        },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi\\Model\\User\u003A\u003AsetDb\u0028\u0029",
-            "name": "setDb",
-            "summary": "Set\u0020the\u0020PDO\u0020connection\u0020to\u0020manage\u0020your\u0020users\nThis\u0020setter\u0020is\u0020used\u0020by\u0020the\u0020factory",
-            "url": "classes/ExampleModuleWithUserAndApi-Model-User.html#method_setDb"
-        },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi\\Model\\User\u003A\u003AgetDb\u0028\u0029",
-            "name": "getDb",
-            "summary": "Get\u0020the\u0020PDO\u0020connection",
-            "url": "classes/ExampleModuleWithUserAndApi-Model-User.html#method_getDb"
-        },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi\\Model\\User\u003A\u003Aauthenticate\u0028\u0029",
-            "name": "authenticate",
-            "summary": "Authenticate\/login\u0020a\u0020user\u0020using\u0020a\u0020database.\u0020This\u0020particular\u0020implementation\u0020would\u0020use\u0020a\u0020central\nDB\u0020for\u0020user\u0020and\u0020each\u0020app\u0020could\u0020have\u0020a\u0020user\u0020param,\u0020that\u0027s\u0020why\u0020it\u0020uses\u0020a\u0020parentDb\u0020for\u0020authenticating",
-            "url": "classes/ExampleModuleWithUserAndApi-Model-User.html#method_authenticate"
-        },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi\\Model\\User\u003A\u003A_loadUserById\u0028\u0029",
-            "name": "_loadUserById",
-            "summary": "A\u0020method\u0020used\u0020by\u0020loadFromJwt\u0020and\u0020loadFromSession\u0020to\u0020load\u0020the\u0020user\u0020without\u0020validating\u0020credentials",
-            "url": "classes/ExampleModuleWithUserAndApi-Model-User.html#method__loadUserById"
-        },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi\\Model\\User\u003A\u003AloadFromJwt\u0028\u0029",
-            "name": "loadFromJwt",
-            "summary": "Load\u0020a\u0020user\u0020from\u0020the\u0020JWT",
-            "url": "classes/ExampleModuleWithUserAndApi-Model-User.html#method_loadFromJwt"
-        },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi\\Model\\User\u003A\u003AgetDataForJWT\u0028\u0029",
-            "name": "getDataForJWT",
-            "summary": "This\u0020function\u0020is\u0020called\u0020when\u0020trying\u0020to\u0020get\u0020the\u0020JWT",
-            "url": "classes/ExampleModuleWithUserAndApi-Model-User.html#method_getDataForJWT"
-        },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi\\Model\\User\u003A\u003AID_FIELD",
-            "name": "ID_FIELD",
-            "summary": "In\u0020DbUser,\u0020the\u0020ID\u0020Field\u0020is\u0020userId",
-            "url": "classes/ExampleModuleWithUserAndApi-Model-User.html#constant_ID_FIELD"
-        },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi\\Model\\UserLdap",
-            "name": "UserLdap",
-            "summary": "",
-            "url": "classes/ExampleModuleWithUserAndApi-Model-UserLdap.html"
-        },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi\\Model\\UserLdap\u003A\u003Aauthenticate\u0028\u0029",
-            "name": "authenticate",
-            "summary": "Authenticate\/login\u0020a\u0020user",
-            "url": "classes/ExampleModuleWithUserAndApi-Model-UserLdap.html#method_authenticate"
-        },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi\\Model\\UserLdap\u003A\u003AgetDataForJWT\u0028\u0029",
-            "name": "getDataForJWT",
-            "summary": "This\u0020function\u0020is\u0020called\u0020when\u0020trying\u0020to\u0020get\u0020the\u0020JWT",
-            "url": "classes/ExampleModuleWithUserAndApi-Model-UserLdap.html#method_getDataForJWT"
+            "url": "classes/UserAuth-UserEvent.html#constant_CHANGE_PASSWORD"
         },                {
             "fqsen": "\\",
             "name": "\\",
             "summary": "",
             "url": "namespaces/default.html"
+        },                {
+            "fqsen": "\\ExampleModule",
+            "name": "ExampleModule",
+            "summary": "",
+            "url": "namespaces/examplemodule.html"
+        },                {
+            "fqsen": "\\ExampleModule\\Controller",
+            "name": "Controller",
+            "summary": "",
+            "url": "namespaces/examplemodule-controller.html"
+        },                {
+            "fqsen": "\\ExampleModule\\Controller\\Plugin",
+            "name": "Plugin",
+            "summary": "",
+            "url": "namespaces/examplemodule-controller-plugin.html"
+        },                {
+            "fqsen": "\\ExampleModule\\Factory",
+            "name": "Factory",
+            "summary": "",
+            "url": "namespaces/examplemodule-factory.html"
+        },                {
+            "fqsen": "\\ExampleModule\\Model",
+            "name": "Model",
+            "summary": "",
+            "url": "namespaces/examplemodule-model.html"
+        },                {
+            "fqsen": "\\ExampleModuleWithUserAndApi",
+            "name": "ExampleModuleWithUserAndApi",
+            "summary": "",
+            "url": "namespaces/examplemodulewithuserandapi.html"
+        },                {
+            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller",
+            "name": "Controller",
+            "summary": "",
+            "url": "namespaces/examplemodulewithuserandapi-controller.html"
+        },                {
+            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller\\Plugin",
+            "name": "Plugin",
+            "summary": "",
+            "url": "namespaces/examplemodulewithuserandapi-controller-plugin.html"
+        },                {
+            "fqsen": "\\ExampleModuleWithUserAndApi\\Factory\\Controller",
+            "name": "Controller",
+            "summary": "",
+            "url": "namespaces/examplemodulewithuserandapi-factory-controller.html"
+        },                {
+            "fqsen": "\\ExampleModuleWithUserAndApi\\Factory\\Model",
+            "name": "Model",
+            "summary": "",
+            "url": "namespaces/examplemodulewithuserandapi-factory-model.html"
+        },                {
+            "fqsen": "\\ExampleModuleWithUserAndApi\\Factory",
+            "name": "Factory",
+            "summary": "",
+            "url": "namespaces/examplemodulewithuserandapi-factory.html"
+        },                {
+            "fqsen": "\\ExampleModuleWithUserAndApi\\Model",
+            "name": "Model",
+            "summary": "",
+            "url": "namespaces/examplemodulewithuserandapi-model.html"
         },                {
             "fqsen": "\\ActiveDirectory",
             "name": "ActiveDirectory",
@@ -2896,10 +5351,20 @@ Search.appendIndex(
             "summary": "",
             "url": "namespaces/activedirectory-model.html"
         },                {
+            "fqsen": "\\ActiveDirectoryTest",
+            "name": "ActiveDirectoryTest",
+            "summary": "",
+            "url": "namespaces/activedirectorytest.html"
+        },                {
             "fqsen": "\\Application",
             "name": "Application",
             "summary": "",
             "url": "namespaces/application.html"
+        },                {
+            "fqsen": "\\Application\\Command",
+            "name": "Command",
+            "summary": "",
+            "url": "namespaces/application-command.html"
         },                {
             "fqsen": "\\Application\\Controller",
             "name": "Controller",
@@ -2910,6 +5375,21 @@ Search.appendIndex(
             "name": "Plugin",
             "summary": "",
             "url": "namespaces/application-controller-plugin.html"
+        },                {
+            "fqsen": "\\Application\\Exception",
+            "name": "Exception",
+            "summary": "",
+            "url": "namespaces/application-exception.html"
+        },                {
+            "fqsen": "\\Application\\Factory\\Command",
+            "name": "Command",
+            "summary": "",
+            "url": "namespaces/application-factory-command.html"
+        },                {
+            "fqsen": "\\OAuth\\Factory\\Controller",
+            "name": "Controller",
+            "summary": "",
+            "url": "namespaces/oauth-factory-controller.html"
         },                {
             "fqsen": "\\Application\\Factory\\Controller\\Plugin",
             "name": "Plugin",
@@ -2926,6 +5406,11 @@ Search.appendIndex(
             "summary": "",
             "url": "namespaces/application-factory.html"
         },                {
+            "fqsen": "\\Application\\Factory\\Listener",
+            "name": "Listener",
+            "summary": "",
+            "url": "namespaces/application-factory-listener.html"
+        },                {
             "fqsen": "\\Application\\Factory\\View\\Helper",
             "name": "Helper",
             "summary": "",
@@ -2935,6 +5420,11 @@ Search.appendIndex(
             "name": "View",
             "summary": "",
             "url": "namespaces/application-factory-view.html"
+        },                {
+            "fqsen": "\\Application\\Listener",
+            "name": "Listener",
+            "summary": "",
+            "url": "namespaces/application-listener.html"
         },                {
             "fqsen": "\\Application\\Model",
             "name": "Model",
@@ -2951,10 +5441,130 @@ Search.appendIndex(
             "summary": "",
             "url": "namespaces/application-view.html"
         },                {
+            "fqsen": "\\CurlWrapper",
+            "name": "CurlWrapper",
+            "summary": "",
+            "url": "namespaces/curlwrapper.html"
+        },                {
+            "fqsen": "\\GcNotify\\Exception",
+            "name": "Exception",
+            "summary": "",
+            "url": "namespaces/gcnotify-exception.html"
+        },                {
             "fqsen": "\\GcNotify",
             "name": "GcNotify",
             "summary": "",
             "url": "namespaces/gcnotify.html"
+        },                {
+            "fqsen": "\\ApplicationTest\\Controller",
+            "name": "Controller",
+            "summary": "",
+            "url": "namespaces/applicationtest-controller.html"
+        },                {
+            "fqsen": "\\ApplicationTest",
+            "name": "ApplicationTest",
+            "summary": "",
+            "url": "namespaces/applicationtest.html"
+        },                {
+            "fqsen": "\\AutoStats",
+            "name": "AutoStats",
+            "summary": "",
+            "url": "namespaces/autostats.html"
+        },                {
+            "fqsen": "\\AutoStats\\Controller",
+            "name": "Controller",
+            "summary": "",
+            "url": "namespaces/autostats-controller.html"
+        },                {
+            "fqsen": "\\AutoStats\\Factory\\Controller",
+            "name": "Controller",
+            "summary": "",
+            "url": "namespaces/autostats-factory-controller.html"
+        },                {
+            "fqsen": "\\AutoStats\\Factory",
+            "name": "Factory",
+            "summary": "",
+            "url": "namespaces/autostats-factory.html"
+        },                {
+            "fqsen": "\\AutoStats\\Model",
+            "name": "Model",
+            "summary": "",
+            "url": "namespaces/autostats-model.html"
+        },                {
+            "fqsen": "\\DompdfView",
+            "name": "DompdfView",
+            "summary": "",
+            "url": "namespaces/dompdfview.html"
+        },                {
+            "fqsen": "\\DompdfView\\Factory",
+            "name": "Factory",
+            "summary": "",
+            "url": "namespaces/dompdfview-factory.html"
+        },                {
+            "fqsen": "\\DompdfView\\Model",
+            "name": "Model",
+            "summary": "",
+            "url": "namespaces/dompdfview-model.html"
+        },                {
+            "fqsen": "\\DompdfView\\Renderer",
+            "name": "Renderer",
+            "summary": "",
+            "url": "namespaces/dompdfview-renderer.html"
+        },                {
+            "fqsen": "\\DompdfView\\Strategy",
+            "name": "Strategy",
+            "summary": "",
+            "url": "namespaces/dompdfview-strategy.html"
+        },                {
+            "fqsen": "\\GcDirectory",
+            "name": "GcDirectory",
+            "summary": "",
+            "url": "namespaces/gcdirectory.html"
+        },                {
+            "fqsen": "\\GcDirectory\\Factory\\Model",
+            "name": "Model",
+            "summary": "",
+            "url": "namespaces/gcdirectory-factory-model.html"
+        },                {
+            "fqsen": "\\GcDirectory\\Factory",
+            "name": "Factory",
+            "summary": "",
+            "url": "namespaces/gcdirectory-factory.html"
+        },                {
+            "fqsen": "\\GcDirectory\\Model",
+            "name": "Model",
+            "summary": "",
+            "url": "namespaces/gcdirectory-model.html"
+        },                {
+            "fqsen": "\\LegacySupport",
+            "name": "LegacySupport",
+            "summary": "",
+            "url": "namespaces/legacysupport.html"
+        },                {
+            "fqsen": "\\LegacySupport\\Factory\\View\\Helper",
+            "name": "Helper",
+            "summary": "",
+            "url": "namespaces/legacysupport-factory-view-helper.html"
+        },                {
+            "fqsen": "\\LegacySupport\\Factory\\View",
+            "name": "View",
+            "summary": "",
+            "url": "namespaces/legacysupport-factory-view.html"
+        },                {
+            "fqsen": "\\LegacySupport\\Factory",
+            "name": "Factory",
+            "summary": "",
+            "url": "namespaces/legacysupport-factory.html"
+        },                {
+            "fqsen": "\\LegacySupport\\View\\Helper",
+            "name": "Helper",
+            "summary": "",
+            "url": "namespaces/legacysupport-view-helper.html"
+        },                {
+            "fqsen": "\\LegacySupport\\View",
+            "name": "View",
+            "summary": "",
+            "url": "namespaces/legacysupport-view.html"
         },                {
             "fqsen": "\\Logger",
             "name": "Logger",
@@ -2971,6 +5581,46 @@ Search.appendIndex(
             "summary": "",
             "url": "namespaces/logger-model.html"
         },                {
+            "fqsen": "\\OAuth",
+            "name": "OAuth",
+            "summary": "",
+            "url": "namespaces/oauth.html"
+        },                {
+            "fqsen": "\\OAuth\\Command",
+            "name": "Command",
+            "summary": "",
+            "url": "namespaces/oauth-command.html"
+        },                {
+            "fqsen": "\\OAuth\\Controller",
+            "name": "Controller",
+            "summary": "",
+            "url": "namespaces/oauth-controller.html"
+        },                {
+            "fqsen": "\\OAuth\\Exception",
+            "name": "Exception",
+            "summary": "",
+            "url": "namespaces/oauth-exception.html"
+        },                {
+            "fqsen": "\\OAuth\\Factory\\Listener",
+            "name": "Listener",
+            "summary": "",
+            "url": "namespaces/oauth-factory-listener.html"
+        },                {
+            "fqsen": "\\OAuth\\Factory",
+            "name": "Factory",
+            "summary": "",
+            "url": "namespaces/oauth-factory.html"
+        },                {
+            "fqsen": "\\OAuth\\Listener",
+            "name": "Listener",
+            "summary": "",
+            "url": "namespaces/oauth-listener.html"
+        },                {
+            "fqsen": "\\OAuth\\Model",
+            "name": "Model",
+            "summary": "",
+            "url": "namespaces/oauth-model.html"
+        },                {
             "fqsen": "\\PublicAsset",
             "name": "PublicAsset",
             "summary": "",
@@ -2980,6 +5630,11 @@ Search.appendIndex(
             "name": "Controller",
             "summary": "",
             "url": "namespaces/publicasset-controller.html"
+        },                {
+            "fqsen": "\\PublicAsset\\Factory\\Controller",
+            "name": "Controller",
+            "summary": "",
+            "url": "namespaces/publicasset-factory-controller.html"
         },                {
             "fqsen": "\\PublicAsset\\Factory",
             "name": "Factory",
@@ -3041,6 +5696,11 @@ Search.appendIndex(
             "summary": "",
             "url": "namespaces/userauth-controller.html"
         },                {
+            "fqsen": "\\UserAuth\\Controller\\Plugin",
+            "name": "Plugin",
+            "summary": "",
+            "url": "namespaces/userauth-controller-plugin.html"
+        },                {
             "fqsen": "\\UserAuth\\Exception",
             "name": "Exception",
             "summary": "",
@@ -3051,64 +5711,29 @@ Search.appendIndex(
             "summary": "",
             "url": "namespaces/userauth-factory.html"
         },                {
+            "fqsen": "\\UserAuth\\Factory\\Controller\\Plugin",
+            "name": "Plugin",
+            "summary": "",
+            "url": "namespaces/userauth-factory-controller-plugin.html"
+        },                {
+            "fqsen": "\\UserAuth\\Factory\\Controller",
+            "name": "Controller",
+            "summary": "",
+            "url": "namespaces/userauth-factory-controller.html"
+        },                {
+            "fqsen": "\\UserAuth\\Factory\\Listener",
+            "name": "Listener",
+            "summary": "",
+            "url": "namespaces/userauth-factory-listener.html"
+        },                {
+            "fqsen": "\\UserAuth\\Listener",
+            "name": "Listener",
+            "summary": "",
+            "url": "namespaces/userauth-listener.html"
+        },                {
             "fqsen": "\\UserAuth\\Model",
             "name": "Model",
             "summary": "",
             "url": "namespaces/userauth-model.html"
-        },                {
-            "fqsen": "\\ExampleModule",
-            "name": "ExampleModule",
-            "summary": "",
-            "url": "namespaces/examplemodule.html"
-        },                {
-            "fqsen": "\\ExampleModule\\Controller",
-            "name": "Controller",
-            "summary": "",
-            "url": "namespaces/examplemodule-controller.html"
-        },                {
-            "fqsen": "\\ExampleModule\\Factory",
-            "name": "Factory",
-            "summary": "",
-            "url": "namespaces/examplemodule-factory.html"
-        },                {
-            "fqsen": "\\ExampleModule\\Model",
-            "name": "Model",
-            "summary": "",
-            "url": "namespaces/examplemodule-model.html"
-        },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi",
-            "name": "ExampleModuleWithUserAndApi",
-            "summary": "",
-            "url": "namespaces/examplemodulewithuserandapi.html"
-        },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller",
-            "name": "Controller",
-            "summary": "",
-            "url": "namespaces/examplemodulewithuserandapi-controller.html"
-        },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi\\Controller\\Plugin",
-            "name": "Plugin",
-            "summary": "",
-            "url": "namespaces/examplemodulewithuserandapi-controller-plugin.html"
-        },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi\\Factory\\Controller",
-            "name": "Controller",
-            "summary": "",
-            "url": "namespaces/examplemodulewithuserandapi-factory-controller.html"
-        },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi\\Factory",
-            "name": "Factory",
-            "summary": "",
-            "url": "namespaces/examplemodulewithuserandapi-factory.html"
-        },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi\\Factory\\Model",
-            "name": "Model",
-            "summary": "",
-            "url": "namespaces/examplemodulewithuserandapi-factory-model.html"
-        },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi\\Model",
-            "name": "Model",
-            "summary": "",
-            "url": "namespaces/examplemodulewithuserandapi-model.html"
         }            ]
 );
