@@ -1,25 +1,44 @@
 #!/usr/bin/env bash
 
-APPNAME=LaminasExample
+# Name of your app and name of the container (usually the same as the app name)
+APPNAME=ExampleModule
 CONTAINER_NAME=$APPNAME
+
+# the image name on artifactory (or ACR) and local
 REMOTE_IMAGE="jack.hc-sc.gc.ca/php/php-base-laminas"
+LOCAL_IMAGE="php-base-laminas"
+
+# the tag you want to use, latest or latest-mongodb are good choice
 APPTAG="latest"
-DOMAIN=localdev.hc-sc.gc.ca
+
+# the folder where your code is located, in an app this might be $APPNAME and where to mount it
+VOLUME=$PWD/$APPNAME
+VOLUME_MOUNT=/var/www/apps/$APPNAME
+
+# the environment variables file
 ENV_FILE="$PWD/environment/app.env"
+
+# if not using traefik, this is the port to publish
+PORT='-p 80:80'
+
+# Name of the network, it will be created if it does not exists
 NETWORK=appnet
 
+# Options when using Traefik
+DOMAIN=localdev.hc-sc.gc.ca
 TRAEFIK_RULE='HostRegexp(`'$DOMAIN'`)'
 TRAEFIK_TLS_MAIN_DOMAIN=$DOMAIN
 TRAEFIK_TLS_SANS_DOMAIN=$DOMAIN,*.hc-sc.gc.ca
+ADD_HOST=''
+# We don't use traefik by default, if a running container named traefik is found we will use it
 USE_TRAEFIK=false
-PORT='-p 80:80'
-IMAGE=$REMOTE_IMAGE
 
 
 print_usage() {
     echo "Usage: ./start [options]"
     echo " "
     echo "    -h|--help     Show this message"
+    echo "    -l|--local    Use local image even if remote is available"
     echo "    -e|--env-file The file with the environment variable [environment/app.env]"
     echo "                  see environment/app.env.dist for an example"
     echo " "
@@ -30,16 +49,22 @@ print_usage() {
 if [ "$(docker ps -qf name=traefik)" ]; then
     USE_TRAEFIK=true
     PORT=''
+    # get the IP for traefik
+    TRAEFIK_IP=$(docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' traefik)
+    ADD_HOST="--add-host ${DOMAIN}:${TRAEFIK_IP}"
 fi
 
 ### Check if we can reach https://jack.hc-sc.gc.ca to download the latest version
 # -q : Silence mode
 # --spider : don't get, just check page availability
-wget -q --spider https://jack.hc-sc.gc.ca
+wget -q --spider $REMOTE_IMAGE
 if [ $? -eq 0 ]; then
-    echo "Online, pulling from jack.hc-sc.gc.ca"
+    echo "Online, pulling..."
     docker pull $REMOTE_IMAGE:$APPTAG
-    docker pull $REMOTE_IMAGE:latest
+    IMAGE=$REMOTE_IMAGE
+else
+    echo "Offline, using local image"
+    IMAGE=$LOCAL_IMAGE
 fi
 
 while test $# -gt 0; do
@@ -52,6 +77,10 @@ while test $# -gt 0; do
         shift
         ENV_FILE=$1
         shift
+        ;;
+    -l|--local)
+        shift
+        IMAGE=$LOCAL_IMAGE
         ;;
     *)
         break
@@ -78,6 +107,11 @@ elif [ "$(docker ps -qaf name=${CONTAINER_NAME})" ]; then
   docker rm ${CONTAINER_NAME}
 fi
 
+# If the volume folder exists, mount it
+VOLUME_STRING=""
+if [ -d "$VOLUME" ]; then
+    VOLUME_STRING="-v ${VOLUME}:${VOLUME_MOUNT}"
+fi
 
 ## if developing Laminas (meaning you have the /docker/php-base-laminas/code/module folder),
 ## use the latest module files. This is to see modifications immediately when changing the framework.
@@ -89,10 +123,9 @@ fi
 echo "Starting ${CONTAINER_NAME}..."
 # setting the container to run detach (-d) so we can use the console
 docker run -d --name $CONTAINER_NAME \
-    -v /etc/localtime:/etc/localtime:ro \
-    -v /etc/timezone:/etc/timezone:ro \
     --restart unless-stopped \
     --network=$NETWORK \
+    --env-file $ENV_FILE \
     --label traefik.enable=$USE_TRAEFIK \
     --label traefik.http.routers.LaminasExample.rule=$TRAEFIK_RULE \
     --label traefik.http.routers.LaminasExample.entrypoints=websecure \
@@ -102,8 +135,7 @@ docker run -d --name $CONTAINER_NAME \
     --label traefik.http.routers.LaminasExample_http.rule=$TRAEFIK_RULE \
     --label traefik.http.routers.LaminasExample_http.entrypoints=web \
     $PORT \
-    --env-file $ENV_FILE \
-    -v $PWD/ExampleModule:/var/www/apps/ExampleModule \
-    -v $PWD/ExampleModuleWithUserAndApi:/var/www/apps/ExampleModuleWithUserAndApi \
+    $ADD_HOST \
+    $VOLUME_STRING \
     $LAMINAS_DEVEL \
     $IMAGE:$APPTAG

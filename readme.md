@@ -100,8 +100,8 @@ Once you have the basic setup, you can copy the example modules in the apps/ fol
 #### Flags
 The start script supports a few flags. You can use the ```-h``` flag to see the list of flags
 available to the script if you forgot. This list is as follows:
-* ```-k|--traefik```: Tell the script that you are using traefik. You can also specify a different domain
-if you wish.
+* ```-l|--local```: Use the local image even if the remote image is available. Useful when you are
+developing and wants to try/debug the image before commiting it to git
 * ```-e|--env-file```: Specify that you wish to use a different environment file then the
 default one (which is $PWD/environment/app.env)
 
