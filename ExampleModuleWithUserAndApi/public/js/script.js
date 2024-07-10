@@ -1,6 +1,3 @@
-// variable that keeps the user
-let user;
-
 // when ready (defined in /application/js/basescript.js) execute init
 ready(init);
 
@@ -13,7 +10,7 @@ function init() {
         switchContent();
     });
     // initialize the user
-    user = new User();
+    laminas.user = new User();
 
     // switch between login and "you are logged in" message
     switchContent();
@@ -86,10 +83,10 @@ function login(url, data) {
                 // do something when there is an error with credentials...
                 alert(data.error);
                 // make sure user is not logged in anymore (just in case)
-                user.logout();
+                laminas.user.logout();
                 return;
             }
-            user.handleLogin(data.jwt, data.remember);
+            laminas.user.handleLogin(data.jwt, data.remember);
             switchContent();
         })
         .catch( error => {
@@ -108,15 +105,15 @@ function switchContent() {
     let contentDb = document.querySelector('#dbContent');
     let contentLdap = document.querySelector('#ldapContent');
 
-    if(user.isLoggedIn) {
-        let username = sprintf(strings['you are logged in'], user.email??user.userId??user.id??'user not found')
+    if(laminas.user.isLoggedIn()) {
+        let username = sprintf(strings['you are logged in'], laminas.user.email??laminas.user.userId??laminas.user.id??'user not found')
 
-        contentDb.innerHTML = (user.type == 'db' ? username : 'logged in LDAP')
+        contentDb.innerHTML = (laminas.user.type == 'db' ? username : 'logged in LDAP')
             + '<br><button class="btn btn-default" id="logoutDb">'
             + strings['logout']
             + '</button>'
         ;
-        contentLdap.innerHTML = (user.type == 'ldap' ? username : 'logged by DB')
+        contentLdap.innerHTML = (laminas.user.type == 'ldap' ? username : 'logged by DB')
             + '<br><button class="btn btn-default" id="logoutLdap">'
             + strings['logout']
             + '</button>'
@@ -173,7 +170,7 @@ function switchContent() {
 *
 */
 function logout() {
-    user.logout();
+    laminas.user.logout();
     switchContent();
 }
 
@@ -187,7 +184,7 @@ function refreshApiContent() {
             headers: {
                 'Content-Type': 'application/json',
                 'Accept': 'application/json',
-                'X-Access-Token': user.getJwt()
+                'X-Access-Token': laminas.user.getJwt()
             }
         })
         .then(response => response.json())

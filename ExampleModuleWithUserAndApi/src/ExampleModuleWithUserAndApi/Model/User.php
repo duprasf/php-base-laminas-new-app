@@ -2,7 +2,7 @@
 namespace ExampleModuleWithUserAndApi\Model;
 
 use PDO;
-use UserAuth\Module as UserAuth;
+use UserAuth\UserEvent;
 use UserAuth\Model\DbUser;
 use UserAuth\Exception\InvalidCredentialsException;
 use UserAuth\Exception\UserException;
@@ -58,8 +58,9 @@ class User extends DbUser
     */
     public function authenticate(String $email, String $password) : bool
     {
+
         // signal that the login process will start
-        $this->getEventManager()->trigger(UserAuth::EVENT_LOGIN.'.pre', $this, ['email'=>$email]);
+        $this->getEventManager()->trigger(UserEvent::LOGIN.'.pre', $this, ['email'=>$email]);
 
         //$pdo = $this->getDb();
         // prepare your query to get the correct user row from the DB
@@ -75,7 +76,7 @@ class User extends DbUser
             // ... then signal that the login failed
             // In the event, when userId is null it means that the email was not found at all,
             // if it is set, the password was wrong
-            $this->getEventManager()->trigger(UserAuth::EVENT_LOGIN_FAILED, $this, ['email'=>$email, 'userId'=>$data['userId']??null]);
+            $this->getEventManager()->trigger(UserEvent::LOGIN_FAILED, $this, ['email'=>$email, 'userId'=>$data['userId']??null]);
 
             // can return false or throw an exception, it depends on your implementation
             throw new InvalidCredentialsException();
@@ -91,7 +92,7 @@ class User extends DbUser
         $this->buildLoginSession($data);
 
         // signal that the login was successful
-        $this->getEventManager()->trigger(UserAuth::EVENT_LOGIN, $this, ['email'=>$email, 'id'=>$this[self::ID_FIELD] ?? null]);
+        $this->getEventManager()->trigger(UserEvent::LOGIN, $this, ['email'=>$email, 'id'=>$this[self::ID_FIELD] ?? null]);
         return true;
     }
 

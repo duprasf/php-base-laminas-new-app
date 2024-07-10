@@ -1,6 +1,6 @@
 <?php
 $this->metadata['title'] = $this->translate('Overwritten title of this page');
-$this->metadata['extra-js'] = '/js/basescript.js|/js/sprintf.min.js|/example-module-with-user-and-api/js/User.js|/example-module-with-user-and-api/js/script.js';
+$this->metadata['extra-js'] = '/js/sprintf.min.js|/example-module-with-user-and-api/js/User.js|/example-module-with-user-and-api/js/script.js';
 $this->metadata['extra-css'] = '/example-module-with-user-and-api/css/style.css';
 ?>
 <p><?=$this->translate('This is the index page of ExampleModuleWithUserAndApi');?></p>
@@ -67,19 +67,18 @@ const strings={
     'Submit':'<?=$this->translate('Submit', 'layout');?>',
     'Use your your Windows username (or email)/password':'<?=$this->translate('Use your your Windows username (or email)/password');?>'
 };
-
+/*
 ready(()=>{
     laminas.oauth2.register(
         document.querySelector("#oauth2"),
         {
             "method":"local-dev",
             "state":JSON.stringify({
-                /*
-                "controller":'\\ExampleModuleWithUserAndApi\\Controller\\Index',
-                "params":{"action":"return","param1":"test", "param2":true}
-                /**/
+                //"controller":'\\ExampleModuleWithUserAndApi\\Controller\\Index',
+                //"params":{"action":"return","param1":"test", "param2":true}
             })
         }
     );
 });
+/**/
 </script>
