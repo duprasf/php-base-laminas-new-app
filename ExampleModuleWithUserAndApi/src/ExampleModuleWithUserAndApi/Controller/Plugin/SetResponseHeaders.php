@@ -1,4 +1,5 @@
 <?php
+
 namespace ExampleModuleWithUserAndApi\Controller\Plugin;
 
 use Laminas\Mvc\Controller\Plugin\AbstractPlugin;
@@ -32,5 +33,5 @@ class SetResponseHeaders extends AbstractPlugin
         ;
 
         return $response;
-   }
+    }
 }

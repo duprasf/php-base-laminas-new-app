@@ -1,3 +1,6 @@
+.theia
+.vscode
+
 *.local.php
 local.php
 .env

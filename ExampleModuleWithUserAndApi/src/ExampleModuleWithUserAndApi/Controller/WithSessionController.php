@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace ExampleModuleWithUserAndApi\Controller;
@@ -12,12 +13,12 @@ use ExampleModuleWithUserAndApi\Model\User;
 class WithSessionController extends AbstractActionController
 {
     private $user;
-    public function setUser(User $user) : self
+    public function setUser(User $user): self
     {
         $this->user = $user;
         return $this;
     }
-    protected function getUser() : User
+    protected function getUser(): User
     {
         return $this->user;
     }
@@ -30,14 +31,14 @@ class WithSessionController extends AbstractActionController
         $entries = [];
         if($user->isLoggedIn()) {
             $entries = [
-                ['name'=>'first item', 'category'=>'green'],
-                ['name'=>'second item', 'category'=>'green'],
-                ['name'=>'third item', 'category'=>'red'],
-                ['name'=>'item 4', 'category'=>'green'],
-                ['name'=>'item 5', 'category'=>'green'],
-                ['name'=>'item 6', 'category'=>'gold'],
-                ['name'=>'item 7', 'category'=>'green'],
-                ['name'=>'item 8', 'category'=>'green'],
+                ['name' => 'first item', 'category' => 'green'],
+                ['name' => 'second item', 'category' => 'green'],
+                ['name' => 'third item', 'category' => 'red'],
+                ['name' => 'item 4', 'category' => 'green'],
+                ['name' => 'item 5', 'category' => 'green'],
+                ['name' => 'item 6', 'category' => 'gold'],
+                ['name' => 'item 7', 'category' => 'green'],
+                ['name' => 'item 8', 'category' => 'green'],
             ];
         }
 
@@ -60,8 +61,8 @@ class WithSessionController extends AbstractActionController
         $lang = $translator->getLang();
         $view->setVariable('metadata', new \ArrayObject(array(
             "title" => $translator->translate('ExampleModuleWithUserAndApi'),
-            "description"=>$translator->translate("ExampleModuleWithUserAndApi"),
-            "issuedDate"=>date('Y-m-d'),
+            "description" => $translator->translate("ExampleModuleWithUserAndApi"),
+            "issuedDate" => date('Y-m-d'),
             //"extra-css"=>'/css/stylesheet.css',
             //"extra-js"=>'/js/script.js',
         )));

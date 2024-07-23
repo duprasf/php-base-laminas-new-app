@@ -1,7 +1,7 @@
 <?php
 $this->metadata['title'] = $this->translate('Overwritten title of this page');
 $this->metadata['extra-js'] = '/js/sprintf.min.js|/example-module-with-user-and-api/js/User.js|/example-module-with-user-and-api/js/script.js';
-$this->metadata['extra-css'] = '/example-module-with-user-and-api/css/style.css';
+$this->metadata['extra-css'] = '/example-module/css/style.css';
 ?>
 <p><?=$this->translate('This is the index page of ExampleModuleWithUserAndApi');?></p>
 
@@ -59,12 +59,13 @@ $this->metadata['extra-css'] = '/example-module-with-user-and-api/css/style.css'
 const strings={
     'you are logged in':'<?=$this->translate('You are logged in as %s.');?>',
     'logout':'<?=$this->translate('Logout');?>',
-    'You can use any email and the password is "test"':'<?=$this->translate('You can use any email and the password is "test"');?>',
+    'You can register and login.':'<?=$this->translate('You can register and login.');?>',
     'Email address':'<?=$this->translate('Email address');?>',
     'required':'<?=$this->translate('required', 'layout');?>',
     'Password':'<?=$this->translate('Password');?>',
     'Remember me':'<?=$this->translate('Remember me');?>',
     'Submit':'<?=$this->translate('Submit', 'layout');?>',
+    'Register':'<?=$this->translate('Register', 'layout');?>',
     'Use your your Windows username (or email)/password':'<?=$this->translate('Use your your Windows username (or email)/password');?>'
 };
 /*

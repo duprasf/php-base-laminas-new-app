@@ -20,7 +20,6 @@ class ApiUserControllerFactory implements FactoryInterface
     {
         $obj = new $requestName();
         $obj->setUser($container->get(User::class));
-
         return $obj;
     }
 }

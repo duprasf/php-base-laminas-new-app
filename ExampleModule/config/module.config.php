@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace ExampleModule;
@@ -8,11 +9,10 @@ use Laminas\Router\Http\Segment;
 use Laminas\ServiceManager\Factory\InvokableFactory;
 use Application\Factory\Controller\Plugin\CommonMetadataFactory;
 
-
 return [
     'router' => [
         'routes' => [
-            'root'=> [
+            'root' => [
                 'type'    => Segment::class,
                 'options' => [
                     'route'    => '[/]',
@@ -31,17 +31,17 @@ return [
                     'defaults' => [
                         'locale'     => 'en',
                     ],
-                    'constraints'=>[
-                        'locale'=>'en|fr',
+                    'constraints' => [
+                        'locale' => 'en|fr',
                     ],
                 ],
                 // may_terminate is false since /en/ and /fr/ should go
                 // to a home page. If your module is the home page of
                 // the server, please change to true
                 'may_terminate' => false,
-                'child_routes'=>[
+                'child_routes' => [
                     // this is all the other path of your app
-                    'first-page'=>[
+                    'first-page' => [
                         'type'    => Segment::class,
                         'options' => [
                             'route'    => '/{my-app}',
@@ -51,7 +51,18 @@ return [
                             ],
                         ],
                         'may_terminate' => true,
-                        'child_routes'=>[
+                        'child_routes' => [
+                            'javascript' => [
+                                'type'    => Literal::class,
+                                'options' => [
+                                    'route'    => '/javascript.js',
+                                    'defaults' => [
+                                        'controller' => Controller\IndexController::class,
+                                        'action'     => 'javascript',
+                                    ],
+                                ],
+                                'may_terminate' => true,
+                            ],
                         ],
                     ],
                 ],
@@ -64,11 +75,11 @@ return [
         ],
     ],
     'controller_plugins' => [
-        'aliases'=> [
-            'exampleModuleCommonMetadata'=>Controller\Plugin\CommonMetadata::class,
+        'aliases' => [
+            'exampleModuleCommonMetadata' => Controller\Plugin\CommonMetadata::class,
         ],
         'factories' => [
-            Controller\Plugin\CommonMetadata::class=>CommonMetadataFactory::class,
+            Controller\Plugin\CommonMetadata::class => CommonMetadataFactory::class,
         ],
     ],
     'service_manager' => [

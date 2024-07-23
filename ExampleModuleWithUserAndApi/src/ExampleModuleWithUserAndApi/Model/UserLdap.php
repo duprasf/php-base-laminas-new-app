@@ -1,8 +1,9 @@
 <?php
+
 namespace ExampleModuleWithUserAndApi\Model;
 
-use \UserAuth\Module as UserAuth;
-use \UserAuth\Model\LdapUser;
+use UserAuth\Module as UserAuth;
+use UserAuth\Model\LdapUser;
 
 class UserLdap extends LdapUser
 {
@@ -13,7 +14,7 @@ class UserLdap extends LdapUser
     * @param string $password
     * @return bool
     */
-    public function authenticate(String $email, String $password) : bool
+    public function authenticate(String $email, String $password): bool
     {
         // this class is not needed if you do not have any special operations to add
         // the parent method will check the AD setup using the configuration 'ldap-options'
@@ -35,13 +36,13 @@ class UserLdap extends LdapUser
     * @param int $time, the length of time the JWT will be valid. It should not change anything, but just in case...
     * @return array, the data you want to send to client as part of the JWT
     */
-    public function getDataForJWT(int $time=86400) : array
+    public function getDataForJWT(int $time = 86400): array
     {
 
         $payload = parent::getDataForJWT($time);
         // here you can add or remove any fields you want to send to the client
-        $payload['debug']='debug string';
-        $payload['type']='ldap';
+        $payload['debug'] = 'debug string';
+        $payload['type'] = 'ldap';
 
         // you must return an array, even an empty array would work, but would be completely useless
         return $payload;

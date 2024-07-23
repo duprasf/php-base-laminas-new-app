@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace ExampleModuleWithUserAndApi\Controller;
@@ -7,6 +8,7 @@ use Laminas\Mvc\Controller\AbstractActionController;
 use Laminas\View\Model\ViewModel;
 use Application\Model\Breadcrumbs;
 use GcNotify\GcNotify;
+use Laminas\Session\Container;
 
 class IndexController extends AbstractActionController
 {

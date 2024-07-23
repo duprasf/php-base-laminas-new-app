@@ -1,4 +1,5 @@
 <?php
+
 namespace ExampleModule\Model;
 
 class Model

@@ -1,12 +1,15 @@
 <?php
+
 declare(strict_types=1);
 
 namespace ExampleModuleWithUserAndApi\Controller;
 
+use Exception;
 use Laminas\Mvc\Controller\AbstractRestfulController;
 use Laminas\View\Model\JsonModel;
-use UserAuth\Model\UserInterface;
+use UserAuth\Model\User\UserInterface;
 use UserAuth\Exception\UserException;
+use UserAuth\Exception\UserExistsException;
 use UserAuth\Exception\InvalidCredentialsException;
 
 class ApiUserController extends AbstractRestfulController
@@ -80,10 +83,9 @@ class ApiUserController extends AbstractRestfulController
         $response = $this->setResponseHeaders($this->getResponse());
         $user = $this->getUser();
         $type = $this->params()->fromRoute('type', 'login');
-
         try {
             if($type == 'register') {
-                if(!$user->register($data['email'], $data['password'])) {
+                if(!$user->register($data)) {
                     $this->response->setStatusCode(400);
                     return new JsonModel(['error' => 'Bad Request']);
                 }
@@ -104,13 +106,16 @@ class ApiUserController extends AbstractRestfulController
         } catch(InvalidCredentialsException $e) {
             $this->response->setStatusCode(401);
             return new JsonModel(['error' => 'Invalid credentials']);
-        } catch(\Exception $e) {
+        } catch(UserExistsException $e) {
+            $this->response->setStatusCode(406);
+            return new JsonModel(['error' => 'Not Acceptable - User already exists']);
+        } catch(Exception $e) {
             $this->response->setStatusCode(500);
-            return new JsonModel(['error'=>'Unknown error, please try again']);
+            return new JsonModel(['error' => 'Unknown error, please try again']);
         }
 
         $this->response->setStatusCode(500);
-        return new JsonModel(['error'=>'Unknown error, please try again']);
+        return new JsonModel(['error' => 'Unknown error, please try again']);
     }
 
     /**

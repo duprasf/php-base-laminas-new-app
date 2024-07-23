@@ -1,7 +1,8 @@
 <?php
+
 namespace ExampleModuleWithUserAndApi\Model;
 
-use UserAuth\Model\UserInterface;
+use UserAuth\Model\User\UserInterface;
 
 class Content
 {
@@ -55,16 +56,16 @@ class Content
 
         // ... but for this example, we will just return some fake data
         $entries = [
-            ['name'=>'first item', 'category'=>'green'],
-            ['name'=>'second item', 'category'=>'green'],
-            ['name'=>'third item', 'category'=>'red'],
+            ['name' => 'first item', 'category' => 'green'],
+            ['name' => 'second item', 'category' => 'green'],
+            ['name' => 'third item', 'category' => 'red'],
         ];
         if($this->getUser()->isLoggedIn()) {
-            $entries[] = ['name'=>'item 4', 'category'=>'green'];
-            $entries[] = ['name'=>'item 5', 'category'=>'gold'];
-            $entries[] = ['name'=>'item 6', 'category'=>'green'];
-            $entries[] = ['name'=>'item 7', 'category'=>'green'];
-            $entries[] = ['name'=>'item 8', 'category'=>'green'];
+            $entries[] = ['name' => 'item 4', 'category' => 'green'];
+            $entries[] = ['name' => 'item 5', 'category' => 'gold'];
+            $entries[] = ['name' => 'item 6', 'category' => 'green'];
+            $entries[] = ['name' => 'item 7', 'category' => 'green'];
+            $entries[] = ['name' => 'item 8', 'category' => 'green'];
         }
         return $entries;
     }

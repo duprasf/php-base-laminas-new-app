@@ -9,14 +9,19 @@ REMOTE_IMAGE="jack.hc-sc.gc.ca/php/php-base-laminas"
 LOCAL_IMAGE="php-base-laminas"
 
 # the tag you want to use, latest or latest-mongodb are good choice
-APPTAG="latest"
+APPTAG="latest-mongodb"
 
 # the folder where your code is located, in an app this might be $APPNAME and where to mount it
-VOLUME=$PWD/$APPNAME
-VOLUME_MOUNT=/var/www/apps/$APPNAME
+VOLUME=$PWD/ExampleModule
+VOLUME_MOUNT=/var/www/apps/ExampleModule
+VOLUME2=$PWD/ExampleModuleUser
+VOLUME_MOUNT2=/var/www/apps/ExampleModuleUser
+VOLUME3=$PWD/ExampleModuleWithUserAndApi
+VOLUME_MOUNT3=/var/www/apps/ExampleModuleWithUserAndApi
 
-# the environment variables file
-ENV_FILE="$PWD/environment/app.env"
+# the environment variables files
+ENV_FILE=$PWD/environment/app.env
+ENV_FILE_DB=$PWD/environment/db.env
 
 # if not using traefik, this is the port to publish
 PORT='-p 80:80'
@@ -107,10 +112,30 @@ elif [ "$(docker ps -qaf name=${CONTAINER_NAME})" ]; then
   docker rm ${CONTAINER_NAME}
 fi
 
+ENV_FILE_STRING="--env-file $ENV_FILE"
+if [ ! -f "${ENV_FILE}" ]; then
+    echo "*** environment file ${$ENV_FILE} not found"
+    ENV_FILE_DB_STRING=""
+fi
+
+ENV_FILE_DB_STRING="--env-file $ENV_FILE_DB"
+if [ ! -f "${ENV_FILE_DB}" ]; then
+    echo "*** DB environment file ${ENV_FILE_DB} not found"
+    ENV_FILE_DB_STRING=""
+fi
+
 # If the volume folder exists, mount it
 VOLUME_STRING=""
 if [ -d "$VOLUME" ]; then
     VOLUME_STRING="-v ${VOLUME}:${VOLUME_MOUNT}"
+fi
+VOLUME_STRING2=""
+if [ -d "$VOLUME2" ]; then
+    VOLUME_STRING2="-v ${VOLUME2}:${VOLUME_MOUNT2}"
+fi
+VOLUME_STRING3=""
+if [ -d "$VOLUME3" ]; then
+    VOLUME_STRING3="-v ${VOLUME3}:${VOLUME_MOUNT3}"
 fi
 
 ## if developing Laminas (meaning you have the /docker/php-base-laminas/code/module folder),
@@ -125,7 +150,6 @@ echo "Starting ${CONTAINER_NAME}..."
 docker run -d --name $CONTAINER_NAME \
     --restart unless-stopped \
     --network=$NETWORK \
-    --env-file $ENV_FILE \
     --label traefik.enable=$USE_TRAEFIK \
     --label traefik.http.routers.LaminasExample.rule=$TRAEFIK_RULE \
     --label traefik.http.routers.LaminasExample.entrypoints=websecure \
@@ -136,6 +160,16 @@ docker run -d --name $CONTAINER_NAME \
     --label traefik.http.routers.LaminasExample_http.entrypoints=web \
     $PORT \
     $ADD_HOST \
+    $ENV_FILE_STRING \
+    $ENV_FILE_DB_STRING \
     $VOLUME_STRING \
+    $VOLUME_STRING2 \
+    $VOLUME_STRING3 \
     $LAMINAS_DEVEL \
     $IMAGE:$APPTAG
+
+# The ExampleModuleUser require a writable user file by default (should be changed in your 
+# application). This should also be a persistant file, so outsite the container.
+# In a production, or even for your dev, you might need to add another volume to the 
+# 'docker run' command to keep this file on the host. (or use a DB for the users :P)
+docker exec $CONTAINER_NAME chown www-data /var/www/data

@@ -7,7 +7,7 @@ namespace ExampleModuleWithUserAndApi\Controller;
 use Laminas\Mvc\Controller\AbstractRestfulController;
 use Laminas\View\Model\ViewModel;
 use Laminas\View\Model\JsonModel;
-use UserAuth\Model\UserInterface;
+use UserAuth\Model\User\UserInterface;
 use UserAuth\Exception\JwtException;
 use UserAuth\Exception\JwtExpiredException;
 use ExampleModuleWithUserAndApi\Model\Content;
@@ -109,7 +109,7 @@ class ApiContentController extends AbstractRestfulController
             return $view;
         } catch (JwtExpiredException $e) {
             $this->response->setStatusCode(401);
-            $view->setVariables(['error' => "Your session is expired. Please login again.", 'code'=>408]);
+            $view->setVariables(['error' => "Your session is expired. Please login again.", 'code' => 408]);
         } catch (JwtException $e) {
             $this->response->setStatusCode(401);
             $view->setVariables(['error' => "Invalid or missing authentication session."]);

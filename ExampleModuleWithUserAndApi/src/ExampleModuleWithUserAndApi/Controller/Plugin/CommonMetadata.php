@@ -1,4 +1,5 @@
 <?php
+
 namespace ExampleModuleWithUserAndApi\Controller\Plugin;
 
 use Laminas\Mvc\Controller\Plugin\AbstractPlugin;
@@ -8,7 +9,6 @@ use Application\Model\Breadcrumbs;
 use Application\Controller\Plugin\CommonMetadata as ParentCommonMetadata;
 use Application\Factory\Controller\Plugin\CommonMetadataFactory;
 
-
 class CommonMetadata extends ParentCommonMetadata
 {
     public function __invoke(ViewModel $view)
@@ -16,20 +16,20 @@ class CommonMetadata extends ParentCommonMetadata
         $translator = $this->getTranslator();
         $lang = $this->getLang();
         $url = $this->getUrlObj();
-        $array=[
+        $array = [
             "title" => $translator->translate('Example Module With User And Api'),
-            "appName"=>$translator->translate('ExampleModuleWithUserAndApi'),
+            "appName" => $translator->translate('ExampleModuleWithUserAndApi'),
             "description" => $translator->translate("ExampleModuleWithUserAndApi"),
             "versionNumber" => '1.0',
-            "isApp"=>true,
-            "contactLinks"=>getenv('ADMIN_EMAIL')?["mailto:".getenv('ADMIN_EMAIL')]:[],
-            "showShare"=>false,
-            "showFeedback"=>false,
-            "appUrl"=>$url('ExampleModuleWithUserAndApi/first-page'),
-            "extra-css"=>[
+            "isApp" => true,
+            "contactLinks" => getenv('ADMIN_EMAIL') ? ["mailto:".getenv('ADMIN_EMAIL')] : [],
+            "showShare" => false,
+            "showFeedback" => false,
+            "appUrl" => $url('ExampleModuleWithUserAndApi/first-page'),
+            "extra-css" => [
                 //'/example-module/css/example-module.css'
             ],
-            "extra-js"=>[
+            "extra-js" => [
                 //'/example-module/js/example-module.min.js',
             ],
         ];
@@ -43,7 +43,7 @@ class CommonMetadata extends ParentCommonMetadata
         }
         /**/
 
-        $view->setVariable('metadata',$this->getMetadataObj()->merge($array));
+        $view->setVariable('metadata', $this->getMetadataObj()->merge($array));
         $view->setVariable('attribution', 'HC');
 
         $breadcrumbs = $this->getBreadcrumbsObj();

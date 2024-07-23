@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace ExampleModuleWithUserAndApi;
@@ -7,7 +8,6 @@ use Laminas\Router\Http\Literal;
 use Laminas\Router\Http\Segment;
 use UserAuth\Factory\GetJwtDataFactory;
 use Application\Factory\Controller\Plugin\CommonMetadataFactory;
-
 
 return [
     'router' => [
@@ -20,17 +20,17 @@ return [
                     'defaults' => [
                         'locale'     => 'en',
                     ],
-                    'constraints'=>[
-                        'locale'=>'en|fr',
+                    'constraints' => [
+                        'locale' => 'en|fr',
                     ],
                 ],
                 // may_terminate is false since /en/ and /fr/ should go
                 // to a home page. If your module is the home page of
                 // the server, please change to true
                 'may_terminate' => false,
-                'child_routes'=>[
+                'child_routes' => [
                     // this is all the other path of your app
-                    'first-page'=>[
+                    'first-page' => [
                         'type'    => Segment::class,
                         'options' => [
                             'route'    => '/{my-app-with-user}',
@@ -41,8 +41,8 @@ return [
                             ],
                         ],
                         'may_terminate' => true,
-                        'child_routes'=>[
-                            'api'=>[
+                        'child_routes' => [
+                            'api' => [
                                 'type'    => Segment::class,
                                 'options' => [
                                     'route'    => '/api/v1',
@@ -51,8 +51,8 @@ return [
                                     ],
                                 ],
                                 'may_terminate' => false,
-                                'child_routes'=>[
-                                    'user'=>[
+                                'child_routes' => [
+                                    'user' => [
                                         'type'    => Segment::class,
                                         'options' => [
                                             'route'    => '/{user}',
@@ -61,22 +61,22 @@ return [
                                             ],
                                         ],
                                         'may_terminate' => true,
-                                        'child_routes'=>[
-                                            'register'=>[
+                                        'child_routes' => [
+                                            'register' => [
                                                 'type'    => Segment::class,
                                                 'options' => [
                                                     'route'    => '/register',
                                                     'defaults' => [
-                                                        'type'=>'register',
+                                                        'type' => 'register',
                                                     ],
                                                 ],
                                                 'may_terminate' => true,
-                                                'child_routes'=>[
+                                                'child_routes' => [
                                                 ],
                                             ],
                                         ],
                                     ],
-                                    'user-ldap'=>[
+                                    'user-ldap' => [
                                         'type'    => Segment::class,
                                         'options' => [
                                             'route'    => '/user-ldap',
@@ -85,10 +85,10 @@ return [
                                             ],
                                         ],
                                         'may_terminate' => true,
-                                        'child_routes'=>[
+                                        'child_routes' => [
                                         ],
                                     ],
-                                    'content'=>[
+                                    'content' => [
                                         'type'    => Segment::class,
                                         'options' => [
                                             'route'    => '/{content}',
@@ -97,12 +97,12 @@ return [
                                             ],
                                         ],
                                         'may_terminate' => true,
-                                        'child_routes'=>[
+                                        'child_routes' => [
                                         ],
                                     ],
                                 ],
                             ],
-                            'content'=>[
+                            'content' => [
                                 'type'    => Segment::class,
                                 'options' => [
                                     'route'    => '/{content}',
@@ -112,10 +112,10 @@ return [
                                     ],
                                 ],
                                 'may_terminate' => true,
-                                'child_routes'=>[
+                                'child_routes' => [
                                 ],
                             ],
-                            'oauth-return'=>[
+                            'oauth-return' => [
                                 'type'    => Segment::class,
                                 'options' => [
                                     'route'    => '/{return}',
@@ -125,7 +125,7 @@ return [
                                     ],
                                 ],
                                 'may_terminate' => true,
-                                'child_routes'=>[
+                                'child_routes' => [
                                 ],
                             ],
                         ],
@@ -144,16 +144,15 @@ return [
         ],
     ],
     'controller_plugins' => [
-        'invokables'=>[
+        'invokables' => [
             'setResponseHeaders' => Controller\Plugin\SetResponseHeaders::class,
-            'returnUserData' => Controller\Plugin\ReturnUserData::class,
         ],
         'factories' => [
             'getJwtData' => GetJwtDataFactory::class,
-            Controller\Plugin\CommonMetadata::class=>CommonMetadataFactory::class,
+            Controller\Plugin\CommonMetadata::class => CommonMetadataFactory::class,
         ],
         'aliases' => [
-            'exampleModuleWithUserAndApiCommonMetadata'=>Controller\Plugin\CommonMetadata::class,
+            'exampleModuleWithUserAndApiCommonMetadata' => Controller\Plugin\CommonMetadata::class,
         ],
     ],
     'service_manager' => [

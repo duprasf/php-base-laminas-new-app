@@ -1,123 +1,216 @@
-/**
- *   Jenkins build script for HC Web/Mobile framework with laminas
- *
- */
-
-pipeline {
+pipeline{
     agent {
         label 'StandardV1'
     }
+
     options {
         // This is required if you want to clean before build
         skipDefaultCheckout(true)
     }
+
     environment {
-        containerRegistry = 'jack.hc-sc.gc.ca'
-        containerRegistryPull = 'jack.hc-sc.gc.ca'
+        // name of the branches to deploy the image in dev and in prod
+        devBranch = 'master'
+        prodTagPattern = 'release-*'
+
+        // Name of the image/app, for the build only, will be remove so this is not important
+        localImage = "appname"
+
+        // path and name of the image that will be saved in Artifactory and ACR
+        imagePath  = "path/to/appname"
+
+        // The container where to deploy the app on App Service
+        acrAppNameDev = "was-dtb-csb-hcan-capc"
+        acrAppNameProd= "was-dtb-csb-hcan-capc"
+
+        // the resource groups for prod and pre-prod
+        appDevGroup  = "rg_DTB_CSB_HCAN_DV"
+        appProdGroup = "rg_DTB_CSB_HCAN_DV"
+
+        // if this is done correctly, you should not have to change anything else in this environment section
+        // The artifactory server and image path
+        artifactoryServer = 'jack.hc-sc.gc.ca'
+        artifactoryImage  = "${artifactoryServer}/${imagePath}"
+
+        // The ARC server and path
+        acrRegistry  = "hcsccrrc"
+        acrImage     = "${acrRegistry}.azurecr.io/dtb/${imagePath}"
+        acrServer    = "https://${acrRegistry}.azurecr.io"
+
+        // Credentials name for each env
+        devCredentials = 'DTB-CSB-HCAN-CICD-DV'
+        prodCredentials= 'DTB-CSB-HCAN-CICD-DV'
+
+        baseVersion="1.0"
     }
 
     stages {
-
-        stage('appmeta Info') {
+        stage('Environment Setup') {
+            when {
+                anyOf {
+                    branch devBranch;
+                    tag prodTagPattern
+                }
+            }
             steps {
                 // Clean before build
                 cleanWs()
                 // We need to explicitly checkout from SCM here
                 checkout scm
-                script {
-
-                    def properties = readProperties  file: 'appmeta.properties'
-
-                    //Get basic meta-data
-                    rootGroup = properties.root_group
-                    rootVersion = properties.root_version
-                    buildId = env.BUILD_ID
-                    version = rootVersion + "-" + (buildId ? buildId : "MANUAL-BUILD")
-                    module = rootGroup
-
-                    // Setup Artifactory connection
-                    artifactoryServer = Artifactory.server 'default'
-                    artifactoryGradle = Artifactory.newGradleBuild()
-                    artifactoryDocker = Artifactory.docker server: artifactoryServer
-                    buildInfo = Artifactory.newBuildInfo()
+                script{
+                    env.version = baseVersion + "." + (env.BUILD_ID ? env.BUILD_ID : "MANUAL-BUILD")
                 }
             }
         }
 
-        stage('Docker Image') {
+        stage('Environment Setup (prod)') {
             when {
-                expression {
-                    /* CHANGE BRANCH NAME TO MASTER (or what you require) */
-                    BRANCH_NAME == 'master--example-doesnt-build-in-artifactory'
+                anyOf {
+                    tag prodTagPattern
                 }
             }
             steps {
-                sh 'rm -rf ./docker/code'
-                sh 'cp -r ./code ./docker'
+                script{
+                    env.version = baseVersion + "." + (env.BUILD_ID ? env.BUILD_ID : "MANUAL-BUILD") + "-prod"
+                }
+            }
+        }
 
+        stage('Building Image') {
+            when {
+                anyOf {
+                    branch devBranch;
+                    tag prodTagPattern
+                }
+            }
+            steps {
+                script {
+                    // Setup Artifactory connection
+                    artiServer = Artifactory.server 'default'
+                    artiGradle = Artifactory.newGradleBuild()
+                    artiDocker = Artifactory.docker server: artiServer
+                    buildInfo = Artifactory.newBuildInfo()
+                }
+
+                sh """
+                    docker build --pull -t ${localImage}:${version} -t ${localImage}:latest .
+                    docker tag ${localImage}:${version} ${artifactoryImage}:${version}
+                    docker tag ${localImage}:latest ${artifactoryImage}:latest
+                """
+            }
+        }
+
+        stage('Sending Image to Artifactory') {
+            when {
+                anyOf {
+                    branch devBranch;
+                    tag prodTagPattern
+                }
+            }
+            steps {
                 withCredentials([
                     usernamePassword(credentialsId:'ARTIFACTORY_PUBLISH', usernameVariable: 'USR', passwordVariable: 'PWD')
                 ]) {
                     sh """
-                        docker login -u ${USR} -p ${PWD} ${
-                            containerRegistry
-                        }
-                        docker build -t example-module:${version} -t example-module:latest .
-                        docker tag example-module:${version} ${containerRegistry}/php/example-module:${version}
-                        docker tag example-module:latest ${containerRegistry}/php/example-module:latest
+                        docker login -u ${USR} -p ${PWD} ${artifactoryServer}
+                        docker push ${artifactoryImage}:${env.version}
+                        docker push ${artifactoryImage}:latest
                     """
                 }
-                script {
-                    def buildInfoTemp
-                    buildInfoTemp = artifactoryDocker.push "${containerRegistry}/php/example-module:${version}", 'docker-local'
-                    buildInfo.append buildInfoTemp
-                    buildInfoTemp = artifactoryDocker.push "${containerRegistry}/php/example-module:latest", 'docker-local'
-                    buildInfo.append buildInfoTemp
+            }
+        }
+
+        stage('Sending Image to ACR') {
+            when {
+                anyOf {
+                    branch devBranch;
+                    tag prodTagPattern
+                }
+            }
+            steps {
+                withCredentials([azureServicePrincipal('DTB-CSB-HCAN-CICD-DV')]){
+                    sh"""
+                        az login --service-principal -u $AZURE_CLIENT_ID -p $AZURE_CLIENT_SECRET -t $AZURE_TENANT_ID
+                        az acr login --name ${acrRegistry}
+                        docker tag ${localImage}:${env.version} ${acrImage}:${env.version}
+                        docker tag ${localImage}:latest ${acrImage}:latest
+                        docker push ${acrImage}:${env.version}
+                        docker push ${acrImage}:latest
+                    """
+                }
+            }
+        }
+
+        //Deploy image from ACR to app1 container
+        stage('Deploy from ACR to DEV'){
+            when {
+                branch devBranch
+            }
+            steps{
+                withCredentials([azureServicePrincipal('DTB-CSB-HCAN-CICD-DV')]){
+                    sh """
+                        az webapp config container set \
+                            --name ${acrAppNameDev} \
+                            --subscription ${AZURE_SUBSCRIPTION_ID} \
+                            --resource-group ${appDevGroup} \
+                            -i ${acrImage}:${env.version} \
+                            -r ${acrServer} \
+                            -u ${AZURE_CLIENT_ID} \
+                            -p ${AZURE_CLIENT_SECRET}
+                    """
+                }
+            }
+        }
+
+        stage('Deploy from ACR to PROD'){
+            when {
+                tag prodTagPattern
+            }
+            steps{
+                withCredentials([azureServicePrincipal($prodCredentials)]) {
+                    sh """
+                        az webapp config container set \
+                            --name ${acrAppNameProd} \
+                            --subscription $AZURE_SUBSCRIPTION_ID \
+                            --resource-group ${appProdGroup} \
+                            -i ${acrImage}:${env.version} \
+                            -r ${acrServer} \
+                            -u ${AZURE_CLIENT_ID} \
+                            -p ${AZURE_CLIENT_SECRET}
+                    """
                 }
             }
         }
     }
-
-    post {
+    post{
         always {
-            // Clean after build
-            cleanWs(
-                cleanWhenNotBuilt: false,
-                deleteDirs: true,
-                disableDeferredWipeout: true,
-                notFailBuild: true,
-                patterns: [
-                    [pattern: '.gitignore', type: 'INCLUDE'],
-                    [pattern: '.propsfile', type: 'EXCLUDE']
-                ]
-            )
             script {
                 resultString = "None"
             }
         }
         success {
             script {
-                resultString = "Success"
+                resultString = "Success 🌞"
             }
         }
         unstable {
             script {
-                resultString = "Unstable"
+                resultString = "Unstable ⛅"
             }
         }
         failure {
             script {
-                resultString = "Failure"
+                resultString = "Failure 🌩"
             }
         }
         cleanup {
-            emailext body: "<p>See build result details at: <a href='${env.JOB_URL}'>${env.JOB_URL}</a></p>", mimeType: 'text/html; charset=UTF-8', recipientProviders: [[$class: 'CulpritsRecipientProvider'], [$class: 'DevelopersRecipientProvider'], [$class: 'UpstreamComitterRecipientProvider'], [$class: 'RequesterRecipientProvider']], replyTo: 'no-reply@build.scs-lab.com', subject: "${currentBuild.fullDisplayName} ${resultString}"
-            script {
-                jiraIssueSelector(issueSelector: [$class: 'DefaultIssueSelector'])
-                        .each {
-                    id -> jiraComment body: "*Build Result ${resultString}* Module: ${module} appmeta: ${version} [Details|${env.BUILD_URL}]", issueKey: id
-                }
-            }
+            emailext body: "<p>See build result details at: <a href='${env.JOB_URL}'>${env.JOB_URL}</a></p>", mimeType: 'text/html; charset=UTF-8', recipientProviders: [[$class: 'CulpritsRecipientProvider'], [$class: 'DevelopersRecipientProvider'], [$class: 'UpstreamComitterRecipientProvider'], [$class: 'RequesterRecipientProvider']], replyTo: 'devops@hc-sc.gc.ca', subject: "${resultString} ${currentBuild.fullDisplayName}"
+
+            // Clean after build
+            cleanWs()
+            sh "docker rmi -f ${localImage}:${env.version}"
+            sh "docker rmi -f ${localImage}:latest"
         }
     }
 }
+

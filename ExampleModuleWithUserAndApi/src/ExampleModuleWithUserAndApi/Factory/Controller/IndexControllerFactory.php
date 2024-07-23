@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace ExampleModuleWithUserAndApi\Factory\Controller;
@@ -7,7 +8,6 @@ use Interop\Container\ContainerInterface;
 use Laminas\ServiceManager\Factory\FactoryInterface;
 
 use ExampleModuleWithUserAndApi\Controller\IndexController;
-
 
 class IndexControllerFactory implements FactoryInterface
 {

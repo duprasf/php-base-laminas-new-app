@@ -1,4 +1,5 @@
 <?php
+
 namespace ExampleModuleWithUserAndApi\Model;
 
 use PDO;
@@ -56,11 +57,11 @@ class User extends DbUser
     * @throws InvalidCredentialsException In this implementation, throw exception when credentials are incorrect
     * @throws UserException this is thrown when no "parentDb" is defined.
     */
-    public function authenticate(String $email, String $password) : bool
+    public function authenticate(String $email, String $password): bool
     {
 
         // signal that the login process will start
-        $this->getEventManager()->trigger(UserEvent::LOGIN.'.pre', $this, ['email'=>$email]);
+        $this->getEventManager()->trigger(UserEvent::LOGIN.'.pre', $this, ['email' => $email]);
 
         //$pdo = $this->getDb();
         // prepare your query to get the correct user row from the DB
@@ -69,14 +70,14 @@ class User extends DbUser
         //$prepared->execute([$email]);
         //$data = $prepared->fetch(PDO::FETCH_ASSOC);
         // ***DEBUG ---> emulate the DB content (the password is "test" without the quotes)
-        $data = ['email'=>$email, 'status'=>1, 'userId'=>1, 'password'=>'$2y$10$yJXNxVITwzgAFhfzwqWJKOySRjF1wueVX81K6/eTcitbmIZ4Qvx3y'];
+        $data = ['email' => $email, 'status' => 1, 'userId' => 1, 'password' => '$2y$10$yJXNxVITwzgAFhfzwqWJKOySRjF1wueVX81K6/eTcitbmIZ4Qvx3y'];
 
         // if there is no data/user or if the password does not match...
         if(!$data || !password_verify($password, $data['password'])) {
             // ... then signal that the login failed
             // In the event, when userId is null it means that the email was not found at all,
             // if it is set, the password was wrong
-            $this->getEventManager()->trigger(UserEvent::LOGIN_FAILED, $this, ['email'=>$email, 'userId'=>$data['userId']??null]);
+            $this->getEventManager()->trigger(UserEvent::LOGIN_FAILED, $this, ['email' => $email, 'userId' => $data['userId'] ?? null]);
 
             // can return false or throw an exception, it depends on your implementation
             throw new InvalidCredentialsException();
@@ -92,7 +93,7 @@ class User extends DbUser
         $this->buildLoginSession($data);
 
         // signal that the login was successful
-        $this->getEventManager()->trigger(UserEvent::LOGIN, $this, ['email'=>$email, 'id'=>$this[self::ID_FIELD] ?? null]);
+        $this->getEventManager()->trigger(UserEvent::LOGIN, $this, ['email' => $email, 'id' => $this[self::ID_FIELD] ?? null]);
         return true;
     }
 
@@ -105,14 +106,14 @@ class User extends DbUser
     * @param int $id
     * @return bool
     */
-    protected function _loadUserById(int $id) : bool
+    protected function _loadUserById(int $id): bool
     {
         // this function would load from the DB, but in this example, we simulate the DB
         // so we only return some fake data
         $data = [
-            'userId'=>$id,
-            'email'=>'fake-test@hc-sc.gc.ca',
-            'status'=>1,
+            'userId' => $id,
+            'email' => 'fake-test@hc-sc.gc.ca',
+            'status' => 1,
         ];
         $this->exchangeArray($data);
         $this->buildLoginSession($data);
@@ -128,7 +129,7 @@ class User extends DbUser
     * @throws JwtExpiredException If the token is expired
     * @throws UserException if the ID field is not set in the JWT
     */
-    public function loadFromJwt(?String $jwt) : bool
+    public function loadFromJwt(?String $jwt): bool
     {
         if($jwt == null) {
             throw new JwtException('JWT is null');
@@ -149,15 +150,15 @@ class User extends DbUser
     * @param int $time, the length of time the JWT will be valid. It should not change anything, but just in case...
     * @return array, the data you want to send to client as part of the JWT
     */
-    public function getDataForJWT(int $time=86400) : array
+    public function getDataForJWT(int $time = 86400): array
     {
         $payload = $this->getArrayCopy();
         if(!isset($payload['id'])) {
             $payload['id'] = $this[self::ID_FIELD] ?? null;
         }
         // here you can add or remove any fields you want to send to the client
-        $payload['debug']='debug string';
-        $payload['type']='db';
+        $payload['debug'] = 'debug string';
+        $payload['type'] = 'db';
 
         // you must return an array, even an empty array would work, but would be completely useless
         return $payload;

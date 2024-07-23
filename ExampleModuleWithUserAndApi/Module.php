@@ -1,4 +1,5 @@
 <?php
+
 namespace ExampleModuleWithUserAndApi;
 
 use Laminas\Stdlib\ArrayUtils;

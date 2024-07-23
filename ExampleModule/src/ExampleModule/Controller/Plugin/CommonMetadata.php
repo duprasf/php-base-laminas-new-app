@@ -1,4 +1,5 @@
 <?php
+
 namespace ExampleModule\Controller\Plugin;
 
 use Laminas\Mvc\Controller\Plugin\AbstractPlugin;
@@ -7,7 +8,6 @@ use Laminas\Mvc\I18n\Translator as MvcTranslator;
 use Application\Model\Breadcrumbs;
 use Application\Controller\Plugin\CommonMetadata as ParentCommonMetadata;
 
-
 class CommonMetadata extends ParentCommonMetadata
 {
     public function __invoke(ViewModel $view)
@@ -15,19 +15,19 @@ class CommonMetadata extends ParentCommonMetadata
         $translator = $this->getTranslator();
         $lang = $this->getLang();
         $url = $this->getUrlObj();
-        $array=[
+        $array = [
             "title" => $translator->translate('Example Module'),
-            "appName"=>$translator->translate('ExampleModule'),
+            "appName" => $translator->translate('ExampleModule'),
             "description" => $translator->translate("ExampleModule"),
-            "isApp"=>false,
-            "contactLinks"=>getenv('ADMIN_EMAIL')?["mailto:".getenv('ADMIN_EMAIL')]:[],
-            "showShare"=>false,
-            "showFeedback"=>false,
-            "appUrl"=>$url('ExampleModule/first-page'),
-            "extra-css"=>[
+            "isApp" => false,
+            "contactLinks" => getenv('ADMIN_EMAIL') ? ["mailto:".getenv('ADMIN_EMAIL')] : [],
+            "showShare" => false,
+            "showFeedback" => false,
+            "appUrl" => $url('ExampleModule/first-page'),
+            "extra-css" => [
                 //'/example-module/css/example-module.css'
             ],
-            "extra-js"=>[
+            "extra-js" => [
                 //'/example-module/js/example-module.min.js',
             ],
         ];
@@ -41,7 +41,7 @@ class CommonMetadata extends ParentCommonMetadata
         }
         /**/
 
-        $view->setVariable('metadata',$this->getMetadataObj()->merge($array));
+        $view->setVariable('metadata', $this->getMetadataObj()->merge($array));
         $view->setVariable('attribution', 'HC');
         /*
         // This is for future use when the session

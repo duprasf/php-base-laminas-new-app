@@ -28,6 +28,13 @@ function init() {
     }
 }
 
+
+function changeDbFormAction(e) {
+    let register = e.target.name=='register';
+    let form = e.target.form;
+    form.action = '/en/my-app-with-user/api/v1/user'+(register?'/register':'');
+}
+
 /**
 * When trying to login using the DB
 *
@@ -35,13 +42,14 @@ function init() {
 */
 function loginDb(e) {
     e.preventDefault();
-
-    const url = '/en/my-app-with-user/api/v1/user';
+    let register = e.target.name=='register';
+    let form = register ? e.target.form : e.target;
+    const url = form.action;
 
     let data = {
-        'email':document.querySelector('#emailDB').value,
-        'password':document.querySelector('#passwordDB').value,
-        'remember':!!document.querySelector('#rememberDb:checked')
+        'email':form.querySelector('#emailDB').value,
+        'password':form.querySelector('#passwordDB').value,
+        'remember':!!form.querySelector('#rememberDb:checked')
     };
     login(url, data);
 }
@@ -108,12 +116,12 @@ function switchContent() {
     if(laminas.user.isLoggedIn()) {
         let username = sprintf(strings['you are logged in'], laminas.user.email??laminas.user.userId??laminas.user.id??'user not found')
 
-        contentDb.innerHTML = (laminas.user.type == 'db' ? username : 'logged in LDAP')
+        contentDb.innerHTML = (laminas.user.type == 'db' ? username : 'logged in')
             + '<br><button class="btn btn-default" id="logoutDb">'
             + strings['logout']
             + '</button>'
         ;
-        contentLdap.innerHTML = (laminas.user.type == 'ldap' ? username : 'logged by DB')
+        contentLdap.innerHTML = (laminas.user.type == 'ldap' ? username : 'logged in')
             + '<br><button class="btn btn-default" id="logoutLdap">'
             + strings['logout']
             + '</button>'
@@ -130,7 +138,7 @@ function switchContent() {
     document.body.classList.remove('isLoggedIn');
 
     contentDb.innerHTML =
-        '<p>'+strings['You can use any email and the password is "test"']+'</p>'
+        '<p>'+strings['You can register and login.']+'</p>'
         +'<form method="get" action="#" id="dbForm">'
         +'<div class="form-group">'
         +'<label for="emailDB" class="required"><span class="field-name">'+strings['Email address']+'</span> <strong class="required">('+strings['required']+')</strong></label>'
@@ -139,7 +147,8 @@ function switchContent() {
         +'<label for="passwordDB" class="required"><span class="field-name">'+strings['Password']+'</span> <strong class="required">('+strings['required']+')</strong></label>'
         +'<input type="password" class="form-control" id="passwordDB"></div>'
         +'<div class="checkbox"><label><input type="checkbox" name="remember" value="1" id="rememberDb">&nbsp;'+strings['Remember me']+'</label></div>'
-        +'<button type="submit" class="btn btn-default">'+strings['Submit']+'</button></form>'
+        +'<button type="submit" class="btn btn-default" name="register">'+strings['Register']+'</button>'
+        +'<button type="submit" class="btn btn-default" name="login">'+strings['Submit']+'</button></form>'
     ;
     contentLdap.innerHTML =
         '<p>'+strings['Use your your Windows username (or email)/password']+'</p>'
@@ -155,6 +164,8 @@ function switchContent() {
     ;
     let form = document.querySelector('#dbForm');
     if(form) {
+        form.querySelector('button[type="submit"][name="register"]').addEventListener('click', changeDbFormAction);
+        form.querySelector('button[type="submit"][name="login"]').addEventListener('click', changeDbFormAction);
         form.addEventListener('submit', loginDb);
     }
 

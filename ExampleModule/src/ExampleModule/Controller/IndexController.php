@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace ExampleModule\Controller;
@@ -13,6 +14,17 @@ class IndexController extends AbstractActionController
     public function indexAction()
     {
         $view = $this->exampleModuleCommonMetadata(new ViewModel());
+        return $view;
+    }
+
+    public function javascriptAction()
+    {
+        $response = $this->getResponse();
+        $response->getHeaders()->addHeaderLine('Content-Type', 'application/javascript');
+        $response->getHeaders()->addHeaderLine('Content-Language', 'en');
+
+        $view = new ViewModel();
+        $view->setTerminal(true);
         return $view;
     }
 

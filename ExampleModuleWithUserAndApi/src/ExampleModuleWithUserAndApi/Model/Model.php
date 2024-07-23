@@ -1,4 +1,5 @@
 <?php
+
 namespace ExampleModuleWithUserAndApi\Model;
 
 class Model

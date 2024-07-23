@@ -1,11 +1,12 @@
 <?php
+
 declare(strict_types=1);
 
 namespace ExampleModuleWithUserAndApi\Controller;
 
 use Laminas\Mvc\Controller\AbstractRestfulController;
 use Laminas\View\Model\JsonModel;
-use UserAuth\Model\UserInterface;
+use UserAuth\Model\User\UserInterface;
 use UserAuth\Exception\UserException;
 use UserAuth\Exception\InvalidCredentialsException;
 
@@ -102,14 +103,14 @@ class ApiUserLdapController extends AbstractRestfulController
             return new JsonModel(['error' => 'Invalid credentials']);
         } catch(UserException $e) {
             $this->response->setStatusCode(500);
-            return new JsonModel(['error'=>'Unknown error, please try again']);
+            return new JsonModel(['error' => 'Unknown error, please try again']);
         } catch(\Exception $e) {
             $this->response->setStatusCode(500);
-            return new JsonModel(['error'=>'Unknown error, please try again']);
+            return new JsonModel(['error' => 'Unknown error, please try again']);
         }
 
         $this->response->setStatusCode(500);
-        return new JsonModel(['error'=>'Unknown error, please try again']);
+        return new JsonModel(['error' => 'Unknown error, please try again']);
     }
 
     /**

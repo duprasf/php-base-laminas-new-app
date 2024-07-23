@@ -1,4 +1,5 @@
 <?php
+
 namespace ExampleModuleWithUserAndApi\Controller\Plugin;
 
 use Laminas\Mvc\Controller\Plugin\AbstractPlugin;
@@ -18,12 +19,12 @@ class ReturnUserData extends AbstractPlugin
     * @param bool $remember, see above
     * @return \Laminas\View\Model\JsonModel
     */
-    public function __invoke(UserInterface $user, int $length=86400, bool $remember=null)
+    public function __invoke(UserInterface $user, int $length = 86400, bool $remember = null)
     {
         // 2419200 = 28 days, 86400 = 24 hours
         return new JsonModel([
-            'remember'=>$remember,
-            'jwt'=>$user->getJWT($length),
+            'remember' => $remember,
+            'jwt' => $user->getJWT($length),
         ]);
     }
 }
