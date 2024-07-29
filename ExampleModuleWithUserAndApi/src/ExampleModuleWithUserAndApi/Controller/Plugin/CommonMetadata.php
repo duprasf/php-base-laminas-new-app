@@ -65,14 +65,6 @@ class CommonMetadata extends ParentCommonMetadata
         $params = $routeParams;
         $params['locale'] = $otherLang;
         $params['lang'] = $otherLang;
-        $view->setVariable(
-            'switch-lang-url',
-            $url(
-                $routeName,
-                $params,
-                array('locale' => $otherLang, 'translator' => $translator)
-            )
-        );
 
         return $view;
     }
