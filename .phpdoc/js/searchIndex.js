@@ -491,61 +491,6 @@ Search.appendIndex(
             "summary": "This\u0020setter\u0020is\u0020used\u0020by\u0020the\u0020factory\nThe\u0020getter\u0020is\u0020used\u0020within\u0020this\u0020classe",
             "url": "classes/ExampleModuleWithUserAndApi-Model-Model.html#property_pdo"
         },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi\\Model\\User",
-            "name": "User",
-            "summary": "",
-            "url": "classes/ExampleModuleWithUserAndApi-Model-User.html"
-        },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi\\Model\\User\u003A\u003AsetDb\u0028\u0029",
-            "name": "setDb",
-            "summary": "Set\u0020the\u0020PDO\u0020connection\u0020to\u0020manage\u0020your\u0020users\nThis\u0020setter\u0020is\u0020used\u0020by\u0020the\u0020factory",
-            "url": "classes/ExampleModuleWithUserAndApi-Model-User.html#method_setDb"
-        },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi\\Model\\User\u003A\u003AgetDb\u0028\u0029",
-            "name": "getDb",
-            "summary": "Get\u0020the\u0020PDO\u0020connection",
-            "url": "classes/ExampleModuleWithUserAndApi-Model-User.html#method_getDb"
-        },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi\\Model\\User\u003A\u003Aauthenticate\u0028\u0029",
-            "name": "authenticate",
-            "summary": "Authenticate\/login\u0020a\u0020user\u0020using\u0020a\u0020database.\u0020This\u0020particular\u0020implementation\u0020would\u0020use\u0020a\u0020central\nDB\u0020for\u0020user\u0020and\u0020each\u0020app\u0020could\u0020have\u0020a\u0020user\u0020param,\u0020that\u0027s\u0020why\u0020it\u0020uses\u0020a\u0020parentDb\u0020for\u0020authenticating",
-            "url": "classes/ExampleModuleWithUserAndApi-Model-User.html#method_authenticate"
-        },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi\\Model\\User\u003A\u003A_loadUserById\u0028\u0029",
-            "name": "_loadUserById",
-            "summary": "A\u0020method\u0020used\u0020by\u0020loadFromJwt\u0020and\u0020loadFromSession\u0020to\u0020load\u0020the\u0020user\u0020without\u0020validating\u0020credentials",
-            "url": "classes/ExampleModuleWithUserAndApi-Model-User.html#method__loadUserById"
-        },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi\\Model\\User\u003A\u003AloadFromJwt\u0028\u0029",
-            "name": "loadFromJwt",
-            "summary": "Load\u0020a\u0020user\u0020from\u0020the\u0020JWT",
-            "url": "classes/ExampleModuleWithUserAndApi-Model-User.html#method_loadFromJwt"
-        },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi\\Model\\User\u003A\u003AgetDataForJWT\u0028\u0029",
-            "name": "getDataForJWT",
-            "summary": "This\u0020function\u0020is\u0020called\u0020when\u0020trying\u0020to\u0020get\u0020the\u0020JWT",
-            "url": "classes/ExampleModuleWithUserAndApi-Model-User.html#method_getDataForJWT"
-        },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi\\Model\\User\u003A\u003AID_FIELD",
-            "name": "ID_FIELD",
-            "summary": "In\u0020DbUser,\u0020the\u0020ID\u0020Field\u0020is\u0020userId",
-            "url": "classes/ExampleModuleWithUserAndApi-Model-User.html#constant_ID_FIELD"
-        },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi\\Model\\UserLdap",
-            "name": "UserLdap",
-            "summary": "",
-            "url": "classes/ExampleModuleWithUserAndApi-Model-UserLdap.html"
-        },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi\\Model\\UserLdap\u003A\u003Aauthenticate\u0028\u0029",
-            "name": "authenticate",
-            "summary": "Authenticate\/login\u0020a\u0020user",
-            "url": "classes/ExampleModuleWithUserAndApi-Model-UserLdap.html#method_authenticate"
-        },                {
-            "fqsen": "\\ExampleModuleWithUserAndApi\\Model\\UserLdap\u003A\u003AgetDataForJWT\u0028\u0029",
-            "name": "getDataForJWT",
-            "summary": "This\u0020function\u0020is\u0020called\u0020when\u0020trying\u0020to\u0020get\u0020the\u0020JWT",
-            "url": "classes/ExampleModuleWithUserAndApi-Model-UserLdap.html#method_getDataForJWT"
-        },                {
             "fqsen": "\\ActiveDirectory\\Factory\\ActiveDirectoryFactory",
             "name": "ActiveDirectoryFactory",
             "summary": "",
@@ -1046,21 +991,6 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Application-Factory-GcNotifyFactory.html#method___invoke"
         },                {
-            "fqsen": "\\Application\\Factory\\GetLangSwitchUrlFactory",
-            "name": "GetLangSwitchUrlFactory",
-            "summary": "",
-            "url": "classes/Application-Factory-GetLangSwitchUrlFactory.html"
-        },                {
-            "fqsen": "\\Application\\Factory\\GetLangSwitchUrlFactory\u003A\u003AcreateService\u0028\u0029",
-            "name": "createService",
-            "summary": "",
-            "url": "classes/Application-Factory-GetLangSwitchUrlFactory.html#method_createService"
-        },                {
-            "fqsen": "\\Application\\Factory\\GetLangSwitchUrlFactory\u003A\u003A__invoke\u0028\u0029",
-            "name": "__invoke",
-            "summary": "",
-            "url": "classes/Application-Factory-GetLangSwitchUrlFactory.html#method___invoke"
-        },                {
             "fqsen": "\\Application\\Factory\\LangFactory",
             "name": "LangFactory",
             "summary": "",
@@ -1255,6 +1185,56 @@ Search.appendIndex(
             "name": "hidden",
             "summary": "",
             "url": "classes/Application-Model-Breadcrumbs.html#property_hidden"
+        },                {
+            "fqsen": "\\Application\\Model\\EmailerInterface",
+            "name": "EmailerInterface",
+            "summary": "",
+            "url": "classes/Application-Model-EmailerInterface.html"
+        },                {
+            "fqsen": "\\Application\\Model\\EmailerInterface\u003A\u003AsetUseException\u0028\u0029",
+            "name": "setUseException",
+            "summary": "",
+            "url": "classes/Application-Model-EmailerInterface.html#method_setUseException"
+        },                {
+            "fqsen": "\\Application\\Model\\EmailerInterface\u003A\u003AsetOverwriteEmail\u0028\u0029",
+            "name": "setOverwriteEmail",
+            "summary": "",
+            "url": "classes/Application-Model-EmailerInterface.html#method_setOverwriteEmail"
+        },                {
+            "fqsen": "\\Application\\Model\\EmailerInterface\u003A\u003AsetAppName\u0028\u0029",
+            "name": "setAppName",
+            "summary": "",
+            "url": "classes/Application-Model-EmailerInterface.html#method_setAppName"
+        },                {
+            "fqsen": "\\Application\\Model\\EmailerInterface\u003A\u003A__toString\u0028\u0029",
+            "name": "__toString",
+            "summary": "",
+            "url": "classes/Application-Model-EmailerInterface.html#method___toString"
+        },                {
+            "fqsen": "\\Application\\Model\\EmailerInterface\u003A\u003A__invoke\u0028\u0029",
+            "name": "__invoke",
+            "summary": "",
+            "url": "classes/Application-Model-EmailerInterface.html#method___invoke"
+        },                {
+            "fqsen": "\\Application\\Model\\EmailerInterface\u003A\u003AsendAuthenticationEmail\u0028\u0029",
+            "name": "sendAuthenticationEmail",
+            "summary": "",
+            "url": "classes/Application-Model-EmailerInterface.html#method_sendAuthenticationEmail"
+        },                {
+            "fqsen": "\\Application\\Model\\EmailerInterface\u003A\u003AreportException\u0028\u0029",
+            "name": "reportException",
+            "summary": "",
+            "url": "classes/Application-Model-EmailerInterface.html#method_reportException"
+        },                {
+            "fqsen": "\\Application\\Model\\EmailerInterface\u003A\u003AreportError\u0028\u0029",
+            "name": "reportError",
+            "summary": "",
+            "url": "classes/Application-Model-EmailerInterface.html#method_reportError"
+        },                {
+            "fqsen": "\\Application\\Model\\EmailerInterface\u003A\u003AsendEmail\u0028\u0029",
+            "name": "sendEmail",
+            "summary": "",
+            "url": "classes/Application-Model-EmailerInterface.html#method_sendEmail"
         },                {
             "fqsen": "\\Application\\Model\\LanguageAwareTrait",
             "name": "LanguageAwareTrait",
@@ -1661,6 +1641,16 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Application-View-Helper-GetLangSwitchUrl.html#method_getRouteMatch"
         },                {
+            "fqsen": "\\Application\\View\\Helper\\GetLangSwitchUrl\u003A\u003AsetQueryString\u0028\u0029",
+            "name": "setQueryString",
+            "summary": "",
+            "url": "classes/Application-View-Helper-GetLangSwitchUrl.html#method_setQueryString"
+        },                {
+            "fqsen": "\\Application\\View\\Helper\\GetLangSwitchUrl\u003A\u003AgetQueryString\u0028\u0029",
+            "name": "getQueryString",
+            "summary": "",
+            "url": "classes/Application-View-Helper-GetLangSwitchUrl.html#method_getQueryString"
+        },                {
             "fqsen": "\\Application\\View\\Helper\\GetLangSwitchUrl\u003A\u003A__invoke\u0028\u0029",
             "name": "__invoke",
             "summary": "",
@@ -1675,6 +1665,11 @@ Search.appendIndex(
             "name": "route",
             "summary": "",
             "url": "classes/Application-View-Helper-GetLangSwitchUrl.html#property_route"
+        },                {
+            "fqsen": "\\Application\\View\\Helper\\GetLangSwitchUrl\u003A\u003A\u0024queryString",
+            "name": "queryString",
+            "summary": "",
+            "url": "classes/Application-View-Helper-GetLangSwitchUrl.html#property_queryString"
         },                {
             "fqsen": "\\Application\\View\\Helper\\HeadScript",
             "name": "HeadScript",
@@ -1713,7 +1708,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Application\\View\\Helper\\SetSwitchLangUrl",
             "name": "SetSwitchLangUrl",
-            "summary": "This\u0020is\u0020OLD.\u0020It\u0020is\u0020meant\u0020as\u0020a\u0020lecagy\u0020support\u0020for\u0020Stockpile",
+            "summary": "",
             "url": "classes/Application-View-Helper-SetSwitchLangUrl.html"
         },                {
             "fqsen": "\\Application\\View\\Helper\\SetSwitchLangUrl\u003A\u003AsetView\u0028\u0029",
@@ -3916,6 +3911,16 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/UserAuth-Controller-IndexController.html#method_emailLoginValidateTokenAction"
         },                {
+            "fqsen": "\\UserAuth\\Controller\\IndexController\u003A\u003AloadJwtFromSessionAction\u0028\u0029",
+            "name": "loadJwtFromSessionAction",
+            "summary": "",
+            "url": "classes/UserAuth-Controller-IndexController.html#method_loadJwtFromSessionAction"
+        },                {
+            "fqsen": "\\UserAuth\\Controller\\IndexController\u003A\u003ApingAction\u0028\u0029",
+            "name": "pingAction",
+            "summary": "",
+            "url": "classes/UserAuth-Controller-IndexController.html#method_pingAction"
+        },                {
             "fqsen": "\\UserAuth\\Controller\\IndexController\u003A\u003AsetUser\u0028\u0029",
             "name": "setUser",
             "summary": "Set\u0020the\u0020user\u0020that\u0020will\u0020be\u0020used\u0020to\u0020validate\u0020email\u0020token",
@@ -4106,26 +4111,6 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/UserAuth-Exception-WrongPasswordException.html"
         },                {
-            "fqsen": "\\UserAuth\\Factory\\Authenticator\\CredentialsAuthenticatorFactory",
-            "name": "CredentialsAuthenticatorFactory",
-            "summary": "",
-            "url": "classes/UserAuth-Factory-Authenticator-CredentialsAuthenticatorFactory.html"
-        },                {
-            "fqsen": "\\UserAuth\\Factory\\Authenticator\\CredentialsAuthenticatorFactory\u003A\u003A__invoke\u0028\u0029",
-            "name": "__invoke",
-            "summary": "",
-            "url": "classes/UserAuth-Factory-Authenticator-CredentialsAuthenticatorFactory.html#method___invoke"
-        },                {
-            "fqsen": "\\UserAuth\\Factory\\Authenticator\\EmailAuthenticatorFactory",
-            "name": "EmailAuthenticatorFactory",
-            "summary": "",
-            "url": "classes/UserAuth-Factory-Authenticator-EmailAuthenticatorFactory.html"
-        },                {
-            "fqsen": "\\UserAuth\\Factory\\Authenticator\\EmailAuthenticatorFactory\u003A\u003A__invoke\u0028\u0029",
-            "name": "__invoke",
-            "summary": "",
-            "url": "classes/UserAuth-Factory-Authenticator-EmailAuthenticatorFactory.html#method___invoke"
-        },                {
             "fqsen": "\\UserAuth\\Factory\\AuthFactory",
             "name": "AuthFactory",
             "summary": "",
@@ -4195,21 +4180,6 @@ Search.appendIndex(
             "name": "__invoke",
             "summary": "",
             "url": "classes/UserAuth-Factory-UserAuditFactory.html#method___invoke"
-        },                {
-            "fqsen": "\\UserAuth\\Factory\\UserFactory",
-            "name": "UserFactory",
-            "summary": "",
-            "url": "classes/UserAuth-Factory-UserFactory.html"
-        },                {
-            "fqsen": "\\UserAuth\\Factory\\UserFactory\u003A\u003A__invoke\u0028\u0029",
-            "name": "__invoke",
-            "summary": "",
-            "url": "classes/UserAuth-Factory-UserFactory.html#method___invoke"
-        },                {
-            "fqsen": "\\UserAuth\\Factory\\UserFactory\u003A\u003AsetLdap\u0028\u0029",
-            "name": "setLdap",
-            "summary": "",
-            "url": "classes/UserAuth-Factory-UserFactory.html#method_setLdap"
         },                {
             "fqsen": "\\UserAuth\\Factory\\UserLoggerFactory",
             "name": "UserLoggerFactory",
@@ -5196,6 +5166,16 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/UserAuth-Model-User-Authenticator-EmailAuthenticator.html#method_getEmailTokenFieldName"
         },                {
+            "fqsen": "\\UserAuth\\Model\\User\\Authenticator\\EmailAuthenticator\u003A\u003AsetEmailer\u0028\u0029",
+            "name": "setEmailer",
+            "summary": "",
+            "url": "classes/UserAuth-Model-User-Authenticator-EmailAuthenticator.html#method_setEmailer"
+        },                {
+            "fqsen": "\\UserAuth\\Model\\User\\Authenticator\\EmailAuthenticator\u003A\u003AgetEmailer\u0028\u0029",
+            "name": "getEmailer",
+            "summary": "",
+            "url": "classes/UserAuth-Model-User-Authenticator-EmailAuthenticator.html#method_getEmailer"
+        },                {
             "fqsen": "\\UserAuth\\Model\\User\\Authenticator\\EmailAuthenticator\u003A\u003AsetGcNotify\u0028\u0029",
             "name": "setGcNotify",
             "summary": "",
@@ -5236,10 +5216,10 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/UserAuth-Model-User-Authenticator-EmailAuthenticator.html#property_tokenFieldName"
         },                {
-            "fqsen": "\\UserAuth\\Model\\User\\Authenticator\\EmailAuthenticator\u003A\u003A\u0024notify",
-            "name": "notify",
+            "fqsen": "\\UserAuth\\Model\\User\\Authenticator\\EmailAuthenticator\u003A\u003A\u0024emailer",
+            "name": "emailer",
             "summary": "",
-            "url": "classes/UserAuth-Model-User-Authenticator-EmailAuthenticator.html#property_notify"
+            "url": "classes/UserAuth-Model-User-Authenticator-EmailAuthenticator.html#property_emailer"
         },                {
             "fqsen": "\\UserAuth\\Model\\User\\Authenticator\\LdapAuthenticator",
             "name": "LdapAuthenticator",
@@ -5860,6 +5840,11 @@ Search.appendIndex(
             "name": "User",
             "summary": "",
             "url": "classes/UserAuth-Model-User.html"
+        },                {
+            "fqsen": "\\UserAuth\\Model\\User\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "",
+            "url": "classes/UserAuth-Model-User.html#method___construct"
         },                {
             "fqsen": "\\UserAuth\\Model\\User\u003A\u003AsetGcNotify\u0028\u0029",
             "name": "setGcNotify",
@@ -9535,11 +9520,6 @@ Search.appendIndex(
             "name": "Exception",
             "summary": "",
             "url": "namespaces/userauth-exception.html"
-        },                {
-            "fqsen": "\\UserAuth\\Factory\\Authenticator",
-            "name": "Authenticator",
-            "summary": "",
-            "url": "namespaces/userauth-factory-authenticator.html"
         },                {
             "fqsen": "\\UserAuth\\Factory",
             "name": "Factory",
