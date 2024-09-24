@@ -14,6 +14,7 @@ class IndexController extends AbstractActionController
     public function indexAction()
     {
         $view = $this->exampleModuleCommonMetadata(new ViewModel());
+        $view->setVariable('id', $this->params()->fromRoute('id', 1));
         return $view;
     }
 

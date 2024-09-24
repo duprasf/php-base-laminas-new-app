@@ -5,4 +5,7 @@
 $this->metadata['title'] = 'Overwritten title of this page';
 ?>
 <p>This is the index page of ExampleModule</p>
+<?php if($this->id>1):?>
+    <h2>Page <?=$this->id;?></h2>
+<?php endif;?>
 <img src="/example-module/img/cute-kitten-playing.jpg" alt="Cute Kitten Fighting">

@@ -1,0 +1,10 @@
+<div class="list-group">
+    <?php foreach($this->links as $cr):?>
+        <?php $isActive = $cr['href'] == $this->url(reuseMatchedParams:true);?>
+        <a href="<?=$cr['href'];?>" class="list-group-item<?=$isActive?' active':'';?>"><?=$cr['text'];?>
+            <?php if(isset($cr['count']) && $cr['count']):?>
+                <span class="badge"><?=$cr['count'];?></span>
+            <?php endif;?>
+        </a>
+    <?php endforeach;?>
+</div>

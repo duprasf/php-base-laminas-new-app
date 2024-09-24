@@ -52,6 +52,20 @@ return [
                         ],
                         'may_terminate' => true,
                         'child_routes' => [
+                            'page'=>[
+                                'type'    => Segment::class,
+                                'options' => [
+                                    'route'    => '/[:id]',
+                                    'defaults' => [
+                                        'controller' => Controller\IndexController::class,
+                                        'action'     => 'index',
+                                    ],
+                                    'constraints'=>[
+                                        'id'=>'\d+',
+                                    ],
+                                ],
+                                'may_terminate' => true,
+                            ],
                             'javascript' => [
                                 'type'    => Literal::class,
                                 'options' => [
@@ -86,12 +100,8 @@ return [
         'factories' => [
             Model\Model::class => Factory\ModelFactory::class,
         ],
-        'invokables' => [
-        ],
     ],
     'view_helpers' => [
-        'invokables' => [
-        ],
         'factories' => [
         ],
     ],

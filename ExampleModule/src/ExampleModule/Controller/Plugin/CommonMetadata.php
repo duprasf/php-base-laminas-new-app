@@ -89,6 +89,39 @@ class CommonMetadata extends ParentCommonMetadata
         $params['locale'] = $otherLang;
         $params['lang'] = $otherLang;
 
+        /////  Adding a side menu
+        $view->setVariable('sideMenuPartial', 'menu/menu');
+        $view->setVariable('sideMenuPartialOptions', [
+            'links'=> [
+                [
+                    'href'=>$url('ExampleModule/first-page'),
+                    'text'=>$translator->translate('Home'),
+                    'count'=>random_int(0, 10),
+                ],
+                [
+                    'href'=>$url('ExampleModule/first-page/page', ['id'=>2]),
+                    'text'=>$translator->translate('Page two'),
+                    'count'=>random_int(0, 50),
+                ],
+                [
+                    'href'=>$url('ExampleModule/first-page/page', ['id'=>3]),
+                    'text'=>$translator->translate('Page three'),
+                    'count'=>random_int(0, 100),
+                ],
+                [
+                    'href'=>$url('ExampleModule/first-page/page', ['id'=>4]),
+                    'text'=>$translator->translate('Page four'),
+                    'count'=>random_int(0, 30),
+                ],
+                [
+                    'href'=>$url('ExampleModule/first-page/page', ['id'=>5]),
+                    'text'=>$translator->translate('Page five'),
+                    'count'=>random_int(0, 10),
+                ],
+
+        ]]);
+        $view->setVariable('sideMenuLocation', 'left');
+
         return $view;
     }
 }
