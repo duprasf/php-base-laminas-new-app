@@ -30,6 +30,18 @@ should show up in your browser.
 Remember to change the route in ```/config/module.config.php```, the route for the
 ExampleModule is currently ```/en/my-app```
 
+## SSH support
+If your app required SSH connection to other server, copy these lines in your own dockerfile.
+The last two lines should be at the bottom of your dockerfile and server to clean the image
+so you have the smallest image possible.
+```
+RUN apt-get update && apt-get install -y libssh2-1-dev libssh2-1 \
+    && pecl install ssh2-1.4.1 \
+    && docker-php-ext-enable ssh2
+# Clean up the image
+RUN rm -rf /var/lib/apt/lists/*
+```
+
 ## Variable
 - ANALYTICS_USE_ADOBE_WITH_PERSONAL_INFORMATION if true, the Adobe Analytics code will be added to the page. This script if required if your application gather personal information from the user.
 - ANALYTICS_USE_ADOBE if true, will include the general code for Adobe Analytics.
@@ -113,32 +125,32 @@ copy to /environment/app.env (so ```cp environment/app.env.dist environment/app.
 
 That file lists all the environment variables to be set in your container.
 
-PHP_DEV_ENV, in a development environment, you should set this environment variable 
+PHP_DEV_ENV, in a development environment, you should set this environment variable
 to 1. This will display the errors and disabled the OP cache.
 
-JWT_SECRET, this variable is the salt use to generate JWT (JavaScript Web Token) and should be 
+JWT_SECRET, this variable is the salt use to generate JWT (JavaScript Web Token) and should be
 a unique very long string of random characters.
 
 GC_NOTIFY_API_KEY, if your project uses Gc Notify, this is the variable to use for your API Key
 
-GC_NOTIFY_ERROR_REPORTING_API_KEY, if your application sends emails to report errors and exceptions 
-you should setup an API Key in the [HC Error Reporting](https://notification.canada.ca/services/5d5e1084-e5fd-4583-a328-dd4412a29eba) 
+GC_NOTIFY_ERROR_REPORTING_API_KEY, if your application sends emails to report errors and exceptions
+you should setup an API Key in the [HC Error Reporting](https://notification.canada.ca/services/5d5e1084-e5fd-4583-a328-dd4412a29eba)
 service of GC Notify. Templates are already made to report the error.
 
 GC_NOTIFY_AUTH_API_KEY, lastly, if you are using email as part of your authentication system, to
 send a validation email or even to sends a link to login, you can use the [Authentication Service](https://notification.canada.ca/services/a5f58806-fe14-49f4-80f4-1df200866df5)
 of GC Notify. Create your API Key and set it to this variable.
 
-GC_NOTIFY_TEMPATES, you can set a list of your template in json string. The format should be 
-{"templateName":"ID"}. This will allow you to use the "templateName" in your code instead of the 
+GC_NOTIFY_TEMPATES, you can set a list of your template in json string. The format should be
+{"templateName":"ID"}. This will allow you to use the "templateName" in your code instead of the
 GC Notify template ID. This will keep things cleaner in your code and if your ID changes at some point,
 your code will not require changes.
 
-GC_NOTIFY_APP_NAME, when using the Auth or Error Reporting service, this variable will be used to identify your 
+GC_NOTIFY_APP_NAME, when using the Auth or Error Reporting service, this variable will be used to identify your
 application.
 
-GC_NOTIFY_OVERWRITE_ALL_EMAIL, this is a variable for debugging only. When this variable is set, all 
-emails send by the GC Notify class will be sent to this value instead of the recipients specified in 
+GC_NOTIFY_OVERWRITE_ALL_EMAIL, this is a variable for debugging only. When this variable is set, all
+emails send by the GC Notify class will be sent to this value instead of the recipients specified in
 the code.
 
 Other variables that you can set can be found in the [PHP base image](https://github.hc-sc.gc.ca/hs/php-base-docker#params) documentation.
@@ -166,12 +178,12 @@ The UserAuth module is a basic authentication module. It is enabled by default, 
 use it by using the standard classes or extending them to add your own functionnalities.
 
 #### Authenticators
-The user class now requires an authenticator object. That object must implements the 
-[AuthenticatorInterface](https://github.hc-sc.gc.ca/hs/php-base-laminas/blob/master/code/module/UserAuth/src/UserAuth/Model/User/Authenticator/AuthenticatorInterface.php) and should extends the 
+The user class now requires an authenticator object. That object must implements the
+[AuthenticatorInterface](https://github.hc-sc.gc.ca/hs/php-base-laminas/blob/master/code/module/UserAuth/src/UserAuth/Model/User/Authenticator/AuthenticatorInterface.php) and should extends the
 [AbstractAuthenticator](https://github.hc-sc.gc.ca/hs/php-base-laminas/blob/master/code/module/UserAuth/src/UserAuth/Model/User/Authenticator/AbstractAuthenticator.php). Extending the Abstract class
 is not mandatory but it reduce duplication of code.
 
-Two Authenticators are available by default in this solution, the CredentialsAuthenticator 
+Two Authenticators are available by default in this solution, the CredentialsAuthenticator
 and the EmailAuthenticator.
 
 All Authenticator has a setting to allow or deny self registration of a new user.
@@ -180,7 +192,7 @@ an admin must create the user (no self registration), you can, in your factory,
 call ```$authenticator->setCanRegister(false);``` to disable the self-registration.
 
 ##### CredentialsAuthenticator
-The CredentialsAuthenticator will use the normal combination of Username and Password to 
+The CredentialsAuthenticator will use the normal combination of Username and Password to
 determine the identity of an user. Of course, the Username can be the email as is the standard
 for most application now.
 
@@ -189,26 +201,26 @@ The EmailAuthenticator will send an email with a link to confirm the identity of
 is half a step between credentials and 2FA since it requires the user to have access to the
 email. This is very safe to use in corporate applications since @hc-sc.gc.ca is well secured.
 
-An application using the EmailAuthenticator will usually remember users for a much longer 
+An application using the EmailAuthenticator will usually remember users for a much longer
 time then the credentials one.
 
 ##### LdapAuthenticator
 The LdapAuthenticator will use Active Directory (or any other LDAP source) to validate identity.
 You can only use LdapAuthenticator in conjoncture with the LdapStorage exclusively.
 
-Using LdapAuthenticator is pretty limiting since we don't have the ability to write in AD, 
-we can only read. This means we cannot register new users in LDAP, update users or anything else, 
+Using LdapAuthenticator is pretty limiting since we don't have the ability to write in AD,
+we can only read. This means we cannot register new users in LDAP, update users or anything else,
 we cannot do more than authenticate the user. All other user properties (if any) will need
 to be stored elsewhere. A new storage and authenticator could be created to use the credentials
 of LDAP but another storage for all other information.
 
 ##### Building your own Authenticator
 Building your own authenticator is pretty simple, you can copy one of the existing authenticator
-and modify it to suit your need. When creating your user, you may pass your own authenticator 
+and modify it to suit your need. When creating your user, you may pass your own authenticator
 as long as it implements the [AuthenticatorInterface](https://github.hc-sc.gc.ca/hs/php-base-laminas/blob/master/code/module/UserAuth/src/UserAuth/Model/User/Authenticator/AuthenticatorInterface.php).
 
-Why build your own? Well, let says you need to support 2FA (Two-factor authentication) where 
-the user must provide their username and password followed by a one-time code sent by email or text. 
+Why build your own? Well, let says you need to support 2FA (Two-factor authentication) where
+the user must provide their username and password followed by a one-time code sent by email or text.
 A solution like this is not currently supported, but could be relatively easy to implement.
 If you do implement another Authenticator, please create pull request so everyone can use it in the future.
 
@@ -220,10 +232,10 @@ Examples of other Authenticator that could be created when using:
 
 #### Storage
 The second part of a user is to store the user information somewhere. Could you have a ephemeral that
-exists only in the session, yes, but what would be the point of such user... All Storage objects must 
-implements the [StorageInterface](https://github.hc-sc.gc.ca/hs/php-base-laminas/blob/master/code/module/UserAuth/src/UserAuth/Model/User/Storage/StorageInterface.php) 
-and should extends the 
-[AbstractStorage](https://github.hc-sc.gc.ca/hs/php-base-laminas/blob/master/code/module/UserAuth/src/UserAuth/Model/User/Storage/AbstractStorage.php). 
+exists only in the session, yes, but what would be the point of such user... All Storage objects must
+implements the [StorageInterface](https://github.hc-sc.gc.ca/hs/php-base-laminas/blob/master/code/module/UserAuth/src/UserAuth/Model/User/Storage/StorageInterface.php)
+and should extends the
+[AbstractStorage](https://github.hc-sc.gc.ca/hs/php-base-laminas/blob/master/code/module/UserAuth/src/UserAuth/Model/User/Storage/AbstractStorage.php).
 Extending the Abstract class is not mandatory but it reduce duplication of code.
 
 Four storage type is available by default in this solution, MySQLStorage, MongodbStorage,
@@ -318,7 +330,7 @@ $mongo = new MongoDb(
         'authSource'=>$dbName,
     ],
 );
-// Since this class only touch one Database, you need to pass only that DB. 
+// Since this class only touch one Database, you need to pass only that DB.
 $storage->setDatabaseConnection($mongo->$dbName);
 // This is the collection (table) where the users are stored
 $storage->setCollectionName('users');
@@ -337,17 +349,17 @@ $obj->setStorage($storage);
 ```
 
 ##### FileStorage
-This is a flat file storage. Meaning your users are stored in JSON all in plain text, the 
+This is a flat file storage. Meaning your users are stored in JSON all in plain text, the
 password will be encrypted, but the rest of the information will not be encrypted.
 
 The configuration is much simpler for a file, all you have to do is give the path to the
-file and the name of the field for the ID (ex: email, username, etc.). By default the name 
+file and the name of the field for the ID (ex: email, username, etc.). By default the name
 of the file must be in the /var/www/ folder, this is to prevent some hacker overwriting system
 files. If you want your file to be outside /var/www/ just extends the FileStorage class and
 overwrite the setFilename method with your own validation (or just use a static filepath).
 
 *NOTE:* The file used to store your user should be kept private and should persist. Meaning
-if you are using a container, that file should be mounted from an outside source. If 
+if you are using a container, that file should be mounted from an outside source. If
 you do not, you will lose all your users between container rebuild.
 
 ```php
@@ -382,34 +394,34 @@ You will need to pass an ActiveDirectory object to setActiveDirectoryConnection 
 $storage = new $requestName();
 $storage->setActiveDirectoryConnection($container->get(ActiveDirectory::class));
 ```
-The ActiveDirectory object comes from the [ActiveDirectory](https://github.hc-sc.gc.ca/hs/php-base-laminas/tree/master/code/module/ActiveDirectory) 
+The ActiveDirectory object comes from the [ActiveDirectory](https://github.hc-sc.gc.ca/hs/php-base-laminas/tree/master/code/module/ActiveDirectory)
 module and is configured by the [factory](https://github.hc-sc.gc.ca/hs/php-base-laminas/blob/master/code/module/ActiveDirectory/src/ActiveDirectory/Factory/ActiveDirectoryFactory.php)
 using the environment variable LAMINAS_LDAP_CONNECTIONS or a laminas service called 'ldap-options'.
-The environment variable must be a JSON string of an array of connections, the service, must be the array 
+The environment variable must be a JSON string of an array of connections, the service, must be the array
 of connections. The array would look like this:
 ```php
 [
     [
-        'host' => 'HCQCK1AWVDCP001.ad.hc-sc.gc.ca', 
-        'baseDn' => 'OU=User Accounts,OU=Accounts,OU=Health Canada,DC=ad,DC=hc-sc,DC=gc,DC=ca', 
-        'username' => 'AD\sv-mySource-LDAP', 
+        'host' => 'HCQCK1AWVDCP001.ad.hc-sc.gc.ca',
+        'baseDn' => 'OU=User Accounts,OU=Accounts,OU=Health Canada,DC=ad,DC=hc-sc,DC=gc,DC=ca',
+        'username' => 'AD\sv-mySource-LDAP',
         'password' => '****password****',
-    ], 
-    [
-        'host' => 'HCONK1VWVDCP002.ad.hc-sc.gc.ca', 
-        'baseDn' => 'OU=User Accounts,OU=Accounts,OU=Health Canada,DC=ad,DC=hc-sc,DC=gc,DC=ca', 
-        'username' => 'AD\sv-mySource-LDAP', 
-        'password' => '****password****', 
     ],
     [
-        'host' => 'HCONK1VWVDCP005.ad.hc-sc.gc.ca', 
-        'baseDn' => 'OU=User Accounts,OU=Accounts,OU=Health Canada,DC=ad,DC=hc-sc,DC=gc,DC=ca', 
-        'username' => 'AD\sv-mySource-LDAP', 
-        'password' => '****password****', 
+        'host' => 'HCONK1VWVDCP002.ad.hc-sc.gc.ca',
+        'baseDn' => 'OU=User Accounts,OU=Accounts,OU=Health Canada,DC=ad,DC=hc-sc,DC=gc,DC=ca',
+        'username' => 'AD\sv-mySource-LDAP',
+        'password' => '****password****',
     ],
     [
-        'host' => 'r6ldap01.hc-sc.gc.ca', 
-        'baseDn' => 'OU=HC-SC,O=GC,C=CA', 
+        'host' => 'HCONK1VWVDCP005.ad.hc-sc.gc.ca',
+        'baseDn' => 'OU=User Accounts,OU=Accounts,OU=Health Canada,DC=ad,DC=hc-sc,DC=gc,DC=ca',
+        'username' => 'AD\sv-mySource-LDAP',
+        'password' => '****password****',
+    ],
+    [
+        'host' => 'r6ldap01.hc-sc.gc.ca',
+        'baseDn' => 'OU=HC-SC,O=GC,C=CA',
         'port' => 389,
     ]
 ]
