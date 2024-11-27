@@ -506,24 +506,9 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/ActiveDirectory-Model-ActiveDirectory.html"
         },                {
-            "fqsen": "\\ActiveDirectory\\Model\\ActiveDirectory\u003A\u003AsetLdaps\u0028\u0029",
-            "name": "setLdaps",
-            "summary": "Set\u0020a\u0020list\u0020of\u0020LDAP\u0020servers\u0020to\u0020connect\u0020to",
-            "url": "classes/ActiveDirectory-Model-ActiveDirectory.html#method_setLdaps"
-        },                {
-            "fqsen": "\\ActiveDirectory\\Model\\ActiveDirectory\u003A\u003AgetLdaps\u0028\u0029",
-            "name": "getLdaps",
-            "summary": "Get\u0020all\u0020LDAPs\u0020objects",
-            "url": "classes/ActiveDirectory-Model-ActiveDirectory.html#method_getLdaps"
-        },                {
-            "fqsen": "\\ActiveDirectory\\Model\\ActiveDirectory\u003A\u003AgetLdap\u0028\u0029",
-            "name": "getLdap",
-            "summary": "Generator\u0020that\u0020returns\u0020each\u0020LDAP\u0020config\u0020one\u0020by\u0020one",
-            "url": "classes/ActiveDirectory-Model-ActiveDirectory.html#method_getLdap"
-        },                {
             "fqsen": "\\ActiveDirectory\\Model\\ActiveDirectory\u003A\u003AvalidateUsername\u0028\u0029",
             "name": "validateUsername",
-            "summary": "Check\u0020if\u0020a\u0020username\u0020exists,\u0020return\u0020true\u0020as\u0020soon\u0020as\u0020a\u0020match\u0020is\u0020found",
+            "summary": "Check\u0020if\u0020a\u0020username\u0020exists,\u0020return\u0020the\u0020username\u0020as\u0020soon\u0020as\u0020a\u0020match\u0020is\u0020found",
             "url": "classes/ActiveDirectory-Model-ActiveDirectory.html#method_validateUsername"
         },                {
             "fqsen": "\\ActiveDirectory\\Model\\ActiveDirectory\u003A\u003AvalidateCredentials\u0028\u0029",
@@ -566,6 +551,21 @@ Search.appendIndex(
             "summary": "Get\u0020a\u0020group\u0020name\u0020from\u0020DN",
             "url": "classes/ActiveDirectory-Model-ActiveDirectory.html#method_getGroupName"
         },                {
+            "fqsen": "\\ActiveDirectory\\Model\\ActiveDirectory\u003A\u003AsetLdaps\u0028\u0029",
+            "name": "setLdaps",
+            "summary": "Set\u0020a\u0020list\u0020of\u0020LDAP\u0020servers\u0020to\u0020connect\u0020to",
+            "url": "classes/ActiveDirectory-Model-ActiveDirectory.html#method_setLdaps"
+        },                {
+            "fqsen": "\\ActiveDirectory\\Model\\ActiveDirectory\u003A\u003AgetLdaps\u0028\u0029",
+            "name": "getLdaps",
+            "summary": "Get\u0020all\u0020LDAPs\u0020objects",
+            "url": "classes/ActiveDirectory-Model-ActiveDirectory.html#method_getLdaps"
+        },                {
+            "fqsen": "\\ActiveDirectory\\Model\\ActiveDirectory\u003A\u003AgetLdap\u0028\u0029",
+            "name": "getLdap",
+            "summary": "Generator\u0020that\u0020returns\u0020each\u0020LDAP\u0020config\u0020one\u0020by\u0020one",
+            "url": "classes/ActiveDirectory-Model-ActiveDirectory.html#method_getLdap"
+        },                {
             "fqsen": "\\ActiveDirectoryTest\\ActiveDirectoryTest",
             "name": "ActiveDirectoryTest",
             "summary": "",
@@ -576,50 +576,80 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/ActiveDirectoryTest-ActiveDirectoryTest.html#method_setUp"
         },                {
-            "fqsen": "\\ActiveDirectoryTest\\ActiveDirectoryTest\u003A\u003AtestValidateUsername\u0028\u0029",
-            "name": "testValidateUsername",
+            "fqsen": "\\ActiveDirectoryTest\\ActiveDirectoryTest\u003A\u003AisReadyForLdap\u0028\u0029",
+            "name": "isReadyForLdap",
             "summary": "",
-            "url": "classes/ActiveDirectoryTest-ActiveDirectoryTest.html#method_testValidateUsername"
+            "url": "classes/ActiveDirectoryTest-ActiveDirectoryTest.html#method_isReadyForLdap"
         },                {
-            "fqsen": "\\ActiveDirectoryTest\\ActiveDirectoryTest\u003A\u003AtestInvalidateUsernames\u0028\u0029",
-            "name": "testInvalidateUsernames",
+            "fqsen": "\\ActiveDirectoryTest\\ActiveDirectoryTest\u003A\u003AtestActiveDirectoryValidateUsername\u0028\u0029",
+            "name": "testActiveDirectoryValidateUsername",
             "summary": "",
-            "url": "classes/ActiveDirectoryTest-ActiveDirectoryTest.html#method_testInvalidateUsernames"
+            "url": "classes/ActiveDirectoryTest-ActiveDirectoryTest.html#method_testActiveDirectoryValidateUsername"
+        },                {
+            "fqsen": "\\ActiveDirectoryTest\\ActiveDirectoryTest\u003A\u003AtestActiveDirectoryGetByEmail\u0028\u0029",
+            "name": "testActiveDirectoryGetByEmail",
+            "summary": "",
+            "url": "classes/ActiveDirectoryTest-ActiveDirectoryTest.html#method_testActiveDirectoryGetByEmail"
+        },                {
+            "fqsen": "\\ActiveDirectoryTest\\ActiveDirectoryTest\u003A\u003AtestActiveDirectoryGetByUsername\u0028\u0029",
+            "name": "testActiveDirectoryGetByUsername",
+            "summary": "",
+            "url": "classes/ActiveDirectoryTest-ActiveDirectoryTest.html#method_testActiveDirectoryGetByUsername"
+        },                {
+            "fqsen": "\\ActiveDirectoryTest\\ActiveDirectoryTest\u003A\u003AtestActiveDirectoryInvalidateUsernames\u0028\u0029",
+            "name": "testActiveDirectoryInvalidateUsernames",
+            "summary": "",
+            "url": "classes/ActiveDirectoryTest-ActiveDirectoryTest.html#method_testActiveDirectoryInvalidateUsernames"
+        },                {
+            "fqsen": "\\ActiveDirectoryTest\\ActiveDirectoryTest\u003A\u003A\u0024emailToTest",
+            "name": "emailToTest",
+            "summary": "",
+            "url": "classes/ActiveDirectoryTest-ActiveDirectoryTest.html#property_emailToTest"
+        },                {
+            "fqsen": "\\ActiveDirectoryTest\\ActiveDirectoryTest\u003A\u003A\u0024usernameToTest",
+            "name": "usernameToTest",
+            "summary": "",
+            "url": "classes/ActiveDirectoryTest-ActiveDirectoryTest.html#property_usernameToTest"
+        },                {
+            "fqsen": "\\ActiveDirectoryTest\\ActiveDirectoryTest\u003A\u003A\u0024readyForLdap",
+            "name": "readyForLdap",
+            "summary": "",
+            "url": "classes/ActiveDirectoryTest-ActiveDirectoryTest.html#property_readyForLdap"
         },                {
             "fqsen": "\\Application\\Module",
             "name": "Module",
             "summary": "Base\u0020configuration\u0020class\u0020for\u0020the\u0020Application\u0020module.\u0020This\u0020is\u0020the\u0020namespace\u0020for\u0020generic\u0020features",
             "url": "classes/Application-Module.html"
         },                {
-            "fqsen": "\\Application\\Command\\Cronjob",
-            "name": "Cronjob",
+            "fqsen": "\\Application\\Command\\GeneratesAutoloadMap",
+            "name": "GeneratesAutoloadMap",
             "summary": "",
-            "url": "classes/Application-Command-Cronjob.html"
+            "url": "classes/Application-Command-GeneratesAutoloadMap.html"
         },                {
-            "fqsen": "\\Application\\Command\\Cronjob\u003A\u003AsetEventManager\u0028\u0029",
-            "name": "setEventManager",
-            "summary": "should\u0020be\u0020used\u0020in\u0020the\u0020factory",
-            "url": "classes/Application-Command-Cronjob.html#method_setEventManager"
-        },                {
-            "fqsen": "\\Application\\Command\\Cronjob\u003A\u003AgetEventManager\u0028\u0029",
-            "name": "getEventManager",
-            "summary": "Get\u0020the\u0020EventManager\u0020to\u0020triger\u0020for\u0020different\u0020events",
-            "url": "classes/Application-Command-Cronjob.html#method_getEventManager"
-        },                {
-            "fqsen": "\\Application\\Command\\Cronjob\u003A\u003Aconfigure\u0028\u0029",
+            "fqsen": "\\Application\\Command\\GeneratesAutoloadMap\u003A\u003Aconfigure\u0028\u0029",
             "name": "configure",
             "summary": "",
-            "url": "classes/Application-Command-Cronjob.html#method_configure"
+            "url": "classes/Application-Command-GeneratesAutoloadMap.html#method_configure"
         },                {
-            "fqsen": "\\Application\\Command\\Cronjob\u003A\u003Aexecute\u0028\u0029",
+            "fqsen": "\\Application\\Command\\GeneratesAutoloadMap\u003A\u003Aexecute\u0028\u0029",
             "name": "execute",
             "summary": "",
-            "url": "classes/Application-Command-Cronjob.html#method_execute"
+            "url": "classes/Application-Command-GeneratesAutoloadMap.html#method_execute"
         },                {
-            "fqsen": "\\Application\\Command\\Cronjob\u003A\u003A\u0024defaultName",
+            "fqsen": "\\Application\\Command\\GeneratesAutoloadMap\u003A\u003A\u0024defaultName",
             "name": "defaultName",
             "summary": "",
-            "url": "classes/Application-Command-Cronjob.html#property_defaultName"
+            "url": "classes/Application-Command-GeneratesAutoloadMap.html#property_defaultName"
+        },                {
+            "fqsen": "\\Application\\Controller\\CronjobController",
+            "name": "CronjobController",
+            "summary": "",
+            "url": "classes/Application-Controller-CronjobController.html"
+        },                {
+            "fqsen": "\\Application\\Controller\\CronjobController\u003A\u003AcronjobAction\u0028\u0029",
+            "name": "cronjobAction",
+            "summary": "",
+            "url": "classes/Application-Controller-CronjobController.html#method_cronjobAction"
         },                {
             "fqsen": "\\Application\\Controller\\IndexController",
             "name": "IndexController",
@@ -665,6 +695,86 @@ Search.appendIndex(
             "name": "loadBaseScript",
             "summary": "",
             "url": "classes/Application-Controller-IndexController.html#property_loadBaseScript"
+        },                {
+            "fqsen": "\\Application\\Controller\\Plugin\\CommonApiExceptionReturn",
+            "name": "CommonApiExceptionReturn",
+            "summary": "",
+            "url": "classes/Application-Controller-Plugin-CommonApiExceptionReturn.html"
+        },                {
+            "fqsen": "\\Application\\Controller\\Plugin\\CommonApiExceptionReturn\u003A\u003A__invoke\u0028\u0029",
+            "name": "__invoke",
+            "summary": "",
+            "url": "classes/Application-Controller-Plugin-CommonApiExceptionReturn.html#method___invoke"
+        },                {
+            "fqsen": "\\Application\\Controller\\Plugin\\CommonApiExceptionReturn\u003A\u003AsetLang\u0028\u0029",
+            "name": "setLang",
+            "summary": "",
+            "url": "classes/Application-Controller-Plugin-CommonApiExceptionReturn.html#method_setLang"
+        },                {
+            "fqsen": "\\Application\\Controller\\Plugin\\CommonApiExceptionReturn\u003A\u003AgetLang\u0028\u0029",
+            "name": "getLang",
+            "summary": "",
+            "url": "classes/Application-Controller-Plugin-CommonApiExceptionReturn.html#method_getLang"
+        },                {
+            "fqsen": "\\Application\\Controller\\Plugin\\CommonApiExceptionReturn\u003A\u003AsetUrlObj\u0028\u0029",
+            "name": "setUrlObj",
+            "summary": "",
+            "url": "classes/Application-Controller-Plugin-CommonApiExceptionReturn.html#method_setUrlObj"
+        },                {
+            "fqsen": "\\Application\\Controller\\Plugin\\CommonApiExceptionReturn\u003A\u003AgetUrlObj\u0028\u0029",
+            "name": "getUrlObj",
+            "summary": "",
+            "url": "classes/Application-Controller-Plugin-CommonApiExceptionReturn.html#method_getUrlObj"
+        },                {
+            "fqsen": "\\Application\\Controller\\Plugin\\CommonApiExceptionReturn\u003A\u003A\u0024lang",
+            "name": "lang",
+            "summary": "",
+            "url": "classes/Application-Controller-Plugin-CommonApiExceptionReturn.html#property_lang"
+        },                {
+            "fqsen": "\\Application\\Controller\\Plugin\\CommonApiExceptionReturn\u003A\u003A\u0024url",
+            "name": "url",
+            "summary": "",
+            "url": "classes/Application-Controller-Plugin-CommonApiExceptionReturn.html#property_url"
+        },                {
+            "fqsen": "\\Application\\Controller\\Plugin\\CommonApiReturn",
+            "name": "CommonApiReturn",
+            "summary": "",
+            "url": "classes/Application-Controller-Plugin-CommonApiReturn.html"
+        },                {
+            "fqsen": "\\Application\\Controller\\Plugin\\CommonApiReturn\u003A\u003A__invoke\u0028\u0029",
+            "name": "__invoke",
+            "summary": "",
+            "url": "classes/Application-Controller-Plugin-CommonApiReturn.html#method___invoke"
+        },                {
+            "fqsen": "\\Application\\Controller\\Plugin\\CommonApiReturn\u003A\u003AsetLang\u0028\u0029",
+            "name": "setLang",
+            "summary": "",
+            "url": "classes/Application-Controller-Plugin-CommonApiReturn.html#method_setLang"
+        },                {
+            "fqsen": "\\Application\\Controller\\Plugin\\CommonApiReturn\u003A\u003AgetLang\u0028\u0029",
+            "name": "getLang",
+            "summary": "",
+            "url": "classes/Application-Controller-Plugin-CommonApiReturn.html#method_getLang"
+        },                {
+            "fqsen": "\\Application\\Controller\\Plugin\\CommonApiReturn\u003A\u003AsetUrlObj\u0028\u0029",
+            "name": "setUrlObj",
+            "summary": "",
+            "url": "classes/Application-Controller-Plugin-CommonApiReturn.html#method_setUrlObj"
+        },                {
+            "fqsen": "\\Application\\Controller\\Plugin\\CommonApiReturn\u003A\u003AgetUrlObj\u0028\u0029",
+            "name": "getUrlObj",
+            "summary": "",
+            "url": "classes/Application-Controller-Plugin-CommonApiReturn.html#method_getUrlObj"
+        },                {
+            "fqsen": "\\Application\\Controller\\Plugin\\CommonApiReturn\u003A\u003A\u0024lang",
+            "name": "lang",
+            "summary": "",
+            "url": "classes/Application-Controller-Plugin-CommonApiReturn.html#property_lang"
+        },                {
+            "fqsen": "\\Application\\Controller\\Plugin\\CommonApiReturn\u003A\u003A\u0024url",
+            "name": "url",
+            "summary": "",
+            "url": "classes/Application-Controller-Plugin-CommonApiReturn.html#property_url"
         },                {
             "fqsen": "\\Application\\Controller\\Plugin\\CommonMetadata",
             "name": "CommonMetadata",
@@ -901,25 +1011,25 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Application-Exception-MetadataException.html"
         },                {
-            "fqsen": "\\Application\\Factory\\Command\\CronjobCommandFactory",
-            "name": "CronjobCommandFactory",
+            "fqsen": "\\Application\\Factory\\Controller\\ControllerFactory",
+            "name": "ControllerFactory",
             "summary": "",
-            "url": "classes/Application-Factory-Command-CronjobCommandFactory.html"
+            "url": "classes/Application-Factory-Controller-ControllerFactory.html"
         },                {
-            "fqsen": "\\Application\\Factory\\Command\\CronjobCommandFactory\u003A\u003A__invoke\u0028\u0029",
+            "fqsen": "\\Application\\Factory\\Controller\\ControllerFactory\u003A\u003A__invoke\u0028\u0029",
             "name": "__invoke",
             "summary": "",
-            "url": "classes/Application-Factory-Command-CronjobCommandFactory.html#method___invoke"
+            "url": "classes/Application-Factory-Controller-ControllerFactory.html#method___invoke"
         },                {
-            "fqsen": "\\OAuth\\Factory\\Controller\\IndexControllerFactory",
+            "fqsen": "\\Application\\Factory\\Controller\\IndexControllerFactory",
             "name": "IndexControllerFactory",
             "summary": "",
-            "url": "classes/OAuth-Factory-Controller-IndexControllerFactory.html"
+            "url": "classes/Application-Factory-Controller-IndexControllerFactory.html"
         },                {
-            "fqsen": "\\OAuth\\Factory\\Controller\\IndexControllerFactory\u003A\u003A__invoke\u0028\u0029",
+            "fqsen": "\\Application\\Factory\\Controller\\IndexControllerFactory\u003A\u003A__invoke\u0028\u0029",
             "name": "__invoke",
             "summary": "",
-            "url": "classes/OAuth-Factory-Controller-IndexControllerFactory.html#method___invoke"
+            "url": "classes/Application-Factory-Controller-IndexControllerFactory.html#method___invoke"
         },                {
             "fqsen": "\\Application\\Factory\\Controller\\Plugin\\CommonMetadataFactory",
             "name": "CommonMetadataFactory",
@@ -960,6 +1070,16 @@ Search.appendIndex(
             "name": "__invoke",
             "summary": "Get\u0020the\u0020Lang\u0020variable.\u0020By\u0020default\u0020the\u0020lang\u0020variable\u0020is\u0020sent\u0020to\u0020layout\u0020and\u0020view\u0020but\u0020there\nis\u0020no\u0020way\u0020to\u0020have\u0020a\u0020variable\u0020in\u0020controller,\u0020this\u0020is\u0020a\u0020subtitute",
             "url": "classes/Application-Factory-Controller-Plugin-LangFactory.html#method___invoke"
+        },                {
+            "fqsen": "\\Application\\Factory\\Controller\\Plugin\\PluginFactory",
+            "name": "PluginFactory",
+            "summary": "",
+            "url": "classes/Application-Factory-Controller-Plugin-PluginFactory.html"
+        },                {
+            "fqsen": "\\Application\\Factory\\Controller\\Plugin\\PluginFactory\u003A\u003A__invoke\u0028\u0029",
+            "name": "__invoke",
+            "summary": "",
+            "url": "classes/Application-Factory-Controller-Plugin-PluginFactory.html#method___invoke"
         },                {
             "fqsen": "\\Application\\Factory\\DomainFactory",
             "name": "DomainFactory",
@@ -1081,6 +1201,56 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Application-Factory-View-Helper-UrlFactory.html#method___invoke"
         },                {
+            "fqsen": "\\Application\\Interface\\EmailerInterface",
+            "name": "EmailerInterface",
+            "summary": "",
+            "url": "classes/Application-Interface-EmailerInterface.html"
+        },                {
+            "fqsen": "\\Application\\Interface\\EmailerInterface\u003A\u003AsetUseException\u0028\u0029",
+            "name": "setUseException",
+            "summary": "",
+            "url": "classes/Application-Interface-EmailerInterface.html#method_setUseException"
+        },                {
+            "fqsen": "\\Application\\Interface\\EmailerInterface\u003A\u003AsetOverwriteEmail\u0028\u0029",
+            "name": "setOverwriteEmail",
+            "summary": "",
+            "url": "classes/Application-Interface-EmailerInterface.html#method_setOverwriteEmail"
+        },                {
+            "fqsen": "\\Application\\Interface\\EmailerInterface\u003A\u003AsetAppName\u0028\u0029",
+            "name": "setAppName",
+            "summary": "",
+            "url": "classes/Application-Interface-EmailerInterface.html#method_setAppName"
+        },                {
+            "fqsen": "\\Application\\Interface\\EmailerInterface\u003A\u003A__toString\u0028\u0029",
+            "name": "__toString",
+            "summary": "",
+            "url": "classes/Application-Interface-EmailerInterface.html#method___toString"
+        },                {
+            "fqsen": "\\Application\\Interface\\EmailerInterface\u003A\u003A__invoke\u0028\u0029",
+            "name": "__invoke",
+            "summary": "",
+            "url": "classes/Application-Interface-EmailerInterface.html#method___invoke"
+        },                {
+            "fqsen": "\\Application\\Interface\\EmailerInterface\u003A\u003AsendAuthenticationEmail\u0028\u0029",
+            "name": "sendAuthenticationEmail",
+            "summary": "",
+            "url": "classes/Application-Interface-EmailerInterface.html#method_sendAuthenticationEmail"
+        },                {
+            "fqsen": "\\Application\\Interface\\EmailerInterface\u003A\u003AreportException\u0028\u0029",
+            "name": "reportException",
+            "summary": "",
+            "url": "classes/Application-Interface-EmailerInterface.html#method_reportException"
+        },                {
+            "fqsen": "\\Application\\Interface\\EmailerInterface\u003A\u003AreportError\u0028\u0029",
+            "name": "reportError",
+            "summary": "",
+            "url": "classes/Application-Interface-EmailerInterface.html#method_reportError"
+        },                {
+            "fqsen": "\\Application\\Interface\\EmailerInterface\u003A\u003AsendEmail\u0028\u0029",
+            "name": "sendEmail",
+            "summary": "",
+            "url": "classes/Application-Interface-EmailerInterface.html#method_sendEmail"
+        },                {
             "fqsen": "\\Application\\Listener\\ApplicationSetupListener",
             "name": "ApplicationSetupListener",
             "summary": "",
@@ -1181,80 +1351,15 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Application-Model-Breadcrumbs.html#method_tojson"
         },                {
+            "fqsen": "\\Application\\Model\\Breadcrumbs\u003A\u003AjsonSerialize\u0028\u0029",
+            "name": "jsonSerialize",
+            "summary": "",
+            "url": "classes/Application-Model-Breadcrumbs.html#method_jsonSerialize"
+        },                {
             "fqsen": "\\Application\\Model\\Breadcrumbs\u003A\u003A\u0024hidden",
             "name": "hidden",
             "summary": "",
             "url": "classes/Application-Model-Breadcrumbs.html#property_hidden"
-        },                {
-            "fqsen": "\\Application\\Model\\EmailerInterface",
-            "name": "EmailerInterface",
-            "summary": "",
-            "url": "classes/Application-Model-EmailerInterface.html"
-        },                {
-            "fqsen": "\\Application\\Model\\EmailerInterface\u003A\u003AsetUseException\u0028\u0029",
-            "name": "setUseException",
-            "summary": "",
-            "url": "classes/Application-Model-EmailerInterface.html#method_setUseException"
-        },                {
-            "fqsen": "\\Application\\Model\\EmailerInterface\u003A\u003AsetOverwriteEmail\u0028\u0029",
-            "name": "setOverwriteEmail",
-            "summary": "",
-            "url": "classes/Application-Model-EmailerInterface.html#method_setOverwriteEmail"
-        },                {
-            "fqsen": "\\Application\\Model\\EmailerInterface\u003A\u003AsetAppName\u0028\u0029",
-            "name": "setAppName",
-            "summary": "",
-            "url": "classes/Application-Model-EmailerInterface.html#method_setAppName"
-        },                {
-            "fqsen": "\\Application\\Model\\EmailerInterface\u003A\u003A__toString\u0028\u0029",
-            "name": "__toString",
-            "summary": "",
-            "url": "classes/Application-Model-EmailerInterface.html#method___toString"
-        },                {
-            "fqsen": "\\Application\\Model\\EmailerInterface\u003A\u003A__invoke\u0028\u0029",
-            "name": "__invoke",
-            "summary": "",
-            "url": "classes/Application-Model-EmailerInterface.html#method___invoke"
-        },                {
-            "fqsen": "\\Application\\Model\\EmailerInterface\u003A\u003AsendAuthenticationEmail\u0028\u0029",
-            "name": "sendAuthenticationEmail",
-            "summary": "",
-            "url": "classes/Application-Model-EmailerInterface.html#method_sendAuthenticationEmail"
-        },                {
-            "fqsen": "\\Application\\Model\\EmailerInterface\u003A\u003AreportException\u0028\u0029",
-            "name": "reportException",
-            "summary": "",
-            "url": "classes/Application-Model-EmailerInterface.html#method_reportException"
-        },                {
-            "fqsen": "\\Application\\Model\\EmailerInterface\u003A\u003AreportError\u0028\u0029",
-            "name": "reportError",
-            "summary": "",
-            "url": "classes/Application-Model-EmailerInterface.html#method_reportError"
-        },                {
-            "fqsen": "\\Application\\Model\\EmailerInterface\u003A\u003AsendEmail\u0028\u0029",
-            "name": "sendEmail",
-            "summary": "",
-            "url": "classes/Application-Model-EmailerInterface.html#method_sendEmail"
-        },                {
-            "fqsen": "\\Application\\Model\\LanguageAwareTrait",
-            "name": "LanguageAwareTrait",
-            "summary": "",
-            "url": "classes/Application-Model-LanguageAwareTrait.html"
-        },                {
-            "fqsen": "\\Application\\Model\\LanguageAwareTrait\u003A\u003AsetLang\u0028\u0029",
-            "name": "setLang",
-            "summary": "",
-            "url": "classes/Application-Model-LanguageAwareTrait.html#method_setLang"
-        },                {
-            "fqsen": "\\Application\\Model\\LanguageAwareTrait\u003A\u003AgetLang\u0028\u0029",
-            "name": "getLang",
-            "summary": "",
-            "url": "classes/Application-Model-LanguageAwareTrait.html#method_getLang"
-        },                {
-            "fqsen": "\\Application\\Model\\LanguageAwareTrait\u003A\u003A\u0024lang",
-            "name": "lang",
-            "summary": "",
-            "url": "classes/Application-Model-LanguageAwareTrait.html#property_lang"
         },                {
             "fqsen": "\\Application\\Model\\Metadata",
             "name": "Metadata",
@@ -1446,10 +1551,70 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Application-Model-MetadataBuilder.html#property_lang"
         },                {
+            "fqsen": "\\Application\\Trait\\EventManagerAwareTrait",
+            "name": "EventManagerAwareTrait",
+            "summary": "",
+            "url": "classes/Application-Trait-EventManagerAwareTrait.html"
+        },                {
+            "fqsen": "\\Application\\Trait\\EventManagerAwareTrait\u003A\u003AsetEventManager\u0028\u0029",
+            "name": "setEventManager",
+            "summary": "",
+            "url": "classes/Application-Trait-EventManagerAwareTrait.html#method_setEventManager"
+        },                {
+            "fqsen": "\\Application\\Trait\\EventManagerAwareTrait\u003A\u003AgetEventManager\u0028\u0029",
+            "name": "getEventManager",
+            "summary": "",
+            "url": "classes/Application-Trait-EventManagerAwareTrait.html#method_getEventManager"
+        },                {
+            "fqsen": "\\Application\\Trait\\EventManagerAwareTrait\u003A\u003A\u0024eventManager",
+            "name": "eventManager",
+            "summary": "",
+            "url": "classes/Application-Trait-EventManagerAwareTrait.html#property_eventManager"
+        },                {
+            "fqsen": "\\Application\\Trait\\LanguageAwareTrait",
+            "name": "LanguageAwareTrait",
+            "summary": "",
+            "url": "classes/Application-Trait-LanguageAwareTrait.html"
+        },                {
+            "fqsen": "\\Application\\Trait\\LanguageAwareTrait\u003A\u003AsetLang\u0028\u0029",
+            "name": "setLang",
+            "summary": "",
+            "url": "classes/Application-Trait-LanguageAwareTrait.html#method_setLang"
+        },                {
+            "fqsen": "\\Application\\Trait\\LanguageAwareTrait\u003A\u003AgetLang\u0028\u0029",
+            "name": "getLang",
+            "summary": "",
+            "url": "classes/Application-Trait-LanguageAwareTrait.html#method_getLang"
+        },                {
+            "fqsen": "\\Application\\Trait\\LanguageAwareTrait\u003A\u003A\u0024lang",
+            "name": "lang",
+            "summary": "",
+            "url": "classes/Application-Trait-LanguageAwareTrait.html#property_lang"
+        },                {
             "fqsen": "\\Application\\View\\Helper\\BreadcrumbsHelper",
             "name": "BreadcrumbsHelper",
             "summary": "Generate\u0020the\u0020WET\u0020HTML\u0020for\u0020the\u0020breadcrumbs",
             "url": "classes/Application-View-Helper-BreadcrumbsHelper.html"
+        },                {
+            "fqsen": "\\Application\\View\\Helper\\BreadcrumbsHelper\u003A\u003A__invoke\u0028\u0029",
+            "name": "__invoke",
+            "summary": "",
+            "url": "classes/Application-View-Helper-BreadcrumbsHelper.html#method___invoke"
+        },                {
+            "fqsen": "\\Application\\View\\Helper\\BreadcrumbsHelper\u003A\u003A__toString\u0028\u0029",
+            "name": "__toString",
+            "summary": "Return\u0020the\u0020WET\u0020HTML\u0020for\u0020the\u0020breadcrumbs",
+            "url": "classes/Application-View-Helper-BreadcrumbsHelper.html#method___toString"
+        },                {
+            "fqsen": "\\Application\\View\\Helper\\BreadcrumbsHelper\u003A\u003Atojson\u0028\u0029",
+            "name": "tojson",
+            "summary": "",
+            "url": "classes/Application-View-Helper-BreadcrumbsHelper.html#method_tojson"
+        },                {
+            "fqsen": "\\Application\\View\\Helper\\BreadcrumbsHelper\u003A\u003AjsonSerialize\u0028\u0029",
+            "name": "jsonSerialize",
+            "summary": "",
+            "url": "classes/Application-View-Helper-BreadcrumbsHelper.html#method_jsonSerialize"
         },                {
             "fqsen": "\\Application\\View\\Helper\\BreadcrumbsHelper\u003A\u003AsetView\u0028\u0029",
             "name": "setView",
@@ -1481,26 +1646,6 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Application-View-Helper-BreadcrumbsHelper.html#method_getBreadcrumbs"
         },                {
-            "fqsen": "\\Application\\View\\Helper\\BreadcrumbsHelper\u003A\u003A__invoke\u0028\u0029",
-            "name": "__invoke",
-            "summary": "",
-            "url": "classes/Application-View-Helper-BreadcrumbsHelper.html#method___invoke"
-        },                {
-            "fqsen": "\\Application\\View\\Helper\\BreadcrumbsHelper\u003A\u003AaddCurrentPage\u0028\u0029",
-            "name": "addCurrentPage",
-            "summary": "THIS\u0020SHOULD\u0020NOT\u0020BE\u0020USED\u0020ANYMORE\nNew\u0020rules\u0020in\u0020the\u0020canada.ca\u0020publishing\u0020guide\u0020says\u0020that\u0020the\u0020breadcrumb\nshould\u0020end\u0020one\u0020level\u0020below\u0020the\u0020current\u0020page",
-            "url": "classes/Application-View-Helper-BreadcrumbsHelper.html#method_addCurrentPage"
-        },                {
-            "fqsen": "\\Application\\View\\Helper\\BreadcrumbsHelper\u003A\u003A__toString\u0028\u0029",
-            "name": "__toString",
-            "summary": "Return\u0020the\u0020WET\u0020HTML\u0020for\u0020the\u0020breadcrumbs",
-            "url": "classes/Application-View-Helper-BreadcrumbsHelper.html#method___toString"
-        },                {
-            "fqsen": "\\Application\\View\\Helper\\BreadcrumbsHelper\u003A\u003Atojson\u0028\u0029",
-            "name": "tojson",
-            "summary": "",
-            "url": "classes/Application-View-Helper-BreadcrumbsHelper.html#method_tojson"
-        },                {
             "fqsen": "\\Application\\View\\Helper\\BreadcrumbsHelper\u003A\u003A\u0024view",
             "name": "view",
             "summary": "",
@@ -1520,6 +1665,16 @@ Search.appendIndex(
             "name": "CompleteMetadata",
             "summary": "",
             "url": "classes/Application-View-Helper-CompleteMetadata.html"
+        },                {
+            "fqsen": "\\Application\\View\\Helper\\CompleteMetadata\u003A\u003A__invoke\u0028\u0029",
+            "name": "__invoke",
+            "summary": "",
+            "url": "classes/Application-View-Helper-CompleteMetadata.html#method___invoke"
+        },                {
+            "fqsen": "\\Application\\View\\Helper\\CompleteMetadata\u003A\u003AupdateMetadata\u0028\u0029",
+            "name": "updateMetadata",
+            "summary": "",
+            "url": "classes/Application-View-Helper-CompleteMetadata.html#method_updateMetadata"
         },                {
             "fqsen": "\\Application\\View\\Helper\\CompleteMetadata\u003A\u003AsetView\u0028\u0029",
             "name": "setView",
@@ -1550,16 +1705,6 @@ Search.appendIndex(
             "name": "getMetadataObj",
             "summary": "",
             "url": "classes/Application-View-Helper-CompleteMetadata.html#method_getMetadataObj"
-        },                {
-            "fqsen": "\\Application\\View\\Helper\\CompleteMetadata\u003A\u003A__invoke\u0028\u0029",
-            "name": "__invoke",
-            "summary": "",
-            "url": "classes/Application-View-Helper-CompleteMetadata.html#method___invoke"
-        },                {
-            "fqsen": "\\Application\\View\\Helper\\CompleteMetadata\u003A\u003AupdateMetadata\u0028\u0029",
-            "name": "updateMetadata",
-            "summary": "",
-            "url": "classes/Application-View-Helper-CompleteMetadata.html#method_updateMetadata"
         },                {
             "fqsen": "\\Application\\View\\Helper\\CompleteMetadata\u003A\u003A\u0024view",
             "name": "view",
@@ -1796,6 +1941,11 @@ Search.appendIndex(
             "summary": "Basic\u0020URL\u0020View\u0020Helper\u0020class\u0020but\u0020will\u0020set\u0020the\u0020locale\/language\u0020of\u0020the\u0020requested\nroute\u0020automatically\u0020if\u0020not\u0020set\u0020when\u0020called",
             "url": "classes/Application-View-Helper-Url.html"
         },                {
+            "fqsen": "\\Application\\View\\Helper\\Url\u003A\u003A__invoke\u0028\u0029",
+            "name": "__invoke",
+            "summary": "",
+            "url": "classes/Application-View-Helper-Url.html#method___invoke"
+        },                {
             "fqsen": "\\Application\\View\\Helper\\Url\u003A\u003AsetView\u0028\u0029",
             "name": "setView",
             "summary": "",
@@ -1815,11 +1965,6 @@ Search.appendIndex(
             "name": "getLang",
             "summary": "",
             "url": "classes/Application-View-Helper-Url.html#method_getLang"
-        },                {
-            "fqsen": "\\Application\\View\\Helper\\Url\u003A\u003A__invoke\u0028\u0029",
-            "name": "__invoke",
-            "summary": "",
-            "url": "classes/Application-View-Helper-Url.html#method___invoke"
         },                {
             "fqsen": "\\Application\\View\\Helper\\Url\u003A\u003A\u0024view",
             "name": "view",
@@ -2096,10 +2241,10 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/CurlWrapper-CurlWrapper.html#property_pubkey"
         },                {
-            "fqsen": "\\Application\\Exception\\CurlException",
+            "fqsen": "\\CurlWrapper\\Exception\\CurlException",
             "name": "CurlException",
             "summary": "",
-            "url": "classes/Application-Exception-CurlException.html"
+            "url": "classes/CurlWrapper-Exception-CurlException.html"
         },                {
             "fqsen": "\\GcNotify\\Exception\\GcNotifyException",
             "name": "GcNotifyException",
@@ -2120,6 +2265,16 @@ Search.appendIndex(
             "name": "getUseException",
             "summary": "",
             "url": "classes/GcNotify-GcNotify.html#method_getUseException"
+        },                {
+            "fqsen": "\\GcNotify\\GcNotify\u003A\u003AsetAuthServiceApiKey\u0028\u0029",
+            "name": "setAuthServiceApiKey",
+            "summary": "",
+            "url": "classes/GcNotify-GcNotify.html#method_setAuthServiceApiKey"
+        },                {
+            "fqsen": "\\GcNotify\\GcNotify\u003A\u003AgetAuthServiceApiKey\u0028\u0029",
+            "name": "getAuthServiceApiKey",
+            "summary": "",
+            "url": "classes/GcNotify-GcNotify.html#method_getAuthServiceApiKey"
         },                {
             "fqsen": "\\GcNotify\\GcNotify\u003A\u003AsetErrorReportingKey\u0028\u0029",
             "name": "setErrorReportingKey",
@@ -2286,6 +2441,11 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/GcNotify-GcNotify.html#property_useException"
         },                {
+            "fqsen": "\\GcNotify\\GcNotify\u003A\u003A\u0024authServiceApiKey",
+            "name": "authServiceApiKey",
+            "summary": "",
+            "url": "classes/GcNotify-GcNotify.html#property_authServiceApiKey"
+        },                {
             "fqsen": "\\GcNotify\\GcNotify\u003A\u003A\u0024errorReportingSecretKey",
             "name": "errorReportingSecretKey",
             "summary": "",
@@ -2325,6 +2485,86 @@ Search.appendIndex(
             "name": "genericAuthenticationTemplates",
             "summary": "",
             "url": "classes/GcNotify-GcNotify.html#property_genericAuthenticationTemplates"
+        },                {
+            "fqsen": "\\ApplicationTest\\Model\\CurlWrapperTest",
+            "name": "CurlWrapperTest",
+            "summary": "",
+            "url": "classes/ApplicationTest-Model-CurlWrapperTest.html"
+        },                {
+            "fqsen": "\\ApplicationTest\\Model\\CurlWrapperTest\u003A\u003AsetUp\u0028\u0029",
+            "name": "setUp",
+            "summary": "",
+            "url": "classes/ApplicationTest-Model-CurlWrapperTest.html#method_setUp"
+        },                {
+            "fqsen": "\\ApplicationTest\\Model\\CurlWrapperTest\u003A\u003AtestCurlWrapperUrl\u0028\u0029",
+            "name": "testCurlWrapperUrl",
+            "summary": "",
+            "url": "classes/ApplicationTest-Model-CurlWrapperTest.html#method_testCurlWrapperUrl"
+        },                {
+            "fqsen": "\\ApplicationTest\\Model\\CurlWrapperTest\u003A\u003A\u0024wrapper",
+            "name": "wrapper",
+            "summary": "",
+            "url": "classes/ApplicationTest-Model-CurlWrapperTest.html#property_wrapper"
+        },                {
+            "fqsen": "\\ApplicationTest\\Model\\BreadcrumbsTest",
+            "name": "BreadcrumbsTest",
+            "summary": "",
+            "url": "classes/ApplicationTest-Model-BreadcrumbsTest.html"
+        },                {
+            "fqsen": "\\ApplicationTest\\Model\\BreadcrumbsTest\u003A\u003AsetUp\u0028\u0029",
+            "name": "setUp",
+            "summary": "",
+            "url": "classes/ApplicationTest-Model-BreadcrumbsTest.html#method_setUp"
+        },                {
+            "fqsen": "\\ApplicationTest\\Model\\BreadcrumbsTest\u003A\u003AtestBreadcrumbsStartsEmpty\u0028\u0029",
+            "name": "testBreadcrumbsStartsEmpty",
+            "summary": "",
+            "url": "classes/ApplicationTest-Model-BreadcrumbsTest.html#method_testBreadcrumbsStartsEmpty"
+        },                {
+            "fqsen": "\\ApplicationTest\\Model\\BreadcrumbsTest\u003A\u003AtestBreadcrumbsHasOneItem\u0028\u0029",
+            "name": "testBreadcrumbsHasOneItem",
+            "summary": "",
+            "url": "classes/ApplicationTest-Model-BreadcrumbsTest.html#method_testBreadcrumbsHasOneItem"
+        },                {
+            "fqsen": "\\ApplicationTest\\Model\\BreadcrumbsTest\u003A\u003AtestBreadcrumbsAddOneItem\u0028\u0029",
+            "name": "testBreadcrumbsAddOneItem",
+            "summary": "",
+            "url": "classes/ApplicationTest-Model-BreadcrumbsTest.html#method_testBreadcrumbsAddOneItem"
+        },                {
+            "fqsen": "\\ApplicationTest\\Model\\BreadcrumbsTest\u003A\u003AtestBreadcrumbsToJson\u0028\u0029",
+            "name": "testBreadcrumbsToJson",
+            "summary": "",
+            "url": "classes/ApplicationTest-Model-BreadcrumbsTest.html#method_testBreadcrumbsToJson"
+        },                {
+            "fqsen": "\\ApplicationTest\\Model\\BreadcrumbsTest\u003A\u003A\u0024breadcrumbs",
+            "name": "breadcrumbs",
+            "summary": "",
+            "url": "classes/ApplicationTest-Model-BreadcrumbsTest.html#property_breadcrumbs"
+        },                {
+            "fqsen": "\\ApplicationTest\\View\\Helper\\BreadcrumbsHelperTest",
+            "name": "BreadcrumbsHelperTest",
+            "summary": "",
+            "url": "classes/ApplicationTest-View-Helper-BreadcrumbsHelperTest.html"
+        },                {
+            "fqsen": "\\ApplicationTest\\View\\Helper\\BreadcrumbsHelperTest\u003A\u003AsetUp\u0028\u0029",
+            "name": "setUp",
+            "summary": "",
+            "url": "classes/ApplicationTest-View-Helper-BreadcrumbsHelperTest.html#method_setUp"
+        },                {
+            "fqsen": "\\ApplicationTest\\View\\Helper\\BreadcrumbsHelperTest\u003A\u003AtestBreadcrumbsHelper\u0028\u0029",
+            "name": "testBreadcrumbsHelper",
+            "summary": "",
+            "url": "classes/ApplicationTest-View-Helper-BreadcrumbsHelperTest.html#method_testBreadcrumbsHelper"
+        },                {
+            "fqsen": "\\ApplicationTest\\View\\Helper\\BreadcrumbsHelperTest\u003A\u003AtestBreadcrumbsHelperWithNoBreadcrumb\u0028\u0029",
+            "name": "testBreadcrumbsHelperWithNoBreadcrumb",
+            "summary": "",
+            "url": "classes/ApplicationTest-View-Helper-BreadcrumbsHelperTest.html#method_testBreadcrumbsHelperWithNoBreadcrumb"
+        },                {
+            "fqsen": "\\ApplicationTest\\View\\Helper\\BreadcrumbsHelperTest\u003A\u003AtestBreadcrumbsHelperJson\u0028\u0029",
+            "name": "testBreadcrumbsHelperJson",
+            "summary": "",
+            "url": "classes/ApplicationTest-View-Helper-BreadcrumbsHelperTest.html#method_testBreadcrumbsHelperJson"
         },                {
             "fqsen": "\\AutoStats\\Module",
             "name": "Module",
@@ -2390,6 +2630,21 @@ Search.appendIndex(
             "name": "get",
             "summary": "",
             "url": "classes/AutoStats-Model-ServerSignature.html#method_get"
+        },                {
+            "fqsen": "\\ApplicationTest\\Model\\ServerSignatureTest",
+            "name": "ServerSignatureTest",
+            "summary": "",
+            "url": "classes/ApplicationTest-Model-ServerSignatureTest.html"
+        },                {
+            "fqsen": "\\ApplicationTest\\Model\\ServerSignatureTest\u003A\u003AsetUp\u0028\u0029",
+            "name": "setUp",
+            "summary": "",
+            "url": "classes/ApplicationTest-Model-ServerSignatureTest.html#method_setUp"
+        },                {
+            "fqsen": "\\ApplicationTest\\Model\\ServerSignatureTest\u003A\u003AtestServerSignature\u0028\u0029",
+            "name": "testServerSignature",
+            "summary": "",
+            "url": "classes/ApplicationTest-Model-ServerSignatureTest.html#method_testServerSignature"
         },                {
             "fqsen": "\\DompdfView\\Module",
             "name": "Module",
@@ -2581,26 +2836,6 @@ Search.appendIndex(
             "summary": "Class\u0020that\u0020search\u0020the\u0020GCdirectory\u0020\u0028formely\u0020GEDS\u0020repository\u0029",
             "url": "classes/GcDirectory-Model-GcDirectory.html"
         },                {
-            "fqsen": "\\GcDirectory\\Model\\GcDirectory\u003A\u003AgetLang\u0028\u0029",
-            "name": "getLang",
-            "summary": "",
-            "url": "classes/GcDirectory-Model-GcDirectory.html#method_getLang"
-        },                {
-            "fqsen": "\\GcDirectory\\Model\\GcDirectory\u003A\u003AsetLang\u0028\u0029",
-            "name": "setLang",
-            "summary": "",
-            "url": "classes/GcDirectory-Model-GcDirectory.html#method_setLang"
-        },                {
-            "fqsen": "\\GcDirectory\\Model\\GcDirectory\u003A\u003AgetConfig\u0028\u0029",
-            "name": "getConfig",
-            "summary": "",
-            "url": "classes/GcDirectory-Model-GcDirectory.html#method_getConfig"
-        },                {
-            "fqsen": "\\GcDirectory\\Model\\GcDirectory\u003A\u003AsetConfig\u0028\u0029",
-            "name": "setConfig",
-            "summary": "",
-            "url": "classes/GcDirectory-Model-GcDirectory.html#method_setConfig"
-        },                {
             "fqsen": "\\GcDirectory\\Model\\GcDirectory\u003A\u003A__get\u0028\u0029",
             "name": "__get",
             "summary": "",
@@ -2611,15 +2846,40 @@ Search.appendIndex(
             "summary": "Search\u0020for\u0020a\u0020person.\u0020The\u0020term\u0020is\u0020the\u0020string\u0020that\u0020needs\u0020to\u0020be\u0020matched",
             "url": "classes/GcDirectory-Model-GcDirectory.html#method_searchEmployees"
         },                {
+            "fqsen": "\\GcDirectory\\Model\\GcDirectory\u003A\u003AgetHeaders\u0028\u0029",
+            "name": "getHeaders",
+            "summary": "",
+            "url": "classes/GcDirectory-Model-GcDirectory.html#method_getHeaders"
+        },                {
             "fqsen": "\\GcDirectory\\Model\\GcDirectory\u003A\u003AgetData\u0028\u0029",
             "name": "getData",
-            "summary": "This\u0020method\u0020makes\u0020the\u0020call\u0020to\u0020GEDS\u0020server.\u0020It\u0020takes\u0020care\u0020or\u0020having\u0020the\nproper\u0020authorizationId\u0020\u0028from\u0020the\u0020L01\u0020call\u0029\u0020and\u0020adds\u0020it\u0020to\u0020the\u0020post\u0020data.",
+            "summary": "This\u0020method\u0020makes\u0020the\u0020call\u0020to\u0020GEDS\u0020server.",
             "url": "classes/GcDirectory-Model-GcDirectory.html#method_getData"
         },                {
-            "fqsen": "\\GcDirectory\\Model\\GcDirectory\u003A\u003ApostData\u0028\u0029",
-            "name": "postData",
+            "fqsen": "\\GcDirectory\\Model\\GcDirectory\u003A\u003AupdateData\u0028\u0029",
+            "name": "updateData",
             "summary": "This\u0020method\u0020makes\u0020the\u0020call\u0020to\u0020GEDS\u0020server.\u0020It\u0020takes\u0020care\u0020or\u0020having\u0020the\nproper\u0020authorizationId\u0020\u0028from\u0020the\u0020L01\u0020call\u0029\u0020and\u0020adds\u0020it\u0020to\u0020the\u0020post\u0020data.",
-            "url": "classes/GcDirectory-Model-GcDirectory.html#method_postData"
+            "url": "classes/GcDirectory-Model-GcDirectory.html#method_updateData"
+        },                {
+            "fqsen": "\\GcDirectory\\Model\\GcDirectory\u003A\u003AsetCurlWrapper\u0028\u0029",
+            "name": "setCurlWrapper",
+            "summary": "",
+            "url": "classes/GcDirectory-Model-GcDirectory.html#method_setCurlWrapper"
+        },                {
+            "fqsen": "\\GcDirectory\\Model\\GcDirectory\u003A\u003AgetCurlWrapper\u0028\u0029",
+            "name": "getCurlWrapper",
+            "summary": "",
+            "url": "classes/GcDirectory-Model-GcDirectory.html#method_getCurlWrapper"
+        },                {
+            "fqsen": "\\GcDirectory\\Model\\GcDirectory\u003A\u003AgetConfig\u0028\u0029",
+            "name": "getConfig",
+            "summary": "",
+            "url": "classes/GcDirectory-Model-GcDirectory.html#method_getConfig"
+        },                {
+            "fqsen": "\\GcDirectory\\Model\\GcDirectory\u003A\u003AsetConfig\u0028\u0029",
+            "name": "setConfig",
+            "summary": "",
+            "url": "classes/GcDirectory-Model-GcDirectory.html#method_setConfig"
         },                {
             "fqsen": "\\GcDirectory\\Model\\GcDirectory\u003A\u003ASEARCH_FIELD_SURNAME_GIVEN_NAME",
             "name": "SEARCH_FIELD_SURNAME_GIVEN_NAME",
@@ -2676,15 +2936,10 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/GcDirectory-Model-GcDirectory.html#constant_SEARCH_EXACT"
         },                {
-            "fqsen": "\\GcDirectory\\Model\\GcDirectory\u003A\u003A\u0024lang",
-            "name": "lang",
+            "fqsen": "\\GcDirectory\\Model\\GcDirectory\u003A\u003AURL_EMPLOYEES",
+            "name": "URL_EMPLOYEES",
             "summary": "",
-            "url": "classes/GcDirectory-Model-GcDirectory.html#property_lang"
-        },                {
-            "fqsen": "\\GcDirectory\\Model\\GcDirectory\u003A\u003A\u0024config",
-            "name": "config",
-            "summary": "",
-            "url": "classes/GcDirectory-Model-GcDirectory.html#property_config"
+            "url": "classes/GcDirectory-Model-GcDirectory.html#constant_URL_EMPLOYEES"
         },                {
             "fqsen": "\\GcDirectory\\Model\\GcDirectory\u003A\u003A\u0024orgId",
             "name": "orgId",
@@ -2705,6 +2960,36 @@ Search.appendIndex(
             "name": "lastPage",
             "summary": "",
             "url": "classes/GcDirectory-Model-GcDirectory.html#property_lastPage"
+        },                {
+            "fqsen": "\\GcDirectory\\Model\\GcDirectory\u003A\u003A\u0024curlWrapper",
+            "name": "curlWrapper",
+            "summary": "",
+            "url": "classes/GcDirectory-Model-GcDirectory.html#property_curlWrapper"
+        },                {
+            "fqsen": "\\GcDirectory\\Model\\GcDirectory\u003A\u003A\u0024config",
+            "name": "config",
+            "summary": "",
+            "url": "classes/GcDirectory-Model-GcDirectory.html#property_config"
+        },                {
+            "fqsen": "\\ApplicationTest\\View\\Helper\\GcDirectoryTest",
+            "name": "GcDirectoryTest",
+            "summary": "",
+            "url": "classes/ApplicationTest-View-Helper-GcDirectoryTest.html"
+        },                {
+            "fqsen": "\\ApplicationTest\\View\\Helper\\GcDirectoryTest\u003A\u003AsetUp\u0028\u0029",
+            "name": "setUp",
+            "summary": "",
+            "url": "classes/ApplicationTest-View-Helper-GcDirectoryTest.html#method_setUp"
+        },                {
+            "fqsen": "\\ApplicationTest\\View\\Helper\\GcDirectoryTest\u003A\u003AtestGcDirectory\u0028\u0029",
+            "name": "testGcDirectory",
+            "summary": "",
+            "url": "classes/ApplicationTest-View-Helper-GcDirectoryTest.html#method_testGcDirectory"
+        },                {
+            "fqsen": "\\ApplicationTest\\View\\Helper\\GcDirectoryTest\u003A\u003A\u0024gcDirectory",
+            "name": "gcDirectory",
+            "summary": "",
+            "url": "classes/ApplicationTest-View-Helper-GcDirectoryTest.html#property_gcDirectory"
         },                {
             "fqsen": "\\LegacySupport\\Factory\\View\\Helper\\ServiceLocatorFactory",
             "name": "ServiceLocatorFactory",
@@ -2760,6 +3045,21 @@ Search.appendIndex(
             "name": "__invoke",
             "summary": "",
             "url": "classes/Logger-Factory-LoggerFactory.html#method___invoke"
+        },                {
+            "fqsen": "\\Application\\Listener\\LogListenerFactory",
+            "name": "LogListenerFactory",
+            "summary": "",
+            "url": "classes/Application-Listener-LogListenerFactory.html"
+        },                {
+            "fqsen": "\\Application\\Listener\\LogListenerFactory\u003A\u003Aattach\u0028\u0029",
+            "name": "attach",
+            "summary": "",
+            "url": "classes/Application-Listener-LogListenerFactory.html#method_attach"
+        },                {
+            "fqsen": "\\Application\\Listener\\LogListenerFactory\u003A\u003AlogListener\u0028\u0029",
+            "name": "logListener",
+            "summary": "",
+            "url": "classes/Application-Listener-LogListenerFactory.html#method_logListener"
         },                {
             "fqsen": "\\Logger\\Model\\DbLogger",
             "name": "DbLogger",
@@ -3435,6 +3735,26 @@ Search.appendIndex(
             "name": "verifyClient",
             "summary": "",
             "url": "classes/OAuth-Model-OAuth2ServerInterface.html#method_verifyClient"
+        },                {
+            "fqsen": "\\ApplicationTest\\View\\Helper\\OAuthTest",
+            "name": "OAuthTest",
+            "summary": "",
+            "url": "classes/ApplicationTest-View-Helper-OAuthTest.html"
+        },                {
+            "fqsen": "\\ApplicationTest\\View\\Helper\\OAuthTest\u003A\u003AsetUp\u0028\u0029",
+            "name": "setUp",
+            "summary": "",
+            "url": "classes/ApplicationTest-View-Helper-OAuthTest.html#method_setUp"
+        },                {
+            "fqsen": "\\ApplicationTest\\View\\Helper\\OAuthTest\u003A\u003AtestOAuth\u0028\u0029",
+            "name": "testOAuth",
+            "summary": "",
+            "url": "classes/ApplicationTest-View-Helper-OAuthTest.html#method_testOAuth"
+        },                {
+            "fqsen": "\\ApplicationTest\\View\\Helper\\OAuthTest\u003A\u003A\u0024gcDirectory",
+            "name": "gcDirectory",
+            "summary": "",
+            "url": "classes/ApplicationTest-View-Helper-OAuthTest.html#property_gcDirectory"
         },                {
             "fqsen": "\\PublicAsset\\Controller\\IndexController",
             "name": "IndexController",
@@ -4161,6 +4481,16 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/UserAuth-Factory-Listener-UserAuthListenerFactory.html#method___invoke"
         },                {
+            "fqsen": "\\UserAuth\\Factory\\User\\Authenticator\\EmailAuthenticatorFactory",
+            "name": "EmailAuthenticatorFactory",
+            "summary": "",
+            "url": "classes/UserAuth-Factory-User-Authenticator-EmailAuthenticatorFactory.html"
+        },                {
+            "fqsen": "\\UserAuth\\Factory\\User\\Authenticator\\EmailAuthenticatorFactory\u003A\u003A__invoke\u0028\u0029",
+            "name": "__invoke",
+            "summary": "",
+            "url": "classes/UserAuth-Factory-User-Authenticator-EmailAuthenticatorFactory.html#method___invoke"
+        },                {
             "fqsen": "\\UserAuth\\Factory\\User\\UserFactory",
             "name": "UserFactory",
             "summary": "",
@@ -4191,6 +4521,16 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/UserAuth-Factory-UserLoggerFactory.html#method___invoke"
         },                {
+            "fqsen": "\\UserAuth\\Factory\\View\\Helper\\UserHelperFactory",
+            "name": "UserHelperFactory",
+            "summary": "",
+            "url": "classes/UserAuth-Factory-View-Helper-UserHelperFactory.html"
+        },                {
+            "fqsen": "\\UserAuth\\Factory\\View\\Helper\\UserHelperFactory\u003A\u003A__invoke\u0028\u0029",
+            "name": "__invoke",
+            "summary": "",
+            "url": "classes/UserAuth-Factory-View-Helper-UserHelperFactory.html#method___invoke"
+        },                {
             "fqsen": "\\UserAuth\\Listener\\UserAuthListener",
             "name": "UserAuthListener",
             "summary": "",
@@ -4220,531 +4560,6 @@ Search.appendIndex(
             "name": "headScript",
             "summary": "",
             "url": "classes/UserAuth-Listener-UserAuthListener.html#property_headScript"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\Auth",
-            "name": "Auth",
-            "summary": "",
-            "url": "classes/UserAuth-Model-Auth.html"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\Auth\u003A\u003A__invoke\u0028\u0029",
-            "name": "__invoke",
-            "summary": "",
-            "url": "classes/UserAuth-Model-Auth.html#method___invoke"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\Auth\u003A\u003AauthenticateHtpasswd\u0028\u0029",
-            "name": "authenticateHtpasswd",
-            "summary": "",
-            "url": "classes/UserAuth-Model-Auth.html#method_authenticateHtpasswd"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\Auth\u003A\u003Averify\u0028\u0029",
-            "name": "verify",
-            "summary": "",
-            "url": "classes/UserAuth-Model-Auth.html#method_verify"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\Auth\u003A\u003Aencrypt\u0028\u0029",
-            "name": "encrypt",
-            "summary": "",
-            "url": "classes/UserAuth-Model-Auth.html#method_encrypt"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\Auth\u003A\u003AcryptApr1Md5\u0028\u0029",
-            "name": "cryptApr1Md5",
-            "summary": "",
-            "url": "classes/UserAuth-Model-Auth.html#method_cryptApr1Md5"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\DbUser",
-            "name": "DbUser",
-            "summary": "",
-            "url": "classes/UserAuth-Model-DbUser.html"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\DbUser\u003A\u003AsetDefaultValues\u0028\u0029",
-            "name": "setDefaultValues",
-            "summary": "Set\u0020the\u0020default\u0020values\u0020for\u0020new\u0020user.\u0020In\u0020this\u0020instance\u0020we\u0020have\u0020a\n\u0027emailVerified\u0027\u0020\u003D\u00200\u0020meaning\u0020the\u0020user\u0020did\u0020not\u0020verified\u0020his\/her\u0020email\u0020yet\nand\u0020\u0027status\u0027\u0020\u003D\u00201\u0020meaning...\u0020whatever\u0020you\u0020want\u0020in\u0020your\u0020app,\u0020the\u0020user\u0020is\u0020active\u0020for\u0020example",
-            "url": "classes/UserAuth-Model-DbUser.html#method_setDefaultValues"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\DbUser\u003A\u003AgetDefaultValues\u0028\u0029",
-            "name": "getDefaultValues",
-            "summary": "Return\u0020the\u0020default\u0020value\u0020of\u0020the\u0020specific\u0020key\u0020or\u0020the\u0020entire\u0020array\u0020of\u0020default\u0020values\u0020if\nno\u0020key\u0020was\u0020provided",
-            "url": "classes/UserAuth-Model-DbUser.html#method_getDefaultValues"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\DbUser\u003A\u003AsetUrlPlugin\u0028\u0029",
-            "name": "setUrlPlugin",
-            "summary": "Set\u0020the\u0020ViewPlugin\u0020UrlPlugin,\u0020this\u0020is\u0020used\u0020when\u0020generating\u0020the\u0020links\u0020in\u0020the\u0020emails",
-            "url": "classes/UserAuth-Model-DbUser.html#method_setUrlPlugin"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\DbUser\u003A\u003AgetUrlPlugin\u0028\u0029",
-            "name": "getUrlPlugin",
-            "summary": "",
-            "url": "classes/UserAuth-Model-DbUser.html#method_getUrlPlugin"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\DbUser\u003A\u003Aurl\u0028\u0029",
-            "name": "url",
-            "summary": "",
-            "url": "classes/UserAuth-Model-DbUser.html#method_url"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\DbUser\u003A\u003AsetTranslator\u0028\u0029",
-            "name": "setTranslator",
-            "summary": "Set\u0020the\u0020MvcTranslator,\u0020this\u0020is\u0020used\u0020when\u0020generating\u0020the\u0020links\u0020in\u0020the\u0020emails",
-            "url": "classes/UserAuth-Model-DbUser.html#method_setTranslator"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\DbUser\u003A\u003AgetTranslator\u0028\u0029",
-            "name": "getTranslator",
-            "summary": "",
-            "url": "classes/UserAuth-Model-DbUser.html#method_getTranslator"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\DbUser\u003A\u003AsetParentDb\u0028\u0029",
-            "name": "setParentDb",
-            "summary": "Set\u0020a\u0020\u0022parentDb\u0022\u0020used\u0020when\u0020the\u0020child\u0020class\u0020still\u0020use\u0020a\u0020\u0022parent\u0022\u0020user\u0020that\u0020share\u0020user\u0020between\nmultiple\u0020applications",
-            "url": "classes/UserAuth-Model-DbUser.html#method_setParentDb"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\DbUser\u003A\u003AgetParentDb\u0028\u0029",
-            "name": "getParentDb",
-            "summary": "",
-            "url": "classes/UserAuth-Model-DbUser.html#method_getParentDb"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\DbUser\u003A\u003AsetTableName\u0028\u0029",
-            "name": "setTableName",
-            "summary": "",
-            "url": "classes/UserAuth-Model-DbUser.html#method_setTableName"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\DbUser\u003A\u003AgetTableName\u0028\u0029",
-            "name": "getTableName",
-            "summary": "",
-            "url": "classes/UserAuth-Model-DbUser.html#method_getTableName"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\DbUser\u003A\u003Aauthenticate\u0028\u0029",
-            "name": "authenticate",
-            "summary": "Authenticate\/login\u0020a\u0020user\u0020using\u0020a\u0020database.\u0020This\u0020particular\u0020implementation\u0020would\u0020use\u0020a\u0020central\nDB\u0020for\u0020user\u0020and\u0020each\u0020app\u0020could\u0020have\u0020a\u0020user\u0020param,\u0020that\u0027s\u0020why\u0020it\u0020uses\u0020a\u0020parentDb\u0020for\u0020authenticating",
-            "url": "classes/UserAuth-Model-DbUser.html#method_authenticate"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\DbUser\u003A\u003AloadFromJwt\u0028\u0029",
-            "name": "loadFromJwt",
-            "summary": "Load\u0020a\u0020user\u0020from\u0020the\u0020JWT.\u0020The\u0020expiry\u0020time\u0020of\u0020the\u0020JWT\u0020should\u0020be\u0020checked\u0020before\u0020allowing\u0020this.",
-            "url": "classes/UserAuth-Model-DbUser.html#method_loadFromJwt"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\DbUser\u003A\u003A_loadUserById\u0028\u0029",
-            "name": "_loadUserById",
-            "summary": "A\u0020method\u0020used\u0020by\u0020loadFromJwt\u0020and\u0020loadFromSession\u0020to\u0020load\u0020the\u0020user\u0020without\u0020validating\u0020credentials",
-            "url": "classes/UserAuth-Model-DbUser.html#method__loadUserById"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\DbUser\u003A\u003Aregister\u0028\u0029",
-            "name": "register",
-            "summary": "Register\u0020a\u0020new\u0020user,\u0020create\u0020a\u0020DB\u0020entry\u0020and\u0020send\u0020email\u0020\u0028depending\u0020on\u0020config\u0029",
-            "url": "classes/UserAuth-Model-DbUser.html#method_register"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\DbUser\u003A\u003ArequestResetPassword\u0028\u0029",
-            "name": "requestResetPassword",
-            "summary": "request\u0020the\u0020reset\u0020of\u0020a\u0020password,\u0020this\u0020will\u0020send\u0020an\u0020email\u0020to\u0020registrered\u0020user\u0020with\u0020a\u0020reset\u0020link",
-            "url": "classes/UserAuth-Model-DbUser.html#method_requestResetPassword"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\DbUser\u003A\u003AresetPassword\u0028\u0029",
-            "name": "resetPassword",
-            "summary": "Called\u0020when\u0020the\u0020user\u0020clicked\u0020on\u0020the\u0020link\u0020to\u0020reset\u0020the\u0020password",
-            "url": "classes/UserAuth-Model-DbUser.html#method_resetPassword"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\DbUser\u003A\u003AchangePassword\u0028\u0029",
-            "name": "changePassword",
-            "summary": "Called\u0020when\u0020a\u0020user\u0020changes\u0020his\/her\u0020password.\u0020They\u0020must\u0020provide\u0020the\u0020current\u0020password",
-            "url": "classes/UserAuth-Model-DbUser.html#method_changePassword"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\DbUser\u003A\u003AhandleVerifyEmailToken\u0028\u0029",
-            "name": "handleVerifyEmailToken",
-            "summary": "When\u0020a\u0020user\u0020click\u0020on\u0020the\u0020link\u0020sent\u0020to\u0020verify\u0020email",
-            "url": "classes/UserAuth-Model-DbUser.html#method_handleVerifyEmailToken"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\DbUser\u003A\u003AremoveToken\u0028\u0029",
-            "name": "removeToken",
-            "summary": "Delete\u0020a\u0020token\u0020once\u0020it\u0020was\u0020used",
-            "url": "classes/UserAuth-Model-DbUser.html#method_removeToken"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\DbUser\u003A\u003AgetUserIdFromToken\u0028\u0029",
-            "name": "getUserIdFromToken",
-            "summary": "Get\u0020the\u0020userId\u0020is\u0020the\u0020token\u0020is\u0020valid,\u0020still\u0020active\u0020and\u0020of\u0020the\u0020right\u0020type",
-            "url": "classes/UserAuth-Model-DbUser.html#method_getUserIdFromToken"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\DbUser\u003A\u003AgenerateToken\u0028\u0029",
-            "name": "generateToken",
-            "summary": "Generate\u0020a\u0020new\u0020token\u0020for\u0020a\u0020specific\u0020type\u0020and\u0020an\u0020optional\u0020time\u0020to\u0020live",
-            "url": "classes/UserAuth-Model-DbUser.html#method_generateToken"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\DbUser\u003A\u003AgetNewToken\u0028\u0029",
-            "name": "getNewToken",
-            "summary": "generate\u0020a\u0020unique\u0020token.\u0020Not\u0020saved\u0020in\u0020the\u0020DB,\u0020just\u0020return\u0020a\u0020token\u0020not\u0020in\u0020the\u0020DB",
-            "url": "classes/UserAuth-Model-DbUser.html#method_getNewToken"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\DbUser\u003A\u003AID_FIELD",
-            "name": "ID_FIELD",
-            "summary": "In\u0020DbUser,\u0020the\u0020ID\u0020Field\u0020is\u0020userId",
-            "url": "classes/UserAuth-Model-DbUser.html#constant_ID_FIELD"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\DbUser\u003A\u003ASTATUS_DELETED",
-            "name": "STATUS_DELETED",
-            "summary": "",
-            "url": "classes/UserAuth-Model-DbUser.html#constant_STATUS_DELETED"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\DbUser\u003A\u003ASTATUS_ACTIVE",
-            "name": "STATUS_ACTIVE",
-            "summary": "",
-            "url": "classes/UserAuth-Model-DbUser.html#constant_STATUS_ACTIVE"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\DbUser\u003A\u003ASTATUS_INACTIVE",
-            "name": "STATUS_INACTIVE",
-            "summary": "",
-            "url": "classes/UserAuth-Model-DbUser.html#constant_STATUS_INACTIVE"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\DbUser\u003A\u003ASTATUS_BLOCKED_BY_ADMIN",
-            "name": "STATUS_BLOCKED_BY_ADMIN",
-            "summary": "",
-            "url": "classes/UserAuth-Model-DbUser.html#constant_STATUS_BLOCKED_BY_ADMIN"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\DbUser\u003A\u003AVERIFICATION_DONE",
-            "name": "VERIFICATION_DONE",
-            "summary": "",
-            "url": "classes/UserAuth-Model-DbUser.html#constant_VERIFICATION_DONE"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\DbUser\u003A\u003AVERIFICATION_COULD_NOT_SEND",
-            "name": "VERIFICATION_COULD_NOT_SEND",
-            "summary": "",
-            "url": "classes/UserAuth-Model-DbUser.html#constant_VERIFICATION_COULD_NOT_SEND"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\DbUser\u003A\u003AVERIFICATION_EMAIL_SENT",
-            "name": "VERIFICATION_EMAIL_SENT",
-            "summary": "",
-            "url": "classes/UserAuth-Model-DbUser.html#constant_VERIFICATION_EMAIL_SENT"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\DbUser\u003A\u003ATOKEN_TYPE_CONFIRM_EMAIL",
-            "name": "TOKEN_TYPE_CONFIRM_EMAIL",
-            "summary": "",
-            "url": "classes/UserAuth-Model-DbUser.html#constant_TOKEN_TYPE_CONFIRM_EMAIL"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\DbUser\u003A\u003ATOKEN_TYPE_RESET_PASSWORD",
-            "name": "TOKEN_TYPE_RESET_PASSWORD",
-            "summary": "",
-            "url": "classes/UserAuth-Model-DbUser.html#constant_TOKEN_TYPE_RESET_PASSWORD"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\DbUser\u003A\u003ATOKEN_TTL_CONFIRM_EMAIL",
-            "name": "TOKEN_TTL_CONFIRM_EMAIL",
-            "summary": "",
-            "url": "classes/UserAuth-Model-DbUser.html#constant_TOKEN_TTL_CONFIRM_EMAIL"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\DbUser\u003A\u003ATOKEN_TTL_RESET_PASSWORD",
-            "name": "TOKEN_TTL_RESET_PASSWORD",
-            "summary": "",
-            "url": "classes/UserAuth-Model-DbUser.html#constant_TOKEN_TTL_RESET_PASSWORD"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\DbUser\u003A\u003A\u0024defaultValues",
-            "name": "defaultValues",
-            "summary": "",
-            "url": "classes/UserAuth-Model-DbUser.html#property_defaultValues"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\DbUser\u003A\u003A\u0024parentdb",
-            "name": "parentdb",
-            "summary": "",
-            "url": "classes/UserAuth-Model-DbUser.html#property_parentdb"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\DbUser\u003A\u003A\u0024tableName",
-            "name": "tableName",
-            "summary": "",
-            "url": "classes/UserAuth-Model-DbUser.html#property_tableName"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\EmailUser",
-            "name": "EmailUser",
-            "summary": "",
-            "url": "classes/UserAuth-Model-EmailUser.html"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\EmailUser\u003A\u003AsetUrlPlugin\u0028\u0029",
-            "name": "setUrlPlugin",
-            "summary": "Set\u0020the\u0020ViewPlugin\u0020UrlPlugin,\u0020this\u0020is\u0020used\u0020when\u0020generating\u0020the\u0020links\u0020in\u0020the\u0020emails",
-            "url": "classes/UserAuth-Model-EmailUser.html#method_setUrlPlugin"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\EmailUser\u003A\u003AgetUrlPlugin\u0028\u0029",
-            "name": "getUrlPlugin",
-            "summary": "",
-            "url": "classes/UserAuth-Model-EmailUser.html#method_getUrlPlugin"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\EmailUser\u003A\u003Aurl\u0028\u0029",
-            "name": "url",
-            "summary": "",
-            "url": "classes/UserAuth-Model-EmailUser.html#method_url"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\EmailUser\u003A\u003AsetTranslator\u0028\u0029",
-            "name": "setTranslator",
-            "summary": "Set\u0020the\u0020MvcTranslator,\u0020this\u0020is\u0020used\u0020when\u0020generating\u0020the\u0020links\u0020in\u0020the\u0020emails",
-            "url": "classes/UserAuth-Model-EmailUser.html#method_setTranslator"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\EmailUser\u003A\u003AgetTranslator\u0028\u0029",
-            "name": "getTranslator",
-            "summary": "",
-            "url": "classes/UserAuth-Model-EmailUser.html#method_getTranslator"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\EmailUser\u003A\u003AsetUserDb\u0028\u0029",
-            "name": "setUserDb",
-            "summary": "Set\u0020a\u0020\u0022parentDb\u0022\u0020used\u0020when\u0020the\u0020child\u0020class\u0020still\u0020use\u0020a\u0020\u0022parent\u0022\u0020user\u0020that\u0020share\u0020user\u0020between\nmultiple\u0020applications",
-            "url": "classes/UserAuth-Model-EmailUser.html#method_setUserDb"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\EmailUser\u003A\u003AgetUserDb\u0028\u0029",
-            "name": "getUserDb",
-            "summary": "",
-            "url": "classes/UserAuth-Model-EmailUser.html#method_getUserDb"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\EmailUser\u003A\u003AsetTimeToLive\u0028\u0029",
-            "name": "setTimeToLive",
-            "summary": "Set\u0020a\u0020\u0022parentDb\u0022\u0020used\u0020when\u0020the\u0020child\u0020class\u0020still\u0020use\u0020a\u0020\u0022parent\u0022\u0020user\u0020that\u0020share\u0020user\u0020between\nmultiple\u0020applications",
-            "url": "classes/UserAuth-Model-EmailUser.html#method_setTimeToLive"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\EmailUser\u003A\u003AgetTimeToLive\u0028\u0029",
-            "name": "getTimeToLive",
-            "summary": "",
-            "url": "classes/UserAuth-Model-EmailUser.html#method_getTimeToLive"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\EmailUser\u003A\u003Asetlang\u0028\u0029",
-            "name": "setlang",
-            "summary": "",
-            "url": "classes/UserAuth-Model-EmailUser.html#method_setlang"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\EmailUser\u003A\u003AgetLang\u0028\u0029",
-            "name": "getLang",
-            "summary": "",
-            "url": "classes/UserAuth-Model-EmailUser.html#method_getLang"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\EmailUser\u003A\u003Aauthenticate\u0028\u0029",
-            "name": "authenticate",
-            "summary": "Authenticate\/login\u0020a\u0020user\u0020using\u0020a\u0020database.\u0020This\u0020particular\u0020implementation\u0020would\u0020use\u0020a\u0020central\nDB\u0020for\u0020user\u0020and\u0020each\u0020app\u0020could\u0020have\u0020a\u0020user\u0020param,\u0020that\u0027s\u0020why\u0020it\u0020uses\u0020a\u0020parentDb\u0020for\u0020authenticating",
-            "url": "classes/UserAuth-Model-EmailUser.html#method_authenticate"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\EmailUser\u003A\u003AloadFromJwt\u0028\u0029",
-            "name": "loadFromJwt",
-            "summary": "Load\u0020a\u0020user\u0020from\u0020the\u0020JWT.\u0020The\u0020expiry\u0020time\u0020of\u0020the\u0020JWT\u0020should\u0020be\u0020checked\u0020before\u0020allowing\u0020this.",
-            "url": "classes/UserAuth-Model-EmailUser.html#method_loadFromJwt"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\EmailUser\u003A\u003AloadFromSession\u0028\u0029",
-            "name": "loadFromSession",
-            "summary": "Load\u0020a\u0020user\u0020from\u0020the\u0020Session\u0020if\u0020the\u0020useSession\u0020is\u0020set\u0020to\u0020true\u0020in\u0020userConfig\u0020\u005Bdefault\u0020false\u005D",
-            "url": "classes/UserAuth-Model-EmailUser.html#method_loadFromSession"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\EmailUser\u003A\u003A_loadUserById\u0028\u0029",
-            "name": "_loadUserById",
-            "summary": "A\u0020method\u0020used\u0020by\u0020loadFromJwt\u0020and\u0020loadFromSession\u0020to\u0020load\u0020the\u0020user\u0020without\u0020validating\u0020credentials",
-            "url": "classes/UserAuth-Model-EmailUser.html#method__loadUserById"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\EmailUser\u003A\u003Aregister\u0028\u0029",
-            "name": "register",
-            "summary": "Register\u0020a\u0020new\u0020user,\u0020create\u0020a\u0020DB\u0020entry\u0020and\u0020send\u0020email\u0020\u0028depending\u0020on\u0020config\u0029",
-            "url": "classes/UserAuth-Model-EmailUser.html#method_register"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\EmailUser\u003A\u003ArequestResetPassword\u0028\u0029",
-            "name": "requestResetPassword",
-            "summary": "request\u0020the\u0020reset\u0020of\u0020a\u0020password,\u0020this\u0020will\u0020send\u0020an\u0020email\u0020to\u0020registrered\u0020user\u0020with\u0020a\u0020reset\u0020link",
-            "url": "classes/UserAuth-Model-EmailUser.html#method_requestResetPassword"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\EmailUser\u003A\u003AresetPassword\u0028\u0029",
-            "name": "resetPassword",
-            "summary": "Called\u0020when\u0020the\u0020user\u0020clicked\u0020on\u0020the\u0020link\u0020to\u0020reset\u0020the\u0020password",
-            "url": "classes/UserAuth-Model-EmailUser.html#method_resetPassword"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\EmailUser\u003A\u003AchangePassword\u0028\u0029",
-            "name": "changePassword",
-            "summary": "Called\u0020when\u0020a\u0020user\u0020changes\u0020his\/her\u0020password.\u0020They\u0020must\u0020provide\u0020the\u0020current\u0020password",
-            "url": "classes/UserAuth-Model-EmailUser.html#method_changePassword"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\EmailUser\u003A\u003AhandleVerifyEmailToken\u0028\u0029",
-            "name": "handleVerifyEmailToken",
-            "summary": "When\u0020a\u0020user\u0020click\u0020on\u0020the\u0020link\u0020sent\u0020to\u0020verify\u0020email",
-            "url": "classes/UserAuth-Model-EmailUser.html#method_handleVerifyEmailToken"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\EmailUser\u003A\u003AremoveToken\u0028\u0029",
-            "name": "removeToken",
-            "summary": "Delete\u0020a\u0020token\u0020once\u0020it\u0020was\u0020used",
-            "url": "classes/UserAuth-Model-EmailUser.html#method_removeToken"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\EmailUser\u003A\u003AgetNewToken\u0028\u0029",
-            "name": "getNewToken",
-            "summary": "generate\u0020a\u0020unique\u0020token.\u0020Not\u0020saved\u0020in\u0020the\u0020DB,\u0020just\u0020return\u0020a\u0020token\u0020not\u0020in\u0020the\u0020DB",
-            "url": "classes/UserAuth-Model-EmailUser.html#method_getNewToken"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\EmailUser\u003A\u003AID_FIELD",
-            "name": "ID_FIELD",
-            "summary": "In\u0020DbUser,\u0020the\u0020ID\u0020Field\u0020is\u0020userId",
-            "url": "classes/UserAuth-Model-EmailUser.html#constant_ID_FIELD"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\EmailUser\u003A\u003A\u0024userDb",
-            "name": "userDb",
-            "summary": "",
-            "url": "classes/UserAuth-Model-EmailUser.html#property_userDb"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\EmailUser\u003A\u003A\u0024ttl",
-            "name": "ttl",
-            "summary": "",
-            "url": "classes/UserAuth-Model-EmailUser.html#property_ttl"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\EmailUser\u003A\u003A\u0024lang",
-            "name": "lang",
-            "summary": "",
-            "url": "classes/UserAuth-Model-EmailUser.html#property_lang"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\FileEmailUser",
-            "name": "FileEmailUser",
-            "summary": "",
-            "url": "classes/UserAuth-Model-FileEmailUser.html"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\FileEmailUser\u003A\u003AsetUrlPlugin\u0028\u0029",
-            "name": "setUrlPlugin",
-            "summary": "Set\u0020the\u0020ViewPlugin\u0020UrlPlugin,\u0020this\u0020is\u0020used\u0020when\u0020generating\u0020the\u0020links\u0020in\u0020the\u0020emails",
-            "url": "classes/UserAuth-Model-FileEmailUser.html#method_setUrlPlugin"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\FileEmailUser\u003A\u003AgetUrlPlugin\u0028\u0029",
-            "name": "getUrlPlugin",
-            "summary": "",
-            "url": "classes/UserAuth-Model-FileEmailUser.html#method_getUrlPlugin"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\FileEmailUser\u003A\u003Aurl\u0028\u0029",
-            "name": "url",
-            "summary": "",
-            "url": "classes/UserAuth-Model-FileEmailUser.html#method_url"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\FileEmailUser\u003A\u003AsetTranslator\u0028\u0029",
-            "name": "setTranslator",
-            "summary": "Set\u0020the\u0020MvcTranslator,\u0020this\u0020is\u0020used\u0020when\u0020generating\u0020the\u0020links\u0020in\u0020the\u0020emails",
-            "url": "classes/UserAuth-Model-FileEmailUser.html#method_setTranslator"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\FileEmailUser\u003A\u003AgetTranslator\u0028\u0029",
-            "name": "getTranslator",
-            "summary": "",
-            "url": "classes/UserAuth-Model-FileEmailUser.html#method_getTranslator"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\FileEmailUser\u003A\u003AsetVerificationRouteName\u0028\u0029",
-            "name": "setVerificationRouteName",
-            "summary": "",
-            "url": "classes/UserAuth-Model-FileEmailUser.html#method_setVerificationRouteName"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\FileEmailUser\u003A\u003AgetVerificationRouteName\u0028\u0029",
-            "name": "getVerificationRouteName",
-            "summary": "",
-            "url": "classes/UserAuth-Model-FileEmailUser.html#method_getVerificationRouteName"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\FileEmailUser\u003A\u003AsetUserFile\u0028\u0029",
-            "name": "setUserFile",
-            "summary": "",
-            "url": "classes/UserAuth-Model-FileEmailUser.html#method_setUserFile"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\FileEmailUser\u003A\u003AgetUserFile\u0028\u0029",
-            "name": "getUserFile",
-            "summary": "",
-            "url": "classes/UserAuth-Model-FileEmailUser.html#method_getUserFile"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\FileEmailUser\u003A\u003AgetUserJson\u0028\u0029",
-            "name": "getUserJson",
-            "summary": "",
-            "url": "classes/UserAuth-Model-FileEmailUser.html#method_getUserJson"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\FileEmailUser\u003A\u003AsetUserJson\u0028\u0029",
-            "name": "setUserJson",
-            "summary": "",
-            "url": "classes/UserAuth-Model-FileEmailUser.html#method_setUserJson"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\FileEmailUser\u003A\u003AsetTimeToLive\u0028\u0029",
-            "name": "setTimeToLive",
-            "summary": "Set\u0020a\u0020\u0022parentDb\u0022\u0020used\u0020when\u0020the\u0020child\u0020class\u0020still\u0020use\u0020a\u0020\u0022parent\u0022\u0020user\u0020that\u0020share\u0020user\u0020between\nmultiple\u0020applications",
-            "url": "classes/UserAuth-Model-FileEmailUser.html#method_setTimeToLive"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\FileEmailUser\u003A\u003AgetTimeToLive\u0028\u0029",
-            "name": "getTimeToLive",
-            "summary": "",
-            "url": "classes/UserAuth-Model-FileEmailUser.html#method_getTimeToLive"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\FileEmailUser\u003A\u003Asetlang\u0028\u0029",
-            "name": "setlang",
-            "summary": "",
-            "url": "classes/UserAuth-Model-FileEmailUser.html#method_setlang"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\FileEmailUser\u003A\u003AgetLang\u0028\u0029",
-            "name": "getLang",
-            "summary": "",
-            "url": "classes/UserAuth-Model-FileEmailUser.html#method_getLang"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\FileEmailUser\u003A\u003Aregister\u0028\u0029",
-            "name": "register",
-            "summary": "Register\u0020a\u0020new\u0020user,\u0020create\u0020an\u0020entry\u0020in\u0020the\u0020file\u0020and\u0020send\u0020email",
-            "url": "classes/UserAuth-Model-FileEmailUser.html#method_register"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\FileEmailUser\u003A\u003AhandleVerifyEmailToken\u0028\u0029",
-            "name": "handleVerifyEmailToken",
-            "summary": "When\u0020a\u0020user\u0020click\u0020on\u0020the\u0020link\u0020sent\u0020to\u0020verify\u0020email",
-            "url": "classes/UserAuth-Model-FileEmailUser.html#method_handleVerifyEmailToken"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\FileEmailUser\u003A\u003AgetDataForJWT\u0028\u0029",
-            "name": "getDataForJWT",
-            "summary": "Should\u0020return\u0020the\u0020data\u0020to\u0020be\u0020included\u0020in\u0020the\u0020JWT.\u0020This\u0020is\u0020meant\u0020to\u0020be\u0020overwritten\u0020if\u0020needed\nBy\u0020default,\u0020the\u0020entire\u0020user\u0020data\u0020set\u0020is\u0020included\u0020and\u0020will\u0020add\u0020a\u0020fields\u0020called\u0020\u0027id\u0027\ncontaining\u0020the\u0020content\u0020of\u0020self\u003A\u003AID_FIELD\u0020if\u0020\u0027id\u0027\u0020was\u0020not\u0020defined",
-            "url": "classes/UserAuth-Model-FileEmailUser.html#method_getDataForJWT"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\FileEmailUser\u003A\u003AloadFromSession\u0028\u0029",
-            "name": "loadFromSession",
-            "summary": "Load\u0020a\u0020user\u0020from\u0020the\u0020Session\u0020if\u0020the\u0020useSession\u0020is\u0020set\u0020to\u0020true\u0020in\u0020userConfig\u0020\u005Bdefault\u0020false\u005D",
-            "url": "classes/UserAuth-Model-FileEmailUser.html#method_loadFromSession"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\FileEmailUser\u003A\u003A_loadUserById\u0028\u0029",
-            "name": "_loadUserById",
-            "summary": "A\u0020method\u0020used\u0020by\u0020loadFromJwt\u0020and\u0020loadFromSession\u0020to\u0020load\u0020the\u0020user\u0020without\u0020validating\u0020credentials",
-            "url": "classes/UserAuth-Model-FileEmailUser.html#method__loadUserById"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\FileEmailUser\u003A\u003AgetNewToken\u0028\u0029",
-            "name": "getNewToken",
-            "summary": "generate\u0020a\u0020unique\u0020token.\u0020Not\u0020saved\u0020in\u0020the\u0020DB,\u0020just\u0020return\u0020a\u0020token\u0020not\u0020in\u0020the\u0020DB",
-            "url": "classes/UserAuth-Model-FileEmailUser.html#method_getNewToken"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\FileEmailUser\u003A\u003AID_FIELD",
-            "name": "ID_FIELD",
-            "summary": "In\u0020DbUser,\u0020the\u0020ID\u0020Field\u0020is\u0020userId",
-            "url": "classes/UserAuth-Model-FileEmailUser.html#constant_ID_FIELD"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\FileEmailUser\u003A\u003AVERIFICATION_DONE",
-            "name": "VERIFICATION_DONE",
-            "summary": "",
-            "url": "classes/UserAuth-Model-FileEmailUser.html#constant_VERIFICATION_DONE"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\FileEmailUser\u003A\u003AVERIFICATION_COULD_NOT_SEND",
-            "name": "VERIFICATION_COULD_NOT_SEND",
-            "summary": "",
-            "url": "classes/UserAuth-Model-FileEmailUser.html#constant_VERIFICATION_COULD_NOT_SEND"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\FileEmailUser\u003A\u003AVERIFICATION_EMAIL_SENT",
-            "name": "VERIFICATION_EMAIL_SENT",
-            "summary": "",
-            "url": "classes/UserAuth-Model-FileEmailUser.html#constant_VERIFICATION_EMAIL_SENT"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\FileEmailUser\u003A\u003ATOKEN_TYPE_CONFIRM_EMAIL",
-            "name": "TOKEN_TYPE_CONFIRM_EMAIL",
-            "summary": "",
-            "url": "classes/UserAuth-Model-FileEmailUser.html#constant_TOKEN_TYPE_CONFIRM_EMAIL"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\FileEmailUser\u003A\u003ATOKEN_TYPE_RESET_PASSWORD",
-            "name": "TOKEN_TYPE_RESET_PASSWORD",
-            "summary": "",
-            "url": "classes/UserAuth-Model-FileEmailUser.html#constant_TOKEN_TYPE_RESET_PASSWORD"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\FileEmailUser\u003A\u003ATOKEN_TTL_CONFIRM_EMAIL",
-            "name": "TOKEN_TTL_CONFIRM_EMAIL",
-            "summary": "",
-            "url": "classes/UserAuth-Model-FileEmailUser.html#constant_TOKEN_TTL_CONFIRM_EMAIL"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\FileEmailUser\u003A\u003A\u0024verificationRouteName",
-            "name": "verificationRouteName",
-            "summary": "",
-            "url": "classes/UserAuth-Model-FileEmailUser.html#property_verificationRouteName"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\FileEmailUser\u003A\u003A\u0024userFile",
-            "name": "userFile",
-            "summary": "",
-            "url": "classes/UserAuth-Model-FileEmailUser.html#property_userFile"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\FileEmailUser\u003A\u003A\u0024ttl",
-            "name": "ttl",
-            "summary": "",
-            "url": "classes/UserAuth-Model-FileEmailUser.html#property_ttl"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\FileEmailUser\u003A\u003A\u0024lang",
-            "name": "lang",
-            "summary": "",
-            "url": "classes/UserAuth-Model-FileEmailUser.html#property_lang"
         },                {
             "fqsen": "\\UserAuth\\Model\\JWT",
             "name": "JWT",
@@ -4825,76 +4640,6 @@ Search.appendIndex(
             "name": "issuer",
             "summary": "",
             "url": "classes/UserAuth-Model-JWT.html#property_issuer"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\LdapUser",
-            "name": "LdapUser",
-            "summary": "",
-            "url": "classes/UserAuth-Model-LdapUser.html"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\LdapUser\u003A\u003AsetLdap\u0028\u0029",
-            "name": "setLdap",
-            "summary": "Set\u0020the\u0020LDAP\u0020object\u0020that\u0020will\u0020be\u0020used\u0020for\u0020authentication",
-            "url": "classes/UserAuth-Model-LdapUser.html#method_setLdap"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\LdapUser\u003A\u003AgetLdap\u0028\u0029",
-            "name": "getLdap",
-            "summary": "",
-            "url": "classes/UserAuth-Model-LdapUser.html#method_getLdap"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\LdapUser\u003A\u003Aauthenticate\u0028\u0029",
-            "name": "authenticate",
-            "summary": "Authenticate\/login\u0020a\u0020user\u0020using\u0020a\u0020database.\u0020This\u0020particular\u0020implementation\u0020would\u0020use\u0020Active\u0020Directory\nto\u0020authenticate\u0020and\u0020each\u0020app\u0020could\u0020have\u0020a\u0020user\u0020DB\u0020with\u0020access\u0020rights",
-            "url": "classes/UserAuth-Model-LdapUser.html#method_authenticate"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\LdapUser\u003A\u003AloadFromJwt\u0028\u0029",
-            "name": "loadFromJwt",
-            "summary": "Load\u0020a\u0020user\u0020from\u0020the\u0020JWT.\u0020The\u0020expiry\u0020time\u0020of\u0020the\u0020JWT\u0020should\u0020be\u0020checked\u0020before\u0020allowing\u0020this.",
-            "url": "classes/UserAuth-Model-LdapUser.html#method_loadFromJwt"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\LdapUser\u003A\u003Aregister\u0028\u0029",
-            "name": "register",
-            "summary": "This\u0020function\u0020is\u0020not\u0020available\u0020in\u0020this\u0020class",
-            "url": "classes/UserAuth-Model-LdapUser.html#method_register"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\LdapUser\u003A\u003ArequestResetPassword\u0028\u0029",
-            "name": "requestResetPassword",
-            "summary": "This\u0020function\u0020is\u0020not\u0020available\u0020in\u0020this\u0020class",
-            "url": "classes/UserAuth-Model-LdapUser.html#method_requestResetPassword"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\LdapUser\u003A\u003AhandleVerifyEmailToken\u0028\u0029",
-            "name": "handleVerifyEmailToken",
-            "summary": "This\u0020function\u0020is\u0020not\u0020available\u0020in\u0020this\u0020class",
-            "url": "classes/UserAuth-Model-LdapUser.html#method_handleVerifyEmailToken"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\LdapUser\u003A\u003AvalidateResetPasswordToken\u0028\u0029",
-            "name": "validateResetPasswordToken",
-            "summary": "This\u0020function\u0020is\u0020not\u0020available\u0020in\u0020this\u0020class",
-            "url": "classes/UserAuth-Model-LdapUser.html#method_validateResetPasswordToken"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\LdapUser\u003A\u003AresetPassword\u0028\u0029",
-            "name": "resetPassword",
-            "summary": "This\u0020function\u0020is\u0020not\u0020available\u0020in\u0020this\u0020class",
-            "url": "classes/UserAuth-Model-LdapUser.html#method_resetPassword"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\LdapUser\u003A\u003AchangePassword\u0028\u0029",
-            "name": "changePassword",
-            "summary": "Called\u0020when\u0020a\u0020user\u0020changes\u0020his\/her\u0020password.\u0020They\u0020must\u0020provide\u0020the\u0020current\u0020password",
-            "url": "classes/UserAuth-Model-LdapUser.html#method_changePassword"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\LdapUser\u003A\u003AvalidatePassword\u0028\u0029",
-            "name": "validatePassword",
-            "summary": "This\u0020function\u0020is\u0020not\u0020available\u0020in\u0020this\u0020class",
-            "url": "classes/UserAuth-Model-LdapUser.html#method_validatePassword"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\LdapUser\u003A\u003AgetDataForJWT\u0028\u0029",
-            "name": "getDataForJWT",
-            "summary": "This\u0020function\u0020is\u0020called\u0020when\u0020trying\u0020to\u0020get\u0020the\u0020JWT",
-            "url": "classes/UserAuth-Model-LdapUser.html#method_getDataForJWT"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\LdapUser\u003A\u003A\u0024ldap",
-            "name": "ldap",
-            "summary": "",
-            "url": "classes/UserAuth-Model-LdapUser.html#property_ldap"
         },                {
             "fqsen": "\\UserAuth\\Model\\User\\Authenticator\\AbstractAuthenticator",
             "name": "AbstractAuthenticator",
@@ -5646,6 +5391,16 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/UserAuth-Model-User-User.html#method_getSessionInfo"
         },                {
+            "fqsen": "\\UserAuth\\Model\\User\\User\u003A\u003AsetJwtFromFactory\u0028\u0029",
+            "name": "setJwtFromFactory",
+            "summary": "",
+            "url": "classes/UserAuth-Model-User-User.html#method_setJwtFromFactory"
+        },                {
+            "fqsen": "\\UserAuth\\Model\\User\\User\u003A\u003AgetJwtFromFactory\u0028\u0029",
+            "name": "getJwtFromFactory",
+            "summary": "",
+            "url": "classes/UserAuth-Model-User-User.html#method_getJwtFromFactory"
+        },                {
             "fqsen": "\\UserAuth\\Model\\User\\User\u003A\u003AsetJwtObj\u0028\u0029",
             "name": "setJwtObj",
             "summary": "Set\u0020the\u0020JWT\u0020object\u0020\u0028should\u0020be\u0020set\u0020in\u0020the\u0020factory\u0029",
@@ -5730,6 +5485,11 @@ Search.appendIndex(
             "name": "errors",
             "summary": "",
             "url": "classes/UserAuth-Model-User-User.html#property_errors"
+        },                {
+            "fqsen": "\\UserAuth\\Model\\User\\User\u003A\u003A\u0024jwtFromFactory",
+            "name": "jwtFromFactory",
+            "summary": "",
+            "url": "classes/UserAuth-Model-User-User.html#property_jwtFromFactory"
         },                {
             "fqsen": "\\UserAuth\\Model\\User\\User\u003A\u003A\u0024jwtObj",
             "name": "jwtObj",
@@ -5836,186 +5596,6 @@ Search.appendIndex(
             "summary": "Set\u0020the\u0020name\u0020of\u0020the\u0020ID\u0020field\u0020for\u0020your\u0020user\u0020\u0028ex\u003A\u0020email,\u0020userId,\u0020accountname,\u0020etc.\u0029",
             "url": "classes/UserAuth-Model-User-UserInterface.html#method_setIdField"
         },                {
-            "fqsen": "\\UserAuth\\Model\\User",
-            "name": "User",
-            "summary": "",
-            "url": "classes/UserAuth-Model-User.html"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\User\u003A\u003A__construct\u0028\u0029",
-            "name": "__construct",
-            "summary": "",
-            "url": "classes/UserAuth-Model-User.html#method___construct"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\User\u003A\u003AsetGcNotify\u0028\u0029",
-            "name": "setGcNotify",
-            "summary": "",
-            "url": "classes/UserAuth-Model-User.html#method_setGcNotify"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\User\u003A\u003AgetGcNotify\u0028\u0029",
-            "name": "getGcNotify",
-            "summary": "",
-            "url": "classes/UserAuth-Model-User.html#method_getGcNotify"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\User\u003A\u003AsetJwtObj\u0028\u0029",
-            "name": "setJwtObj",
-            "summary": "Set\u0020the\u0020JWT\u0020object\u0020\u0028should\u0020be\u0020used\u0020in\u0020the\u0020factory\u0029",
-            "url": "classes/UserAuth-Model-User.html#method_setJwtObj"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\User\u003A\u003AgetJwtObj\u0028\u0029",
-            "name": "getJwtObj",
-            "summary": "Return\u0020the\u0020JWT\u0020object",
-            "url": "classes/UserAuth-Model-User.html#method_getJwtObj"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\User\u003A\u003AsetSessionLength\u0028\u0029",
-            "name": "setSessionLength",
-            "summary": "",
-            "url": "classes/UserAuth-Model-User.html#method_setSessionLength"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\User\u003A\u003AgetSessionLength\u0028\u0029",
-            "name": "getSessionLength",
-            "summary": "",
-            "url": "classes/UserAuth-Model-User.html#method_getSessionLength"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\User\u003A\u003AsetEventManager\u0028\u0029",
-            "name": "setEventManager",
-            "summary": "should\u0020be\u0020used\u0020in\u0020the\u0020factory",
-            "url": "classes/UserAuth-Model-User.html#method_setEventManager"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\User\u003A\u003AgetEventManager\u0028\u0029",
-            "name": "getEventManager",
-            "summary": "Get\u0020the\u0020EventManager\u0020to\u0020triger\u0020for\u0020different\u0020events",
-            "url": "classes/UserAuth-Model-User.html#method_getEventManager"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\User\u003A\u003AsetLogger\u0028\u0029",
-            "name": "setLogger",
-            "summary": "Set\u0020the\u0020logger\u0020interface\u0020that\u0020will\u0020be\u0020used\u0020to\u0020log\u0020all\u0020activity\u0020of\u0020this\u0020user\u0020class",
-            "url": "classes/UserAuth-Model-User.html#method_setLogger"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\User\u003A\u003AsetUserConfig\u0028\u0029",
-            "name": "setUserConfig",
-            "summary": "Configuration\u0020for\u0020the\u0020user\u0020object.",
-            "url": "classes/UserAuth-Model-User.html#method_setUserConfig"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\User\u003A\u003AgetUserConfig\u0028\u0029",
-            "name": "getUserConfig",
-            "summary": "Get\u0020the\u0020configuration,\u0020if\u0020you\u0020specify\u0020a\u0020key,\u0020only\u0020that\u0020particular\u0020key\u0020will\u0020be\u0020returned",
-            "url": "classes/UserAuth-Model-User.html#method_getUserConfig"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\User\u003A\u003AsetPasswordRules\u0028\u0029",
-            "name": "setPasswordRules",
-            "summary": "Set\u0020the\u0020specific\u0020password\u0020rules\u0020for\u0020this\u0020instance",
-            "url": "classes/UserAuth-Model-User.html#method_setPasswordRules"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\User\u003A\u003AgetPasswordRules\u0028\u0029",
-            "name": "getPasswordRules",
-            "summary": "Get\u0020this\u0020password\u0020rules\u0020or\u0020the\u0020default\u0020rules\u0020if\u0020none\u0020was\u0020passed\u0020to\u0020the\u0020setPasswordRules\u0028\u0029",
-            "url": "classes/UserAuth-Model-User.html#method_getPasswordRules"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\User\u003A\u003AgetLastPasswordErrors\u0028\u0029",
-            "name": "getLastPasswordErrors",
-            "summary": "Return\u0020the\u0020last\u0020error\u0020encountered\u0020when\u0020validating\u0020the\u0020password\u0020againts\u0020the\u0020rules",
-            "url": "classes/UserAuth-Model-User.html#method_getLastPasswordErrors"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\User\u003A\u003AisLoggedIn\u0028\u0029",
-            "name": "isLoggedIn",
-            "summary": "Return\u0020true\u0020if\u0020logged\u0020in,\u0020false\u0020otherwise.\u0020By\u0020default",
-            "url": "classes/UserAuth-Model-User.html#method_isLoggedIn"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\User\u003A\u003AgetUserId\u0028\u0029",
-            "name": "getUserId",
-            "summary": "Returns\u0020the\u0020ID\u0020field\u0020defined\u0020in\u0020the\u0020const\u0020ID_FIELD\u0020of\u0020the\u0020class",
-            "url": "classes/UserAuth-Model-User.html#method_getUserId"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\User\u003A\u003Alogin\u0028\u0029",
-            "name": "login",
-            "summary": "Synonym\u0020of\u0020authenticate\u0028\u0029\u0020function",
-            "url": "classes/UserAuth-Model-User.html#method_login"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\User\u003A\u003Aauthenticate\u0028\u0029",
-            "name": "authenticate",
-            "summary": "Authenticate\u0020user\u0020with\u0020an\u0020ID\u0020\u0028usually\u0020email\u0029\u0020and\u0020password",
-            "url": "classes/UserAuth-Model-User.html#method_authenticate"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\User\u003A\u003AloadFromJwt\u0028\u0029",
-            "name": "loadFromJwt",
-            "summary": "Load\u0020a\u0020user\u0020from\u0020the\u0020JWT.\u0020The\u0020expiry\u0020time\u0020of\u0020the\u0020JWT\u0020should\u0020be\u0020checked\u0020before\u0020allowing\u0020this.",
-            "url": "classes/UserAuth-Model-User.html#method_loadFromJwt"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\User\u003A\u003AchangePassword\u0028\u0029",
-            "name": "changePassword",
-            "summary": "Called\u0020when\u0020a\u0020user\u0020changes\u0020his\/her\u0020password.\u0020They\u0020must\u0020provide\u0020the\u0020current\u0020password",
-            "url": "classes/UserAuth-Model-User.html#method_changePassword"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\User\u003A\u003Aregister\u0028\u0029",
-            "name": "register",
-            "summary": "Register\u0020a\u0020new\u0020user,\u0020create\u0020a\u0020DB\u0020entry\u0020and\u0020send\u0020email\u0020\u0028depending\u0020on\u0020config\u0029",
-            "url": "classes/UserAuth-Model-User.html#method_register"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\User\u003A\u003AvalidatePassword\u0028\u0029",
-            "name": "validatePassword",
-            "summary": "Validate\u0020the\u0020password\u0020and\u0020confirmation\u0020using\u0020the\u0020provided\u0020\u0024passwordRules\u0020arg,\u0020set\u0020in\u0020setPasswordRules\u0028\u0029\u0020or\u0020the\u0020default\u0020rules",
-            "url": "classes/UserAuth-Model-User.html#method_validatePassword"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\User\u003A\u003AloadFromSession\u0028\u0029",
-            "name": "loadFromSession",
-            "summary": "Load\u0020a\u0020user\u0020from\u0020the\u0020Session\u0020if\u0020the\u0020useSession\u0020is\u0020set\u0020to\u0020true\u0020in\u0020userConfig\u0020\u005Bdefault\u0020false\u005D",
-            "url": "classes/UserAuth-Model-User.html#method_loadFromSession"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\User\u003A\u003AbuildLoginSession\u0028\u0029",
-            "name": "buildLoginSession",
-            "summary": "Set\u0020the\u0020data\u0020in\u0020the\u0020session\u0020if\u0020the\u0020useSession\u0020is\u0020set\u0020to\u0020true\u0020in\u0020userConfig\u0020\u005Bdefault\u0020false\u005D",
-            "url": "classes/UserAuth-Model-User.html#method_buildLoginSession"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\User\u003A\u003AdestroySession\u0028\u0029",
-            "name": "destroySession",
-            "summary": "Destroy\u0020the\u0020session",
-            "url": "classes/UserAuth-Model-User.html#method_destroySession"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\User\u003A\u003AgetSessionInfo\u0028\u0029",
-            "name": "getSessionInfo",
-            "summary": "Return\u0020all\u0020the\u0020session\u0020data",
-            "url": "classes/UserAuth-Model-User.html#method_getSessionInfo"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\User\u003A\u003Alogout\u0028\u0029",
-            "name": "logout",
-            "summary": "Log\u0020the\u0020user\u0020out\u0020and\u0020destroy\u0020the\u0020session",
-            "url": "classes/UserAuth-Model-User.html#method_logout"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\User\u003A\u003AjwtToData\u0028\u0029",
-            "name": "jwtToData",
-            "summary": "Get\u0020the\u0020content\u0020of\u0020the\u0020Javascript\u0020Web\u0020Token\u0020\u0028when\u0020using\u0020API\u0029",
-            "url": "classes/UserAuth-Model-User.html#method_jwtToData"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\User\u003A\u003AgetDataForJWT\u0028\u0029",
-            "name": "getDataForJWT",
-            "summary": "Should\u0020return\u0020the\u0020data\u0020to\u0020be\u0020included\u0020in\u0020the\u0020JWT.\u0020This\u0020is\u0020meant\u0020to\u0020be\u0020overwritten\u0020if\u0020needed\nBy\u0020default,\u0020the\u0020entire\u0020user\u0020data\u0020set\u0020is\u0020included\u0020and\u0020will\u0020add\u0020a\u0020fields\u0020called\u0020\u0027id\u0027\ncontaining\u0020the\u0020content\u0020of\u0020self\u003A\u003AID_FIELD\u0020if\u0020\u0027id\u0027\u0020was\u0020not\u0020defined",
-            "url": "classes/UserAuth-Model-User.html#method_getDataForJWT"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\User\u003A\u003AgetJWT\u0028\u0029",
-            "name": "getJWT",
-            "summary": "Generate\u0020and\u0020return\u0020the\u0020Javascript\u0020Web\u0020Token\u0020\u0028when\u0020using\u0020API\u0029",
-            "url": "classes/UserAuth-Model-User.html#method_getJWT"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\User\u003A\u003AID_FIELD",
-            "name": "ID_FIELD",
-            "summary": "Which\u0020field\u0020represent\u0020the\u0020unique\u0020identifier\u0020of\u0020the\u0020user\u0020\u0028ex\u003A\u0020email,\u0020userId,\u0020etc.\u0029",
-            "url": "classes/UserAuth-Model-User.html#constant_ID_FIELD"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\User\u003A\u003A\u0024gcNotifyObj",
-            "name": "gcNotifyObj",
-            "summary": "",
-            "url": "classes/UserAuth-Model-User.html#property_gcNotifyObj"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\User\u003A\u003A\u0024sessionLength",
-            "name": "sessionLength",
-            "summary": "",
-            "url": "classes/UserAuth-Model-User.html#property_sessionLength"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\User\u003A\u003A\u0024defaultPasswordRules",
-            "name": "defaultPasswordRules",
-            "summary": "Default\u0020rules\u0020for\u0020a\u0020valid\u0020password,\u0020this\u0020can\u0020be\u0020overwritten\u0020in\u0020config",
-            "url": "classes/UserAuth-Model-User.html#property_defaultPasswordRules"
-        },                {
             "fqsen": "\\UserAuth\\Model\\UserAudit",
             "name": "UserAudit",
             "summary": "",
@@ -6055,51 +5635,6 @@ Search.appendIndex(
             "name": "eventManager",
             "summary": "",
             "url": "classes/UserAuth-Model-UserAudit.html#property_eventManager"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\UserInterface",
-            "name": "UserInterface",
-            "summary": "",
-            "url": "classes/UserAuth-Model-UserInterface.html"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\UserInterface\u003A\u003Alogin\u0028\u0029",
-            "name": "login",
-            "summary": "Synonym\u0020of\u0020authenticate\u0028\u0029\u0020function",
-            "url": "classes/UserAuth-Model-UserInterface.html#method_login"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\UserInterface\u003A\u003Aauthenticate\u0028\u0029",
-            "name": "authenticate",
-            "summary": "Authenticate\u0020user\u0020with\u0020an\u0020ID\u0020\u0028usually\u0020email\u0029\u0020and\u0020password",
-            "url": "classes/UserAuth-Model-UserInterface.html#method_authenticate"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\UserInterface\u003A\u003Alogout\u0028\u0029",
-            "name": "logout",
-            "summary": "Log\u0020the\u0020user\u0020out\u0020and\u0020destroy\u0020the\u0020session",
-            "url": "classes/UserAuth-Model-UserInterface.html#method_logout"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\UserInterface\u003A\u003AisLoggedIn\u0028\u0029",
-            "name": "isLoggedIn",
-            "summary": "Return\u0020true\u0020if\u0020logged\u0020in,\u0020false\u0020otherwise.\u0020By\u0020default",
-            "url": "classes/UserAuth-Model-UserInterface.html#method_isLoggedIn"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\UserInterface\u003A\u003AgetUserId\u0028\u0029",
-            "name": "getUserId",
-            "summary": "Returns\u0020the\u0020ID\u0020field\u0020defined\u0020in\u0020the\u0020const\u0020ID_FIELD\u0020of\u0020the\u0020class",
-            "url": "classes/UserAuth-Model-UserInterface.html#method_getUserId"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\UserInterface\u003A\u003AjwtToData\u0028\u0029",
-            "name": "jwtToData",
-            "summary": "Get\u0020the\u0020content\u0020of\u0020the\u0020Javascript\u0020Web\u0020Token\u0020\u0028when\u0020using\u0020API\u0029",
-            "url": "classes/UserAuth-Model-UserInterface.html#method_jwtToData"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\UserInterface\u003A\u003AgetJWT\u0028\u0029",
-            "name": "getJWT",
-            "summary": "Generate\u0020and\u0020return\u0020the\u0020Javascript\u0020Web\u0020Token\u0020\u0028when\u0020using\u0020API\u0029",
-            "url": "classes/UserAuth-Model-UserInterface.html#method_getJWT"
-        },                {
-            "fqsen": "\\UserAuth\\Model\\UserInterface\u003A\u003AgetDataForJWT\u0028\u0029",
-            "name": "getDataForJWT",
-            "summary": "Get\u0020the\u0020data\u0020from\u0020the\u0020user\u0020that\u0020should\u0020be\u0020saved\u0020in\u0020the\u0020token.\u0020Remember\u0020that\ntoken\u0020data\u0020is\u0020public,\u0020the\u0020user\u0020can\u0020see\u0020it.\u0020Do\u0020not\u0020put\u0020some\u0020private\u0020or\nprotected\u0020data\u0020in\u0020JWT\u0021\u0021",
-            "url": "classes/UserAuth-Model-UserInterface.html#method_getDataForJWT"
         },                {
             "fqsen": "\\UserAuth\\Model\\UserLogger",
             "name": "UserLogger",
@@ -6166,6 +5701,26 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/UserAuth-Model-UserLogger.html#property_db"
         },                {
+            "fqsen": "\\UserAuth\\Trait\\UserAwareTrait",
+            "name": "UserAwareTrait",
+            "summary": "",
+            "url": "classes/UserAuth-Trait-UserAwareTrait.html"
+        },                {
+            "fqsen": "\\UserAuth\\Trait\\UserAwareTrait\u003A\u003AsetUser\u0028\u0029",
+            "name": "setUser",
+            "summary": "",
+            "url": "classes/UserAuth-Trait-UserAwareTrait.html#method_setUser"
+        },                {
+            "fqsen": "\\UserAuth\\Trait\\UserAwareTrait\u003A\u003AgetUser\u0028\u0029",
+            "name": "getUser",
+            "summary": "",
+            "url": "classes/UserAuth-Trait-UserAwareTrait.html#method_getUser"
+        },                {
+            "fqsen": "\\UserAuth\\Trait\\UserAwareTrait\u003A\u003A\u0024user",
+            "name": "user",
+            "summary": "",
+            "url": "classes/UserAuth-Trait-UserAwareTrait.html#property_user"
+        },                {
             "fqsen": "\\UserAuth\\UserEvent",
             "name": "UserEvent",
             "summary": "",
@@ -6221,6 +5776,66 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/UserAuth-UserEvent.html#constant_CHANGE_PASSWORD"
         },                {
+            "fqsen": "\\UserAuth\\View\\Helper\\UserHelper",
+            "name": "UserHelper",
+            "summary": "Generate\u0020the\u0020WET\u0020HTML\u0020for\u0020the\u0020breadcrumbs",
+            "url": "classes/UserAuth-View-Helper-UserHelper.html"
+        },                {
+            "fqsen": "\\UserAuth\\View\\Helper\\UserHelper\u003A\u003A__invoke\u0028\u0029",
+            "name": "__invoke",
+            "summary": "",
+            "url": "classes/UserAuth-View-Helper-UserHelper.html#method___invoke"
+        },                {
+            "fqsen": "\\UserAuth\\View\\Helper\\UserHelper\u003A\u003AsetUser\u0028\u0029",
+            "name": "setUser",
+            "summary": "",
+            "url": "classes/UserAuth-View-Helper-UserHelper.html#method_setUser"
+        },                {
+            "fqsen": "\\UserAuth\\View\\Helper\\UserHelper\u003A\u003AgetUser\u0028\u0029",
+            "name": "getUser",
+            "summary": "",
+            "url": "classes/UserAuth-View-Helper-UserHelper.html#method_getUser"
+        },                {
+            "fqsen": "\\UserAuth\\View\\Helper\\UserHelper\u003A\u003AsetView\u0028\u0029",
+            "name": "setView",
+            "summary": "",
+            "url": "classes/UserAuth-View-Helper-UserHelper.html#method_setView"
+        },                {
+            "fqsen": "\\UserAuth\\View\\Helper\\UserHelper\u003A\u003AgetView\u0028\u0029",
+            "name": "getView",
+            "summary": "",
+            "url": "classes/UserAuth-View-Helper-UserHelper.html#method_getView"
+        },                {
+            "fqsen": "\\UserAuth\\View\\Helper\\UserHelper\u003A\u003A\u0024user",
+            "name": "user",
+            "summary": "",
+            "url": "classes/UserAuth-View-Helper-UserHelper.html#property_user"
+        },                {
+            "fqsen": "\\UserAuth\\View\\Helper\\UserHelper\u003A\u003A\u0024view",
+            "name": "view",
+            "summary": "",
+            "url": "classes/UserAuth-View-Helper-UserHelper.html#property_view"
+        },                {
+            "fqsen": "\\ApplicationTest\\View\\Helper\\UserAuthTest",
+            "name": "UserAuthTest",
+            "summary": "",
+            "url": "classes/ApplicationTest-View-Helper-UserAuthTest.html"
+        },                {
+            "fqsen": "\\ApplicationTest\\View\\Helper\\UserAuthTest\u003A\u003AsetUp\u0028\u0029",
+            "name": "setUp",
+            "summary": "",
+            "url": "classes/ApplicationTest-View-Helper-UserAuthTest.html#method_setUp"
+        },                {
+            "fqsen": "\\ApplicationTest\\View\\Helper\\UserAuthTest\u003A\u003AtestUserAuth\u0028\u0029",
+            "name": "testUserAuth",
+            "summary": "",
+            "url": "classes/ApplicationTest-View-Helper-UserAuthTest.html#method_testUserAuth"
+        },                {
+            "fqsen": "\\ApplicationTest\\View\\Helper\\UserAuthTest\u003A\u003A\u0024gcDirectory",
+            "name": "gcDirectory",
+            "summary": "",
+            "url": "classes/ApplicationTest-View-Helper-UserAuthTest.html#property_gcDirectory"
+        },                {
             "fqsen": "\\Void\\ArrayFunction",
             "name": "ArrayFunction",
             "summary": "",
@@ -6255,6 +5870,16 @@ Search.appendIndex(
             "name": "arrayToTableRow",
             "summary": "",
             "url": "classes/Void-ArrayFunction.html#method_arrayToTableRow"
+        },                {
+            "fqsen": "\\Void\\ArrayFunction\u003A\u003AexplodeToMultidimensionArray\u0028\u0029",
+            "name": "explodeToMultidimensionArray",
+            "summary": "",
+            "url": "classes/Void-ArrayFunction.html#method_explodeToMultidimensionArray"
+        },                {
+            "fqsen": "\\Void\\ArrayFunction\u003A\u003AsetInArray\u0028\u0029",
+            "name": "setInArray",
+            "summary": "",
+            "url": "classes/Void-ArrayFunction.html#method_setInArray"
         },                {
             "fqsen": "\\Void\\ArrayObject",
             "name": "ArrayObject",
@@ -9196,25 +8821,15 @@ Search.appendIndex(
             "summary": "",
             "url": "namespaces/application-exception.html"
         },                {
-            "fqsen": "\\Application\\Factory\\Command",
-            "name": "Command",
-            "summary": "",
-            "url": "namespaces/application-factory-command.html"
-        },                {
-            "fqsen": "\\OAuth\\Factory\\Controller",
+            "fqsen": "\\Application\\Factory\\Controller",
             "name": "Controller",
             "summary": "",
-            "url": "namespaces/oauth-factory-controller.html"
+            "url": "namespaces/application-factory-controller.html"
         },                {
             "fqsen": "\\Application\\Factory\\Controller\\Plugin",
             "name": "Plugin",
             "summary": "",
             "url": "namespaces/application-factory-controller-plugin.html"
-        },                {
-            "fqsen": "\\Application\\Factory\\Controller",
-            "name": "Controller",
-            "summary": "",
-            "url": "namespaces/application-factory-controller.html"
         },                {
             "fqsen": "\\Application\\Factory",
             "name": "Factory",
@@ -9236,6 +8851,11 @@ Search.appendIndex(
             "summary": "",
             "url": "namespaces/application-factory-view.html"
         },                {
+            "fqsen": "\\Application\\Interface",
+            "name": "Interface",
+            "summary": "",
+            "url": "namespaces/application-interface.html"
+        },                {
             "fqsen": "\\Application\\Listener",
             "name": "Listener",
             "summary": "",
@@ -9245,6 +8865,11 @@ Search.appendIndex(
             "name": "Model",
             "summary": "",
             "url": "namespaces/application-model.html"
+        },                {
+            "fqsen": "\\Application\\Trait",
+            "name": "Trait",
+            "summary": "",
+            "url": "namespaces/application-trait.html"
         },                {
             "fqsen": "\\Application\\View\\Helper",
             "name": "Helper",
@@ -9260,6 +8885,11 @@ Search.appendIndex(
             "name": "CurlWrapper",
             "summary": "",
             "url": "namespaces/curlwrapper.html"
+        },                {
+            "fqsen": "\\CurlWrapper\\Exception",
+            "name": "Exception",
+            "summary": "",
+            "url": "namespaces/curlwrapper-exception.html"
         },                {
             "fqsen": "\\GcNotify\\Exception",
             "name": "Exception",
@@ -9280,6 +8910,21 @@ Search.appendIndex(
             "name": "ApplicationTest",
             "summary": "",
             "url": "namespaces/applicationtest.html"
+        },                {
+            "fqsen": "\\ApplicationTest\\Model",
+            "name": "Model",
+            "summary": "",
+            "url": "namespaces/applicationtest-model.html"
+        },                {
+            "fqsen": "\\ApplicationTest\\View\\Helper",
+            "name": "Helper",
+            "summary": "",
+            "url": "namespaces/applicationtest-view-helper.html"
+        },                {
+            "fqsen": "\\ApplicationTest\\View",
+            "name": "View",
+            "summary": "",
+            "url": "namespaces/applicationtest-view.html"
         },                {
             "fqsen": "\\AutoStats",
             "name": "AutoStats",
@@ -9416,6 +9061,11 @@ Search.appendIndex(
             "summary": "",
             "url": "namespaces/oauth-exception.html"
         },                {
+            "fqsen": "\\OAuth\\Factory\\Controller",
+            "name": "Controller",
+            "summary": "",
+            "url": "namespaces/oauth-factory-controller.html"
+        },                {
             "fqsen": "\\OAuth\\Factory\\Listener",
             "name": "Listener",
             "summary": "",
@@ -9541,10 +9191,25 @@ Search.appendIndex(
             "summary": "",
             "url": "namespaces/userauth-factory-listener.html"
         },                {
+            "fqsen": "\\UserAuth\\Factory\\User\\Authenticator",
+            "name": "Authenticator",
+            "summary": "",
+            "url": "namespaces/userauth-factory-user-authenticator.html"
+        },                {
             "fqsen": "\\UserAuth\\Factory\\User",
             "name": "User",
             "summary": "",
             "url": "namespaces/userauth-factory-user.html"
+        },                {
+            "fqsen": "\\UserAuth\\Factory\\View\\Helper",
+            "name": "Helper",
+            "summary": "",
+            "url": "namespaces/userauth-factory-view-helper.html"
+        },                {
+            "fqsen": "\\UserAuth\\Factory\\View",
+            "name": "View",
+            "summary": "",
+            "url": "namespaces/userauth-factory-view.html"
         },                {
             "fqsen": "\\UserAuth\\Listener",
             "name": "Listener",
@@ -9570,6 +9235,21 @@ Search.appendIndex(
             "name": "User",
             "summary": "",
             "url": "namespaces/userauth-model-user.html"
+        },                {
+            "fqsen": "\\UserAuth\\Trait",
+            "name": "Trait",
+            "summary": "",
+            "url": "namespaces/userauth-trait.html"
+        },                {
+            "fqsen": "\\UserAuth\\View\\Helper",
+            "name": "Helper",
+            "summary": "",
+            "url": "namespaces/userauth-view-helper.html"
+        },                {
+            "fqsen": "\\UserAuth\\View",
+            "name": "View",
+            "summary": "",
+            "url": "namespaces/userauth-view.html"
         },                {
             "fqsen": "\\Void",
             "name": "Void",

@@ -131,11 +131,19 @@
                 
             </li>
                     <li>
+                <a href="namespaces/application-interface.html" class="">Interface</a>
+                
+            </li>
+                    <li>
                 <a href="namespaces/application-listener.html" class="">Listener</a>
                 
             </li>
                     <li>
                 <a href="namespaces/application-model.html" class="">Model</a>
+                
+            </li>
+                    <li>
+                <a href="namespaces/application-trait.html" class="">Trait</a>
                 
             </li>
                     <li>
@@ -147,6 +155,12 @@
                                     <h4 class="phpdocumentor-sidebar__root-namespace">
     <a href="namespaces/curlwrapper.html" class="">CurlWrapper</a>
 </h4>
+    <ul class="phpdocumentor-list">
+                    <li>
+                <a href="namespaces/curlwrapper-exception.html" class="">Exception</a>
+                
+            </li>
+            </ul>
 
                                     <h4 class="phpdocumentor-sidebar__root-namespace">
     <a href="namespaces/gcnotify.html" class="">GcNotify</a>
@@ -164,6 +178,14 @@
     <ul class="phpdocumentor-list">
                     <li>
                 <a href="namespaces/applicationtest-controller.html" class="">Controller</a>
+                
+            </li>
+                    <li>
+                <a href="namespaces/applicationtest-model.html" class="">Model</a>
+                
+            </li>
+                    <li>
+                <a href="namespaces/applicationtest-view.html" class="">View</a>
                 
             </li>
             </ul>
@@ -358,6 +380,14 @@
                 <a href="namespaces/userauth-model.html" class="">Model</a>
                 
             </li>
+                    <li>
+                <a href="namespaces/userauth-trait.html" class="">Trait</a>
+                
+            </li>
+                    <li>
+                <a href="namespaces/userauth-view.html" class="">View</a>
+                
+            </li>
             </ul>
 
                                     <h4 class="phpdocumentor-sidebar__root-namespace">
@@ -429,6 +459,9 @@
         </div>
     
     
+            <span class="phpdocumentor-element__extends">
+            uses
+                            <a href="classes/Application-Trait-LanguageAwareTrait.html"><abbr title="\Application\Trait\LanguageAwareTrait">LanguageAwareTrait</abbr></a>                    </span>
     </h2>
 
 <div class="phpdocumentor-label-line">
@@ -439,7 +472,7 @@
         <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="module/GcDirectory/src/GcDirectory/Model/GcDirectory.php"><a href="files/module-gcdirectory-src-gcdirectory-model-gcdirectory.html"><abbr title="module/GcDirectory/src/GcDirectory/Model/GcDirectory.php">GcDirectory.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">11</span>
+    <span class="phpdocumentor-element-found-in__line">15</span>
 
     </aside>
 
@@ -458,7 +491,7 @@
                 </dt>
                 <dd class="phpdocumentor-tag-list__definition">
                                                                                 
-                                                 <section class="phpdocumentor-description"><p>Francois Dupras, Infrastructure Canada/ Health Canada</p>
+                                                 <section class="phpdocumentor-description"><p>Francois Dupras, Health Canada</p>
 </section>
 
                                     </dd>
@@ -567,6 +600,12 @@
         &nbsp;= 4                            </span>
 </dt>
 
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="classes/GcDirectory-Model-GcDirectory.html#constant_URL_EMPLOYEES">URL_EMPLOYEES</a>
+    <span>
+        &nbsp;= &#039;employees&#039;                            </span>
+</dt>
+
     </dl>
 
 
@@ -607,7 +646,13 @@
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -private">
-    <a href="classes/GcDirectory-Model-GcDirectory.html#property_lang">$lang</a>
+    <a href="classes/GcDirectory-Model-GcDirectory.html#property_curlWrapper">$curlWrapper</a>
+    <span>
+                        &nbsp;: mixed            </span>
+</dt>
+
+            <dt class="phpdocumentor-table-of-contents__entry -property -private">
+    <a href="classes/Application-Trait-LanguageAwareTrait.html#property_lang">$lang</a>
     <span>
                         &nbsp;: mixed            </span>
 </dt>
@@ -640,9 +685,15 @@
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/GcDirectory-Model-GcDirectory.html#method_setLang">setLang()</a>
+    <a href="classes/GcDirectory-Model-GcDirectory.html#method_setCurlWrapper">setCurlWrapper()</a>
     <span>
-                                &nbsp;: mixed    </span>
+                                &nbsp;: self    </span>
+</dt>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Application-Trait-LanguageAwareTrait.html#method_setLang">setLang()</a>
+    <span>
+                                &nbsp;: self    </span>
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -protected">
@@ -652,21 +703,32 @@
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -protected">
+    <a href="classes/GcDirectory-Model-GcDirectory.html#method_getCurlWrapper">getCurlWrapper()</a>
+    <span>
+                                &nbsp;: <a href="classes/CurlWrapper-CurlWrapper.html"><abbr title="\CurlWrapper\CurlWrapper">CurlWrapper</abbr></a>    </span>
+</dt>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -protected">
     <a href="classes/GcDirectory-Model-GcDirectory.html#method_getData">getData()</a>
     <span>
                                 &nbsp;: array&lt;string|int, mixed&gt;    </span>
 </dt>
-<dd>This method makes the call to GEDS server. It takes care or having the
-proper authorizationId (from the L01 call) and adds it to the post data.</dd>
+<dd>This method makes the call to GEDS server.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -protected">
-    <a href="classes/GcDirectory-Model-GcDirectory.html#method_getLang">getLang()</a>
+    <a href="classes/GcDirectory-Model-GcDirectory.html#method_getHeaders">getHeaders()</a>
     <span>
                                 &nbsp;: mixed    </span>
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -protected">
-    <a href="classes/GcDirectory-Model-GcDirectory.html#method_postData">postData()</a>
+    <a href="classes/Application-Trait-LanguageAwareTrait.html#method_getLang">getLang()</a>
+    <span>
+                                &nbsp;: string    </span>
+</dt>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -protected">
+    <a href="classes/GcDirectory-Model-GcDirectory.html#method_updateData">updateData()</a>
     <span>
                                 &nbsp;: array&lt;string|int, mixed&gt;    </span>
 </dt>
@@ -697,7 +759,7 @@ proper authorizationId (from the L01 call) and adds it to the post data.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="module/GcDirectory/src/GcDirectory/Model/GcDirectory.php"><a href="files/module-gcdirectory-src-gcdirectory-model-gcdirectory.html"><abbr title="module/GcDirectory/src/GcDirectory/Model/GcDirectory.php">GcDirectory.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">21</span>
+    <span class="phpdocumentor-element-found-in__line">27</span>
 
     </aside>
 
@@ -725,7 +787,7 @@ proper authorizationId (from the L01 call) and adds it to the post data.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="module/GcDirectory/src/GcDirectory/Model/GcDirectory.php"><a href="files/module-gcdirectory-src-gcdirectory-model-gcdirectory.html"><abbr title="module/GcDirectory/src/GcDirectory/Model/GcDirectory.php">GcDirectory.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">23</span>
+    <span class="phpdocumentor-element-found-in__line">29</span>
 
     </aside>
 
@@ -753,7 +815,7 @@ proper authorizationId (from the L01 call) and adds it to the post data.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="module/GcDirectory/src/GcDirectory/Model/GcDirectory.php"><a href="files/module-gcdirectory-src-gcdirectory-model-gcdirectory.html"><abbr title="module/GcDirectory/src/GcDirectory/Model/GcDirectory.php">GcDirectory.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">22</span>
+    <span class="phpdocumentor-element-found-in__line">28</span>
 
     </aside>
 
@@ -781,7 +843,7 @@ proper authorizationId (from the L01 call) and adds it to the post data.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="module/GcDirectory/src/GcDirectory/Model/GcDirectory.php"><a href="files/module-gcdirectory-src-gcdirectory-model-gcdirectory.html"><abbr title="module/GcDirectory/src/GcDirectory/Model/GcDirectory.php">GcDirectory.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">24</span>
+    <span class="phpdocumentor-element-found-in__line">30</span>
 
     </aside>
 
@@ -809,7 +871,7 @@ proper authorizationId (from the L01 call) and adds it to the post data.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="module/GcDirectory/src/GcDirectory/Model/GcDirectory.php"><a href="files/module-gcdirectory-src-gcdirectory-model-gcdirectory.html"><abbr title="module/GcDirectory/src/GcDirectory/Model/GcDirectory.php">GcDirectory.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">19</span>
+    <span class="phpdocumentor-element-found-in__line">25</span>
 
     </aside>
 
@@ -837,7 +899,7 @@ proper authorizationId (from the L01 call) and adds it to the post data.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="module/GcDirectory/src/GcDirectory/Model/GcDirectory.php"><a href="files/module-gcdirectory-src-gcdirectory-model-gcdirectory.html"><abbr title="module/GcDirectory/src/GcDirectory/Model/GcDirectory.php">GcDirectory.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">18</span>
+    <span class="phpdocumentor-element-found-in__line">24</span>
 
     </aside>
 
@@ -865,7 +927,7 @@ proper authorizationId (from the L01 call) and adds it to the post data.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="module/GcDirectory/src/GcDirectory/Model/GcDirectory.php"><a href="files/module-gcdirectory-src-gcdirectory-model-gcdirectory.html"><abbr title="module/GcDirectory/src/GcDirectory/Model/GcDirectory.php">GcDirectory.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">15</span>
+    <span class="phpdocumentor-element-found-in__line">21</span>
 
     </aside>
 
@@ -893,7 +955,7 @@ proper authorizationId (from the L01 call) and adds it to the post data.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="module/GcDirectory/src/GcDirectory/Model/GcDirectory.php"><a href="files/module-gcdirectory-src-gcdirectory-model-gcdirectory.html"><abbr title="module/GcDirectory/src/GcDirectory/Model/GcDirectory.php">GcDirectory.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">16</span>
+    <span class="phpdocumentor-element-found-in__line">22</span>
 
     </aside>
 
@@ -921,7 +983,7 @@ proper authorizationId (from the L01 call) and adds it to the post data.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="module/GcDirectory/src/GcDirectory/Model/GcDirectory.php"><a href="files/module-gcdirectory-src-gcdirectory-model-gcdirectory.html"><abbr title="module/GcDirectory/src/GcDirectory/Model/GcDirectory.php">GcDirectory.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">14</span>
+    <span class="phpdocumentor-element-found-in__line">20</span>
 
     </aside>
 
@@ -949,7 +1011,7 @@ proper authorizationId (from the L01 call) and adds it to the post data.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="module/GcDirectory/src/GcDirectory/Model/GcDirectory.php"><a href="files/module-gcdirectory-src-gcdirectory-model-gcdirectory.html"><abbr title="module/GcDirectory/src/GcDirectory/Model/GcDirectory.php">GcDirectory.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">13</span>
+    <span class="phpdocumentor-element-found-in__line">19</span>
 
     </aside>
 
@@ -977,7 +1039,7 @@ proper authorizationId (from the L01 call) and adds it to the post data.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="module/GcDirectory/src/GcDirectory/Model/GcDirectory.php"><a href="files/module-gcdirectory-src-gcdirectory-model-gcdirectory.html"><abbr title="module/GcDirectory/src/GcDirectory/Model/GcDirectory.php">GcDirectory.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">17</span>
+    <span class="phpdocumentor-element-found-in__line">23</span>
 
     </aside>
 
@@ -987,6 +1049,34 @@ proper authorizationId (from the L01 call) and adds it to the post data.</dd>
         <span class="phpdocumentor-signature__type">mixed</span>
     <span class="phpdocumentor-signature__name">SEARCH_FIELD_TITLE</span>
     = <span class="phpdocumentor-signature__default-value">4</span>
+</code>
+
+
+    
+    
+    
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_URL_EMPLOYEES">
+        URL_EMPLOYEES
+        <a href="classes/GcDirectory-Model-GcDirectory.html#constant_URL_EMPLOYEES" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="module/GcDirectory/src/GcDirectory/Model/GcDirectory.php"><a href="files/module-gcdirectory-src-gcdirectory-model-gcdirectory.html"><abbr title="module/GcDirectory/src/GcDirectory/Model/GcDirectory.php">GcDirectory.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">32</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+        <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">URL_EMPLOYEES</span>
+    = <span class="phpdocumentor-signature__default-value">&#039;employees&#039;</span>
 </code>
 
 
@@ -1021,7 +1111,7 @@ proper authorizationId (from the L01 call) and adds it to the post data.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="module/GcDirectory/src/GcDirectory/Model/GcDirectory.php"><a href="files/module-gcdirectory-src-gcdirectory-model-gcdirectory.html"><abbr title="module/GcDirectory/src/GcDirectory/Model/GcDirectory.php">GcDirectory.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">49</span>
+    <span class="phpdocumentor-element-found-in__line">35</span>
 
     </aside>
 
@@ -1054,7 +1144,7 @@ proper authorizationId (from the L01 call) and adds it to the post data.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="module/GcDirectory/src/GcDirectory/Model/GcDirectory.php"><a href="files/module-gcdirectory-src-gcdirectory-model-gcdirectory.html"><abbr title="module/GcDirectory/src/GcDirectory/Model/GcDirectory.php">GcDirectory.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">51</span>
+    <span class="phpdocumentor-element-found-in__line">37</span>
 
     </aside>
 
@@ -1087,7 +1177,7 @@ proper authorizationId (from the L01 call) and adds it to the post data.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="module/GcDirectory/src/GcDirectory/Model/GcDirectory.php"><a href="files/module-gcdirectory-src-gcdirectory-model-gcdirectory.html"><abbr title="module/GcDirectory/src/GcDirectory/Model/GcDirectory.php">GcDirectory.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">50</span>
+    <span class="phpdocumentor-element-found-in__line">36</span>
 
     </aside>
 
@@ -1120,7 +1210,7 @@ proper authorizationId (from the L01 call) and adds it to the post data.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="module/GcDirectory/src/GcDirectory/Model/GcDirectory.php"><a href="files/module-gcdirectory-src-gcdirectory-model-gcdirectory.html"><abbr title="module/GcDirectory/src/GcDirectory/Model/GcDirectory.php">GcDirectory.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">48</span>
+    <span class="phpdocumentor-element-found-in__line">34</span>
 
     </aside>
 
@@ -1153,7 +1243,7 @@ proper authorizationId (from the L01 call) and adds it to the post data.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="module/GcDirectory/src/GcDirectory/Model/GcDirectory.php"><a href="files/module-gcdirectory-src-gcdirectory-model-gcdirectory.html"><abbr title="module/GcDirectory/src/GcDirectory/Model/GcDirectory.php">GcDirectory.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">37</span>
+    <span class="phpdocumentor-element-found-in__line">171</span>
 
     </aside>
 
@@ -1176,9 +1266,9 @@ proper authorizationId (from the L01 call) and adds it to the post data.</dd>
             -private
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="property_lang">
-        $lang
-        <a href="classes/GcDirectory-Model-GcDirectory.html#property_lang" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="property_curlWrapper">
+        $curlWrapper
+        <a href="classes/GcDirectory-Model-GcDirectory.html#property_curlWrapper" class="headerlink"><i class="fas fa-link"></i></a>
 
         <span class="phpdocumentor-element__modifiers">
                                 </span>
@@ -1186,7 +1276,40 @@ proper authorizationId (from the L01 call) and adds it to the post data.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="module/GcDirectory/src/GcDirectory/Model/GcDirectory.php"><a href="files/module-gcdirectory-src-gcdirectory-model-gcdirectory.html"><abbr title="module/GcDirectory/src/GcDirectory/Model/GcDirectory.php">GcDirectory.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">26</span>
+    <span class="phpdocumentor-element-found-in__line">160</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">private</span>
+        <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">$curlWrapper</span>
+    </code>
+
+    
+    
+    
+
+</article>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -private
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="property_lang">
+        $lang
+        <a href="classes/Application-Trait-LanguageAwareTrait.html#property_lang" class="headerlink"><i class="fas fa-link"></i></a>
+
+        <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="module/Application/src/Application/Trait/LanguageAwareTrait.php"><a href="files/module-application-src-application-trait-languageawaretrait.html"><abbr title="module/Application/src/Application/Trait/LanguageAwareTrait.php">LanguageAwareTrait.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">7</span>
 
     </aside>
 
@@ -1224,7 +1347,7 @@ proper authorizationId (from the L01 call) and adds it to the post data.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="module/GcDirectory/src/GcDirectory/Model/GcDirectory.php"><a href="files/module-gcdirectory-src-gcdirectory-model-gcdirectory.html"><abbr title="module/GcDirectory/src/GcDirectory/Model/GcDirectory.php">GcDirectory.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">53</span>
+    <span class="phpdocumentor-element-found-in__line">39</span>
 
     </aside>
 
@@ -1265,7 +1388,7 @@ proper authorizationId (from the L01 call) and adds it to the post data.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="module/GcDirectory/src/GcDirectory/Model/GcDirectory.php"><a href="files/module-gcdirectory-src-gcdirectory-model-gcdirectory.html"><abbr title="module/GcDirectory/src/GcDirectory/Model/GcDirectory.php">GcDirectory.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">68</span>
+    <span class="phpdocumentor-element-found-in__line">54</span>
 
     </aside>
 
@@ -1273,7 +1396,7 @@ proper authorizationId (from the L01 call) and adds it to the post data.</dd>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">searchEmployees</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$term</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><span class="phpdocumentor-signature__argument__name">$limitToOrg</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">false</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$params</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">array()</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">searchEmployees</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$term</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><span class="phpdocumentor-signature__argument__name">$limitToOrg</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">false</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$params</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">array()</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$searchField</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">self::SEARCH_FIELD_EMAIL</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$searchCriterion</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">self::SEARCH_EXACT</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -1305,6 +1428,20 @@ proper authorizationId (from the L01 call) and adds it to the post data.</dd>
             <dd class="phpdocumentor-argument-list__definition">
                 
             </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$searchField</span>
+                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">self::SEARCH_FIELD_EMAIL</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$searchCriterion</span>
+                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">self::SEARCH_EXACT</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
             </dl>
 
     
@@ -1325,7 +1462,7 @@ proper authorizationId (from the L01 call) and adds it to the post data.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="module/GcDirectory/src/GcDirectory/Model/GcDirectory.php"><a href="files/module-gcdirectory-src-gcdirectory-model-gcdirectory.html"><abbr title="module/GcDirectory/src/GcDirectory/Model/GcDirectory.php">GcDirectory.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">42</span>
+    <span class="phpdocumentor-element-found-in__line">176</span>
 
     </aside>
 
@@ -1358,22 +1495,22 @@ proper authorizationId (from the L01 call) and adds it to the post data.</dd>
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_setLang">
-        setLang()
-        <a href="classes/GcDirectory-Model-GcDirectory.html#method_setLang" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_setCurlWrapper">
+        setCurlWrapper()
+        <a href="classes/GcDirectory-Model-GcDirectory.html#method_setCurlWrapper" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="module/GcDirectory/src/GcDirectory/Model/GcDirectory.php"><a href="files/module-gcdirectory-src-gcdirectory-model-gcdirectory.html"><abbr title="module/GcDirectory/src/GcDirectory/Model/GcDirectory.php">GcDirectory.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">31</span>
+    <span class="phpdocumentor-element-found-in__line">161</span>
 
     </aside>
 
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">setLang</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$lang</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">setCurlWrapper</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/CurlWrapper-CurlWrapper.html"><abbr title="\CurlWrapper\CurlWrapper">CurlWrapper</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$obj</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">self</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -1381,8 +1518,8 @@ proper authorizationId (from the L01 call) and adds it to the post data.</dd>
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$lang</span>
-                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                <span class="phpdocumentor-signature__argument__name">$obj</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/CurlWrapper-CurlWrapper.html"><abbr title="\CurlWrapper\CurlWrapper">CurlWrapper</abbr></a></span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                 
@@ -1391,7 +1528,56 @@ proper authorizationId (from the L01 call) and adds it to the post data.</dd>
 
     
 
+            <section>
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">self</span>
+            </section>
+
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_setLang">
+        setLang()
+        <a href="classes/Application-Trait-LanguageAwareTrait.html#method_setLang" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="module/Application/src/Application/Trait/LanguageAwareTrait.php"><a href="files/module-application-src-application-trait-languageawaretrait.html"><abbr title="module/Application/src/Application/Trait/LanguageAwareTrait.php">LanguageAwareTrait.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">8</span>
+
+    </aside>
+
     
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                    <span class="phpdocumentor-signature__name">setLang</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$lang</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">self</span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$lang</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+            </dl>
+
+    
+
+            <section>
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">self</span>
+            </section>
+
 </article>
                     <article
         class="phpdocumentor-element
@@ -1407,7 +1593,7 @@ proper authorizationId (from the L01 call) and adds it to the post data.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="module/GcDirectory/src/GcDirectory/Model/GcDirectory.php"><a href="files/module-gcdirectory-src-gcdirectory-model-gcdirectory.html"><abbr title="module/GcDirectory/src/GcDirectory/Model/GcDirectory.php">GcDirectory.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">38</span>
+    <span class="phpdocumentor-element-found-in__line">172</span>
 
     </aside>
 
@@ -1430,6 +1616,41 @@ proper authorizationId (from the L01 call) and adds it to the post data.</dd>
             -protected
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_getCurlWrapper">
+        getCurlWrapper()
+        <a href="classes/GcDirectory-Model-GcDirectory.html#method_getCurlWrapper" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="module/GcDirectory/src/GcDirectory/Model/GcDirectory.php"><a href="files/module-gcdirectory-src-gcdirectory-model-gcdirectory.html"><abbr title="module/GcDirectory/src/GcDirectory/Model/GcDirectory.php">GcDirectory.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">166</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">protected</span>
+                    <span class="phpdocumentor-signature__name">getCurlWrapper</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/CurlWrapper-CurlWrapper.html"><abbr title="\CurlWrapper\CurlWrapper">CurlWrapper</abbr></a></span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+    
+    
+    
+
+            <section>
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type"><a href="classes/CurlWrapper-CurlWrapper.html"><abbr title="\CurlWrapper\CurlWrapper">CurlWrapper</abbr></a></span>
+            </section>
+
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -protected
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_getData">
         getData()
         <a href="classes/GcDirectory-Model-GcDirectory.html#method_getData" class="headerlink"><i class="fas fa-link"></i></a>
@@ -1442,8 +1663,7 @@ proper authorizationId (from the L01 call) and adds it to the post data.</dd>
 
     </aside>
 
-        <p class="phpdocumentor-summary">This method makes the call to GEDS server. It takes care or having the
-proper authorizationId (from the L01 call) and adds it to the post data.</p>
+        <p class="phpdocumentor-summary">This method makes the call to GEDS server.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">protected</span>
@@ -1488,22 +1708,22 @@ proper authorizationId (from the L01 call) and adds it to the post data.</p>
             -protected
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_getLang">
-        getLang()
-        <a href="classes/GcDirectory-Model-GcDirectory.html#method_getLang" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_getHeaders">
+        getHeaders()
+        <a href="classes/GcDirectory-Model-GcDirectory.html#method_getHeaders" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="module/GcDirectory/src/GcDirectory/Model/GcDirectory.php"><a href="files/module-gcdirectory-src-gcdirectory-model-gcdirectory.html"><abbr title="module/GcDirectory/src/GcDirectory/Model/GcDirectory.php">GcDirectory.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">27</span>
+    <span class="phpdocumentor-element-found-in__line">91</span>
 
     </aside>
 
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">protected</span>
-                    <span class="phpdocumentor-signature__name">getLang</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">getHeaders</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -1519,15 +1739,50 @@ proper authorizationId (from the L01 call) and adds it to the post data.</p>
             -protected
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_postData">
-        postData()
-        <a href="classes/GcDirectory-Model-GcDirectory.html#method_postData" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_getLang">
+        getLang()
+        <a href="classes/Application-Trait-LanguageAwareTrait.html#method_getLang" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="module/Application/src/Application/Trait/LanguageAwareTrait.php"><a href="files/module-application-src-application-trait-languageawaretrait.html"><abbr title="module/Application/src/Application/Trait/LanguageAwareTrait.php">LanguageAwareTrait.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">13</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">protected</span>
+                    <span class="phpdocumentor-signature__name">getLang</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+    
+    
+    
+
+            <section>
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">string</span>
+            </section>
+
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -protected
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_updateData">
+        updateData()
+        <a href="classes/GcDirectory-Model-GcDirectory.html#method_updateData" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="module/GcDirectory/src/GcDirectory/Model/GcDirectory.php"><a href="files/module-gcdirectory-src-gcdirectory-model-gcdirectory.html"><abbr title="module/GcDirectory/src/GcDirectory/Model/GcDirectory.php">GcDirectory.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">151</span>
+    <span class="phpdocumentor-element-found-in__line">137</span>
 
     </aside>
 
@@ -1536,7 +1791,7 @@ proper authorizationId (from the L01 call) and adds it to the post data.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">protected</span>
-                    <span class="phpdocumentor-signature__name">postData</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$url</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$requestData</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
+                    <span class="phpdocumentor-signature__name">updateData</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$url</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$data</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$verb</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">CurlWrapper::PUT</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -1545,15 +1800,22 @@ proper authorizationId (from the L01 call) and adds it to the post data.</p>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
                 <span class="phpdocumentor-signature__argument__name">$url</span>
-                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                 
             </dd>
                     <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$requestData</span>
+                <span class="phpdocumentor-signature__argument__name">$data</span>
                 : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
                             </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$verb</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">CurlWrapper::PUT</span>            </dt>
             <dd class="phpdocumentor-argument-list__definition">
                 
             </dd>
@@ -1695,6 +1957,7 @@ proper authorizationId (from the L01 call) and adds it to the post data.</p>
                                                     <li><a href="classes/GcDirectory-Model-GcDirectory.html#constant_SEARCH_FIELD_SURNAME">SEARCH_FIELD_SURNAME</a></li>
                                                     <li><a href="classes/GcDirectory-Model-GcDirectory.html#constant_SEARCH_FIELD_SURNAME_GIVEN_NAME">SEARCH_FIELD_SURNAME_GIVEN_NAME</a></li>
                                                     <li><a href="classes/GcDirectory-Model-GcDirectory.html#constant_SEARCH_FIELD_TITLE">SEARCH_FIELD_TITLE</a></li>
+                                                    <li><a href="classes/GcDirectory-Model-GcDirectory.html#constant_URL_EMPLOYEES">URL_EMPLOYEES</a></li>
                                             </ul>
                 </li>
             
@@ -1706,7 +1969,8 @@ proper authorizationId (from the L01 call) and adds it to the post data.</p>
                                                     <li><a href="classes/GcDirectory-Model-GcDirectory.html#property_lastStatus">$lastStatus<a href="classes/GcDirectory-Model-GcDirectory.html"></li>
                                                     <li><a href="classes/GcDirectory-Model-GcDirectory.html#property_orgId">$orgId<a href="classes/GcDirectory-Model-GcDirectory.html"></li>
                                                     <li><a href="classes/GcDirectory-Model-GcDirectory.html#property_config">$config<a href="classes/GcDirectory-Model-GcDirectory.html"></li>
-                                                    <li><a href="classes/GcDirectory-Model-GcDirectory.html#property_lang">$lang<a href="classes/GcDirectory-Model-GcDirectory.html"></li>
+                                                    <li><a href="classes/GcDirectory-Model-GcDirectory.html#property_curlWrapper">$curlWrapper<a href="classes/GcDirectory-Model-GcDirectory.html"></li>
+                                                    <li><a href="classes/Application-Trait-LanguageAwareTrait.html#property_lang">$lang<a href="classes/GcDirectory-Model-GcDirectory.html"></li>
                                             </ul>
                 </li>
             
@@ -1716,11 +1980,14 @@ proper authorizationId (from the L01 call) and adds it to the post data.</p>
                                             <li><a href="classes/GcDirectory-Model-GcDirectory.html#method___get">__get()</a></li>
                                             <li><a href="classes/GcDirectory-Model-GcDirectory.html#method_searchEmployees">searchEmployees()</a></li>
                                             <li><a href="classes/GcDirectory-Model-GcDirectory.html#method_setConfig">setConfig()</a></li>
-                                            <li><a href="classes/GcDirectory-Model-GcDirectory.html#method_setLang">setLang()</a></li>
+                                            <li><a href="classes/GcDirectory-Model-GcDirectory.html#method_setCurlWrapper">setCurlWrapper()</a></li>
+                                            <li><a href="classes/Application-Trait-LanguageAwareTrait.html#method_setLang">setLang()</a></li>
                                             <li><a href="classes/GcDirectory-Model-GcDirectory.html#method_getConfig">getConfig()</a></li>
+                                            <li><a href="classes/GcDirectory-Model-GcDirectory.html#method_getCurlWrapper">getCurlWrapper()</a></li>
                                             <li><a href="classes/GcDirectory-Model-GcDirectory.html#method_getData">getData()</a></li>
-                                            <li><a href="classes/GcDirectory-Model-GcDirectory.html#method_getLang">getLang()</a></li>
-                                            <li><a href="classes/GcDirectory-Model-GcDirectory.html#method_postData">postData()</a></li>
+                                            <li><a href="classes/GcDirectory-Model-GcDirectory.html#method_getHeaders">getHeaders()</a></li>
+                                            <li><a href="classes/Application-Trait-LanguageAwareTrait.html#method_getLang">getLang()</a></li>
+                                            <li><a href="classes/GcDirectory-Model-GcDirectory.html#method_updateData">updateData()</a></li>
                                     </ul>
             </li>
                     </ul>

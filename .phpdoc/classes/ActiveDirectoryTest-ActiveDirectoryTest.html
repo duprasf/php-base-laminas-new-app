@@ -131,11 +131,19 @@
                 
             </li>
                     <li>
+                <a href="namespaces/application-interface.html" class="">Interface</a>
+                
+            </li>
+                    <li>
                 <a href="namespaces/application-listener.html" class="">Listener</a>
                 
             </li>
                     <li>
                 <a href="namespaces/application-model.html" class="">Model</a>
+                
+            </li>
+                    <li>
+                <a href="namespaces/application-trait.html" class="">Trait</a>
                 
             </li>
                     <li>
@@ -147,6 +155,12 @@
                                     <h4 class="phpdocumentor-sidebar__root-namespace">
     <a href="namespaces/curlwrapper.html" class="">CurlWrapper</a>
 </h4>
+    <ul class="phpdocumentor-list">
+                    <li>
+                <a href="namespaces/curlwrapper-exception.html" class="">Exception</a>
+                
+            </li>
+            </ul>
 
                                     <h4 class="phpdocumentor-sidebar__root-namespace">
     <a href="namespaces/gcnotify.html" class="">GcNotify</a>
@@ -164,6 +178,14 @@
     <ul class="phpdocumentor-list">
                     <li>
                 <a href="namespaces/applicationtest-controller.html" class="">Controller</a>
+                
+            </li>
+                    <li>
+                <a href="namespaces/applicationtest-model.html" class="">Model</a>
+                
+            </li>
+                    <li>
+                <a href="namespaces/applicationtest-view.html" class="">View</a>
                 
             </li>
             </ul>
@@ -358,6 +380,14 @@
                 <a href="namespaces/userauth-model.html" class="">Model</a>
                 
             </li>
+                    <li>
+                <a href="namespaces/userauth-trait.html" class="">Trait</a>
+                
+            </li>
+                    <li>
+                <a href="namespaces/userauth-view.html" class="">View</a>
+                
+            </li>
             </ul>
 
                                     <h4 class="phpdocumentor-sidebar__root-namespace">
@@ -420,7 +450,7 @@
     ActiveDirectoryTest
 
         <span class="phpdocumentor-element__extends">
-        extends <abbr title="\PHPUnit\Framework\TestCase">TestCase</abbr>
+        extends <abbr title="\Laminas\Test\PHPUnit\Controller\AbstractHttpControllerTestCase">AbstractHttpControllerTestCase</abbr>
     </span>
     
             <div class="phpdocumentor-element__package">
@@ -443,7 +473,7 @@
         <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="module/ActiveDirectory/test/ActiveDirectoryTest.php"><a href="files/module-activedirectory-test-activedirectorytest.html"><abbr title="module/ActiveDirectory/test/ActiveDirectoryTest.php">ActiveDirectoryTest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">11</span>
+    <span class="phpdocumentor-element-found-in__line">10</span>
 
     </aside>
 
@@ -467,6 +497,31 @@
 
 
 
+<h4 id="toc-properties">
+    Properties
+    <a href="classes/ActiveDirectoryTest-ActiveDirectoryTest.html#toc-properties" class="headerlink"><i class="fas fa-link"></i></a>
+
+</h4>
+<dl class="phpdocumentor-table-of-contents">
+            <dt class="phpdocumentor-table-of-contents__entry -property -protected">
+    <a href="classes/ActiveDirectoryTest-ActiveDirectoryTest.html#property_emailToTest">$emailToTest</a>
+    <span>
+                        &nbsp;: mixed            </span>
+</dt>
+
+            <dt class="phpdocumentor-table-of-contents__entry -property -protected">
+    <a href="classes/ActiveDirectoryTest-ActiveDirectoryTest.html#property_readyForLdap">$readyForLdap</a>
+    <span>
+                        &nbsp;: mixed            </span>
+</dt>
+
+            <dt class="phpdocumentor-table-of-contents__entry -property -protected">
+    <a href="classes/ActiveDirectoryTest-ActiveDirectoryTest.html#property_usernameToTest">$usernameToTest</a>
+    <span>
+                        &nbsp;: mixed            </span>
+</dt>
+
+    </dl>
 
 <h4 id="toc-methods">
     Methods
@@ -481,15 +536,33 @@
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/ActiveDirectoryTest-ActiveDirectoryTest.html#method_testInvalidateUsernames">testInvalidateUsernames()</a>
+    <a href="classes/ActiveDirectoryTest-ActiveDirectoryTest.html#method_testActiveDirectoryGetByEmail">testActiveDirectoryGetByEmail()</a>
     <span>
                                 &nbsp;: void    </span>
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/ActiveDirectoryTest-ActiveDirectoryTest.html#method_testValidateUsername">testValidateUsername()</a>
+    <a href="classes/ActiveDirectoryTest-ActiveDirectoryTest.html#method_testActiveDirectoryGetByUsername">testActiveDirectoryGetByUsername()</a>
     <span>
                                 &nbsp;: void    </span>
+</dt>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/ActiveDirectoryTest-ActiveDirectoryTest.html#method_testActiveDirectoryInvalidateUsernames">testActiveDirectoryInvalidateUsernames()</a>
+    <span>
+                                &nbsp;: void    </span>
+</dt>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/ActiveDirectoryTest-ActiveDirectoryTest.html#method_testActiveDirectoryValidateUsername">testActiveDirectoryValidateUsername()</a>
+    <span>
+                                &nbsp;: void    </span>
+</dt>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -protected">
+    <a href="classes/ActiveDirectoryTest-ActiveDirectoryTest.html#method_isReadyForLdap">isReadyForLdap()</a>
+    <span>
+                                &nbsp;: bool    </span>
 </dt>
 
     </dl>
@@ -502,6 +575,112 @@
         
 
         
+    <section class="phpdocumentor-properties">
+        <h3 class="phpdocumentor-elements__header" id="properties">
+            Properties
+            <a href="classes/ActiveDirectoryTest-ActiveDirectoryTest.html#properties" class="headerlink"><i class="fas fa-link"></i></a>
+
+        </h3>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -protected
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="property_emailToTest">
+        $emailToTest
+        <a href="classes/ActiveDirectoryTest-ActiveDirectoryTest.html#property_emailToTest" class="headerlink"><i class="fas fa-link"></i></a>
+
+        <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="module/ActiveDirectory/test/ActiveDirectoryTest.php"><a href="files/module-activedirectory-test-activedirectorytest.html"><abbr title="module/ActiveDirectory/test/ActiveDirectoryTest.php">ActiveDirectoryTest.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">12</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">protected</span>
+        <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">$emailToTest</span>
+     = <span class="phpdocumentor-signature__default-value">&#039;francois.dupras@hc-sc.gc.ca&#039;</span></code>
+
+    
+    
+    
+
+</article>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -protected
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="property_readyForLdap">
+        $readyForLdap
+        <a href="classes/ActiveDirectoryTest-ActiveDirectoryTest.html#property_readyForLdap" class="headerlink"><i class="fas fa-link"></i></a>
+
+        <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="module/ActiveDirectory/test/ActiveDirectoryTest.php"><a href="files/module-activedirectory-test-activedirectorytest.html"><abbr title="module/ActiveDirectory/test/ActiveDirectoryTest.php">ActiveDirectoryTest.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">21</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">protected</span>
+        <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">$readyForLdap</span>
+     = <span class="phpdocumentor-signature__default-value">false</span></code>
+
+    
+    
+    
+
+</article>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -protected
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="property_usernameToTest">
+        $usernameToTest
+        <a href="classes/ActiveDirectoryTest-ActiveDirectoryTest.html#property_usernameToTest" class="headerlink"><i class="fas fa-link"></i></a>
+
+        <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="module/ActiveDirectory/test/ActiveDirectoryTest.php"><a href="files/module-activedirectory-test-activedirectorytest.html"><abbr title="module/ActiveDirectory/test/ActiveDirectoryTest.php">ActiveDirectoryTest.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">13</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">protected</span>
+        <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">$usernameToTest</span>
+     = <span class="phpdocumentor-signature__default-value">&#039;fdupras&#039;</span></code>
+
+    
+    
+    
+
+</article>
+            </section>
 
             <section class="phpdocumentor-methods">
         <h3 class="phpdocumentor-elements__header" id="methods">
@@ -523,7 +702,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="module/ActiveDirectory/test/ActiveDirectoryTest.php"><a href="files/module-activedirectory-test-activedirectorytest.html"><abbr title="module/ActiveDirectory/test/ActiveDirectoryTest.php">ActiveDirectoryTest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">13</span>
+    <span class="phpdocumentor-element-found-in__line">15</span>
 
     </aside>
 
@@ -546,22 +725,22 @@
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_testInvalidateUsernames">
-        testInvalidateUsernames()
-        <a href="classes/ActiveDirectoryTest-ActiveDirectoryTest.html#method_testInvalidateUsernames" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_testActiveDirectoryGetByEmail">
+        testActiveDirectoryGetByEmail()
+        <a href="classes/ActiveDirectoryTest-ActiveDirectoryTest.html#method_testActiveDirectoryGetByEmail" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="module/ActiveDirectory/test/ActiveDirectoryTest.php"><a href="files/module-activedirectory-test-activedirectorytest.html"><abbr title="module/ActiveDirectory/test/ActiveDirectoryTest.php">ActiveDirectoryTest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">37</span>
+    <span class="phpdocumentor-element-found-in__line">64</span>
 
     </aside>
 
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">testInvalidateUsernames</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+                    <span class="phpdocumentor-signature__name">testActiveDirectoryGetByEmail</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -577,22 +756,22 @@
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_testValidateUsername">
-        testValidateUsername()
-        <a href="classes/ActiveDirectoryTest-ActiveDirectoryTest.html#method_testValidateUsername" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_testActiveDirectoryGetByUsername">
+        testActiveDirectoryGetByUsername()
+        <a href="classes/ActiveDirectoryTest-ActiveDirectoryTest.html#method_testActiveDirectoryGetByUsername" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="module/ActiveDirectory/test/ActiveDirectoryTest.php"><a href="files/module-activedirectory-test-activedirectorytest.html"><abbr title="module/ActiveDirectory/test/ActiveDirectoryTest.php">ActiveDirectoryTest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">31</span>
+    <span class="phpdocumentor-element-found-in__line">79</span>
 
     </aside>
 
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">testValidateUsername</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+                    <span class="phpdocumentor-signature__name">testActiveDirectoryGetByUsername</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -601,6 +780,103 @@
     
 
     
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_testActiveDirectoryInvalidateUsernames">
+        testActiveDirectoryInvalidateUsernames()
+        <a href="classes/ActiveDirectoryTest-ActiveDirectoryTest.html#method_testActiveDirectoryInvalidateUsernames" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="module/ActiveDirectory/test/ActiveDirectoryTest.php"><a href="files/module-activedirectory-test-activedirectorytest.html"><abbr title="module/ActiveDirectory/test/ActiveDirectoryTest.php">ActiveDirectoryTest.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">93</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                    <span class="phpdocumentor-signature__name">testActiveDirectoryInvalidateUsernames</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+    
+    
+    
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_testActiveDirectoryValidateUsername">
+        testActiveDirectoryValidateUsername()
+        <a href="classes/ActiveDirectoryTest-ActiveDirectoryTest.html#method_testActiveDirectoryValidateUsername" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="module/ActiveDirectory/test/ActiveDirectoryTest.php"><a href="files/module-activedirectory-test-activedirectorytest.html"><abbr title="module/ActiveDirectory/test/ActiveDirectoryTest.php">ActiveDirectoryTest.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">49</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                    <span class="phpdocumentor-signature__name">testActiveDirectoryValidateUsername</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+    
+    
+    
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -protected
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_isReadyForLdap">
+        isReadyForLdap()
+        <a href="classes/ActiveDirectoryTest-ActiveDirectoryTest.html#method_isReadyForLdap" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="module/ActiveDirectory/test/ActiveDirectoryTest.php"><a href="files/module-activedirectory-test-activedirectorytest.html"><abbr title="module/ActiveDirectory/test/ActiveDirectoryTest.php">ActiveDirectoryTest.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">22</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">protected</span>
+                    <span class="phpdocumentor-signature__name">isReadyForLdap</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+    
+    
+    
+
+            <section>
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">bool</span>
+            </section>
+
 </article>
             </section>
 
@@ -707,17 +983,29 @@
             <li class="phpdocumentor-on-this-page-section__title">Table Of Contents</li>
             <li>
                 <ul class="phpdocumentor-list -clean">
-                                                                                <li><a href="classes/ActiveDirectoryTest-ActiveDirectoryTest.html#toc-methods">Methods</a></li>
+                                                            <li><a href="classes/ActiveDirectoryTest-ActiveDirectoryTest.html#toc-properties">Properties</a></li>
+                                                            <li><a href="classes/ActiveDirectoryTest-ActiveDirectoryTest.html#toc-methods">Methods</a></li>
                                     </ul>
             </li>
             
+                            <li class="phpdocumentor-on-this-page-section__title">Properties</li>
+                <li>
+                    <ul class="phpdocumentor-list -clean">
+                                                    <li><a href="classes/ActiveDirectoryTest-ActiveDirectoryTest.html#property_emailToTest">$emailToTest<a href="classes/ActiveDirectoryTest-ActiveDirectoryTest.html"></li>
+                                                    <li><a href="classes/ActiveDirectoryTest-ActiveDirectoryTest.html#property_readyForLdap">$readyForLdap<a href="classes/ActiveDirectoryTest-ActiveDirectoryTest.html"></li>
+                                                    <li><a href="classes/ActiveDirectoryTest-ActiveDirectoryTest.html#property_usernameToTest">$usernameToTest<a href="classes/ActiveDirectoryTest-ActiveDirectoryTest.html"></li>
+                                            </ul>
+                </li>
             
                         <li class="phpdocumentor-on-this-page-section__title">Methods</li>
             <li>
                 <ul class="phpdocumentor-list -clean">
                                             <li><a href="classes/ActiveDirectoryTest-ActiveDirectoryTest.html#method_setUp">setUp()</a></li>
-                                            <li><a href="classes/ActiveDirectoryTest-ActiveDirectoryTest.html#method_testInvalidateUsernames">testInvalidateUsernames()</a></li>
-                                            <li><a href="classes/ActiveDirectoryTest-ActiveDirectoryTest.html#method_testValidateUsername">testValidateUsername()</a></li>
+                                            <li><a href="classes/ActiveDirectoryTest-ActiveDirectoryTest.html#method_testActiveDirectoryGetByEmail">testActiveDirectoryGetByEmail()</a></li>
+                                            <li><a href="classes/ActiveDirectoryTest-ActiveDirectoryTest.html#method_testActiveDirectoryGetByUsername">testActiveDirectoryGetByUsername()</a></li>
+                                            <li><a href="classes/ActiveDirectoryTest-ActiveDirectoryTest.html#method_testActiveDirectoryInvalidateUsernames">testActiveDirectoryInvalidateUsernames()</a></li>
+                                            <li><a href="classes/ActiveDirectoryTest-ActiveDirectoryTest.html#method_testActiveDirectoryValidateUsername">testActiveDirectoryValidateUsername()</a></li>
+                                            <li><a href="classes/ActiveDirectoryTest-ActiveDirectoryTest.html#method_isReadyForLdap">isReadyForLdap()</a></li>
                                     </ul>
             </li>
                     </ul>

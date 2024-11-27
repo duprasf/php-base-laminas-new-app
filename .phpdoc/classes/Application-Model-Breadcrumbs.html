@@ -131,11 +131,19 @@
                 
             </li>
                     <li>
+                <a href="namespaces/application-interface.html" class="">Interface</a>
+                
+            </li>
+                    <li>
                 <a href="namespaces/application-listener.html" class="">Listener</a>
                 
             </li>
                     <li>
                 <a href="namespaces/application-model.html" class="">Model</a>
+                
+            </li>
+                    <li>
+                <a href="namespaces/application-trait.html" class="">Trait</a>
                 
             </li>
                     <li>
@@ -147,6 +155,12 @@
                                     <h4 class="phpdocumentor-sidebar__root-namespace">
     <a href="namespaces/curlwrapper.html" class="">CurlWrapper</a>
 </h4>
+    <ul class="phpdocumentor-list">
+                    <li>
+                <a href="namespaces/curlwrapper-exception.html" class="">Exception</a>
+                
+            </li>
+            </ul>
 
                                     <h4 class="phpdocumentor-sidebar__root-namespace">
     <a href="namespaces/gcnotify.html" class="">GcNotify</a>
@@ -164,6 +178,14 @@
     <ul class="phpdocumentor-list">
                     <li>
                 <a href="namespaces/applicationtest-controller.html" class="">Controller</a>
+                
+            </li>
+                    <li>
+                <a href="namespaces/applicationtest-model.html" class="">Model</a>
+                
+            </li>
+                    <li>
+                <a href="namespaces/applicationtest-view.html" class="">View</a>
                 
             </li>
             </ul>
@@ -358,6 +380,14 @@
                 <a href="namespaces/userauth-model.html" class="">Model</a>
                 
             </li>
+                    <li>
+                <a href="namespaces/userauth-trait.html" class="">Trait</a>
+                
+            </li>
+                    <li>
+                <a href="namespaces/userauth-view.html" class="">View</a>
+                
+            </li>
             </ul>
 
                                     <h4 class="phpdocumentor-sidebar__root-namespace">
@@ -431,6 +461,9 @@
                             </ul>
         </div>
     
+            <span class="phpdocumentor-element__implements">
+            implements
+                            <abbr title="\JsonSerializable">JsonSerializable</abbr>                    </span>
     
     </h2>
 
@@ -442,7 +475,7 @@
         <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="module/Application/src/Application/Model/Breadcrumbs.php"><a href="files/module-application-src-application-model-breadcrumbs.html"><abbr title="module/Application/src/Application/Model/Breadcrumbs.php">Breadcrumbs.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">10</span>
+    <span class="phpdocumentor-element-found-in__line">11</span>
 
     </aside>
 
@@ -461,6 +494,13 @@
 
 
 
+    <h4 id="toc-interfaces">
+        Interfaces
+        <a href="classes/Application-Model-Breadcrumbs.html#toc-interfaces" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <dl class="phpdocumentor-table-of-contents">
+                    <dt class="phpdocumentor-table-of-contents__entry -interface"><abbr title="\JsonSerializable">JsonSerializable</abbr></dt>    </dl>
 
 
 
@@ -490,11 +530,17 @@
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Application-Model-Breadcrumbs.html#method___invoke">__invoke()</a>
     <span>
-                                &nbsp;: mixed    </span>
+                                &nbsp;: self    </span>
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Application-Model-Breadcrumbs.html#method_addBreadcrumbs">addBreadcrumbs()</a>
+    <span>
+                                &nbsp;: self    </span>
+</dt>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Application-Model-Breadcrumbs.html#method_jsonSerialize">jsonSerialize()</a>
     <span>
                                 &nbsp;: mixed    </span>
 </dt>
@@ -538,7 +584,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="module/Application/src/Application/Model/Breadcrumbs.php"><a href="files/module-application-src-application-model-breadcrumbs.html"><abbr title="module/Application/src/Application/Model/Breadcrumbs.php">Breadcrumbs.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">12</span>
+    <span class="phpdocumentor-element-found-in__line">13</span>
 
     </aside>
 
@@ -576,14 +622,14 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="module/Application/src/Application/Model/Breadcrumbs.php"><a href="files/module-application-src-application-model-breadcrumbs.html"><abbr title="module/Application/src/Application/Model/Breadcrumbs.php">Breadcrumbs.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">14</span>
+    <span class="phpdocumentor-element-found-in__line">15</span>
 
     </aside>
 
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">__invoke</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$breadcrumbs</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">__invoke</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$breadcrumbs</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">null</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">self</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -601,7 +647,11 @@
 
     
 
-    
+            <section>
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">self</span>
+            </section>
+
 </article>
                     <article
         class="phpdocumentor-element
@@ -617,14 +667,14 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="module/Application/src/Application/Model/Breadcrumbs.php"><a href="files/module-application-src-application-model-breadcrumbs.html"><abbr title="module/Application/src/Application/Model/Breadcrumbs.php">Breadcrumbs.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">23</span>
+    <span class="phpdocumentor-element-found-in__line">24</span>
 
     </aside>
 
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">addBreadcrumbs</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$breadcrumbs</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">addBreadcrumbs</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$breadcrumbs</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">self</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -640,6 +690,41 @@
             </dd>
             </dl>
 
+    
+
+            <section>
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">self</span>
+            </section>
+
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_jsonSerialize">
+        jsonSerialize()
+        <a href="classes/Application-Model-Breadcrumbs.html#method_jsonSerialize" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="module/Application/src/Application/Model/Breadcrumbs.php"><a href="files/module-application-src-application-model-breadcrumbs.html"><abbr title="module/Application/src/Application/Model/Breadcrumbs.php">Breadcrumbs.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">58</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                    <span class="phpdocumentor-signature__name">jsonSerialize</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+    
+    
     
 
     
@@ -658,7 +743,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="module/Application/src/Application/Model/Breadcrumbs.php"><a href="files/module-application-src-application-model-breadcrumbs.html"><abbr title="module/Application/src/Application/Model/Breadcrumbs.php">Breadcrumbs.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">51</span>
+    <span class="phpdocumentor-element-found-in__line">53</span>
 
     </aside>
 
@@ -797,6 +882,7 @@
                 <ul class="phpdocumentor-list -clean">
                                             <li><a href="classes/Application-Model-Breadcrumbs.html#method___invoke">__invoke()</a></li>
                                             <li><a href="classes/Application-Model-Breadcrumbs.html#method_addBreadcrumbs">addBreadcrumbs()</a></li>
+                                            <li><a href="classes/Application-Model-Breadcrumbs.html#method_jsonSerialize">jsonSerialize()</a></li>
                                             <li><a href="classes/Application-Model-Breadcrumbs.html#method_tojson">tojson()</a></li>
                                     </ul>
             </li>
