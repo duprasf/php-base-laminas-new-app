@@ -177,10 +177,6 @@
 </h4>
     <ul class="phpdocumentor-list">
                     <li>
-                <a href="namespaces/applicationtest-controller.html" class="">Controller</a>
-                
-            </li>
-                    <li>
                 <a href="namespaces/applicationtest-model.html" class="">Model</a>
                 
             </li>
@@ -471,6 +467,9 @@
 
 
 
+
+
+
 <h3 id="toc">
     Table of Contents
     <a href="classes/UserAuth-Model-User-UserInterface.html#toc" class="headerlink"><i class="fas fa-link"></i></a>
@@ -493,14 +492,14 @@
 </h4>
 <dl class="phpdocumentor-table-of-contents">
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/UserAuth-Model-User-UserInterface.html#method_authenticate">authenticate()</a>
+    <a class="" href="classes/UserAuth-Model-User-UserInterface.html#method_authenticate">authenticate()</a>
     <span>
-                                &nbsp;: bool    </span>
+                                &nbsp;: bool|array&lt;string|int, mixed&gt;    </span>
 </dt>
 <dd>Authenticate user with an ID (usually email) and might require a password depending on the authenticator</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/UserAuth-Model-User-UserInterface.html#method_getDataForJWT">getDataForJWT()</a>
+    <a class="" href="classes/UserAuth-Model-User-UserInterface.html#method_getDataForJWT">getDataForJWT()</a>
     <span>
                                 &nbsp;: array&lt;string|int, mixed&gt;    </span>
 </dt>
@@ -509,70 +508,70 @@ token data is public, the user can see it. Do not put some private or
 protected data in JWT!!</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/UserAuth-Model-User-UserInterface.html#method_getJWT">getJWT()</a>
+    <a class="" href="classes/UserAuth-Model-User-UserInterface.html#method_getJWT">getJWT()</a>
     <span>
                                 &nbsp;: string    </span>
 </dt>
 <dd>Generate and return the Javascript Web Token (when using API)</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/UserAuth-Model-User-UserInterface.html#method_getUserId">getUserId()</a>
+    <a class="" href="classes/UserAuth-Model-User-UserInterface.html#method_getUserId">getUserId()</a>
     <span>
                                 &nbsp;: mixed    </span>
 </dt>
 <dd>Returns the ID field defined in the const ID_FIELD of the class</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/UserAuth-Model-User-UserInterface.html#method_isLoggedIn">isLoggedIn()</a>
+    <a class="" href="classes/UserAuth-Model-User-UserInterface.html#method_isLoggedIn">isLoggedIn()</a>
     <span>
                                 &nbsp;: bool    </span>
 </dt>
 <dd>Return true if logged in, false otherwise. By default</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/UserAuth-Model-User-UserInterface.html#method_jwtToData">jwtToData()</a>
+    <a class="" href="classes/UserAuth-Model-User-UserInterface.html#method_jwtToData">jwtToData()</a>
     <span>
                                 &nbsp;: array&lt;string|int, mixed&gt;    </span>
 </dt>
 <dd>Get the content of the Javascript Web Token (when using API)</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/UserAuth-Model-User-UserInterface.html#method_login">login()</a>
+    <a class="" href="classes/UserAuth-Model-User-UserInterface.html#method_login">login()</a>
     <span>
-                                &nbsp;: bool    </span>
+                                &nbsp;: bool|array&lt;string|int, mixed&gt;    </span>
 </dt>
 <dd>Synonym of authenticate() function</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/UserAuth-Model-User-UserInterface.html#method_logout">logout()</a>
+    <a class="" href="classes/UserAuth-Model-User-UserInterface.html#method_logout">logout()</a>
     <span>
                                 &nbsp;: <a href="classes/UserAuth-Model-User-UserInterface.html"><abbr title="\UserAuth\Model\User\UserInterface">UserInterface</abbr></a>    </span>
 </dt>
 <dd>Log the user out and destroy the session</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/UserAuth-Model-User-UserInterface.html#method_setAuthenticator">setAuthenticator()</a>
+    <a class="" href="classes/UserAuth-Model-User-UserInterface.html#method_setAuthenticator">setAuthenticator()</a>
     <span>
                                 &nbsp;: <a href="classes/UserAuth-Model-User-UserInterface.html"><abbr title="\UserAuth\Model\User\UserInterface">UserInterface</abbr></a>    </span>
 </dt>
 <dd>Set the authenticator for your user (credentials, email, token, etc.)</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/UserAuth-Model-User-UserInterface.html#method_setIdField">setIdField()</a>
+    <a class="" href="classes/UserAuth-Model-User-UserInterface.html#method_setIdField">setIdField()</a>
     <span>
                                 &nbsp;: <a href="classes/UserAuth-Model-User-UserInterface.html"><abbr title="\UserAuth\Model\User\UserInterface">UserInterface</abbr></a>    </span>
 </dt>
 <dd>Set the name of the ID field for your user (ex: email, userId, accountname, etc.)</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/UserAuth-Model-User-UserInterface.html#method_setJwtObj">setJwtObj()</a>
+    <a class="" href="classes/UserAuth-Model-User-UserInterface.html#method_setJwtObj">setJwtObj()</a>
     <span>
                                 &nbsp;: <a href="classes/UserAuth-Model-User-UserInterface.html"><abbr title="\UserAuth\Model\User\UserInterface">UserInterface</abbr></a>    </span>
 </dt>
 <dd>Set the JWT object (should be set in the factory)</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/UserAuth-Model-User-UserInterface.html#method_setStorage">setStorage()</a>
+    <a class="" href="classes/UserAuth-Model-User-UserInterface.html#method_setStorage">setStorage()</a>
     <span>
                                 &nbsp;: <a href="classes/UserAuth-Model-User-UserInterface.html"><abbr title="\UserAuth\Model\User\UserInterface">UserInterface</abbr></a>    </span>
 </dt>
@@ -582,8 +581,6 @@ protected data in JWT!!</dd>
 
 
 
-
-        
 
         
 
@@ -615,10 +612,11 @@ protected data in JWT!!</dd>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">authenticate</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__variadic-operator">...</span><span class="phpdocumentor-signature__argument__name">$args</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
+                    <span class="phpdocumentor-signature__name">authenticate</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__variadic-operator">...</span><span class="phpdocumentor-signature__argument__name">$args</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool|array&lt;string|int, mixed&gt;</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
+    
     
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
@@ -632,14 +630,28 @@ protected data in JWT!!</dd>
             </dl>
 
     
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="classes/UserAuth-Model-User-UserInterface.html#method_authenticate#tags" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">@return</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                                
+                                                 <section class="phpdocumentor-description"><p>bool, true if successful false (or throws exception) otherwise</p>
+</section>
+
+                                    </dd>
+                                            </dl>
+
+    
 
             <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-        <span class="phpdocumentor-signature__response_type">bool</span>
-                    &mdash;
-                <section class="phpdocumentor-description"><p>true if successful false (or throws exception) otherwise</p>
-</section>
-
+        <span class="phpdocumentor-signature__response_type">bool|array&lt;string|int, mixed&gt;</span>
             </section>
 
 </article>
@@ -672,6 +684,7 @@ protected data in JWT!!</p>
     <div class="phpdocumentor-label-line">
         </div>
     
+    
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
@@ -679,9 +692,13 @@ protected data in JWT!!</p>
                 : <span class="phpdocumentor-signature__argument__return-type">int</span>
                  = <span class="phpdocumentor-signature__argument__default-value">86400</span>            </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                
+                    <section class="phpdocumentor-description"><p>, in case the length of time the token will live change the data...</p>
+</section>
+
             </dd>
             </dl>
+
+    
 
     
 
@@ -722,6 +739,7 @@ protected data in JWT!!</p>
     <div class="phpdocumentor-label-line">
         </div>
     
+    
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
@@ -734,6 +752,8 @@ protected data in JWT!!</p>
 
             </dd>
             </dl>
+
+    
 
     
 
@@ -771,6 +791,9 @@ protected data in JWT!!</p>
         </div>
     
     
+    
+    
+
     
 
             <section>
@@ -812,14 +835,29 @@ protected data in JWT!!</p>
     
     
     
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="classes/UserAuth-Model-User-UserInterface.html#method_isLoggedIn#tags" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">@return</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                                
+                                                 <section class="phpdocumentor-description"><p>bool, return true if logged in, false otherwise.</p>
+</section>
+
+                                    </dd>
+                                            </dl>
+
+    
 
             <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
         <span class="phpdocumentor-signature__response_type">bool</span>
-                    &mdash;
-                <section class="phpdocumentor-description"><p>return true if logged in, false otherwise.</p>
-</section>
-
             </section>
 
 </article>
@@ -849,6 +887,7 @@ protected data in JWT!!</p>
 
     <div class="phpdocumentor-label-line">
         </div>
+    
     
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
@@ -890,6 +929,8 @@ protected data in JWT!!</p>
                                     </dd>
                                             </dl>
 
+    
+
             <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
         <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span>
@@ -922,10 +963,11 @@ protected data in JWT!!</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">login</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__variadic-operator">...</span><span class="phpdocumentor-signature__argument__name">$args</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
+                    <span class="phpdocumentor-signature__name">login</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__variadic-operator">...</span><span class="phpdocumentor-signature__argument__name">$args</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool|array&lt;string|int, mixed&gt;</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
+    
     
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
@@ -939,14 +981,28 @@ protected data in JWT!!</p>
             </dl>
 
     
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="classes/UserAuth-Model-User-UserInterface.html#method_login#tags" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">@return</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                                
+                                                 <section class="phpdocumentor-description"><p>bool, true if successful false (or throws exception) otherwise</p>
+</section>
+
+                                    </dd>
+                                            </dl>
+
+    
 
             <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-        <span class="phpdocumentor-signature__response_type">bool</span>
-                    &mdash;
-                <section class="phpdocumentor-description"><p>true if successful false (or throws exception) otherwise</p>
-</section>
-
+        <span class="phpdocumentor-signature__response_type">bool|array&lt;string|int, mixed&gt;</span>
             </section>
 
 </article>
@@ -978,6 +1034,9 @@ protected data in JWT!!</p>
         </div>
     
     
+    
+    
+
     
 
             <section>
@@ -1013,6 +1072,7 @@ protected data in JWT!!</p>
     <div class="phpdocumentor-label-line">
         </div>
     
+    
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
@@ -1023,6 +1083,8 @@ protected data in JWT!!</p>
                 
             </dd>
             </dl>
+
+    
 
     
 
@@ -1059,6 +1121,7 @@ protected data in JWT!!</p>
     <div class="phpdocumentor-label-line">
         </div>
     
+    
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
@@ -1069,6 +1132,8 @@ protected data in JWT!!</p>
                 
             </dd>
             </dl>
+
+    
 
     
 
@@ -1105,6 +1170,7 @@ protected data in JWT!!</p>
     <div class="phpdocumentor-label-line">
         </div>
     
+    
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
@@ -1115,6 +1181,8 @@ protected data in JWT!!</p>
                 
             </dd>
             </dl>
+
+    
 
     
 
@@ -1151,6 +1219,7 @@ protected data in JWT!!</p>
     <div class="phpdocumentor-label-line">
         </div>
     
+    
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
@@ -1161,6 +1230,8 @@ protected data in JWT!!</p>
                 
             </dd>
             </dl>
+
+    
 
     
 
@@ -1282,18 +1353,18 @@ protected data in JWT!!</p>
                             <li class="phpdocumentor-on-this-page-section__title">Methods</li>
                 <li>
                     <ul class="phpdocumentor-list -clean">
-                                                    <li><a href="classes/UserAuth-Model-User-UserInterface.html#method_authenticate">authenticate()</a></li>
-                                                    <li><a href="classes/UserAuth-Model-User-UserInterface.html#method_getDataForJWT">getDataForJWT()</a></li>
-                                                    <li><a href="classes/UserAuth-Model-User-UserInterface.html#method_getJWT">getJWT()</a></li>
-                                                    <li><a href="classes/UserAuth-Model-User-UserInterface.html#method_getUserId">getUserId()</a></li>
-                                                    <li><a href="classes/UserAuth-Model-User-UserInterface.html#method_isLoggedIn">isLoggedIn()</a></li>
-                                                    <li><a href="classes/UserAuth-Model-User-UserInterface.html#method_jwtToData">jwtToData()</a></li>
-                                                    <li><a href="classes/UserAuth-Model-User-UserInterface.html#method_login">login()</a></li>
-                                                    <li><a href="classes/UserAuth-Model-User-UserInterface.html#method_logout">logout()</a></li>
-                                                    <li><a href="classes/UserAuth-Model-User-UserInterface.html#method_setAuthenticator">setAuthenticator()</a></li>
-                                                    <li><a href="classes/UserAuth-Model-User-UserInterface.html#method_setIdField">setIdField()</a></li>
-                                                    <li><a href="classes/UserAuth-Model-User-UserInterface.html#method_setJwtObj">setJwtObj()</a></li>
-                                                    <li><a href="classes/UserAuth-Model-User-UserInterface.html#method_setStorage">setStorage()</a></li>
+                                                    <li class=""><a href="classes/UserAuth-Model-User-UserInterface.html#method_authenticate">authenticate()</a></li>
+                                                    <li class=""><a href="classes/UserAuth-Model-User-UserInterface.html#method_getDataForJWT">getDataForJWT()</a></li>
+                                                    <li class=""><a href="classes/UserAuth-Model-User-UserInterface.html#method_getJWT">getJWT()</a></li>
+                                                    <li class=""><a href="classes/UserAuth-Model-User-UserInterface.html#method_getUserId">getUserId()</a></li>
+                                                    <li class=""><a href="classes/UserAuth-Model-User-UserInterface.html#method_isLoggedIn">isLoggedIn()</a></li>
+                                                    <li class=""><a href="classes/UserAuth-Model-User-UserInterface.html#method_jwtToData">jwtToData()</a></li>
+                                                    <li class=""><a href="classes/UserAuth-Model-User-UserInterface.html#method_login">login()</a></li>
+                                                    <li class=""><a href="classes/UserAuth-Model-User-UserInterface.html#method_logout">logout()</a></li>
+                                                    <li class=""><a href="classes/UserAuth-Model-User-UserInterface.html#method_setAuthenticator">setAuthenticator()</a></li>
+                                                    <li class=""><a href="classes/UserAuth-Model-User-UserInterface.html#method_setIdField">setIdField()</a></li>
+                                                    <li class=""><a href="classes/UserAuth-Model-User-UserInterface.html#method_setJwtObj">setJwtObj()</a></li>
+                                                    <li class=""><a href="classes/UserAuth-Model-User-UserInterface.html#method_setStorage">setStorage()</a></li>
                                             </ul>
                 </li>
             

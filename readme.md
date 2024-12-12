@@ -519,6 +519,30 @@ if(!$result && getenv('PHP_DEV_ENV')) {
 
 }
 ```
+### Sending email using SMTP
+A version of PHPMailer is available in the framework in case GC Notify is not suitable 
+for your need. A wrapper was create to use the same interface as GC Notify.
+
+You will need set the following environment variables:
+* SMTP_HOST
+* SMTP_USERNAME
+* SMTP_PASSWORD
+* SMTP_ENCRYPTION (can be 'tls', 'ssl' or null but TLS or SSL is recomended)
+* SMTP_PORT
+
+Next, all you have to do is call ```$container->get(Application\Model\PHPMailerWraper::class)```, 
+of course, if you want to set your own templates in your factory, you will need to extends
+the Application\Factory\PHPMailerWraperFactory or set all the variables above yourself.
+
+To send an email, the process is very similar to the GCNotify since they both implements
+the same interface, so you just have to call 
+```php 
+$result = $phpMailerWrapper->sendEmail(
+    'hc.imsd.web-dsgi.sc@canada.ca', // recipient of the email
+    'nameOfTemplate', // template ID set from calling ->setTemplate or ->setTemplates beforehand
+    array('varInTemplate'=>'value') // needs to have ALL variable from the template
+);
+```
 
 ### Public Assets (images, css, js)
 In the example modules provided, the configuration is already set to allow js, css, jpg, jpeg, png,

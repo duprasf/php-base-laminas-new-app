@@ -1151,6 +1151,16 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Application-Factory-MetadataFactory.html#method___invoke"
         },                {
+            "fqsen": "\\Application\\Factory\\PHPMailerWrapperFactory",
+            "name": "PHPMailerWrapperFactory",
+            "summary": "",
+            "url": "classes/Application-Factory-PHPMailerWrapperFactory.html"
+        },                {
+            "fqsen": "\\Application\\Factory\\PHPMailerWrapperFactory\u003A\u003A__invoke\u0028\u0029",
+            "name": "__invoke",
+            "summary": "",
+            "url": "classes/Application-Factory-PHPMailerWrapperFactory.html#method___invoke"
+        },                {
             "fqsen": "\\Application\\Factory\\SessionManagerFactory",
             "name": "SessionManagerFactory",
             "summary": "",
@@ -1231,10 +1241,10 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Application-Interface-EmailerInterface.html#method___invoke"
         },                {
-            "fqsen": "\\Application\\Interface\\EmailerInterface\u003A\u003AsendAuthenticationEmail\u0028\u0029",
-            "name": "sendAuthenticationEmail",
+            "fqsen": "\\Application\\Interface\\EmailerInterface\u003A\u003AsendEmail\u0028\u0029",
+            "name": "sendEmail",
             "summary": "",
-            "url": "classes/Application-Interface-EmailerInterface.html#method_sendAuthenticationEmail"
+            "url": "classes/Application-Interface-EmailerInterface.html#method_sendEmail"
         },                {
             "fqsen": "\\Application\\Interface\\EmailerInterface\u003A\u003AreportException\u0028\u0029",
             "name": "reportException",
@@ -1246,10 +1256,15 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Application-Interface-EmailerInterface.html#method_reportError"
         },                {
-            "fqsen": "\\Application\\Interface\\EmailerInterface\u003A\u003AsendEmail\u0028\u0029",
-            "name": "sendEmail",
+            "fqsen": "\\Application\\Interface\\EmailerInterface\u003A\u003AsetTemplates\u0028\u0029",
+            "name": "setTemplates",
             "summary": "",
-            "url": "classes/Application-Interface-EmailerInterface.html#method_sendEmail"
+            "url": "classes/Application-Interface-EmailerInterface.html#method_setTemplates"
+        },                {
+            "fqsen": "\\Application\\Interface\\EmailerInterface\u003A\u003AsetTemplate\u0028\u0029",
+            "name": "setTemplate",
+            "summary": "",
+            "url": "classes/Application-Interface-EmailerInterface.html#method_setTemplate"
         },                {
             "fqsen": "\\Application\\Listener\\ApplicationSetupListener",
             "name": "ApplicationSetupListener",
@@ -1550,6 +1565,101 @@ Search.appendIndex(
             "name": "lang",
             "summary": "",
             "url": "classes/Application-Model-MetadataBuilder.html#property_lang"
+        },                {
+            "fqsen": "\\Application\\Model\\PHPMailerWrapper",
+            "name": "PHPMailerWrapper",
+            "summary": "",
+            "url": "classes/Application-Model-PHPMailerWrapper.html"
+        },                {
+            "fqsen": "\\Application\\Model\\PHPMailerWrapper\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "",
+            "url": "classes/Application-Model-PHPMailerWrapper.html#method___construct"
+        },                {
+            "fqsen": "\\Application\\Model\\PHPMailerWrapper\u003A\u003A__invoke\u0028\u0029",
+            "name": "__invoke",
+            "summary": "",
+            "url": "classes/Application-Model-PHPMailerWrapper.html#method___invoke"
+        },                {
+            "fqsen": "\\Application\\Model\\PHPMailerWrapper\u003A\u003AreportException\u0028\u0029",
+            "name": "reportException",
+            "summary": "",
+            "url": "classes/Application-Model-PHPMailerWrapper.html#method_reportException"
+        },                {
+            "fqsen": "\\Application\\Model\\PHPMailerWrapper\u003A\u003AreportError\u0028\u0029",
+            "name": "reportError",
+            "summary": "",
+            "url": "classes/Application-Model-PHPMailerWrapper.html#method_reportError"
+        },                {
+            "fqsen": "\\Application\\Model\\PHPMailerWrapper\u003A\u003AsendEmail\u0028\u0029",
+            "name": "sendEmail",
+            "summary": "",
+            "url": "classes/Application-Model-PHPMailerWrapper.html#method_sendEmail"
+        },                {
+            "fqsen": "\\Application\\Model\\PHPMailerWrapper\u003A\u003AsetUseException\u0028\u0029",
+            "name": "setUseException",
+            "summary": "",
+            "url": "classes/Application-Model-PHPMailerWrapper.html#method_setUseException"
+        },                {
+            "fqsen": "\\Application\\Model\\PHPMailerWrapper\u003A\u003AsetOverwriteEmail\u0028\u0029",
+            "name": "setOverwriteEmail",
+            "summary": "",
+            "url": "classes/Application-Model-PHPMailerWrapper.html#method_setOverwriteEmail"
+        },                {
+            "fqsen": "\\Application\\Model\\PHPMailerWrapper\u003A\u003AsetAppName\u0028\u0029",
+            "name": "setAppName",
+            "summary": "",
+            "url": "classes/Application-Model-PHPMailerWrapper.html#method_setAppName"
+        },                {
+            "fqsen": "\\Application\\Model\\PHPMailerWrapper\u003A\u003AsetTemplates\u0028\u0029",
+            "name": "setTemplates",
+            "summary": "",
+            "url": "classes/Application-Model-PHPMailerWrapper.html#method_setTemplates"
+        },                {
+            "fqsen": "\\Application\\Model\\PHPMailerWrapper\u003A\u003AsetTemplate\u0028\u0029",
+            "name": "setTemplate",
+            "summary": "",
+            "url": "classes/Application-Model-PHPMailerWrapper.html#method_setTemplate"
+        },                {
+            "fqsen": "\\Application\\Model\\PHPMailerWrapper\u003A\u003AsetPhpMailer\u0028\u0029",
+            "name": "setPhpMailer",
+            "summary": "",
+            "url": "classes/Application-Model-PHPMailerWrapper.html#method_setPhpMailer"
+        },                {
+            "fqsen": "\\Application\\Model\\PHPMailerWrapper\u003A\u003AgetPhpMailer\u0028\u0029",
+            "name": "getPhpMailer",
+            "summary": "",
+            "url": "classes/Application-Model-PHPMailerWrapper.html#method_getPhpMailer"
+        },                {
+            "fqsen": "\\Application\\Model\\PHPMailerWrapper\u003A\u003A__toString\u0028\u0029",
+            "name": "__toString",
+            "summary": "",
+            "url": "classes/Application-Model-PHPMailerWrapper.html#method___toString"
+        },                {
+            "fqsen": "\\Application\\Model\\PHPMailerWrapper\u003A\u003A\u0024useException",
+            "name": "useException",
+            "summary": "",
+            "url": "classes/Application-Model-PHPMailerWrapper.html#property_useException"
+        },                {
+            "fqsen": "\\Application\\Model\\PHPMailerWrapper\u003A\u003A\u0024overwriteEmail",
+            "name": "overwriteEmail",
+            "summary": "",
+            "url": "classes/Application-Model-PHPMailerWrapper.html#property_overwriteEmail"
+        },                {
+            "fqsen": "\\Application\\Model\\PHPMailerWrapper\u003A\u003A\u0024appName",
+            "name": "appName",
+            "summary": "",
+            "url": "classes/Application-Model-PHPMailerWrapper.html#property_appName"
+        },                {
+            "fqsen": "\\Application\\Model\\PHPMailerWrapper\u003A\u003A\u0024templates",
+            "name": "templates",
+            "summary": "",
+            "url": "classes/Application-Model-PHPMailerWrapper.html#property_templates"
+        },                {
+            "fqsen": "\\Application\\Model\\PHPMailerWrapper\u003A\u003A\u0024phpMailer",
+            "name": "phpMailer",
+            "summary": "",
+            "url": "classes/Application-Model-PHPMailerWrapper.html#property_phpMailer"
         },                {
             "fqsen": "\\Application\\Trait\\EventManagerAwareTrait",
             "name": "EventManagerAwareTrait",
@@ -4983,7 +5093,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\UserAuth\\Model\\User\\Authenticator\\LdapAuthenticator\u003A\u003AsetStorage\u0028\u0029",
             "name": "setStorage",
-            "summary": "",
+            "summary": "Set\u0020the\u0020storage\u0020for\u0020your\u0020user\u0020\u0028MySQL,\u0020Mongo,\u0020File,\u0020LDAP,\u0020etc.\u0029",
             "url": "classes/UserAuth-Model-User-Authenticator-LdapAuthenticator.html#method_setStorage"
         },                {
             "fqsen": "\\UserAuth\\Model\\User\\Storage\\AbstractStorage",
